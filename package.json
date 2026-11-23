@@ -3,11 +3,16 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "engines": {"node": ">=24"},
+  "engines": {
+    "node": ">=24"
+  },
   "scripts": {
     "start": "node --env-file-if-exists=.env server.js",
     "dev": "node --env-file-if-exists=.env --watch server.js",
     "test": "node --test --test-isolation=none tests/*.test.js"
   },
-  "dependencies": {"qrcode": "1.5.4"}
+  "dependencies": {
+    "pg": "^8.23.1",
+    "qrcode": "1.5.4"
+  }
 }

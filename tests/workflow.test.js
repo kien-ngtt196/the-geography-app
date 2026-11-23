@@ -4,6 +4,7 @@ import { mkdtempSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { once } from 'node:events';
+import { createServer } from 'node:http';
 import { lessons, fraction, selectQuestions, safeQuestion, gradeAttempt } from '../learning.js';
 
 test('Đề giữa kì I lớp 9 khớp thứ tự, phạm vi và điểm phần khách quan', () => {
@@ -41,6 +42,10 @@ test('Câu trả lời ngắn công bố đơn vị và chấm phần số', () 
 });
 
 test('Học thử, đăng ký, luyện tập, thi thử và chơi theo đội', async t => {
+  delete process.env.DATABASE_URL;
+  delete process.env.POSTGRES_URL;
+  delete process.env.VERCEL;
+  if (process.env.ATLAS_TEST_DATABASE_URL) process.env.DATABASE_URL = process.env.ATLAS_TEST_DATABASE_URL;
   process.env.DATA_DIR = mkdtempSync(join(tmpdir(),'atlat-test-'));
   process.env.PORT = '0';
   process.env.HOST = '127.0.0.1';
@@ -49,6 +54,7 @@ test('Học thử, đăng ký, luyện tập, thi thử và chơi theo đội', 
   if (!server.listening) await once(server,'listening');
   t.after(()=>new Promise(resolve=>server.close(resolve)));
   const base = 'http://127.0.0.1:'+server.address().port;
+  assert.deepEqual(await (await fetch(base+'/api/health')).json(),{ok:true});
   const home = await (await fetch(base+'/')).text();
   assert.match(home,/href="\/ban-do"/);
   assert.doesNotMatch(home,/id="geomap"|id="activity"|id="study-grid"/);
@@ -110,6 +116,18 @@ test('Học thử, đăng ký, luyện tập, thi thử và chơi theo đội', 
   const room='rooms/'+code;
   await student8(room,undefined,403);
   assert.match(await teacher('qr?code='+code),/<svg/);
+  const {default:atlas} = await import('../api/atlas.js');
+  const rewritten = createServer(atlas).listen(0,'127.0.0.1');
+  await once(rewritten,'listening');
+  try {
+    const apiBase = 'http://127.0.0.1:'+rewritten.address().port+'/api/atlas?atlasPath=';
+    assert.deepEqual(await (await fetch(apiBase+'health')).json(),{ok:true});
+    const invite = await fetch(apiBase+'qr&code='+code);
+    assert.equal(invite.status,200);
+    assert.match(await invite.text(),/<svg/);
+  } finally {
+    await new Promise(resolve=>rewritten.close(resolve));
+  }
   await guest(room+'/join',{name:'Lan',team:'Sen'});
   assert.equal((await guest(room)).joined,true);
   await guest(room+'/next',{},403);

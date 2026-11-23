@@ -1,0 +1,18 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "outputDirectory": "public",
+  "functions": {
+    "api/atlas.js": { "includeFiles": "content/**" }
+  },
+  "rewrites": [
+    { "source": "/ban-do", "destination": "/map.html" },
+    { "source": "/hoc-tap", "destination": "/feature.html" },
+    { "source": "/luyen-tap", "destination": "/feature.html" },
+    { "source": "/thi-thu", "destination": "/feature.html" },
+    { "source": "/phong-hoc", "destination": "/feature.html" },
+    { "source": "/so-hoc-tap", "destination": "/feature.html" },
+    { "source": "/tai-khoan", "destination": "/feature.html" },
+    { "source": "/api/:path*", "destination": "/api/atlas?atlasPath=:path*" }
+  ]
+}
