@@ -26,6 +26,7 @@
   background: #edf2e7;
 }
 #activity h1 { color: #1f4135; font: 600 clamp(1.65rem,4vw,2.4rem)/1.25 var(--serif); margin: 0; }
+#activity #activity-title:focus { outline: none; }
 #activity h3 { font-weight: 600; font-size: 1.08rem; line-height: 1.5; margin: 1em 0 .55em; color: #233d34; }
 #activity small { font-size: .85rem; }
 #activity p, #activity h3, #activity td, #activity summary { overflow-wrap: anywhere; }
