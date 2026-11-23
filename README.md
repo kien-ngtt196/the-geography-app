@@ -76,7 +76,7 @@ Trong phòng chờ của giáo viên, mã QR nằm cạnh mã phòng. Học sinh
 
 ## Triển khai trên Render
 
-1. Tạo một **Web Service** từ kho `kien-ngtt196/the-study-app`. Chọn nhánh `main`, môi trường Node và giữ thư mục gốc mặc định.
+1. Tạo một **Web Service** từ kho `kien-ngtt196/the-geography-app`. Chọn nhánh `main`, môi trường Node và giữ thư mục gốc mặc định.
 2. Đặt **Build Command** là `npm ci` và **Start Command** là `npm start`. Chọn gói hỗ trợ đĩa lưu trữ bền vững. Gắn đĩa tại `/var/data` trong phần **Advanced**.
 3. Thêm các biến môi trường dưới đây. Render cấp `PORT` cho dịch vụ. Sau khi biết địa chỉ HTTPS thực tế, cập nhật `PUBLIC_ORIGIN` theo địa chỉ đó, bỏ dấu gạch chéo cuối và triển khai lại.
 
@@ -92,7 +92,7 @@ Trong phòng chờ của giáo viên, mã QR nằm cạnh mã phòng. Học sinh
 
 ## Triển khai trên Vercel với Neon
 
-1. Import kho `kien-ngtt196/the-study-app` từ GitHub vào Vercel. Trong **Settings → Environments → Production → Branch Tracking**, chọn `main`. Dự án dùng Node.js 24 và cấu hình có sẵn trong `vercel.json`.
+1. Import kho `kien-ngtt196/the-geography-app` từ GitHub vào Vercel. Trong **Settings → Environments → Production → Branch Tracking**, chọn `main`. Dự án dùng Node.js 24 và cấu hình có sẵn trong `vercel.json`.
 2. Tạo một cơ sở dữ liệu Neon riêng cho Atlat Việt. Kết nối qua [Neon Marketplace](https://vercel.com/marketplace/neon) hoặc đặt chuỗi kết nối **pooled** vào biến `DATABASE_URL` của môi trường Production. Ứng dụng cũng đọc `POSTGRES_URL` nếu tích hợp cung cấp biến này.
 3. Thêm `TEACHER_KEY` với giá trị bí mật tự chọn. Nếu dùng một tên miền cố định cho QR, đặt `PUBLIC_ORIGIN` thành địa chỉ HTTPS của tên miền đó, bỏ dấu `/` cuối. Khi không đặt biến này, QR dùng địa chỉ HTTPS đang truy cập trên Vercel.
 4. Triển khai lại rồi mở `/api/health`. Kết quả `{"ok":true}` xác nhận backend truy cập được cơ sở dữ liệu. Lần gọi đầu tiên tự tạo các bảng. Đăng ký tài khoản giáo viên, tạo phòng rồi quét QR để kiểm tra.
