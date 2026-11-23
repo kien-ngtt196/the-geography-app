@@ -21,6 +21,14 @@ function limit(key, maximum) {
   limits.set(key,bucket);
   if (++bucket.count > maximum) fail(429,'Có nhiều yêu cầu liên tiếp. Hãy thử lại sau ít phút.');
 }
+function clientAddress(req) {
+  const forwarded = req.headers['x-vercel-forwarded-for'] || req.headers['x-forwarded-for'];
+  if (process.env.VERCEL === '1' && typeof forwarded === 'string') {
+    const ip = forwarded.split(',')[0].trim();
+    if (ip) return ip;
+  }
+  return req.socket?.remoteAddress || 'unknown';
+}
 let lastCleanup = Date.now();
 export async function cleanExpired() {
   for (const [key,entry] of limits) if (entry.until < Date.now()) limits.delete(key);
@@ -151,12 +159,14 @@ async function handle(req,res) {
     if (user?.role === 'student' && user.grade !== grade) fail(403,'Hãy dùng học liệu đúng khối lớp trong tài khoản.');
   };
   let body = {};
+  let address;
   if (method==='POST') {
     const origin = req.headers.origin;
     if (origin && origin!==process.env.PUBLIC_ORIGIN && new URL(origin).host!==req.headers.host) fail(403,'Nguồn yêu cầu không hợp lệ.');
     body = await jsonBody(req);
+    address = clientAddress(req);
     if (!session) {
-      limit('session:'+req.socket.remoteAddress,480);
+      limit('session:'+address,480);
       session={token:await setSession(res,null)};
     }
   }
@@ -168,7 +178,7 @@ async function handle(req,res) {
     checkGrade(grade);
     output={lessons:lessons(grade).map(({id,title,summary,questions})=>({id,title,summary,count:questions.length}))};
   } else if (method==='POST' && ['/api/login','/api/register'].includes(path)) {
-    limit('auth:'+req.socket.remoteAddress,120);
+    limit('auth:'+address,120);
     const id = await authenticate(path,body);
     await run('DELETE FROM sessions WHERE token=?',session.token);
     await setSession(res,id); output={user:await currentUser(id)};

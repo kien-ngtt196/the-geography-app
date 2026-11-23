@@ -5,6 +5,7 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { once } from 'node:events';
 import { createServer } from 'node:http';
+import { Readable } from 'node:stream';
 import { lessons, fraction, selectQuestions, safeQuestion, gradeAttempt } from '../learning.js';
 
 test('Đề giữa kì I lớp 9 khớp thứ tự, phạm vi và điểm phần khách quan', () => {
@@ -55,6 +56,30 @@ test('Học thử, đăng ký, luyện tập, thi thử và chơi theo đội', 
   t.after(()=>new Promise(resolve=>server.close(resolve)));
   const base = 'http://127.0.0.1:'+server.address().port;
   assert.deepEqual(await (await fetch(base+'/api/health')).json(),{ok:true});
+  await t.test('Đăng ký qua Vercel khi yêu cầu không có socket', async () => {
+    const {default:atlas} = await import('../api/atlas.js');
+    const body = {name:'Giáo viên Vercel',password:'local-test-password',role:'teacher',teacherKey:process.env.TEACHER_KEY};
+    const req = Object.assign(Readable.from([Buffer.from(JSON.stringify(body))]),{
+      method:'POST',url:'/api/atlas?atlasPath=register',
+      headers:{'content-type':'application/json','x-vercel-forwarded-for':'192.0.2.1'}
+    });
+    const headers = new Map();
+    let status = 200, result;
+    const res = {
+      setHeader:(name,value)=>headers.set(name,value),
+      writeHead:code=>{ status = code; },
+      end:value=>{ result = JSON.parse(value); }
+    };
+    process.env.VERCEL = '1';
+    try {
+      await atlas(req,res);
+      assert.equal(status,200);
+      assert.equal(result.user?.role,'teacher');
+      assert.match(headers.get('Set-Cookie'),/; Secure$/);
+    } finally {
+      delete process.env.VERCEL;
+    }
+  });
   const home = await (await fetch(base+'/')).text();
   assert.match(home,/href="\/ban-do"/);
   assert.doesNotMatch(home,/id="geomap"|id="activity"|id="study-grid"/);
