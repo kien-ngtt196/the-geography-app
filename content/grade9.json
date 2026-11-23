@@ -1,0 +1,4530 @@
+[
+  {
+    "id": "g9_l1",
+    "title": "Bài 1. Dân tộc và dân số",
+    "summary": "Việt Nam có 54 dân tộc. Dân số tiếp tục tăng dù tỉ lệ tăng có xu hướng giảm. So sánh tỉ trọng các nhóm tuổi để nhận diện già hoá dân số và phân biệt mức tăng tuyệt đối với tỉ lệ tăng.",
+    "questions": [
+      {
+        "id": "g9_l1_mcq_1",
+        "prompt": "Nước ta có bao nhiêu dân tộc?",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án C: 54. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. 52",
+          "B. 53",
+          "C. 54",
+          "D. 55"
+        ],
+        "answer": "C. 54"
+      },
+      {
+        "id": "g9_l1_mcq_2",
+        "prompt": "Năm 2024, người Kinh chiếm khoảng bao nhiêu % tổng số dân?",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án C: 85%. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. 15%",
+          "B. 54%",
+          "C. 85%",
+          "D. 95%"
+        ],
+        "answer": "C. 85%"
+      },
+      {
+        "id": "g9_l1_mcq_3",
+        "prompt": "Người Kinh tập trung nhiều hơn ở khu vực nào?",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: Đồng bằng, ven biển và trung du. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. Đồng bằng, ven biển và trung du",
+          "B. Chỉ ở vùng núi cao",
+          "C. Chỉ ở Tây Nguyên",
+          "D. Chỉ ở Đồng bằng sông Cửu Long"
+        ],
+        "answer": "A. Đồng bằng, ven biển và trung du"
+      },
+      {
+        "id": "g9_l1_mcq_4",
+        "prompt": "Nhóm dân tộc Tày, HMông, Thái, Mường chủ yếu cư trú ở",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án B: Trung du và miền núi phía Bắc. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. Đông Nam Bộ",
+          "B. Trung du và miền núi phía Bắc",
+          "C. Đồng bằng sông Cửu Long",
+          "D. Duyên hải Nam Trung Bộ"
+        ],
+        "answer": "B. Trung du và miền núi phía Bắc"
+      },
+      {
+        "id": "g9_l1_mcq_5",
+        "prompt": "Đặc điểm thay đổi nổi bật trong phân bố dân tộc ở Việt Nam là",
+        "type": "choice",
+        "level": "hiểu",
+        "explanation": "Đáp án C: phạm vi cư trú mở rộng và phân bố ngày càng đan xen. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. phạm vi cư trú thu hẹp dần",
+          "B. các dân tộc tách biệt hơn",
+          "C. phạm vi cư trú mở rộng và phân bố ngày càng đan xen",
+          "D. người Kinh chỉ tập trung ở đồng bằng"
+        ],
+        "answer": "C. phạm vi cư trú mở rộng và phân bố ngày càng đan xen"
+      },
+      {
+        "id": "g9_l1_mcq_6",
+        "prompt": "Năm 2024, dân số Việt Nam đạt",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án D: 101,3 triệu người. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. 76,5 triệu người",
+          "B. 86,0 triệu người",
+          "C. 96,5 triệu người",
+          "D. 101,3 triệu người"
+        ],
+        "answer": "D. 101,3 triệu người"
+      },
+      {
+        "id": "g9_l1_mcq_7",
+        "prompt": "Nhận xét đúng về tỉ lệ tăng dân số giai đoạn 1999–2024 là",
+        "type": "choice",
+        "level": "hiểu",
+        "explanation": "Đáp án B: nhìn chung có xu hướng giảm. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. tăng liên tục",
+          "B. nhìn chung có xu hướng giảm",
+          "C. không thay đổi",
+          "D. giảm liên tục qua mọi mốc năm"
+        ],
+        "answer": "B. nhìn chung có xu hướng giảm"
+      },
+      {
+        "id": "g9_l1_mcq_8",
+        "prompt": "Dân số nước ta vẫn tăng khoảng 1 triệu người mỗi năm dù tỉ lệ tăng dân số có xu hướng giảm chủ yếu vì",
+        "type": "choice",
+        "level": "hiểu",
+        "explanation": "Đáp án A: quy mô dân số đông. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. quy mô dân số đông",
+          "B. tỉ lệ sinh tăng rất cao",
+          "C. tuổi thọ giảm",
+          "D. dân số dưới 15 tuổi tăng"
+        ],
+        "answer": "A. quy mô dân số đông"
+      },
+      {
+        "id": "g9_l1_mcq_9",
+        "prompt": "Biểu hiện rõ nhất của xu hướng già hoá dân số giai đoạn 1999–2024 là",
+        "type": "choice",
+        "level": "hiểu",
+        "explanation": "Đáp án B: tỉ lệ 65 tuổi trở lên tăng. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. tỉ lệ dưới 15 tuổi tăng",
+          "B. tỉ lệ 65 tuổi trở lên tăng",
+          "C. tỉ lệ 15–64 tuổi tăng liên tục",
+          "D. tỉ số giới tính giảm liên tục"
+        ],
+        "answer": "B. tỉ lệ 65 tuổi trở lên tăng"
+      },
+      {
+        "id": "g9_l1_mcq_10",
+        "prompt": "Năm 2024, vấn đề giới tính cần được quan tâm là",
+        "type": "choice",
+        "level": "hiểu",
+        "explanation": "Đáp án B: mất cân bằng giới tính khi sinh. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. tỉ số giới tính dân số chỉ còn 80 nam/100 nữ",
+          "B. mất cân bằng giới tính khi sinh",
+          "C. nữ giới ít hơn nam giới rất nhiều trong toàn dân số",
+          "D. không còn chênh lệch giới tính khi sinh"
+        ],
+        "answer": "B. mất cân bằng giới tính khi sinh"
+      },
+      {
+        "id": "g9_l1_sa_1",
+        "prompt": "Dân số Việt Nam tăng từ 76,5 triệu người năm 1999 lên 101,3 triệu người năm 2024. Mức tăng là bao nhiêu triệu người?",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "101,3 - 76,5 = 24,8 triệu người.",
+        "answer": "24.8"
+      },
+      {
+        "id": "g9_l1_sa_2",
+        "prompt": "Dân số Việt Nam là 76,5 triệu người năm 1999 và 101,3 triệu người năm 2024. Tính tốc độ tăng trưởng năm 2024 so với năm 1999, lấy năm 1999 = 100%.",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "101,3 / 76,5 × 100 ≈ 132,4%.",
+        "answer": "132.4"
+      },
+      {
+        "id": "g9_l1_sa_3",
+        "prompt": "Tỉ lệ tăng dân số giảm từ 1,51% năm 1999 xuống 1,03% năm 2024. Mức giảm là bao nhiêu điểm phần trăm?",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "1,51% - 1,03% = 0,48 điểm phần trăm.",
+        "answer": "0.48"
+      },
+      {
+        "id": "g9_l1_sa_4",
+        "prompt": "Tỉ lệ dân số dưới 15 tuổi giảm từ 33,1% năm 1999 xuống 23,3% năm 2024. Mức giảm là bao nhiêu điểm phần trăm?",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "33,1% - 23,3% = 9,8 điểm phần trăm.",
+        "answer": "9.8"
+      },
+      {
+        "id": "g9_l1_sa_5",
+        "prompt": "Tỉ lệ dân số từ 65 tuổi trở lên tăng từ 5,8% năm 1999 lên 9,3% năm 2024. Mức tăng là bao nhiêu điểm phần trăm?",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "9,3% - 5,8% = 3,5 điểm phần trăm.",
+        "answer": "3.5"
+      },
+      {
+        "id": "g9_l1_sa_6",
+        "prompt": "Năm 2024, nhóm dưới 15 tuổi chiếm 23,3% và nhóm từ 65 tuổi trở lên chiếm 9,3%. Hai nhóm dân số phụ thuộc chiếm tổng cộng bao nhiêu %?",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "23,3% + 9,3% = 32,6%.",
+        "answer": "32.6"
+      },
+      {
+        "id": "g9_l1_sa_7",
+        "prompt": "Tỉ số giới tính tăng từ 98,0 lên 99,7 nam/100 nữ. Mức tăng là bao nhiêu nam/100 nữ?",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "99,7 - 98,0 = 1,7 nam/100 nữ.",
+        "answer": "1.7"
+      }
+    ]
+  },
+  {
+    "id": "g9_l2",
+    "title": "Bài 2. Phân bố dân cư và các loại hình quần cư",
+    "summary": "Dân cư tập trung đông ở đồng bằng, ven biển và đô thị. Mật độ dân số được tính bằng số dân chia diện tích. Quần cư nông thôn và thành thị khác nhau về mật độ, chức năng kinh tế và tổ chức không gian.",
+    "questions": [
+      {
+        "id": "g9_l2_mcq_1",
+        "prompt": "Mật độ dân số Việt Nam năm 2024 là",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án B: 306 người/km². Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. 136 người/km²",
+          "B. 306 người/km²",
+          "C. 1 034 người/km²",
+          "D. 615 người/km²"
+        ],
+        "answer": "B. 306 người/km²"
+      },
+      {
+        "id": "g9_l2_mcq_2",
+        "prompt": "Năm 2024, vùng có mật độ dân số cao nhất cả nước là",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: Đồng bằng sông Hồng. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. Đồng bằng sông Hồng",
+          "B. Trung du và miền núi phía Bắc",
+          "C. Đông Nam Bộ",
+          "D. Bắc Trung Bộ"
+        ],
+        "answer": "A. Đồng bằng sông Hồng"
+      },
+      {
+        "id": "g9_l2_mcq_3",
+        "prompt": "Năm 2024, Trung du và miền núi phía Bắc có mật độ dân số",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: 136 người/km². Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. 136 người/km²",
+          "B. 306 người/km²",
+          "C. 1 034 người/km²",
+          "D. 38,5 người/km²"
+        ],
+        "answer": "A. 136 người/km²"
+      },
+      {
+        "id": "g9_l2_mcq_4",
+        "prompt": "Dân cư nước ta chủ yếu sinh sống ở",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án B: nông thôn. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. thành thị",
+          "B. nông thôn",
+          "C. miền núi cao",
+          "D. hải đảo"
+        ],
+        "answer": "B. nông thôn"
+      },
+      {
+        "id": "g9_l2_mcq_5",
+        "prompt": "Tỉ lệ dân thành thị tăng từ 19,5% năm 1990 lên bao nhiêu năm 2024?",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án B: 38,5%. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. 28,4%",
+          "B. 38,5%",
+          "C. 52,2%",
+          "D. 61,5%"
+        ],
+        "answer": "B. 38,5%"
+      },
+      {
+        "id": "g9_l2_mcq_6",
+        "prompt": "Khu vực nào thường có dân cư đông đúc hơn?",
+        "type": "choice",
+        "level": "hiểu",
+        "explanation": "Đáp án B: Đồng bằng và ven biển. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. Miền núi cao",
+          "B. Đồng bằng và ven biển",
+          "C. Khu vực xa trung tâm kinh tế",
+          "D. Khu vực ít việc làm"
+        ],
+        "answer": "B. Đồng bằng và ven biển"
+      },
+      {
+        "id": "g9_l2_mcq_7",
+        "prompt": "Các vùng kinh tế phát triển năng động thu hút đông dân cư được nêu trong bài là",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: Đông Nam Bộ và Đồng bằng sông Hồng. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. Đông Nam Bộ và Đồng bằng sông Hồng",
+          "B. Bắc Trung Bộ và Tây Nguyên",
+          "C. Trung du và miền núi phía Bắc và Bắc Trung Bộ",
+          "D. Đồng bằng sông Cửu Long và Tây Nguyên"
+        ],
+        "answer": "A. Đông Nam Bộ và Đồng bằng sông Hồng"
+      },
+      {
+        "id": "g9_l2_mcq_8",
+        "prompt": "Hoạt động kinh tế chủ yếu của quần cư thành thị là",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án C: công nghiệp và dịch vụ. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. nông nghiệp",
+          "B. lâm nghiệp",
+          "C. công nghiệp và dịch vụ",
+          "D. khai thác tự nhiên"
+        ],
+        "answer": "C. công nghiệp và dịch vụ"
+      },
+      {
+        "id": "g9_l2_mcq_9",
+        "prompt": "Điểm khác biệt phù hợp giữa quần cư nông thôn và thành thị là",
+        "type": "choice",
+        "level": "hiểu",
+        "explanation": "Đáp án C: nông thôn chủ yếu nông nghiệp; thành thị chủ yếu công nghiệp, dịch vụ. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. nông thôn có mật độ cao hơn thành thị",
+          "B. thành thị cấu trúc thành xã, thôn, bản",
+          "C. nông thôn chủ yếu nông nghiệp; thành thị chủ yếu công nghiệp, dịch vụ",
+          "D. hai loại hình có chức năng hoàn toàn giống nhau"
+        ],
+        "answer": "C. nông thôn chủ yếu nông nghiệp; thành thị chủ yếu công nghiệp, dịch vụ"
+      },
+      {
+        "id": "g9_l2_mcq_10",
+        "prompt": "Một hệ quả của phân bố dân cư không đều được nêu trong bài là",
+        "type": "choice",
+        "level": "hiểu",
+        "explanation": "Đáp án B: nơi đông dân chịu sức ép về môi trường, việc làm. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. không có ảnh hưởng đến việc làm",
+          "B. nơi đông dân chịu sức ép về môi trường, việc làm",
+          "C. mọi vùng đều thiếu lao động",
+          "D. mật độ dân số các vùng trở nên bằng nhau"
+        ],
+        "answer": "B. nơi đông dân chịu sức ép về môi trường, việc làm"
+      },
+      {
+        "id": "g9_l2_sa_1",
+        "prompt": "Năm 2024, mật độ dân số Đồng bằng sông Hồng là 1 034 người/km² và Trung du và miền núi phía Bắc là 136 người/km². Chênh lệch là bao nhiêu người/km²?",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "1 034 - 136 = 898 người/km².",
+        "answer": "898"
+      },
+      {
+        "id": "g9_l2_sa_2",
+        "prompt": "Tỉ lệ dân thành thị tăng từ 19,5% năm 1990 lên 38,5% năm 2024. Mức tăng là bao nhiêu điểm phần trăm?",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "38,5% - 19,5% = 19,0 điểm phần trăm.",
+        "answer": "19.0"
+      },
+      {
+        "id": "g9_l2_sa_3",
+        "prompt": "Từ tỉ lệ dân thành thị năm 1990, vận dụng công thức tỉ lệ dân nông thôn = 100% - tỉ lệ dân thành thị để tính tỉ lệ dân nông thôn năm 1990.",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Tỉ lệ dân nông thôn năm 1990: 100% - 19,5% = 80,5%.",
+        "answer": "80.5"
+      },
+      {
+        "id": "g9_l2_sa_4",
+        "prompt": "Năm 2024, dân nông thôn chiếm 61,5% và dân thành thị chiếm 38,5%. Tỉ lệ dân nông thôn gấp khoảng bao nhiêu lần dân thành thị?",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "61,5 / 38,5 ≈ 1,6 lần.",
+        "answer": "1.6"
+      },
+      {
+        "id": "g9_l2_sa_5",
+        "prompt": "Năm 2024, mật độ dân số Trung du và miền núi phía Bắc là 136 người/km², cả nước là 306 người/km². Mật độ của vùng bằng bao nhiêu % mức cả nước?",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "136 / 306 × 100 ≈ 44,4%.",
+        "answer": "44.4"
+      },
+      {
+        "id": "g9_l2_sa_6",
+        "prompt": "Năm 2024, mật độ dân số cả nước là 306 người/km², Trung du và miền núi phía Bắc là 136 người/km². Chênh lệch là bao nhiêu người/km²?",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "306 - 136 = 170 người/km².",
+        "answer": "170"
+      }
+    ]
+  },
+  {
+    "id": "g9_l3",
+    "title": "Bài 3. Lao động và việc làm",
+    "summary": "Nguồn lao động phân bố không đều và chuyển dịch giữa các ngành. Tỉ trọng lao động trong nông nghiệp có xu hướng giảm. Đào tạo nghề, phát triển ngành mới và thông tin thị trường lao động giúp giải quyết việc làm.",
+    "questions": [
+      {
+        "id": "g9_l3_mcq_1",
+        "prompt": "Năm 2024, lực lượng lao động nước ta chiếm bao nhiêu % tổng số dân?",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án C: 52,2%. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. 28,4%",
+          "B. 38,5%",
+          "C. 52,2%",
+          "D. 61,5%"
+        ],
+        "answer": "C. 52,2%"
+      },
+      {
+        "id": "g9_l3_mcq_2",
+        "prompt": "Năm 2024, lực lượng lao động từ 15 tuổi trở lên là",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án B: 52,9 triệu người. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. 50,4 triệu người",
+          "B. 52,9 triệu người",
+          "C. 54,3 triệu người",
+          "D. 54,8 triệu người"
+        ],
+        "answer": "B. 52,9 triệu người"
+      },
+      {
+        "id": "g9_l3_mcq_3",
+        "prompt": "Tỉ lệ lao động đã qua đào tạo năm 2024 là",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án B: 28,4%. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. 13,8%",
+          "B. 28,4%",
+          "C. 40,2%",
+          "D. 52,2%"
+        ],
+        "answer": "B. 28,4%"
+      },
+      {
+        "id": "g9_l3_mcq_4",
+        "prompt": "Hạn chế của lao động nước ta được nêu trong bài là",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án B: hạn chế về thể lực và kĩ năng chuyên sâu. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. thiếu kinh nghiệm sản xuất",
+          "B. hạn chế về thể lực và kĩ năng chuyên sâu",
+          "C. không có khả năng ứng dụng khoa học – công nghệ",
+          "D. không chăm chỉ, sáng tạo"
+        ],
+        "answer": "B. hạn chế về thể lực và kĩ năng chuyên sâu"
+      },
+      {
+        "id": "g9_l3_mcq_5",
+        "prompt": "Năm 2024, số lao động có việc làm trong nền kinh tế là",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: 50,6 triệu người. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. 50,6 triệu người",
+          "B. 51,9 triệu người",
+          "C. 52,9 triệu người",
+          "D. 54,8 triệu người"
+        ],
+        "answer": "A. 50,6 triệu người"
+      },
+      {
+        "id": "g9_l3_mcq_6",
+        "prompt": "Cơ cấu lao động theo ngành đang chuyển dịch theo hướng",
+        "type": "choice",
+        "level": "hiểu",
+        "explanation": "Đáp án B: công nghiệp hoá, hiện đại hoá và nâng cao năng suất. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. tăng nhanh lao động nông nghiệp",
+          "B. công nghiệp hoá, hiện đại hoá và nâng cao năng suất",
+          "C. chỉ phát triển khu vực Nhà nước",
+          "D. giảm lao động dịch vụ"
+        ],
+        "answer": "B. công nghiệp hoá, hiện đại hoá và nâng cao năng suất"
+      },
+      {
+        "id": "g9_l3_mcq_7",
+        "prompt": "Thành phần kinh tế sử dụng tỉ trọng lao động lớn nhất năm 2024 là",
+        "type": "choice",
+        "level": "hiểu",
+        "explanation": "Đáp án B: Kinh tế ngoài Nhà nước. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. Kinh tế Nhà nước",
+          "B. Kinh tế ngoài Nhà nước",
+          "C. Khu vực có vốn đầu tư nước ngoài",
+          "D. Ba khu vực bằng nhau"
+        ],
+        "answer": "B. Kinh tế ngoài Nhà nước"
+      },
+      {
+        "id": "g9_l3_mcq_8",
+        "prompt": "Vấn đề việc làm cần quan tâm hiện nay là",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: thất nghiệp, thiếu việc làm ở thanh niên còn cao. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. thất nghiệp, thiếu việc làm ở thanh niên còn cao",
+          "B. tỉ lệ thất nghiệp chung tăng liên tục",
+          "C. không còn thiếu việc làm",
+          "D. ngành nghề ngày càng ít"
+        ],
+        "answer": "A. thất nghiệp, thiếu việc làm ở thanh niên còn cao"
+      },
+      {
+        "id": "g9_l3_mcq_9",
+        "prompt": "Lĩnh vực mới được bài học nêu là",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: trí tuệ nhân tạo, logistics, khoa học dữ liệu. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. trí tuệ nhân tạo, logistics, khoa học dữ liệu",
+          "B. chỉ trồng trọt và chăn nuôi",
+          "C. chỉ khai khoáng",
+          "D. chỉ lâm nghiệp"
+        ],
+        "answer": "A. trí tuệ nhân tạo, logistics, khoa học dữ liệu"
+      },
+      {
+        "id": "g9_l3_mcq_10",
+        "prompt": "Giải pháp nào phù hợp với phương hướng giải quyết việc làm?",
+        "type": "choice",
+        "level": "hiểu",
+        "explanation": "Đáp án C: Đẩy mạnh đào tạo, dạy nghề nâng cao chất lượng lao động. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. Giảm đào tạo nghề",
+          "B. Hạn chế thông tin thị trường lao động",
+          "C. Đẩy mạnh đào tạo, dạy nghề nâng cao chất lượng lao động",
+          "D. Thu hẹp hợp tác quốc tế về lao động"
+        ],
+        "answer": "C. Đẩy mạnh đào tạo, dạy nghề nâng cao chất lượng lao động"
+      },
+      {
+        "id": "g9_l3_sa_1",
+        "prompt": "Lực lượng lao động tăng từ 50,4 triệu người năm 2010 lên 52,9 triệu người năm 2024. Mức tăng là bao nhiêu triệu người?",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "52,9 - 50,4 = 2,5 triệu người.",
+        "answer": "2.5"
+      },
+      {
+        "id": "g9_l3_sa_2",
+        "prompt": "Lực lượng lao động giảm từ 54,8 triệu người năm 2020 xuống 50,6 triệu người năm 2021. Mức giảm là bao nhiêu triệu người?",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "54,8 - 50,6 = 4,2 triệu người.",
+        "answer": "4.2"
+      },
+      {
+        "id": "g9_l3_sa_3",
+        "prompt": "Lực lượng lao động tăng từ 50,6 triệu người năm 2021 lên 52,9 triệu người năm 2024. Mức tăng là bao nhiêu triệu người?",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "52,9 - 50,6 = 2,3 triệu người.",
+        "answer": "2.3"
+      },
+      {
+        "id": "g9_l3_sa_4",
+        "prompt": "Tỉ trọng lao động nông, lâm nghiệp và thủy sản giảm từ 49,5% năm 2010 xuống 26,4% năm 2024. Mức giảm là bao nhiêu điểm phần trăm?",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "49,5% - 26,4% = 23,1 điểm phần trăm.",
+        "answer": "23.1"
+      },
+      {
+        "id": "g9_l3_sa_5",
+        "prompt": "Tỉ trọng lao động công nghiệp và xây dựng tăng từ 20,9% năm 2010 lên 33,4% năm 2024. Mức tăng là bao nhiêu điểm phần trăm?",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "33,4% - 20,9% = 12,5 điểm phần trăm.",
+        "answer": "12.5"
+      },
+      {
+        "id": "g9_l3_sa_6",
+        "prompt": "Tỉ trọng lao động dịch vụ tăng từ 29,6% năm 2010 lên 40,2% năm 2024. Mức tăng là bao nhiêu điểm phần trăm?",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "40,2% - 29,6% = 10,6 điểm phần trăm.",
+        "answer": "10.6"
+      },
+      {
+        "id": "g9_l3_sa_7",
+        "prompt": "Năm 2024, lao động dịch vụ chiếm 40,2%, còn nông, lâm nghiệp và thủy sản chiếm 26,4%. Chênh lệch là bao nhiêu điểm phần trăm?",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "40,2% - 26,4% = 13,8 điểm phần trăm.",
+        "answer": "13.8"
+      },
+      {
+        "id": "g9_l3_sa_8",
+        "prompt": "Tỉ trọng lao động khu vực có vốn đầu tư nước ngoài tăng từ 3,5% năm 2010 lên 10,4% năm 2024. Mức tăng là bao nhiêu điểm phần trăm?",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "10,4% - 3,5% = 6,9 điểm phần trăm.",
+        "answer": "6.9"
+      },
+      {
+        "id": "g9_l3_sa_9",
+        "prompt": "Tỉ lệ thất nghiệp giảm từ 2,88% năm 2010 xuống 2,24% năm 2024. Mức giảm là bao nhiêu điểm phần trăm?",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Mức giảm tỉ lệ thất nghiệp: 2,88% - 2,24% = 0,64% ≈ 0,6%.",
+        "answer": "0.6"
+      },
+      {
+        "id": "g9_l3_sa_10",
+        "prompt": "Tỉ lệ thiếu việc làm giảm từ 3,57% năm 2010 xuống 1,85% năm 2024. Mức giảm là bao nhiêu điểm phần trăm?",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "3,57% - 1,85% = 1,72 ≈ 1,7 điểm phần trăm.",
+        "answer": "1.7"
+      }
+    ]
+  },
+  {
+    "id": "g9_l4",
+    "title": "Bài 4. Việc làm ở địa phương và phân hoá thu nhập",
+    "summary": "Chọn số liệu cùng năm và cùng đơn vị để so sánh thu nhập giữa các vùng. Tính mức chênh lệch và số lần chênh lệch, sau đó liên hệ với cơ cấu ngành, kĩ năng lao động và cơ hội việc làm ở địa phương.",
+    "questions": [
+      {
+        "id": "g9_l4_mcq_1",
+        "prompt": "Năm 2010, vùng có thu nhập bình quân đầu người một tháng cao nhất là",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án B: Đông Nam Bộ. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. Bắc Trung Bộ",
+          "B. Đông Nam Bộ",
+          "C. Đồng bằng sông Hồng",
+          "D. Đồng bằng sông Cửu Long"
+        ],
+        "answer": "B. Đông Nam Bộ"
+      },
+      {
+        "id": "g9_l4_mcq_2",
+        "prompt": "Năm 2024, vùng có thu nhập bình quân đầu người một tháng cao nhất là",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: Đông Nam Bộ. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. Đông Nam Bộ",
+          "B. Đồng bằng sông Hồng",
+          "C. Bắc Trung Bộ",
+          "D. Trung du và miền núi phía Bắc"
+        ],
+        "answer": "A. Đông Nam Bộ"
+      },
+      {
+        "id": "g9_l4_mcq_3",
+        "prompt": "Năm 2010, vùng có thu nhập thấp nhất là",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: Bắc Trung Bộ. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. Bắc Trung Bộ",
+          "B. Trung du và miền núi phía Bắc",
+          "C. Duyên hải Nam Trung Bộ và Tây Nguyên",
+          "D. Đồng bằng sông Cửu Long"
+        ],
+        "answer": "A. Bắc Trung Bộ"
+      },
+      {
+        "id": "g9_l4_mcq_4",
+        "prompt": "Năm 2024, vùng có thu nhập thấp nhất là",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: Trung du và miền núi phía Bắc. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. Trung du và miền núi phía Bắc",
+          "B. Bắc Trung Bộ",
+          "C. Duyên hải Nam Trung Bộ và Tây Nguyên",
+          "D. Đồng bằng sông Cửu Long"
+        ],
+        "answer": "A. Trung du và miền núi phía Bắc"
+      },
+      {
+        "id": "g9_l4_mcq_5",
+        "prompt": "Nhận xét đúng về thu nhập các vùng năm 2024 so với 2010 là",
+        "type": "choice",
+        "level": "hiểu",
+        "explanation": "Đáp án A: tất cả các vùng đều tăng. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. tất cả các vùng đều tăng",
+          "B. tất cả các vùng đều giảm",
+          "C. chỉ Đông Nam Bộ tăng",
+          "D. chỉ Đồng bằng sông Hồng tăng"
+        ],
+        "answer": "A. tất cả các vùng đều tăng"
+      },
+      {
+        "id": "g9_l4_mcq_6",
+        "prompt": "Vùng có mức tăng tuyệt đối lớn nhất giai đoạn 2010–2024 là",
+        "type": "choice",
+        "level": "vận dụng",
+        "explanation": "Đáp án A: Đồng bằng sông Hồng. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. Đồng bằng sông Hồng",
+          "B. Đông Nam Bộ",
+          "C. Bắc Trung Bộ",
+          "D. Đồng bằng sông Cửu Long"
+        ],
+        "answer": "A. Đồng bằng sông Hồng"
+      },
+      {
+        "id": "g9_l4_mcq_7",
+        "prompt": "Nội dung nào thuộc cấu trúc báo cáo vấn đề việc làm ở địa phương?",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: Thực trạng, giải pháp và ý nghĩa. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. Thực trạng, giải pháp và ý nghĩa",
+          "B. Chỉ nêu số dân",
+          "C. Chỉ mô tả khí hậu",
+          "D. Chỉ thống kê diện tích"
+        ],
+        "answer": "A. Thực trạng, giải pháp và ý nghĩa"
+      },
+      {
+        "id": "g9_l4_mcq_8",
+        "prompt": "Nguồn tư liệu phù hợp được bài học gợi ý là",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: Niên giám thống kê địa phương. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. Niên giám thống kê địa phương",
+          "B. Truyện ngắn",
+          "C. Từ điển văn học",
+          "D. Bản nhạc"
+        ],
+        "answer": "A. Niên giám thống kê địa phương"
+      },
+      {
+        "id": "g9_l4_mcq_9",
+        "prompt": "Khi nhận xét phân hoá thu nhập theo vùng, cần",
+        "type": "choice",
+        "level": "hiểu",
+        "explanation": "Đáp án B: so sánh sự thay đổi và sự phân hoá giữa các vùng theo từng năm. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. chỉ nêu vùng cao nhất",
+          "B. so sánh sự thay đổi và sự phân hoá giữa các vùng theo từng năm",
+          "C. bỏ qua số liệu năm 2010",
+          "D. không cần kết luận"
+        ],
+        "answer": "B. so sánh sự thay đổi và sự phân hoá giữa các vùng theo từng năm"
+      },
+      {
+        "id": "g9_l4_mcq_10",
+        "prompt": "Nhiệm vụ thực hành số 1 yêu cầu có thể lựa chọn phạm vi",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: cấp tỉnh hoặc cấp xã. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. cấp tỉnh hoặc cấp xã",
+          "B. chỉ cấp quốc gia",
+          "C. chỉ cấp châu lục",
+          "D. chỉ cấp huyện"
+        ],
+        "answer": "A. cấp tỉnh hoặc cấp xã"
+      },
+      {
+        "id": "g9_l4_sa_1",
+        "prompt": "Thu nhập bình quân của Trung du và miền núi phía Bắc tăng từ 907 nghìn đồng năm 2010 lên 3 749 nghìn đồng năm 2024. Mức tăng là bao nhiêu nghìn đồng?",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "3 749 - 907 = 2 842 nghìn đồng.",
+        "answer": "2842"
+      },
+      {
+        "id": "g9_l4_sa_2",
+        "prompt": "Thu nhập bình quân của Đồng bằng sông Hồng tăng từ 1 561 nghìn đồng năm 2010 lên 6 480 nghìn đồng năm 2024. Mức tăng là bao nhiêu nghìn đồng?",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "6 480 - 1 561 = 4 919 nghìn đồng.",
+        "answer": "4919"
+      },
+      {
+        "id": "g9_l4_sa_3",
+        "prompt": "Thu nhập bình quân của Đông Nam Bộ tăng từ 2 212 nghìn đồng năm 2010 lên 6 868 nghìn đồng năm 2024. Tính tốc độ tăng trưởng, lấy năm 2010 = 100%.",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "6 868 / 2 212 × 100 ≈ 310,5%.",
+        "answer": "310.5"
+      },
+      {
+        "id": "g9_l4_sa_4",
+        "prompt": "Năm 2010, thu nhập cao nhất là 2 212 nghìn đồng và thấp nhất là 903 nghìn đồng. Chênh lệch là bao nhiêu nghìn đồng?",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "2 212 - 903 = 1 309 nghìn đồng.",
+        "answer": "1309"
+      },
+      {
+        "id": "g9_l4_sa_5",
+        "prompt": "Năm 2024, thu nhập cao nhất là 6 868 nghìn đồng và thấp nhất là 3 749 nghìn đồng. Chênh lệch là bao nhiêu nghìn đồng?",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "6 868 - 3 749 = 3 119 nghìn đồng.",
+        "answer": "3119"
+      },
+      {
+        "id": "g9_l4_sa_6",
+        "prompt": "Chênh lệch thu nhập cao nhất - thấp nhất là 1 309 nghìn đồng năm 2010 và 3 119 nghìn đồng năm 2024. Mức chênh lệch tăng thêm bao nhiêu nghìn đồng?",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "3 119 - 1 309 = 1 810 nghìn đồng.",
+        "answer": "1810"
+      },
+      {
+        "id": "g9_l4_sa_7",
+        "prompt": "Tổng thu nhập bình quân của 6 vùng năm 2010 là 7 953 nghìn đồng/người/tháng. Trung bình của 6 vùng là bao nhiêu nghìn đồng/người/tháng?",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "7 953 / 6 = 1 325,5 nghìn đồng/người/tháng.",
+        "answer": "1325.5"
+      }
+    ]
+  },
+  {
+    "id": "g9_l5",
+    "title": "Bài 5. Nông nghiệp",
+    "summary": "Đất, nước, khí hậu, thị trường và kĩ thuật ảnh hưởng đến phân bố cây trồng, vật nuôi. Hai châu thổ lớn là vùng trọng điểm lúa. Để so sánh năng suất, chia sản lượng cho diện tích và đổi về cùng đơn vị.",
+    "questions": [
+      {
+        "id": "sgk9-table",
+        "type": "short",
+        "level": "vận dụng",
+        "prompt": "Sản lượng lúa năm 2024 tăng bao nhiêu triệu tấn so với năm 2010?",
+        "context": "SGK Lịch sử và Địa lí 9, bảng 5.1, trang 131. Nhập kết quả theo triệu tấn.",
+        "media": "/media/luong-thuc.jpg",
+        "answer": "3.5",
+        "explanation": "43,5 − 40,0 = 3,5 triệu tấn."
+      },
+      {
+        "id": "sgk9-photo",
+        "type": "choice",
+        "level": "biết",
+        "prompt": "Trang trại ở Măng Đen trong hình áp dụng phương thức nào?",
+        "context": "SGK Lịch sử và Địa lí 9, hình 5.1, trang 131.",
+        "media": "/media/mang-den.jpg",
+        "options": [
+          "Trồng rau thuỷ canh",
+          "Canh tác lúa nước",
+          "Luân canh lúa – tôm"
+        ],
+        "answer": "Trồng rau thuỷ canh"
+      },
+      {
+        "id": "g9_l5_mcq_1",
+        "prompt": "Loại đất chủ yếu ở khu vực đồi núi, thuận lợi cho cây công nghiệp và cây ăn quả là",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án B: đất feralit. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. đất phù sa",
+          "B. đất feralit",
+          "C. đất mặn",
+          "D. đất phèn"
+        ],
+        "answer": "B. đất feralit"
+      },
+      {
+        "id": "g9_l5_mcq_2",
+        "prompt": "Hai vùng trồng lúa trọng điểm của nước ta là",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: ĐBSCL và ĐBSH. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. ĐBSCL và ĐBSH",
+          "B. Đông Nam Bộ và ĐBSH",
+          "C. TDMNPB và Bắc Trung Bộ",
+          "D. DHNTB-Tây Nguyên và Đông Nam Bộ"
+        ],
+        "answer": "A. ĐBSCL và ĐBSH"
+      },
+      {
+        "id": "g9_l5_mcq_3",
+        "prompt": "Năm 2024, trồng trọt chiếm bao nhiêu % giá trị sản xuất ngành nông nghiệp?",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án B: 65,3%. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. 30,6%",
+          "B. 65,3%",
+          "C. 74,4%",
+          "D. 17,9%"
+        ],
+        "answer": "B. 65,3%"
+      },
+      {
+        "id": "g9_l5_mcq_4",
+        "prompt": "Cây công nghiệp lâu năm được trồng chủ yếu ở DHNTB-Tây Nguyên và Đông Nam Bộ là",
+        "type": "choice",
+        "level": "hiểu",
+        "explanation": "Đáp án C: cà phê, điều, hồ tiêu, cao su. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. lạc",
+          "B. mía",
+          "C. cà phê, điều, hồ tiêu, cao su",
+          "D. đậu tương"
+        ],
+        "answer": "C. cà phê, điều, hồ tiêu, cao su"
+      },
+      {
+        "id": "g9_l5_mcq_5",
+        "prompt": "Vùng trồng cây ăn quả lớn nhất nước ta là",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: ĐBSCL. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. ĐBSCL",
+          "B. ĐBSH",
+          "C. Bắc Trung Bộ",
+          "D. TDMNPB"
+        ],
+        "answer": "A. ĐBSCL"
+      },
+      {
+        "id": "g9_l5_mcq_6",
+        "prompt": "Năm 2024, chăn nuôi chiếm bao nhiêu % giá trị sản xuất ngành nông nghiệp?",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: 30,6%. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. 30,6%",
+          "B. 65,3%",
+          "C. 22,6%",
+          "D. 17,9%"
+        ],
+        "answer": "A. 30,6%"
+      },
+      {
+        "id": "g9_l5_mcq_7",
+        "prompt": "Trâu được nuôi nhiều nhất năm 2024 ở",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án C: TDMNPB. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. Đông Nam Bộ",
+          "B. ĐBSH",
+          "C. TDMNPB",
+          "D. ĐBSCL"
+        ],
+        "answer": "C. TDMNPB"
+      },
+      {
+        "id": "g9_l5_mcq_8",
+        "prompt": "Gia cầm được nuôi nhiều nhất ở",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: ĐBSH. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. ĐBSH",
+          "B. ĐBSCL",
+          "C. Bắc Trung Bộ",
+          "D. Đông Nam Bộ"
+        ],
+        "answer": "A. ĐBSH"
+      },
+      {
+        "id": "g9_l5_mcq_9",
+        "prompt": "Nhân tố kinh tế - xã hội trực tiếp mở rộng đầu ra cho nông sản là",
+        "type": "choice",
+        "level": "hiểu",
+        "explanation": "Đáp án A: Thị trường tiêu thụ ngày càng mở rộng. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. Thị trường tiêu thụ ngày càng mở rộng.",
+          "B. Địa hình đồi núi chiếm phần lớn diện tích.",
+          "C. Khí hậu phân hóa theo độ cao.",
+          "D. Sông ngòi có nhiều nước theo mùa."
+        ],
+        "answer": "A. Thị trường tiêu thụ ngày càng mở rộng."
+      },
+      {
+        "id": "g9_l5_mcq_10",
+        "prompt": "Xu hướng cơ cấu nông nghiệp hiện nay là",
+        "type": "choice",
+        "level": "hiểu",
+        "explanation": "Đáp án B: giảm trồng trọt, tăng chăn nuôi và dịch vụ. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. tăng trồng trọt, giảm chăn nuôi",
+          "B. giảm trồng trọt, tăng chăn nuôi và dịch vụ",
+          "C. chỉ tăng trồng trọt",
+          "D. không thay đổi"
+        ],
+        "answer": "B. giảm trồng trọt, tăng chăn nuôi và dịch vụ"
+      },
+      {
+        "id": "g9_l5_tf_1",
+        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "type": "boolean",
+        "level": "hiểu",
+        "explanation": "Kết luận: a) Đúng; b) Đúng; c) Sai; d) Đúng. Các kết luận được đối chiếu trực tiếp với ngữ liệu của câu hỏi.",
+        "context": "Ngữ liệu: Bảng 5.1 cho biết diện tích gieo trồng lương thực có hạt và sản lượng lương thực có hạt, trong đó có lúa, giai đoạn 2010-2024.",
+        "options": [
+          "Diện tích gieo trồng lúa năm 2024 thấp hơn năm 2010.",
+          "Sản lượng lúa năm 2024 cao hơn năm 2010.",
+          "Năng suất lúa năm 2024 thấp hơn năm 2010.",
+          "Diện tích lúa giảm nhưng sản lượng lúa vẫn tăng so với năm 2010."
+        ],
+        "answer": [
+          "Đ",
+          "Đ",
+          "S",
+          "Đ"
+        ]
+      },
+      {
+        "id": "g9_l5_tf_2",
+        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "type": "boolean",
+        "level": "hiểu",
+        "explanation": "Kết luận: a) Đúng; b) Sai; c) Đúng; d) Đúng. Các kết luận được đối chiếu trực tiếp với ngữ liệu của câu hỏi.",
+        "context": "Ngữ liệu: Bảng 5.2 thể hiện diện tích và sản lượng cao su, cà phê, chè các năm 2010, 2015 và 2024.",
+        "options": [
+          "Diện tích cà phê tăng liên tục qua các mốc năm.",
+          "Diện tích chè năm 2024 cao hơn năm 2010.",
+          "Sản lượng cao su năm 2024 lớn hơn khoảng 1,7 lần năm 2010.",
+          "Cà phê có sản lượng năm 2024 lớn nhất trong ba cây nêu trong bảng."
+        ],
+        "answer": [
+          "Đ",
+          "S",
+          "Đ",
+          "Đ"
+        ]
+      },
+      {
+        "id": "g9_l5_tf_3",
+        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "type": "boolean",
+        "level": "hiểu",
+        "explanation": "Kết luận: a) Đúng; b) Đúng; c) Sai; d) Đúng. Các kết luận được đối chiếu trực tiếp với ngữ liệu của câu hỏi.",
+        "context": "Ngữ liệu: Hình 5.3 cho thấy diện tích cây ăn quả tăng từ 779,7 nghìn ha năm 2010 lên 1 297,7 nghìn ha năm 2024.",
+        "options": [
+          "Diện tích cây ăn quả tăng trong toàn giai đoạn 2010-2024.",
+          "Mức tăng 2010-2024 lớn hơn 500 nghìn ha.",
+          "Diện tích năm 2024 gấp hơn 2 lần năm 2010.",
+          "Giai đoạn 2015-2020 tăng nhiều hơn giai đoạn 2020-2024."
+        ],
+        "answer": [
+          "Đ",
+          "Đ",
+          "S",
+          "Đ"
+        ]
+      },
+      {
+        "id": "g9_l5_tf_4",
+        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "type": "boolean",
+        "level": "hiểu",
+        "explanation": "Kết luận: a) Đúng; b) Đúng; c) Đúng; d) Sai. Các kết luận được đối chiếu trực tiếp với ngữ liệu của câu hỏi.",
+        "context": "Ngữ liệu: Bảng 5.3 thể hiện số lượng trâu, bò, lợn và gia cầm giai đoạn 2010-2024.",
+        "options": [
+          "Số lượng trâu giảm liên tục.",
+          "Số lượng gia cầm tăng liên tục.",
+          "Năm 2024 số gia cầm gần gấp đôi năm 2010.",
+          "Số lợn năm 2024 cao hơn năm 2015."
+        ],
+        "answer": [
+          "Đ",
+          "Đ",
+          "Đ",
+          "S"
+        ]
+      },
+      {
+        "id": "g9_l5_tf_5",
+        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "type": "boolean",
+        "level": "hiểu",
+        "explanation": "Kết luận: a) Đúng; b) Đúng; c) Sai; d) Đúng. Các kết luận được đối chiếu trực tiếp với ngữ liệu của câu hỏi.",
+        "context": "Ngữ liệu: Năm 2024, nông nghiệp tăng trưởng 2,9%; trồng trọt chiếm 65,3%, chăn nuôi 30,6% giá trị sản xuất ngành nông nghiệp.",
+        "options": [
+          "Trồng trọt vẫn chiếm tỉ trọng lớn nhất trong ngành nông nghiệp.",
+          "Chăn nuôi chiếm dưới 1/3 giá trị sản xuất ngành nông nghiệp.",
+          "Tổng tỉ trọng trồng trọt và chăn nuôi bằng 100%.",
+          "Phần còn lại ngoài trồng trọt và chăn nuôi là khoảng 4,1%."
+        ],
+        "answer": [
+          "Đ",
+          "Đ",
+          "S",
+          "Đ"
+        ]
+      },
+      {
+        "id": "g9_l5_sa_1",
+        "prompt": "Cho các số liệu: 40,0 triệu tấn / 7,5 triệu ha. Tính năng suất lúa năm 2010 (tạ/ha).",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Năng suất lúa năm 2010: 40,0 triệu tấn / 7,5 triệu ha = 5,33 tấn/ha = 53,3 tạ/ha.",
+        "answer": "53.3"
+      },
+      {
+        "id": "g9_l5_sa_2",
+        "prompt": "Cho các số liệu: 43,5 triệu tấn / 7,1 triệu ha. Tính năng suất lúa năm 2024 (tạ/ha).",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Năng suất lúa năm 2024: 43,5 triệu tấn / 7,1 triệu ha = 6,13 tấn/ha = 61,3 tạ/ha.",
+        "answer": "61.3"
+      },
+      {
+        "id": "g9_l5_sa_3",
+        "prompt": "Tính mức tăng năng suất lúa năm 2024 so với 2010 (tạ/ha).",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Mức tăng năng suất lúa: 61,3 - 53,3 = 8,0 tạ/ha.",
+        "answer": "8.0"
+      },
+      {
+        "id": "g9_l5_sa_4",
+        "prompt": "Cho các số liệu: 7,1 / 8,0 × 100. Tính tỉ lệ diện tích lúa trong tổng diện tích gieo trồng lương thực có hạt năm 2024 (%).",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Tỉ lệ diện tích lúa: 7,1 / 8,0 × 100 ≈ 88,8%.",
+        "answer": "88.8"
+      },
+      {
+        "id": "g9_l5_sa_5",
+        "prompt": "Cho các số liệu: 1 327,7 nghìn tấn / 909,3 nghìn ha. Tính năng suất cao su năm 2024 (tạ/ha).",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Năng suất cao su năm 2024: 1 327,7 nghìn tấn / 909,3 nghìn ha ≈ 1,46 tấn/ha = 14,6 tạ/ha.",
+        "answer": "14.6"
+      },
+      {
+        "id": "g9_l5_sa_6",
+        "prompt": "Tính tốc độ tăng sản lượng cà phê năm 2024 so với 2010 (%; lấy 2010=100).",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Tốc độ tăng sản lượng cà phê: 2 015,2 / 1 100,5 × 100 ≈ 183,1%.",
+        "answer": "183.1"
+      },
+      {
+        "id": "g9_l5_sa_7",
+        "prompt": "Tính mức tăng diện tích cà phê từ 2010 đến 2024 (nghìn ha).",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Mức tăng diện tích cà phê: 710,0 - 532,9 = 177,1 nghìn ha.",
+        "answer": "177.1"
+      },
+      {
+        "id": "g9_l5_sa_8",
+        "prompt": "Tính mức giảm diện tích chè từ 2010 đến 2024 (nghìn ha).",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Mức giảm diện tích chè: 130,0 - 122,0 = 8,0 nghìn ha.",
+        "answer": "8.0"
+      },
+      {
+        "id": "g9_l5_sa_9",
+        "prompt": "Tính số gia cầm năm 2024 gấp bao nhiêu lần năm 2010.",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Số gia cầm gấp: 584,1 / 301,9 ≈ 1,94 lần.",
+        "answer": "1.94"
+      },
+      {
+        "id": "g9_l5_sa_10",
+        "prompt": "Tính mức giảm số lượng trâu từ 2010 đến 2024 (% so với 2010).",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Mức giảm trâu: (2,9 - 2,0) / 2,9 × 100 ≈ 31,0%.",
+        "answer": "31.0"
+      },
+      {
+        "id": "g9_l5_sa_11",
+        "prompt": "(2,9-2,0)/2,9 ×100 ≈ 31,0%.",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Mức giảm trâu: (2,9 - 2,0) / 2,9 × 100 ≈ 31,0%.",
+        "answer": "31.0"
+      }
+    ]
+  },
+  {
+    "id": "g9_l6",
+    "title": "Bài 6. Lâm nghiệp và thuỷ sản",
+    "summary": "Rừng cung cấp lâm sản, bảo vệ đất và điều tiết nước. Ngành thuỷ sản gồm khai thác và nuôi trồng; sông ngòi, mặt nước ven bờ và ngư trường tạo điều kiện sản xuất khác nhau. Bảo vệ nguồn giống giúp duy trì sản lượng lâu dài.",
+    "questions": [
+      {
+        "id": "g9_l6_mcq_1",
+        "prompt": "Tỉ lệ che phủ rừng của nước ta năm 2024 đạt khoảng",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án B: 42%. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. 36%",
+          "B. 42%",
+          "C. 53%",
+          "D. 97%"
+        ],
+        "answer": "B. 42%"
+      },
+      {
+        "id": "g9_l6_mcq_2",
+        "prompt": "Vùng có diện tích rừng lớn nhất năm 2024 là",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án C: TDMNPB. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. ĐBSH",
+          "B. Đông Nam Bộ",
+          "C. TDMNPB",
+          "D. ĐBSCL"
+        ],
+        "answer": "C. TDMNPB"
+      },
+      {
+        "id": "g9_l6_mcq_3",
+        "prompt": "Sản lượng gỗ khai thác năm 2024 đạt khoảng",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án B: 14,9 triệu m³. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. 4 triệu m³",
+          "B. 14,9 triệu m³",
+          "C. 24 triệu m³",
+          "D. 304 triệu m³"
+        ],
+        "answer": "B. 14,9 triệu m³"
+      },
+      {
+        "id": "g9_l6_mcq_4",
+        "prompt": "Rừng sản xuất chiếm hơn bao nhiêu % tổng diện tích rừng năm 2024?",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án B: 53%. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. 42%",
+          "B. 53%",
+          "C. 60%",
+          "D. 97%"
+        ],
+        "answer": "B. 53%"
+      },
+      {
+        "id": "g9_l6_mcq_5",
+        "prompt": "Tổng trữ lượng nguồn lợi thủy sản biển khoảng",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án B: 4 triệu tấn. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. 2 triệu tấn",
+          "B. 4 triệu tấn",
+          "C. 5,8 triệu tấn",
+          "D. 9,7 triệu tấn"
+        ],
+        "answer": "B. 4 triệu tấn"
+      },
+      {
+        "id": "g9_l6_mcq_6",
+        "prompt": "Sản lượng thủy sản nuôi trồng năm 2024 chiếm gần",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án C: 60%. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. 40%",
+          "B. 50%",
+          "C. 60%",
+          "D. 74%"
+        ],
+        "answer": "C. 60%"
+      },
+      {
+        "id": "g9_l6_mcq_7",
+        "prompt": "Vùng có sản lượng thủy sản nuôi trồng lớn nhất là",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: ĐBSCL. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. ĐBSCL",
+          "B. ĐBSH",
+          "C. TDMNPB",
+          "D. Bắc Trung Bộ"
+        ],
+        "answer": "A. ĐBSCL"
+      },
+      {
+        "id": "g9_l6_mcq_8",
+        "prompt": "Năm 2024, cá biển chiếm bao nhiêu % tổng sản lượng khai thác?",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án D: 73,7%. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. 22,6%",
+          "B. 42%",
+          "C. 60%",
+          "D. 73,7%"
+        ],
+        "answer": "D. 73,7%"
+      },
+      {
+        "id": "g9_l6_mcq_9",
+        "prompt": "IUU liên quan trực tiếp đến",
+        "type": "choice",
+        "level": "hiểu",
+        "explanation": "Đáp án A: khai thác hải sản bất hợp pháp, không khai báo và không theo quy định. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. khai thác hải sản bất hợp pháp, không khai báo và không theo quy định",
+          "B. trồng rừng mới",
+          "C. nuôi cá nước ngọt",
+          "D. chế biến gỗ"
+        ],
+        "answer": "A. khai thác hải sản bất hợp pháp, không khai báo và không theo quy định"
+      },
+      {
+        "id": "g9_l6_mcq_10",
+        "prompt": "Nhân tố giúp nâng cao năng suất, hiệu quả và chất lượng thủy sản là",
+        "type": "choice",
+        "level": "hiểu",
+        "explanation": "Đáp án A: khoa học-công nghệ và cơ sở vật chất-kĩ thuật. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. khoa học-công nghệ và cơ sở vật chất-kĩ thuật",
+          "B. địa hình",
+          "C. vĩ độ",
+          "D. đất feralit"
+        ],
+        "answer": "A. khoa học-công nghệ và cơ sở vật chất-kĩ thuật"
+      },
+      {
+        "id": "g9_l6_tf_1",
+        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "type": "boolean",
+        "level": "hiểu",
+        "explanation": "Kết luận: a) Đúng; b) Đúng; c) Sai; d) Đúng. Các kết luận được đối chiếu trực tiếp với ngữ liệu của câu hỏi.",
+        "context": "Ngữ liệu: Năm 2024, tổng diện tích rừng khoảng 14,9 triệu ha; tỉ lệ che phủ rừng 42%; TDMNPB chiếm gần 36% tổng diện tích rừng cả nước.",
+        "options": [
+          "Diện tích rừng của TDMNPB xấp xỉ 5,4 triệu ha.",
+          "TDMNPB có diện tích rừng lớn nhất cả nước.",
+          "Tỉ lệ che phủ rừng cao hơn 50%.",
+          "Diện tích không có rừng chiếm 58% diện tích tự nhiên cả nước."
+        ],
+        "answer": [
+          "Đ",
+          "Đ",
+          "S",
+          "Đ"
+        ]
+      },
+      {
+        "id": "g9_l6_tf_2",
+        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "type": "boolean",
+        "level": "hiểu",
+        "explanation": "Kết luận: a) Đúng; b) Đúng; c) Sai; d) Đúng. Các kết luận được đối chiếu trực tiếp với ngữ liệu của câu hỏi.",
+        "context": "Ngữ liệu: Năm 2024, rừng sản xuất chiếm hơn 53% tổng diện tích rừng; diện tích rừng trồng mới khoảng 304 nghìn ha, trong đó rừng sản xuất chiếm hơn 97%.",
+        "options": [
+          "Rừng sản xuất là loại có tỉ trọng lớn trong tổng diện tích rừng.",
+          "Diện tích rừng sản xuất trồng mới năm 2024 lớn hơn 294 nghìn ha.",
+          "Rừng trồng mới chủ yếu là rừng đặc dụng.",
+          "Phần rừng trồng mới không phải rừng sản xuất nhỏ hơn 10 nghìn ha."
+        ],
+        "answer": [
+          "Đ",
+          "Đ",
+          "S",
+          "Đ"
+        ]
+      },
+      {
+        "id": "g9_l6_tf_3",
+        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "type": "boolean",
+        "level": "hiểu",
+        "explanation": "Kết luận: a) Đúng; b) Đúng; c) Sai; d) Đúng. Các kết luận được đối chiếu trực tiếp với ngữ liệu của câu hỏi.",
+        "context": "Ngữ liệu: Hình 6.2: khai thác 2,5; 3,2; 3,9; 3,9 triệu tấn và nuôi trồng 2,7; 3,6; 4,7; 5,8 triệu tấn tương ứng các năm 2010, 2015, 2020, 2024.",
+        "options": [
+          "Tổng sản lượng thủy sản năm 2024 là 9,7 triệu tấn.",
+          "Nuôi trồng tăng nhanh hơn khai thác trong giai đoạn 2010-2024.",
+          "Tỉ trọng khai thác năm 2024 lớn hơn nuôi trồng.",
+          "Sản lượng nuôi trồng năm 2024 hơn năm 2010 là 3,1 triệu tấn."
+        ],
+        "answer": [
+          "Đ",
+          "Đ",
+          "S",
+          "Đ"
+        ]
+      },
+      {
+        "id": "g9_l6_tf_4",
+        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "type": "boolean",
+        "level": "hiểu",
+        "explanation": "Kết luận: a) Đúng; b) Đúng; c) Sai; d) Đúng. Các kết luận được đối chiếu trực tiếp với ngữ liệu của câu hỏi.",
+        "context": "Ngữ liệu: Năm 2024, giá trị sản xuất thủy sản chiếm 22,6% toàn ngành nông-lâm-thủy sản và tăng trưởng 4,1%.",
+        "options": [
+          "Thủy sản đóng góp dưới 1/4 giá trị sản xuất toàn ngành.",
+          "Tốc độ tăng trưởng thủy sản thấp hơn lâm nghiệp 0,9 %.",
+          "Thủy sản chiếm hơn 50% toàn ngành.",
+          "Lâm nghiệp tăng trưởng 5,0% nhanh hơn thủy sản."
+        ],
+        "answer": [
+          "Đ",
+          "Đ",
+          "S",
+          "Đ"
+        ]
+      },
+      {
+        "id": "g9_l6_tf_5",
+        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "type": "boolean",
+        "level": "hiểu",
+        "explanation": "Kết luận: a) Đúng; b) Đúng; c) Sai; d) Đúng. Các kết luận được đối chiếu trực tiếp với ngữ liệu của câu hỏi.",
+        "context": "Ngữ liệu: Sản lượng gỗ khai thác năm 2024 khoảng 24 triệu m³, gấp 6 lần năm 2010.",
+        "options": [
+          "Sản lượng gỗ khai thác năm 2010 khoảng 4 triệu m³.",
+          "Mức tăng tuyệt đối 2010-2024 khoảng 20 triệu m³.",
+          "Năm 2024 chỉ gấp 3 lần năm 2010.",
+          "Tốc độ tăng năm 2024 so với 2010 khoảng 600% nếu lấy 2010=100."
+        ],
+        "answer": [
+          "Đ",
+          "Đ",
+          "S",
+          "Đ"
+        ]
+      },
+      {
+        "id": "g9_l6_sa_1",
+        "prompt": "Cho các số liệu: 2,7 (nuôi) + 2,5 (khai thác). Tính tổng sản lượng thủy sản năm 2010.",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Tổng sản lượng thủy sản năm 2010: 2,7 (nuôi) + 2,5 (khai thác) = 5,2 triệu tấn.",
+        "answer": "5.2"
+      },
+      {
+        "id": "g9_l6_sa_2",
+        "prompt": "Cho các số liệu: 5,8 (nuôi) + 3,9 (khai thác). Tính tổng sản lượng thủy sản năm 2024.",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Tổng sản lượng thủy sản năm 2024: 5,8 (nuôi) + 3,9 (khai thác) = 9,7 triệu tấn.",
+        "answer": "9.7"
+      },
+      {
+        "id": "g9_l6_sa_3",
+        "prompt": "Cho các số liệu: 2,5 / 5,2 × 100. Tính tỉ trọng thủy sản khai thác năm 2010 (%).",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Tỉ trọng thủy sản khai thác năm 2010: 2,5 / 5,2 × 100 ≈ 48,1%.",
+        "answer": "48.1"
+      },
+      {
+        "id": "g9_l6_sa_4",
+        "prompt": "Cho các số liệu: 5,8 / 9,7 × 100. Tính tỉ trọng thủy sản nuôi trồng năm 2024 (%).",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Tỉ trọng thủy sản nuôi trồng năm 2024: 5,8 / 9,7 × 100 ≈ 59,8%.",
+        "answer": "59.8"
+      },
+      {
+        "id": "g9_l6_sa_5",
+        "prompt": "Tính mức tăng sản lượng nuôi trồng 2010-2024 (triệu tấn).",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Mức tăng sản lượng nuôi trồng: 5,8 - 2,7 = 3,1 triệu tấn.",
+        "answer": "3.1"
+      },
+      {
+        "id": "g9_l6_sa_6",
+        "prompt": "Tính tốc độ tăng sản lượng nuôi trồng năm 2024 so với 2010 (%; 2010=100).",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Tốc độ tăng sản lượng nuôi trồng: 5,8 / 2,7 × 100 ≈ 214,8%.",
+        "answer": "214.8"
+      },
+      {
+        "id": "g9_l6_sa_7",
+        "prompt": "Tính chênh lệch tỉ trọng nuôi trồng giữa 2024 và 2010 (%).",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Chênh lệch tỉ trọng nuôi trồng: 59,8% - 51,9% ≈ 7,9%.",
+        "answer": "7.9"
+      },
+      {
+        "id": "g9_l6_sa_8",
+        "prompt": "Cho các số liệu: 5,8 / 3,9. Tính sản lượng nuôi trồng năm 2024 gấp bao nhiêu lần khai thác cùng năm.",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Nuôi trồng gấp khai thác năm 2024: 5,8 / 3,9 ≈ 1,49 lần.",
+        "answer": "1.49"
+      },
+      {
+        "id": "g9_l6_sa_9",
+        "prompt": "Biết sản lượng gỗ khai thác năm 2024 khoảng 24 triệu m³ và gấp 6 lần năm 2010. Tính sản lượng năm 2010.",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Sản lượng gỗ năm 2010: 24 / 6 = 4,0 triệu m³.",
+        "answer": "4.0"
+      },
+      {
+        "id": "g9_l6_sa_10",
+        "prompt": "Biết diện tích rừng năm 2024 khoảng 14,9 triệu ha, TDMNPB chiếm gần 36%. Tính diện tích rừng của vùng (triệu ha).",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Diện tích rừng TDMNPB: 14,9 triệu ha × 36% ≈ 5,36 triệu ha.",
+        "answer": "5.36"
+      }
+    ]
+  },
+  {
+    "id": "g9_l7",
+    "title": "Bài 7. Báo cáo về một mô hình sản xuất nông nghiệp",
+    "summary": "Mô tả địa bàn, đầu vào, quy trình và đầu ra của mô hình. Đánh giá hiệu quả bằng năng suất, thu nhập và tác động đến môi trường. Ghi nguồn và năm của số liệu để người đọc kiểm tra được kết luận.",
+    "questions": [
+      {
+        "id": "g9_l7_mcq_1",
+        "prompt": "Một mô hình được gợi ý trong bài là",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: trồng trọt hữu cơ. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. trồng trọt hữu cơ",
+          "B. khai thác than",
+          "C. nhiệt điện",
+          "D. luyện kim"
+        ],
+        "answer": "A. trồng trọt hữu cơ"
+      },
+      {
+        "id": "g9_l7_mcq_2",
+        "prompt": "Mô hình nào thuộc lĩnh vực chăn nuôi?",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: chăn nuôi tuần hoàn. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. chăn nuôi tuần hoàn",
+          "B. nuôi trồng thủy sản công nghệ cao",
+          "C. trồng trọt hữu cơ",
+          "D. nông nghiệp thông minh"
+        ],
+        "answer": "A. chăn nuôi tuần hoàn"
+      },
+      {
+        "id": "g9_l7_mcq_3",
+        "prompt": "Nguồn tư liệu được khuyến nghị là",
+        "type": "choice",
+        "level": "hiểu",
+        "explanation": "Đáp án A: trang web có độ tin cậy cao. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. trang web có độ tin cậy cao",
+          "B. mạng xã hội không rõ nguồn",
+          "C. tin truyền miệng",
+          "D. quảng cáo không kiểm chứng"
+        ],
+        "answer": "A. trang web có độ tin cậy cao"
+      },
+      {
+        "id": "g9_l7_mcq_4",
+        "prompt": "Phần mở đầu báo cáo cần",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: giới thiệu khái quát mô hình. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. giới thiệu khái quát mô hình",
+          "B. chỉ nêu kết luận",
+          "C. chỉ nêu số liệu",
+          "D. không cần tên mô hình"
+        ],
+        "answer": "A. giới thiệu khái quát mô hình"
+      },
+      {
+        "id": "g9_l7_mcq_5",
+        "prompt": "Nội dung chính cần có",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: một số sản phẩm từ mô hình. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. một số sản phẩm từ mô hình",
+          "B. chỉ ảnh minh họa",
+          "C. chỉ địa chỉ",
+          "D. chỉ tên người viết"
+        ],
+        "answer": "A. một số sản phẩm từ mô hình"
+      },
+      {
+        "id": "g9_l7_mcq_6",
+        "prompt": "Nội dung chính còn cần trình bày",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: ứng dụng công nghệ sản xuất. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. ứng dụng công nghệ sản xuất",
+          "B. lịch sử thế giới",
+          "C. địa chất",
+          "D. khí tượng synop"
+        ],
+        "answer": "A. ứng dụng công nghệ sản xuất"
+      },
+      {
+        "id": "g9_l7_mcq_7",
+        "prompt": "Ý nghĩa phát triển mô hình thuộc phần",
+        "type": "choice",
+        "level": "hiểu",
+        "explanation": "Đáp án A: nội dung chính. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. nội dung chính",
+          "B. mở đầu",
+          "C. tài liệu tham khảo duy nhất",
+          "D. phụ lục bắt buộc"
+        ],
+        "answer": "A. nội dung chính"
+      },
+      {
+        "id": "g9_l7_mcq_8",
+        "prompt": "Mô hình nuôi trồng thủy sản công nghệ cao thuộc",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: nông nghiệp. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. nông nghiệp",
+          "B. công nghiệp khai khoáng",
+          "C. dịch vụ tài chính",
+          "D. giao thông"
+        ],
+        "answer": "A. nông nghiệp"
+      },
+      {
+        "id": "g9_l7_mcq_9",
+        "prompt": "Mục tiêu của bài thực hành là",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: tìm kiếm thông tin và viết báo cáo ngắn. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. tìm kiếm thông tin và viết báo cáo ngắn",
+          "B. tính mật độ dân số",
+          "C. vẽ bản đồ địa hình",
+          "D. đo nhiệt độ"
+        ],
+        "answer": "A. tìm kiếm thông tin và viết báo cáo ngắn"
+      },
+      {
+        "id": "g9_l7_mcq_10",
+        "prompt": "Khi chọn nguồn, tiêu chí quan trọng nhất là",
+        "type": "choice",
+        "level": "hiểu",
+        "explanation": "Đáp án A: độ tin cậy. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. độ tin cậy",
+          "B. nhiều quảng cáo",
+          "C. không có tác giả",
+          "D. không ghi thời gian"
+        ],
+        "answer": "A. độ tin cậy"
+      },
+      {
+        "id": "g9_l7_tf_1",
+        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "type": "boolean",
+        "level": "hiểu",
+        "explanation": "Kết luận: a) Đúng; b) Sai; c) Đúng; d) Sai. Các kết luận được đối chiếu trực tiếp với ngữ liệu của câu hỏi.",
+        "context": "Ngữ liệu: Bài gợi ý bốn mô hình: trồng trọt hữu cơ, chăn nuôi tuần hoàn, nông nghiệp thông minh, nuôi trồng thủy sản công nghệ cao.",
+        "options": [
+          "Người học có thể lựa chọn một trong bốn mô hình được gợi ý.",
+          "Khai thác khoáng sản là một mô hình được gợi ý.",
+          "Có mô hình thuộc trồng trọt, chăn nuôi và thủy sản.",
+          "Tất cả mô hình đều bắt buộc phải là trồng trọt."
+        ],
+        "answer": [
+          "Đ",
+          "S",
+          "Đ",
+          "S"
+        ]
+      },
+      {
+        "id": "g9_l7_tf_2",
+        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "type": "boolean",
+        "level": "hiểu",
+        "explanation": "Kết luận: a) Đúng; b) Đúng; c) Sai; d) Đúng. Các kết luận được đối chiếu trực tiếp với ngữ liệu của câu hỏi.",
+        "context": "Ngữ liệu: Nguồn tư liệu: các trang web có độ tin cậy cao như Cổng thông tin điện tử Bộ Nông nghiệp và Môi trường, các tỉnh/thành phố, Cục Thống kê; sách, báo, tạp chí.",
+        "options": [
+          "Có thể sử dụng nguồn từ cơ quan nhà nước.",
+          "Sách, báo, tạp chí được chấp nhận làm nguồn.",
+          "Bài khuyến khích dùng mọi nguồn không cần kiểm chứng.",
+          "Độ tin cậy của nguồn là yêu cầu quan trọng."
+        ],
+        "answer": [
+          "Đ",
+          "Đ",
+          "S",
+          "Đ"
+        ]
+      },
+      {
+        "id": "g9_l7_tf_3",
+        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "type": "boolean",
+        "level": "hiểu",
+        "explanation": "Kết luận: a) Đúng; b) Sai; c) Đúng; d) Sai. Các kết luận được đối chiếu trực tiếp với ngữ liệu của câu hỏi.",
+        "context": "Ngữ liệu: Cấu trúc báo cáo gồm mở đầu và nội dung chính; mở đầu giới thiệu khái quát mô hình.",
+        "options": [
+          "Mở đầu nên nêu tên mô hình.",
+          "Mở đầu không cần giới thiệu mô hình.",
+          "Nội dung chính đứng sau phần mở đầu.",
+          "Cấu trúc báo cáo chỉ có một phần duy nhất."
+        ],
+        "answer": [
+          "Đ",
+          "S",
+          "Đ",
+          "S"
+        ]
+      },
+      {
+        "id": "g9_l7_tf_4",
+        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "type": "boolean",
+        "level": "hiểu",
+        "explanation": "Kết luận: a) Đúng; b) Sai; c) Đúng; d) Sai. Các kết luận được đối chiếu trực tiếp với ngữ liệu của câu hỏi.",
+        "context": "Ngữ liệu: Nội dung chính gồm một số sản phẩm sản xuất từ mô hình, ứng dụng công nghệ sản xuất trong mô hình và ý nghĩa của phát triển mô hình.",
+        "options": [
+          "Sản phẩm của mô hình là một nội dung cần trình bày.",
+          "Ứng dụng công nghệ không liên quan đến báo cáo.",
+          "Ý nghĩa phát triển mô hình cần được phân tích.",
+          "Báo cáo chỉ cần nêu tên sản phẩm."
+        ],
+        "answer": [
+          "Đ",
+          "S",
+          "Đ",
+          "S"
+        ]
+      },
+      {
+        "id": "g9_l7_tf_5",
+        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "type": "boolean",
+        "level": "hiểu",
+        "explanation": "Kết luận: a) Đúng; b) Đúng; c) Sai; d) Đúng. Các kết luận được đối chiếu trực tiếp với ngữ liệu của câu hỏi.",
+        "context": "Ngữ liệu: Yêu cầu cần đạt là tìm kiếm thông tin và viết báo cáo về một số mô hình sản xuất nông nghiệp có hiệu quả.",
+        "options": [
+          "Kĩ năng tìm kiếm thông tin là một phần của yêu cầu cần đạt.",
+          "Sản phẩm cuối cùng là một báo cáo.",
+          "Bài yêu cầu bắt buộc tính toán số liệu.",
+          "Bài thực hành chú trọng năng lực vận dụng thông tin."
+        ],
+        "answer": [
+          "Đ",
+          "Đ",
+          "S",
+          "Đ"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "g9_l8",
+    "title": "Bài 8. Công nghiệp",
+    "summary": "Vị trí, nguyên liệu, năng lượng, lao động, hạ tầng và thị trường chi phối phân bố công nghiệp. Nhiệt điện, thuỷ điện và điện gió cần các điều kiện khác nhau. Đọc số liệu sản lượng và cơ cấu để nhận xét chuyển dịch ngành.",
+    "questions": [
+      {
+        "id": "g9_l8_mcq_1",
+        "prompt": "Giá trị sản xuất ngành công nghiệp năm 2024 đạt khoảng",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: 2 929,7 nghìn tỉ đồng. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. 2 929,7 nghìn tỉ đồng",
+          "B. 19 929,7 nghìn tỉ đồng",
+          "C. 293,1 tỉ kWh",
+          "D. 91,7 tỉ kWh"
+        ],
+        "answer": "A. 2 929,7 nghìn tỉ đồng"
+      },
+      {
+        "id": "g9_l8_mcq_2",
+        "prompt": "Hai vùng tập trung hoạt động công nghiệp mạnh nhất là",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: ĐBSH và Đông Nam Bộ. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. ĐBSH và Đông Nam Bộ",
+          "B. TDMNPB và Bắc Trung Bộ",
+          "C. ĐBSCL và Bắc Trung Bộ",
+          "D. DHNTB-Tây Nguyên và ĐBSCL"
+        ],
+        "answer": "A. ĐBSH và Đông Nam Bộ"
+      },
+      {
+        "id": "g9_l8_mcq_3",
+        "prompt": "Dầu thô khai thác trong nước năm 2024 đạt",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: 8,1 triệu tấn. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. 8,1 triệu tấn",
+          "B. 9,9 triệu tấn",
+          "C. 45,3 triệu tấn",
+          "D. 6,4 tỉ m³"
+        ],
+        "answer": "A. 8,1 triệu tấn"
+      },
+      {
+        "id": "g9_l8_mcq_4",
+        "prompt": "Sản lượng điện năm 2024 đạt",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án B: 293,1 tỉ kWh. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. 91,7 tỉ kWh",
+          "B. 293,1 tỉ kWh",
+          "C. 56,6 tỉ kWh",
+          "D. 12,8 tỉ kWh"
+        ],
+        "answer": "B. 293,1 tỉ kWh"
+      },
+      {
+        "id": "g9_l8_mcq_5",
+        "prompt": "Loại điện có tỉ trọng lớn nhất năm 2024 là",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án B: nhiệt điện. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. thủy điện",
+          "B. nhiệt điện",
+          "C. năng lượng tái tạo",
+          "D. nguồn khác"
+        ],
+        "answer": "B. nhiệt điện"
+      },
+      {
+        "id": "g9_l8_mcq_6",
+        "prompt": "Điện gió phát triển mạnh ở",
+        "type": "choice",
+        "level": "hiểu",
+        "explanation": "Đáp án A: DHNTB-Tây Nguyên và ĐBSCL. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. DHNTB-Tây Nguyên và ĐBSCL",
+          "B. ĐBSH và TDMNPB",
+          "C. Bắc Trung Bộ và ĐBSH",
+          "D. Đông Nam Bộ và ĐBSH"
+        ],
+        "answer": "A. DHNTB-Tây Nguyên và ĐBSCL"
+      },
+      {
+        "id": "g9_l8_mcq_7",
+        "prompt": "Ngành sản xuất điện tử, máy vi tính thuộc nhóm",
+        "type": "choice",
+        "level": "hiểu",
+        "explanation": "Đáp án A: công nghiệp công nghệ cao. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. công nghiệp công nghệ cao",
+          "B. khai khoáng",
+          "C. nông nghiệp",
+          "D. dịch vụ"
+        ],
+        "answer": "A. công nghiệp công nghệ cao"
+      },
+      {
+        "id": "g9_l8_mcq_8",
+        "prompt": "Mục tiêu của công nghiệp xanh là",
+        "type": "choice",
+        "level": "hiểu",
+        "explanation": "Đáp án A: thân thiện môi trường và sử dụng hiệu quả tài nguyên. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. thân thiện môi trường và sử dụng hiệu quả tài nguyên",
+          "B. tăng chất thải",
+          "C. tăng khai thác tài nguyên bằng mọi giá",
+          "D. giảm công nghệ"
+        ],
+        "answer": "A. thân thiện môi trường và sử dụng hiệu quả tài nguyên"
+      },
+      {
+        "id": "g9_l8_mcq_9",
+        "prompt": "Sản phẩm nào thuộc công nghiệp chế biến thực phẩm?",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: sữa tươi. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. sữa tươi",
+          "B. than sạch",
+          "C. khí tự nhiên",
+          "D. ti-tan"
+        ],
+        "answer": "A. sữa tươi"
+      },
+      {
+        "id": "g9_l8_mcq_10",
+        "prompt": "Một lợi ích của công nghiệp xanh là",
+        "type": "choice",
+        "level": "hiểu",
+        "explanation": "Đáp án A: giảm thiểu chất thải. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. giảm thiểu chất thải",
+          "B. tăng ô nhiễm",
+          "C. tăng tiêu hao năng lượng",
+          "D. giảm chất lượng sản phẩm"
+        ],
+        "answer": "A. giảm thiểu chất thải"
+      },
+      {
+        "id": "g9_l8_tf_1",
+        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "type": "boolean",
+        "level": "hiểu",
+        "explanation": "Kết luận: a) Đúng; b) Đúng; c) Sai; d) Đúng. Các kết luận được đối chiếu trực tiếp với ngữ liệu của câu hỏi.",
+        "context": "Ngữ liệu: Bảng 8.1 cho biết sản lượng dầu thô, than sạch, khí tự nhiên giai đoạn 2010-2024.",
+        "options": [
+          "Dầu thô giảm từ 15,0 xuống 9,9 triệu tấn.",
+          "Khí tự nhiên năm 2024 thấp hơn năm 2010.",
+          "Than sạch năm 2024 thấp hơn năm 2010.",
+          "Dầu thô khai thác trong nước năm 2024 chiếm khoảng 81,8% tổng dầu thô."
+        ],
+        "answer": [
+          "Đ",
+          "Đ",
+          "S",
+          "Đ"
+        ]
+      },
+      {
+        "id": "g9_l8_tf_2",
+        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "type": "boolean",
+        "level": "hiểu",
+        "explanation": "Kết luận: a) Đúng; b) Đúng; c) Sai; d) Đúng. Các kết luận được đối chiếu trực tiếp với ngữ liệu của câu hỏi.",
+        "context": "Ngữ liệu: Hình 8.2: sản lượng điện tăng từ 91,7 tỉ kWh năm 2010 lên 293,1 tỉ kWh năm 2024; cơ cấu 2010: thủy điện 38,0%, nhiệt điện 56,0%, tái tạo 6,0%; 2024: 28,7%, 56,6%, 12,8%, nguồn khác 1,9%.",
+        "options": [
+          "Sản lượng điện năm 2024 gấp hơn 3 lần năm 2010.",
+          "Tỉ trọng thủy điện giảm.",
+          "Tỉ trọng nhiệt điện giảm mạnh.",
+          "Năng lượng tái tạo tăng 6,8 %."
+        ],
+        "answer": [
+          "Đ",
+          "Đ",
+          "S",
+          "Đ"
+        ]
+      },
+      {
+        "id": "g9_l8_tf_3",
+        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "type": "boolean",
+        "level": "hiểu",
+        "explanation": "Kết luận: a) Đúng; b) Đúng; c) Đúng; d) Sai. Các kết luận được đối chiếu trực tiếp với ngữ liệu của câu hỏi.",
+        "context": "Ngữ liệu: Bảng 8.2 thể hiện sản lượng sữa tươi, thủy sản ướp đông, gạo xay xát, đường kính và dầu thực vật tinh luyện giai đoạn 2010-2024.",
+        "options": [
+          "Sữa tươi tăng liên tục.",
+          "Thủy sản ướp đông năm 2024 thấp hơn năm 2020.",
+          "Gạo xay xát năm 2024 tăng 13,9 triệu tấn so với 2010.",
+          "Dầu thực vật tinh luyện năm 2024 thấp hơn năm 2010."
+        ],
+        "answer": [
+          "Đ",
+          "Đ",
+          "Đ",
+          "S"
+        ]
+      },
+      {
+        "id": "g9_l8_tf_4",
+        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "type": "boolean",
+        "level": "hiểu",
+        "explanation": "Kết luận: a) Đúng; b) Đúng; c) Đúng; d) Sai. Các kết luận được đối chiếu trực tiếp với ngữ liệu của câu hỏi.",
+        "context": "Ngữ liệu: Bảng 8.3: ti vi lắp ráp 2,8; 5,5; 13,6; 15,1 triệu cái; điện thoại di động 37,5; 235,6; 201,6; 149,4; tủ lạnh 1,5;1,6;2,3;4,0.",
+        "options": [
+          "Ti vi lắp ráp tăng liên tục.",
+          "Điện thoại di động đạt cao nhất năm 2015.",
+          "Tủ lạnh năm 2024 gấp khoảng 2,7 lần năm 2010.",
+          "Điện thoại di động năm 2024 cao hơn năm 2015."
+        ],
+        "answer": [
+          "Đ",
+          "Đ",
+          "Đ",
+          "S"
+        ]
+      },
+      {
+        "id": "g9_l8_tf_5",
+        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "type": "boolean",
+        "level": "hiểu",
+        "explanation": "Kết luận: a) Đúng; b) Đúng; c) Đúng; d) Sai. Các kết luận được đối chiếu trực tiếp với ngữ liệu của câu hỏi.",
+        "context": "Ngữ liệu: Bảng 8.4: vải 1,2 lên 3,2 tỉ m²; quần áo 2,6 lên 5,9 tỉ cái; giày dép 192,2 lên 344,2 triệu đôi từ 2010 đến 2024.",
+        "options": [
+          "Cả ba sản phẩm đều tăng.",
+          "Vải tăng 2,0 tỉ m².",
+          "Quần áo năm 2024 gấp hơn 2 lần năm 2010.",
+          "Giày dép tăng dưới 100 triệu đôi."
+        ],
+        "answer": [
+          "Đ",
+          "Đ",
+          "Đ",
+          "S"
+        ]
+      },
+      {
+        "id": "g9_l8_sa_1",
+        "prompt": "Cho các số liệu: 8,1 / 9,9 × 100. Tính tỉ lệ dầu thô khai thác trong nước so với tổng dầu thô năm 2024 (%).",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Tỉ lệ dầu thô khai thác trong nước: 8,1 / 9,9 × 100 ≈ 81,8%.",
+        "answer": "81.8"
+      },
+      {
+        "id": "g9_l8_sa_2",
+        "prompt": "Tính mức giảm khí tự nhiên 2010-2024 (% so với 2010).",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Mức giảm khí tự nhiên: (9,4 - 6,4) / 9,4 × 100 ≈ 31,9%.",
+        "answer": "31.9"
+      },
+      {
+        "id": "g9_l8_sa_3",
+        "prompt": "Tính mức tăng than sạch 2010-2024 (triệu tấn).",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Mức tăng than sạch: 48,6 - 44,8 = 3,8 triệu tấn.",
+        "answer": "3.8"
+      },
+      {
+        "id": "g9_l8_sa_4",
+        "prompt": "Cho các số liệu: 293,1 × 28,7%. Tính sản lượng thủy điện năm 2024 (tỉ kWh).",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Sản lượng thủy điện năm 2024: 293,1 × 28,7% ≈ 84,1 tỉ kWh.",
+        "answer": "84.1"
+      },
+      {
+        "id": "g9_l8_sa_5",
+        "prompt": "Cho các số liệu: 293,1 × 12,8%. Tính sản lượng điện tái tạo năm 2024 (tỉ kWh).",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Sản lượng điện tái tạo năm 2024: 293,1 × 12,8% ≈ 37,5 tỉ kWh.",
+        "answer": "37.5"
+      },
+      {
+        "id": "g9_l8_sa_6",
+        "prompt": "Tính sản lượng điện năm 2024 gấp bao nhiêu lần năm 2010.",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Sản lượng điện gấp: 293,1 / 91,7 ≈ 3,20 lần.",
+        "answer": "3.20"
+      },
+      {
+        "id": "g9_l8_sa_7",
+        "prompt": "Tính tốc độ tăng sản lượng sữa tươi năm 2024 so với 2010 (%; 2010=100).",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Tốc độ tăng sản lượng sữa tươi: 1 601,6 / 520,6 × 100 ≈ 307,6%.",
+        "answer": "307.6"
+      },
+      {
+        "id": "g9_l8_sa_8",
+        "prompt": "Tính mức tăng gạo xay xát 2010-2024 (triệu tấn).",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Mức tăng gạo xay xát: 47,4 - 33,5 = 13,9 triệu tấn.",
+        "answer": "13.9"
+      },
+      {
+        "id": "g9_l8_sa_9",
+        "prompt": "Tính số ti vi lắp ráp năm 2024 gấp bao nhiêu lần năm 2010.",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Số ti vi lắp ráp gấp: 15,1 / 2,8 ≈ 5,39 lần.",
+        "answer": "5.39"
+      },
+      {
+        "id": "g9_l8_sa_10",
+        "prompt": "Tính mức tăng sản lượng vải 2010-2024 (% so với 2010).",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Mức tăng sản lượng vải: (3,2 - 1,2) / 1,2 × 100 ≈ 166,7%.",
+        "answer": "166.7"
+      },
+      {
+        "id": "g9_l8_sa_11",
+        "prompt": "(9,4-6,4)/9,4×100≈31,9%.",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Mức giảm khí tự nhiên: (9,4 - 6,4) / 9,4 × 100 ≈ 31,9%.",
+        "answer": "31.9"
+      },
+      {
+        "id": "g9_l8_sa_12",
+        "prompt": "(3,2-1,2)/1,2×100≈166,7%.",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Mức tăng sản lượng vải: (3,2 - 1,2) / 1,2 × 100 ≈ 166,7%.",
+        "answer": "166.7"
+      }
+    ]
+  },
+  {
+    "id": "g9_l9",
+    "title": "Bài 9. Tổ chức lãnh thổ công nghiệp",
+    "summary": "Dựa vào chú giải để nhận biết khu công nghiệp, trung tâm công nghiệp và quy mô trên bản đồ. Liên hệ vị trí với giao thông, đô thị, lao động và nguồn nguyên liệu để giải thích sự tập trung sản xuất.",
+    "questions": [
+      {
+        "id": "g9_l9_mcq_1",
+        "prompt": "Bài thực hành yêu cầu xác định hai hình thức tổ chức lãnh thổ công nghiệp là",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: khu công nghiệp và khu công nghệ cao. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. khu công nghiệp và khu công nghệ cao",
+          "B. trang trại và nông trường",
+          "C. cảng biển và sân bay",
+          "D. đô thị và nông thôn"
+        ],
+        "answer": "A. khu công nghiệp và khu công nghệ cao"
+      },
+      {
+        "id": "g9_l9_mcq_2",
+        "prompt": "Nguồn bản đồ chính được sử dụng là",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: Hình 8.1 - Bản đồ công nghiệp Việt Nam năm 2024. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. Hình 8.1 - Bản đồ công nghiệp Việt Nam năm 2024",
+          "B. Hình 5.2",
+          "C. Hình 6.1",
+          "D. Hình 8.4"
+        ],
+        "answer": "A. Hình 8.1 - Bản đồ công nghiệp Việt Nam năm 2024"
+      },
+      {
+        "id": "g9_l9_mcq_3",
+        "prompt": "Một loại thông tin cần ghi trong bảng là",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: tên khu công nghiệp/khu công nghệ cao. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. tên khu công nghiệp/khu công nghệ cao",
+          "B. nhiệt độ",
+          "C. lượng mưa",
+          "D. diện tích lúa"
+        ],
+        "answer": "A. tên khu công nghiệp/khu công nghệ cao"
+      },
+      {
+        "id": "g9_l9_mcq_4",
+        "prompt": "Một loại thông tin khác cần ghi là",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: thuộc tỉnh, thành phố. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. thuộc tỉnh, thành phố",
+          "B. mực nước biển",
+          "C. tỉ suất sinh",
+          "D. tuổi thọ"
+        ],
+        "answer": "A. thuộc tỉnh, thành phố"
+      },
+      {
+        "id": "g9_l9_mcq_5",
+        "prompt": "Hình thức nào thuộc tổ chức lãnh thổ công nghiệp?",
+        "type": "choice",
+        "level": "hiểu",
+        "explanation": "Đáp án A: khu công nghệ cao. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. khu công nghệ cao",
+          "B. vùng chuyên canh lúa",
+          "C. ngư trường",
+          "D. vườn quốc gia"
+        ],
+        "answer": "A. khu công nghệ cao"
+      },
+      {
+        "id": "g9_l9_mcq_6",
+        "prompt": "Khu công nghiệp khác khu công nghệ cao chủ yếu ở",
+        "type": "choice",
+        "level": "hiểu",
+        "explanation": "Đáp án A: chức năng và định hướng hoạt động. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. chức năng và định hướng hoạt động",
+          "B. đều là đơn vị hành chính",
+          "C. đều là vùng nông nghiệp",
+          "D. không liên quan sản xuất"
+        ],
+        "answer": "A. chức năng và định hướng hoạt động"
+      },
+      {
+        "id": "g9_l9_mcq_7",
+        "prompt": "Để xác định vị trí, học sinh cần kết hợp bản đồ công nghiệp với",
+        "type": "choice",
+        "level": "hiểu",
+        "explanation": "Đáp án A: bản đồ hành chính Việt Nam. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. bản đồ hành chính Việt Nam",
+          "B. bản đồ khí hậu thế giới",
+          "C. bản đồ địa chất toàn cầu",
+          "D. không cần bản đồ khác"
+        ],
+        "answer": "A. bản đồ hành chính Việt Nam"
+      },
+      {
+        "id": "g9_l9_mcq_8",
+        "prompt": "Bảng mẫu của bài có cột đầu tiên là",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: hình thức tổ chức lãnh thổ công nghiệp. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. hình thức tổ chức lãnh thổ công nghiệp",
+          "B. năm",
+          "C. sản lượng",
+          "D. mật độ"
+        ],
+        "answer": "A. hình thức tổ chức lãnh thổ công nghiệp"
+      },
+      {
+        "id": "g9_l9_mcq_9",
+        "prompt": "Yêu cầu bài thiên về kĩ năng",
+        "type": "choice",
+        "level": "hiểu",
+        "explanation": "Đáp án A: đọc bản đồ và xác định vị trí. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. đọc bản đồ và xác định vị trí",
+          "B. tính toán số liệu",
+          "C. vẽ biểu đồ tròn",
+          "D. viết báo cáo khí hậu"
+        ],
+        "answer": "A. đọc bản đồ và xác định vị trí"
+      },
+      {
+        "id": "g9_l9_mcq_10",
+        "prompt": "Dữ liệu chính của bài là",
+        "type": "choice",
+        "level": "hiểu",
+        "explanation": "Đáp án A: thông tin không gian trên bản đồ. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. thông tin không gian trên bản đồ",
+          "B. chuỗi số liệu nhiều năm",
+          "C. bảng khí hậu",
+          "D. bảng dân số"
+        ],
+        "answer": "A. thông tin không gian trên bản đồ"
+      }
+    ]
+  },
+  {
+    "id": "g9_dichvu",
+    "title": "Bài 10. Dịch vụ",
+    "summary": "Giao thông vận tải kết nối nơi sản xuất với thị trường. Thương mại phân phối hàng hoá, còn du lịch khai thác tài nguyên tự nhiên và văn hoá. Đô thị đông dân và đầu mối giao thông thường tập trung nhiều dịch vụ.",
+    "questions": [
+      {
+        "id": "dv1",
+        "type": "choice",
+        "level": "hiểu",
+        "prompt": "Một hợp tác xã chuyển nông sản bằng xe lạnh tới siêu thị. Hoạt động nối nơi sản xuất với nơi tiêu thụ thuộc ngành nào?",
+        "options": [
+          "Giao thông vận tải",
+          "Trồng trọt",
+          "Khai khoáng"
+        ],
+        "answer": "Giao thông vận tải"
+      }
+    ]
+  },
+  {
+    "id": "g9_l10",
+    "title": "Bài 11. Xu hướng phát triển thương mại và du lịch",
+    "summary": "Thương mại điện tử, mở rộng thị trường và liên kết điểm đến làm thay đổi hoạt động dịch vụ. Phân biệt doanh thu, số lượt khách và tốc độ tăng. Dẫn chứng cần có nguồn, thời điểm và đơn vị.",
+    "questions": [
+      {
+        "id": "g9_l10_mcq_1",
+        "prompt": "Nội dung thực hành của bài là phân tích xu hướng phát triển mới trong",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án B: thương mại và du lịch. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. nông nghiệp và công nghiệp",
+          "B. thương mại và du lịch",
+          "C. giao thông và bưu chính",
+          "D. tài chính và ngân hàng"
+        ],
+        "answer": "B. thương mại và du lịch"
+      },
+      {
+        "id": "g9_l10_mcq_2",
+        "prompt": "Xu hướng nào được nêu đối với ngành thương mại?",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: Phát triển thương mại điện tử. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. Phát triển thương mại điện tử",
+          "B. Thu hẹp loại hình kinh doanh",
+          "C. Giảm xuất khẩu hàng thế mạnh",
+          "D. Chỉ tập trung một thị trường"
+        ],
+        "answer": "A. Phát triển thương mại điện tử"
+      },
+      {
+        "id": "g9_l10_mcq_3",
+        "prompt": "Một xu hướng khác của thương mại là",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: đa dạng hoá các loại hình kinh doanh. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. đa dạng hoá các loại hình kinh doanh",
+          "B. chỉ phát triển chợ truyền thống",
+          "C. giảm xây dựng thương hiệu",
+          "D. hạn chế xuất nhập khẩu"
+        ],
+        "answer": "A. đa dạng hoá các loại hình kinh doanh"
+      },
+      {
+        "id": "g9_l10_mcq_4",
+        "prompt": "Định hướng xuất khẩu được nêu trong bài là",
+        "type": "choice",
+        "level": "hiểu",
+        "explanation": "Đáp án A: đẩy mạnh các mặt hàng thế mạnh và phát triển thương hiệu hàng hoá Việt Nam. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. đẩy mạnh các mặt hàng thế mạnh và phát triển thương hiệu hàng hoá Việt Nam",
+          "B. chỉ xuất khẩu nguyên liệu thô",
+          "C. giảm đa dạng hoá thị trường",
+          "D. chỉ bán trong nước"
+        ],
+        "answer": "A. đẩy mạnh các mặt hàng thế mạnh và phát triển thương hiệu hàng hoá Việt Nam"
+      },
+      {
+        "id": "g9_l10_mcq_5",
+        "prompt": "Xu hướng của thị trường xuất, nhập khẩu là",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án B: đa dạng hoá. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. thu hẹp",
+          "B. đa dạng hoá",
+          "C. chỉ hướng tới một nước",
+          "D. ngừng nhập khẩu"
+        ],
+        "answer": "B. đa dạng hoá"
+      },
+      {
+        "id": "g9_l10_mcq_6",
+        "prompt": "Xu hướng phát triển du lịch đầu tiên được nêu là",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: du lịch bền vững. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. du lịch bền vững",
+          "B. du lịch tự phát",
+          "C. du lịch khép kín",
+          "D. du lịch không công nghệ"
+        ],
+        "answer": "A. du lịch bền vững"
+      },
+      {
+        "id": "g9_l10_mcq_7",
+        "prompt": "Phát triển du lịch thông minh gắn nhiều nhất với",
+        "type": "choice",
+        "level": "hiểu",
+        "explanation": "Đáp án A: ứng dụng công nghệ và dữ liệu trong hoạt động du lịch. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. ứng dụng công nghệ và dữ liệu trong hoạt động du lịch",
+          "B. giảm thông tin cho khách",
+          "C. loại bỏ dịch vụ trực tuyến",
+          "D. chỉ tăng số khách"
+        ],
+        "answer": "A. ứng dụng công nghệ và dữ liệu trong hoạt động du lịch"
+      },
+      {
+        "id": "g9_l10_mcq_8",
+        "prompt": "Đa dạng hoá sản phẩm du lịch có ý nghĩa chủ yếu là",
+        "type": "choice",
+        "level": "hiểu",
+        "explanation": "Đáp án A: đáp ứng nhiều nhu cầu khác nhau của du khách. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. đáp ứng nhiều nhu cầu khác nhau của du khách",
+          "B. giảm khả năng lựa chọn",
+          "C. thu hẹp thị trường khách",
+          "D. chỉ phát triển một điểm đến"
+        ],
+        "answer": "A. đáp ứng nhiều nhu cầu khác nhau của du khách"
+      },
+      {
+        "id": "g9_l10_mcq_9",
+        "prompt": "Quyết định 1163/QĐ-TTg được bài gợi ý để tìm hiểu về",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: chiến lược phát triển thương mại trong nước. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. chiến lược phát triển thương mại trong nước",
+          "B. chiến lược lâm nghiệp",
+          "C. chiến lược dân số",
+          "D. quy hoạch điện"
+        ],
+        "answer": "A. chiến lược phát triển thương mại trong nước"
+      },
+      {
+        "id": "g9_l10_mcq_10",
+        "prompt": "Quyết định 147/QĐ-TTg được bài gợi ý để tìm hiểu về",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: chiến lược phát triển du lịch Việt Nam đến năm 2030. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. chiến lược phát triển du lịch Việt Nam đến năm 2030",
+          "B. chiến lược xuất nhập khẩu hàng hoá",
+          "C. chiến lược phát triển dân số",
+          "D. chiến lược khoáng sản"
+        ],
+        "answer": "A. chiến lược phát triển du lịch Việt Nam đến năm 2030"
+      }
+    ]
+  },
+  {
+    "id": "g9_l11",
+    "title": "Bài 12. Trung du và miền núi phía Bắc",
+    "summary": "Đông Bắc có nhiều núi thấp hướng vòng cung; Tây Bắc có núi cao và thung lũng hướng tây bắc – đông nam. Khí hậu phân hoá theo độ cao, khoáng sản và sông dốc tạo điều kiện cho cây cận nhiệt, khai khoáng và thuỷ điện.",
+    "questions": [
+      {
+        "id": "g9_l11_mcq_1",
+        "prompt": "Năm 2024, diện tích vùng Trung du và miền núi phía Bắc khoảng",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: 92,5 nghìn km². Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. 92,5 nghìn km²",
+          "B. 23,94 nghìn km²",
+          "C. 51,2 nghìn km²",
+          "D. 28,0 nghìn km²"
+        ],
+        "answer": "A. 92,5 nghìn km²"
+      },
+      {
+        "id": "g9_l11_mcq_2",
+        "prompt": "Đối với vùng Trung du và miền núi phía Bắc, vùng tiếp giáp quốc gia nào?",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: Trung Quốc và Lào. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. Trung Quốc và Lào",
+          "B. Lào và Cam-pu-chia",
+          "C. Trung Quốc và Cam-pu-chia",
+          "D. Thái Lan và Lào"
+        ],
+        "answer": "A. Trung Quốc và Lào"
+      },
+      {
+        "id": "g9_l11_mcq_3",
+        "prompt": "Đối với vùng Trung du và miền núi phía Bắc, đặc điểm địa hình nổi bật của Đông Bắc là",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: núi trung bình và núi thấp chiếm diện tích lớn, hướng cánh cung. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. núi trung bình và núi thấp chiếm diện tích lớn, hướng cánh cung",
+          "B. địa hình cao, Hoàng Liên Sơn cao nhất nước",
+          "C. đồng bằng rộng lớn",
+          "D. cao nguyên badan xếp tầng"
+        ],
+        "answer": "A. núi trung bình và núi thấp chiếm diện tích lớn, hướng cánh cung"
+      },
+      {
+        "id": "g9_l11_mcq_4",
+        "prompt": "Đối với vùng Trung du và miền núi phía Bắc, tây Bắc có thế mạnh thủy điện lớn chủ yếu do",
+        "type": "choice",
+        "level": "hiểu",
+        "explanation": "Đáp án A: sông ngòi có độ dốc lớn, lưu lượng dồi dào. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. sông ngòi có độ dốc lớn, lưu lượng dồi dào",
+          "B. địa hình thấp và bằng phẳng",
+          "C. ít sông",
+          "D. khí hậu khô hạn quanh năm"
+        ],
+        "answer": "A. sông ngòi có độ dốc lớn, lưu lượng dồi dào"
+      },
+      {
+        "id": "g9_l11_mcq_5",
+        "prompt": "Đối với vùng Trung du và miền núi phía Bắc, năm 2024, dân số vùng khoảng",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: 12,6 triệu người. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. 12,6 triệu người",
+          "B. 24,75 triệu người",
+          "C. 21,0 triệu người",
+          "D. 15,8 triệu người"
+        ],
+        "answer": "A. 12,6 triệu người"
+      },
+      {
+        "id": "g9_l11_mcq_6",
+        "prompt": "Đối với vùng Trung du và miền núi phía Bắc, dân tộc thiểu số trong vùng chiếm",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: hơn 50% dân số toàn vùng. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. hơn 50% dân số toàn vùng",
+          "B. dưới 10%",
+          "C. khoảng 15%",
+          "D. 100%"
+        ],
+        "answer": "A. hơn 50% dân số toàn vùng"
+      },
+      {
+        "id": "g9_l11_mcq_7",
+        "prompt": "Đối với vùng Trung du và miền núi phía Bắc, mật độ dân số thấp nhất năm 2024 thuộc tỉnh",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: Lai Châu. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. Lai Châu",
+          "B. Phú Thọ",
+          "C. Thái Nguyên",
+          "D. Cao Bằng"
+        ],
+        "answer": "A. Lai Châu"
+      },
+      {
+        "id": "g9_l11_mcq_8",
+        "prompt": "Đối với vùng Trung du và miền núi phía Bắc, cơ cấu GRDP chuyển dịch theo hướng",
+        "type": "choice",
+        "level": "hiểu",
+        "explanation": "Đáp án A: giảm nông, lâm, thủy sản; tăng công nghiệp và xây dựng. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. giảm nông, lâm, thủy sản; tăng công nghiệp và xây dựng",
+          "B. tăng nông nghiệp, giảm công nghiệp",
+          "C. không thay đổi",
+          "D. chỉ tăng thuế sản phẩm"
+        ],
+        "answer": "A. giảm nông, lâm, thủy sản; tăng công nghiệp và xây dựng"
+      },
+      {
+        "id": "g9_l11_mcq_9",
+        "prompt": "Đối với vùng Trung du và miền núi phía Bắc, cây công nghiệp đặc trưng được trồng nhiều ở Thái Nguyên, Phú Thọ, Tuyên Quang là",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: chè. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. chè",
+          "B. cà phê",
+          "C. cao su",
+          "D. dừa"
+        ],
+        "answer": "A. chè"
+      },
+      {
+        "id": "g9_l11_mcq_10",
+        "prompt": "Đối với vùng Trung du và miền núi phía Bắc, hai nhà máy thủy điện có công suất 2 400 MW được nêu trong bài là",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: Hòa Bình và Sơn La. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. Hòa Bình và Sơn La",
+          "B. Lai Châu và Tuyên Quang",
+          "C. Sơn La và Lai Châu",
+          "D. Hòa Bình và Tuyên Quang"
+        ],
+        "answer": "A. Hòa Bình và Sơn La"
+      },
+      {
+        "id": "g9_l11_sa_1",
+        "prompt": "Tính mức giảm tỉ trọng nông nghiệp, lâm nghiệp và thủy sản của vùng từ năm 2010 đến năm 2024 (đơn vị: %).",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Mức giảm tỉ trọng nông-lâm-thủy sản TDMNPB: 24,5% - 16,0% = 8,5%.",
+        "answer": "8.5"
+      },
+      {
+        "id": "g9_l11_sa_2",
+        "prompt": "Cho các số liệu: 28,4% - 16,0%. Năm 2024, tỉ trọng công nghiệp và xây dựng cao hơn nông nghiệp, lâm nghiệp và thủy sản bao nhiêu %?",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Chênh lệch tỉ trọng công nghiệp và nông nghiệp năm 2024: 28,4% - 16,0% = 12,4%.",
+        "answer": "12.4"
+      },
+      {
+        "id": "g9_l11_sa_3",
+        "prompt": "Tính mức giảm số lượng trâu của vùng từ năm 2010 đến năm 2024 (triệu con).",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Mức giảm số lượng trâu: 1,9 - 1,5 = 0,4 triệu con.",
+        "answer": "0.4"
+      },
+      {
+        "id": "g9_l11_sa_4",
+        "prompt": "Tính tốc độ tăng số lượng bò năm 2024 so với năm 2010 (lấy năm 2010 = 100%).",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Tốc độ tăng số lượng bò: 1,1 / 0,85 × 100 ≈ 128,5%.",
+        "answer": "128.5"
+      },
+      {
+        "id": "g9_l11_sa_5",
+        "prompt": "Năm 2024, dân số vùng là 12,6 triệu người và diện tích tự nhiên khoảng 92,5 nghìn km². Tính mật độ dân số của vùng (người/km², làm tròn đến hàng đơn vị).",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Mật độ dân số TDMNPB: 12,6 triệu người / 95,0 nghìn km² ≈ 132,6 người/km².",
+        "answer": "132.6"
+      },
+      {
+        "id": "g9_l11_sa_6",
+        "prompt": "Thu nhập bình quân đầu người/tháng tăng từ 0,9 triệu đồng năm 2010 lên 3,7 triệu đồng năm 2024. Tính tốc độ tăng thu nhập năm 2024 so với năm 2010 (lấy năm 2010 = 100%; làm tròn đến hàng đơn vị).",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Mức tăng thu nhập bình quân: 4,2 - 0,9 = 3,3 triệu đồng.",
+        "answer": "3.3"
+      }
+    ]
+  },
+  {
+    "id": "g9_l12",
+    "title": "Bài 13. Đồng bằng sông Hồng",
+    "summary": "Đất phù sa, khí hậu có mùa đông lạnh và dân cư đông tạo điều kiện cho thâm canh lúa, cây vụ đông và phát triển dịch vụ. Mạng lưới đô thị, cảng và giao thông liên kết sản xuất với thị trường.",
+    "questions": [
+      {
+        "id": "g9_l12_mcq_1",
+        "prompt": "Diện tích tự nhiên vùng Đồng bằng sông Hồng năm 2024 khoảng",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: 23,94 nghìn km². Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. 23,94 nghìn km²",
+          "B. 92,5 nghìn km²",
+          "C. 51,2 nghìn km²",
+          "D. 36,4 nghìn km²"
+        ],
+        "answer": "A. 23,94 nghìn km²"
+      },
+      {
+        "id": "g9_l12_mcq_2",
+        "prompt": "Đối với vùng Đồng bằng sông Hồng, năm 2024, quy mô dân số vùng khoảng",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: 24,75 triệu người. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. 24,75 triệu người",
+          "B. 12,6 triệu người",
+          "C. 11,3 triệu người",
+          "D. 15,9 triệu người"
+        ],
+        "answer": "A. 24,75 triệu người"
+      },
+      {
+        "id": "g9_l12_mcq_3",
+        "prompt": "Đối với vùng Đồng bằng sông Hồng, mật độ dân số năm 2024 của vùng là",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: 1 034 người/km². Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. 1 034 người/km²",
+          "B. 306 người/km²",
+          "C. 221 người/km²",
+          "D. 749 người/km²"
+        ],
+        "answer": "A. 1 034 người/km²"
+      },
+      {
+        "id": "g9_l12_mcq_4",
+        "prompt": "Đối với vùng Đồng bằng sông Hồng, nhóm 65 tuổi trở lên năm 2024 chiếm",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: 11,4%. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. 11,4%",
+          "B. 7,1%",
+          "C. 10,0%",
+          "D. 9,3%"
+        ],
+        "answer": "A. 11,4%"
+      },
+      {
+        "id": "g9_l12_mcq_5",
+        "prompt": "Đối với vùng Đồng bằng sông Hồng, lực lượng lao động từ 15 tuổi trở lên năm 2024 khoảng",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: 12,3 triệu người. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. 12,3 triệu người",
+          "B. 21,0 triệu người",
+          "C. 15,8 triệu người",
+          "D. 9,4 triệu người"
+        ],
+        "answer": "A. 12,3 triệu người"
+      },
+      {
+        "id": "g9_l12_mcq_6",
+        "prompt": "Đối với vùng Đồng bằng sông Hồng, đô thị đặc biệt và trung tâm lớn nhất vùng là",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: Hà Nội. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. Hà Nội",
+          "B. Hải Phòng",
+          "C. Bắc Ninh",
+          "D. Quảng Ninh"
+        ],
+        "answer": "A. Hà Nội"
+      },
+      {
+        "id": "g9_l12_mcq_7",
+        "prompt": "Đối với vùng Đồng bằng sông Hồng, năm 2024, GRDP Hà Nội chiếm khoảng bao nhiêu GRDP toàn vùng?",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: 41%. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. 41%",
+          "B. 23,6%",
+          "C. 74,4%",
+          "D. 12,4%"
+        ],
+        "answer": "A. 41%"
+      },
+      {
+        "id": "g9_l12_mcq_8",
+        "prompt": "Đối với vùng Đồng bằng sông Hồng, ngành kinh tế chiếm tỉ trọng lớn nhất trong cơ cấu GRDP vùng năm 2024 là",
+        "type": "choice",
+        "level": "hiểu",
+        "explanation": "Đáp án A: dịch vụ. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. dịch vụ",
+          "B. công nghiệp và xây dựng",
+          "C. nông nghiệp",
+          "D. thuế sản phẩm"
+        ],
+        "answer": "A. dịch vụ"
+      },
+      {
+        "id": "g9_l12_mcq_9",
+        "prompt": "Đối với vùng Đồng bằng sông Hồng, vùng sản xuất cây lương thực lớn thứ hai cả nước là",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: Đồng bằng sông Hồng. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. Đồng bằng sông Hồng",
+          "B. Đông Nam Bộ",
+          "C. Bắc Trung Bộ",
+          "D. Trung du và miền núi phía Bắc"
+        ],
+        "answer": "A. Đồng bằng sông Hồng"
+      },
+      {
+        "id": "g9_l12_mcq_10",
+        "prompt": "Đối với vùng Đồng bằng sông Hồng, hai đầu mối giao thông vận tải quan trọng nhất vùng được nêu là",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: Hà Nội và Hải Phòng. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. Hà Nội và Hải Phòng",
+          "B. Hà Nội và Ninh Bình",
+          "C. Bắc Ninh và Hưng Yên",
+          "D. Quảng Ninh và Ninh Bình"
+        ],
+        "answer": "A. Hà Nội và Hải Phòng"
+      },
+      {
+        "id": "g9_l12_sa_1",
+        "prompt": "Tính số dân thành thị tăng thêm của vùng từ năm 1999 đến năm 2024 (triệu người).",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Dân số thành thị tăng thêm ĐBH: 9,8 - 5,6 = 4,2 triệu người.",
+        "answer": "4.2"
+      },
+      {
+        "id": "g9_l12_sa_2",
+        "prompt": "Năm 2024, tỉ lệ dân thành thị là 38,1%. Tính tỉ lệ dân nông thôn của vùng (%).",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Tỉ lệ dân nông thôn: 100% - 38.1% = 61,9%.",
+        "answer": "61.9"
+      },
+      {
+        "id": "g9_l12_sa_3",
+        "prompt": "Tính mức giảm diện tích gieo trồng lương thực có hạt từ năm 2010 đến năm 2024 (triệu ha).",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Mức giảm diện tích lương thực ĐBH: 1 250 - 1 125 = 125,0 nghìn ha.",
+        "answer": "125.0"
+      },
+      {
+        "id": "g9_l12_sa_4",
+        "prompt": "Tính mức giảm sản lượng lúa từ năm 2010 đến năm 2024 (triệu tấn).",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Mức giảm sản lượng lúa ĐBH: 6,8 - 6,2 = 0,6 triệu tấn.",
+        "answer": "0.6"
+      },
+      {
+        "id": "g9_l12_sa_5",
+        "prompt": "Tính tốc độ tăng tổng sản lượng thủy sản năm 2024 so với năm 2010 (lấy năm 2010 = 100%; làm tròn đến hàng đơn vị).",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Tốc độ tăng sản lượng thủy sản ĐBH: 1,32 / 0,80 × 100 ≈ 165,0%.",
+        "answer": "165.0"
+      },
+      {
+        "id": "g9_l12_sa_6",
+        "prompt": "Năm 2024, dân số vùng khoảng 24,75 triệu người, lực lượng lao động từ 15 tuổi trở lên khoảng 12,3 triệu người. Tính tỉ lệ lực lượng lao động so với dân số (%; làm tròn 1 chữ số thập phân).",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Lực lượng lao động ĐBH: 24,75 triệu người × 55% ≈ 13,6 triệu người.",
+        "answer": "13.6"
+      },
+      {
+        "id": "g9_l12_sa_7",
+        "prompt": "Năm 2024, nhóm dưới 15 tuổi chiếm 24,0%, nhóm từ 65 tuổi trở lên chiếm 11,4%. Tính tỉ lệ dân số từ 15 đến 64 tuổi (%).",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Tỉ lệ nhóm 15-64 tuổi: 100% - 24.0% - 11.4% = 64.6%.",
+        "answer": "64.6"
+      }
+    ]
+  },
+  {
+    "id": "g9_l13",
+    "title": "Bài 14. Bắc Trung Bộ",
+    "summary": "Lãnh thổ kéo dài, hẹp ngang, từ tây sang đông có miền núi, đồng bằng và dải ven biển. Các khu vực có thể liên kết lâm nghiệp, nông nghiệp và kinh tế biển. Bão, lũ và gió khô nóng ảnh hưởng đến sinh kế.",
+    "questions": [
+      {
+        "id": "g9_l13_mcq_1",
+        "prompt": "Diện tích tự nhiên Bắc Trung Bộ năm 2024 khoảng",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: 51,2 nghìn km². Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. 51,2 nghìn km²",
+          "B. 28,0 nghìn km²",
+          "C. 36,4 nghìn km²",
+          "D. 23,94 nghìn km²"
+        ],
+        "answer": "A. 51,2 nghìn km²"
+      },
+      {
+        "id": "g9_l13_mcq_2",
+        "prompt": "Đối với vùng Bắc Trung Bộ, năm 2024, dân số vùng khoảng",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: 11,3 triệu người. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. 11,3 triệu người",
+          "B. 12,6 triệu người",
+          "C. 15,9 triệu người",
+          "D. 21,0 triệu người"
+        ],
+        "answer": "A. 11,3 triệu người"
+      },
+      {
+        "id": "g9_l13_mcq_3",
+        "prompt": "Đối với vùng Bắc Trung Bộ, mật độ dân số năm 2024 khoảng",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: 221 người/km². Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. 221 người/km²",
+          "B. 749 người/km²",
+          "C. 1 034 người/km²",
+          "D. 160 người/km²"
+        ],
+        "answer": "A. 221 người/km²"
+      },
+      {
+        "id": "g9_l13_mcq_4",
+        "prompt": "Đối với vùng Bắc Trung Bộ, dân cư tập trung đông hơn ở",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: đồng bằng ven biển phía đông. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. đồng bằng ven biển phía đông",
+          "B. đồi núi phía tây",
+          "C. chỉ dọc biên giới",
+          "D. các đảo xa bờ"
+        ],
+        "answer": "A. đồng bằng ven biển phía đông"
+      },
+      {
+        "id": "g9_l13_mcq_5",
+        "prompt": "Đối với vùng Bắc Trung Bộ, tỉ lệ dân nông thôn năm 2024",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: hơn 74%. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. hơn 74%",
+          "B. khoảng 37%",
+          "C. dưới 20%",
+          "D. hơn 90%"
+        ],
+        "answer": "A. hơn 74%"
+      },
+      {
+        "id": "g9_l13_mcq_6",
+        "prompt": "Đối với vùng Bắc Trung Bộ, cơ cấu kinh tế chuyển dịch theo hướng",
+        "type": "choice",
+        "level": "hiểu",
+        "explanation": "Đáp án A: tăng công nghiệp và xây dựng, dịch vụ chiếm tỉ trọng cao. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. tăng công nghiệp và xây dựng, dịch vụ chiếm tỉ trọng cao",
+          "B. tăng nông nghiệp",
+          "C. giảm công nghiệp",
+          "D. không thay đổi"
+        ],
+        "answer": "A. tăng công nghiệp và xây dựng, dịch vụ chiếm tỉ trọng cao"
+      },
+      {
+        "id": "g9_l13_mcq_7",
+        "prompt": "Đối với vùng Bắc Trung Bộ, lúa được trồng chủ yếu ở đồng bằng",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: Thanh Hoá, Nghệ An, Hà Tĩnh. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. Thanh Hoá, Nghệ An, Hà Tĩnh",
+          "B. Quảng Trị, Huế, Quảng Ngãi",
+          "C. Ninh Bình, Nam Định, Thái Bình",
+          "D. Gia Lai, Đắk Lắk, Lâm Đồng"
+        ],
+        "answer": "A. Thanh Hoá, Nghệ An, Hà Tĩnh"
+      },
+      {
+        "id": "g9_l13_mcq_8",
+        "prompt": "Đối với vùng Bắc Trung Bộ, năm 2024, sản lượng gỗ khai thác toàn vùng đạt",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: 6,3 triệu m³. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. 6,3 triệu m³",
+          "B. 3,2 triệu m³",
+          "C. 1,6 triệu m³",
+          "D. 31,0 triệu m³"
+        ],
+        "answer": "A. 6,3 triệu m³"
+      },
+      {
+        "id": "g9_l13_mcq_9",
+        "prompt": "Đối với vùng Bắc Trung Bộ, hoạt động du lịch nổi bật dựa trên",
+        "type": "choice",
+        "level": "hiểu",
+        "explanation": "Đáp án A: di sản, biển, sinh thái và hang động. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. di sản, biển, sinh thái và hang động",
+          "B. chỉ du lịch đô thị",
+          "C. chỉ mua sắm",
+          "D. không có tài nguyên du lịch"
+        ],
+        "answer": "A. di sản, biển, sinh thái và hang động"
+      },
+      {
+        "id": "g9_l13_mcq_10",
+        "prompt": "Phát triển kinh tế biển ở Bắc Trung Bộ cần gắn với",
+        "type": "choice",
+        "level": "hiểu",
+        "explanation": "Đáp án A: bảo vệ môi trường, quốc phòng an ninh và thích ứng khí hậu. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. bảo vệ môi trường, quốc phòng an ninh và thích ứng khí hậu",
+          "B. khai thác bằng mọi giá",
+          "C. thu hẹp giao thông biển",
+          "D. không cần bảo tồn biển"
+        ],
+        "answer": "A. bảo vệ môi trường, quốc phòng an ninh và thích ứng khí hậu"
+      },
+      {
+        "id": "g9_l13_sa_1",
+        "prompt": "Tính mức giảm tỉ trọng nông nghiệp, lâm nghiệp và thủy sản từ năm 2010 đến năm 2024 (đơn vị: %).",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Mức giảm tỉ trọng nông nghiệp Bắc Trung Bộ: 22,5% - 16,0% = 6,5%.",
+        "answer": "6.5"
+      },
+      {
+        "id": "g9_l13_sa_2",
+        "prompt": "Cho các số liệu: 38,2% - 34,0%. Năm 2024, tỉ trọng công nghiệp và xây dựng cao hơn dịch vụ bao nhiêu %?",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Tỉ trọng công nghiệp cao hơn dịch vụ: 38,2% - 34,0% = 4,2%.",
+        "answer": "4.2"
+      },
+      {
+        "id": "g9_l13_sa_3",
+        "prompt": "Tính mức giảm diện tích gieo trồng lúa từ năm 2010 đến năm 2024 (nghìn ha).",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Mức giảm diện tích lúa Bắc Trung Bộ: 700,8 - 655,8 = 45,0 nghìn ha.",
+        "answer": "45.0"
+      },
+      {
+        "id": "g9_l13_sa_4",
+        "prompt": "Tính năng suất lúa năm 2024 (tấn/ha), biết diện tích 655,8 nghìn ha và sản lượng 3,9 triệu tấn. Làm tròn 1 chữ số thập phân.",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Năng suất lúa: 3 900 nghìn tấn : 655,8 nghìn ha ≈ 5,9 tấn/ha.",
+        "answer": "5.9"
+      },
+      {
+        "id": "g9_l13_sa_5",
+        "prompt": "Tính tốc độ tăng số lượt hành khách vận chuyển năm 2024 so với năm 2010 (lấy năm 2010 = 100%; làm tròn đến hàng đơn vị).",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Tốc độ tăng số lượt hành khách: 185,0%.",
+        "answer": "185.0"
+      },
+      {
+        "id": "g9_l13_sa_6",
+        "prompt": "Năm 2024, dân số vùng khoảng 11,3 triệu người và dân nông thôn chiếm hơn 74%. Lấy 74% để tính mức tối thiểu, số dân nông thôn ít nhất khoảng bao nhiêu triệu người? (Làm tròn 1 chữ số thập phân).",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Số dân nông thôn tối thiểu: 11,3 triệu × 74% = 8,362 triệu ≈ 8,4 triệu người.",
+        "answer": "8.4"
+      }
+    ]
+  },
+  {
+    "id": "g9_l14",
+    "title": "Bài 15. Phòng chống thiên tai ở Bắc Trung Bộ",
+    "summary": "Dựa vào địa hình và mùa mưa để xác định nơi dễ xảy ra lũ quét, sạt lở hay ngập lụt. Kết hợp dự báo sớm, bảo vệ rừng đầu nguồn, quy hoạch dân cư và phương án sơ tán phù hợp từng địa bàn.",
+    "questions": [
+      {
+        "id": "g9_l14_mcq_1",
+        "prompt": "Nội dung thực hành tập trung vào",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: phòng, chống thiên tai và ứng phó biến đổi khí hậu ở Bắc Trung Bộ. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. phòng, chống thiên tai và ứng phó biến đổi khí hậu ở Bắc Trung Bộ",
+          "B. phát triển thương mại",
+          "C. đô thị hoá",
+          "D. phân bố dân cư"
+        ],
+        "answer": "A. phòng, chống thiên tai và ứng phó biến đổi khí hậu ở Bắc Trung Bộ"
+      },
+      {
+        "id": "g9_l14_mcq_2",
+        "prompt": "Nguồn tư liệu được gợi ý gồm",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: sách, báo, internet và các quyết định của Chính phủ. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. sách, báo, internet và các quyết định của Chính phủ",
+          "B. chỉ truyện văn học",
+          "C. chỉ bản đồ cổ",
+          "D. chỉ phỏng vấn"
+        ],
+        "answer": "A. sách, báo, internet và các quyết định của Chính phủ"
+      },
+      {
+        "id": "g9_l14_mcq_3",
+        "prompt": "Quyết định 379/QĐ-TTg liên quan đến",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: Chiến lược quốc gia phòng, chống thiên tai đến năm 2030, tầm nhìn 2050. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. Chiến lược quốc gia phòng, chống thiên tai đến năm 2030, tầm nhìn 2050",
+          "B. Chiến lược du lịch",
+          "C. Chiến lược thương mại",
+          "D. Chiến lược dân số"
+        ],
+        "answer": "A. Chiến lược quốc gia phòng, chống thiên tai đến năm 2030, tầm nhìn 2050"
+      },
+      {
+        "id": "g9_l14_mcq_4",
+        "prompt": "Quyết định 896/QĐ-TTg liên quan đến",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: Chiến lược quốc gia về biến đổi khí hậu giai đoạn đến năm 2050. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. Chiến lược quốc gia về biến đổi khí hậu giai đoạn đến năm 2050",
+          "B. xuất nhập khẩu",
+          "C. đô thị hoá",
+          "D. khoáng sản"
+        ],
+        "answer": "A. Chiến lược quốc gia về biến đổi khí hậu giai đoạn đến năm 2050"
+      },
+      {
+        "id": "g9_l14_mcq_5",
+        "prompt": "Nội dung về thiên tai cần trình bày trước hết là",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: thực trạng. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. thực trạng",
+          "B. chỉ số dân",
+          "C. chỉ GDP",
+          "D. chỉ diện tích"
+        ],
+        "answer": "A. thực trạng"
+      },
+      {
+        "id": "g9_l14_mcq_6",
+        "prompt": "Biện pháp phòng chống thiên tai được chia thành",
+        "type": "choice",
+        "level": "hiểu",
+        "explanation": "Đáp án A: phòng ngừa, ứng phó, khắc phục hậu quả. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. phòng ngừa, ứng phó, khắc phục hậu quả",
+          "B. chỉ phòng ngừa",
+          "C. chỉ cứu trợ",
+          "D. chỉ phục hồi"
+        ],
+        "answer": "A. phòng ngừa, ứng phó, khắc phục hậu quả"
+      },
+      {
+        "id": "g9_l14_mcq_7",
+        "prompt": "Ứng phó biến đổi khí hậu gồm hai nhóm giải pháp",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: giảm nhẹ và thích ứng. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. giảm nhẹ và thích ứng",
+          "B. khai thác và xuất khẩu",
+          "C. đô thị và nông thôn",
+          "D. sinh và tử"
+        ],
+        "answer": "A. giảm nhẹ và thích ứng"
+      },
+      {
+        "id": "g9_l14_mcq_8",
+        "prompt": "Giải pháp giảm nhẹ biến đổi khí hậu hướng chủ yếu tới",
+        "type": "choice",
+        "level": "hiểu",
+        "explanation": "Đáp án A: giảm phát thải khí nhà kính và tăng hấp thụ. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. giảm phát thải khí nhà kính và tăng hấp thụ",
+          "B. tăng phát thải",
+          "C. mở rộng khai thác tài nguyên bằng mọi giá",
+          "D. giảm cảnh báo thiên tai"
+        ],
+        "answer": "A. giảm phát thải khí nhà kính và tăng hấp thụ"
+      },
+      {
+        "id": "g9_l14_mcq_9",
+        "prompt": "Giải pháp thích ứng hướng tới",
+        "type": "choice",
+        "level": "hiểu",
+        "explanation": "Đáp án A: giảm mức độ tổn thương trước tác động khí hậu. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. giảm mức độ tổn thương trước tác động khí hậu",
+          "B. chỉ giảm lượng khách du lịch",
+          "C. tăng phụ thuộc vào thiên tai",
+          "D. không thay đổi sản xuất"
+        ],
+        "answer": "A. giảm mức độ tổn thương trước tác động khí hậu"
+      },
+      {
+        "id": "g9_l14_mcq_10",
+        "prompt": "Khi viết báo cáo thực hành, điều cần tránh là",
+        "type": "choice",
+        "level": "vận dụng",
+        "explanation": "Đáp án A: tự tạo số liệu không có nguồn. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. tự tạo số liệu không có nguồn",
+          "B. dẫn nguồn tin cậy",
+          "C. phân loại giải pháp",
+          "D. trình bày thực trạng"
+        ],
+        "answer": "A. tự tạo số liệu không có nguồn"
+      }
+    ]
+  },
+  {
+    "id": "g9_l15",
+    "title": "Bài 16. Duyên hải Nam Trung Bộ và Tây Nguyên",
+    "summary": "Dải duyên hải có cảng, ngư trường và du lịch biển; các cao nguyên có đất badan thích hợp cho cây công nghiệp lâu năm. Liên kết cao nguyên với cảng biển mở rộng thị trường. Mùa khô đặt ra yêu cầu sử dụng nước tiết kiệm.",
+    "questions": [
+      {
+        "id": "g9_l15_mcq_1",
+        "prompt": "Đối với vùng Duyên hải Nam Trung Bộ và Tây Nguyên, diện tích tự nhiên của vùng năm 2024 khoảng",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: 99,2 nghìn km². Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. 99,2 nghìn km²",
+          "B. 51,2 nghìn km²",
+          "C. 28,0 nghìn km²",
+          "D. 36,4 nghìn km²"
+        ],
+        "answer": "A. 99,2 nghìn km²"
+      },
+      {
+        "id": "g9_l15_mcq_2",
+        "prompt": "Đối với vùng Duyên hải Nam Trung Bộ và Tây Nguyên, năm 2024, dân số của vùng khoảng",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: 15,9 triệu người. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. 15,9 triệu người",
+          "B. 21,0 triệu người",
+          "C. 11,3 triệu người",
+          "D. 24,75 triệu người"
+        ],
+        "answer": "A. 15,9 triệu người"
+      },
+      {
+        "id": "g9_l15_mcq_3",
+        "prompt": "Đối với vùng Duyên hải Nam Trung Bộ và Tây Nguyên, mật độ dân số của vùng năm 2024 là",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: 160 người/km². Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. 160 người/km²",
+          "B. 306 người/km²",
+          "C. 749 người/km²",
+          "D. 1 034 người/km²"
+        ],
+        "answer": "A. 160 người/km²"
+      },
+      {
+        "id": "g9_l15_mcq_4",
+        "prompt": "Đối với vùng Duyên hải Nam Trung Bộ và Tây Nguyên, tỉ lệ dân thành thị của vùng năm 2024 là",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: 37,1%. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. 37,1%",
+          "B. 62,8%",
+          "C. 28,6%",
+          "D. 38,5%"
+        ],
+        "answer": "A. 37,1%"
+      },
+      {
+        "id": "g9_l15_mcq_5",
+        "prompt": "Đối với vùng Duyên hải Nam Trung Bộ và Tây Nguyên, loại đất tạo lợi thế lớn cho cây công nghiệp lâu năm ở phía tây là",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: đất badan. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. đất badan",
+          "B. đất phèn",
+          "C. đất mặn",
+          "D. đất phù sa sông Hồng"
+        ],
+        "answer": "A. đất badan"
+      },
+      {
+        "id": "g9_l15_mcq_6",
+        "prompt": "Đối với vùng Duyên hải Nam Trung Bộ và Tây Nguyên, khoáng sản nổi bật nhất của vùng là",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: bô-xít. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. bô-xít",
+          "B. than đá",
+          "C. a-pa-tit",
+          "D. sắt"
+        ],
+        "answer": "A. bô-xít"
+      },
+      {
+        "id": "g9_l15_mcq_7",
+        "prompt": "Đối với vùng Duyên hải Nam Trung Bộ và Tây Nguyên, năm 2024, diện tích cà phê của vùng chiếm bao nhiêu % cả nước?",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: 92,7%. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. 92,7%",
+          "B. 67,4%",
+          "C. 49,5%",
+          "D. 31,4%"
+        ],
+        "answer": "A. 92,7%"
+      },
+      {
+        "id": "g9_l15_mcq_8",
+        "prompt": "Đối với vùng Duyên hải Nam Trung Bộ và Tây Nguyên, sản lượng thủy sản của vùng đứng",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: thứ hai cả nước. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. thứ hai cả nước",
+          "B. thứ nhất cả nước",
+          "C. thứ ba cả nước",
+          "D. thứ tư cả nước"
+        ],
+        "answer": "A. thứ hai cả nước"
+      },
+      {
+        "id": "g9_l15_mcq_9",
+        "prompt": "Đối với vùng Duyên hải Nam Trung Bộ và Tây Nguyên, năm 2024, sản lượng điện của vùng là",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: 81,2 tỉ kWh. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. 81,2 tỉ kWh",
+          "B. 99,4 tỉ kWh",
+          "C. 65,3 tỉ kWh",
+          "D. 32,0 tỉ kWh"
+        ],
+        "answer": "A. 81,2 tỉ kWh"
+      },
+      {
+        "id": "g9_l15_mcq_10",
+        "prompt": "Đối với vùng Duyên hải Nam Trung Bộ và Tây Nguyên, một vấn đề môi trường nổi bật của vùng là",
+        "type": "choice",
+        "level": "hiểu",
+        "explanation": "Đáp án A: suy giảm rừng, hạn hán và nguy cơ sa mạc hoá. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. suy giảm rừng, hạn hán và nguy cơ sa mạc hoá",
+          "B. không có hạn hán",
+          "C. không có lũ",
+          "D. rừng tăng nhanh ở mọi nơi"
+        ],
+        "answer": "A. suy giảm rừng, hạn hán và nguy cơ sa mạc hoá"
+      },
+      {
+        "id": "g9_l15_sa_1",
+        "prompt": "Cho các số liệu: Mật độ cả nước (~310 người/km²) - Mật độ vùng (~110 người/km²). Tính mức chênh lệch mật độ dân số giữa cả nước và vùng năm 2024.",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Chênh lệch mật độ dân số: Mật độ cả nước (~310 người/km²) - Mật độ vùng (~110 người/km²) = 200 người/km².",
+        "answer": "200"
+      },
+      {
+        "id": "g9_l15_sa_2",
+        "prompt": "Cho các số liệu: 74,5 tuổi - 71,5 tuổi. Tính mức chênh lệch tuổi thọ trung bình giữa cả nước và vùng năm 2024.",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Chênh lệch tuổi thọ trung bình: 74,5 tuổi - 71,5 tuổi = 3,0 tuổi.",
+        "answer": "3.0"
+      },
+      {
+        "id": "g9_l15_sa_3",
+        "prompt": "Cho các số liệu: 100% - 29,5% (thành thị). Tính tỉ lệ dân nông thôn của vùng năm 2024.",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Tỉ lệ dân nông thôn: 100% - 29,5% (thành thị) = 70,5%.",
+        "answer": "70.5"
+      },
+      {
+        "id": "g9_l15_sa_4",
+        "prompt": "Diện tích bốn cây trồng lần lượt là 650, 250, 175 và 75 nghìn ha. Tổng diện tích của bốn cây là bao nhiêu nghìn ha?",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Tổng diện tích 4 cây trồng: 650 + 250 + 175 + 75 = 1 150 nghìn ha.",
+        "answer": "1150"
+      },
+      {
+        "id": "g9_l15_sa_5",
+        "prompt": "Cho các số liệu: 650 - 75. Tính chênh lệch diện tích cà phê và hồ tiêu.",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Chênh lệch diện tích: 650 - 75 = 575 nghìn ha.",
+        "answer": "575"
+      },
+      {
+        "id": "g9_l15_sa_6",
+        "prompt": "Cho các số liệu: 92% - 60%. Tính chênh lệch tỉ lệ diện tích cà phê và hồ tiêu so với cả nước.",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Chênh lệch tỉ lệ diện tích với cả nước: 92% - 60% = 32%.",
+        "answer": "32"
+      },
+      {
+        "id": "g9_l15_sa_7",
+        "prompt": "Tính mức tăng sản lượng thủy sản khai thác giai đoạn 2010–2024.",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Mức tăng sản lượng thủy sản khai thác: 3,8 - 2,4 = 1,4 triệu tấn.",
+        "answer": "1.4"
+      },
+      {
+        "id": "g9_l15_sa_8",
+        "prompt": "Tính mức tăng sản lượng điện của vùng từ năm 2010 đến năm 2024.",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Mức tăng sản lượng điện: 28,5 - 8,5 = 20,0 tỉ kWh.",
+        "answer": "20.0"
+      },
+      {
+        "id": "g9_l15_sa_9",
+        "prompt": "Năm 2024, doanh thu du lịch lữ hành gấp bao nhiêu lần năm 2010? Làm tròn 1 chữ số thập phân.",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Tỉ lệ tăng doanh thu du lịch: 14,5 : 3,6 ≈ 4,0 lần.",
+        "answer": "4.0"
+      }
+    ]
+  },
+  {
+    "id": "g9_l16",
+    "title": "Bài 17. Đông Nam Bộ",
+    "summary": "Vị trí kết nối vùng, đô thị lớn, thị trường và hạ tầng tạo thế mạnh cho công nghiệp, dịch vụ. Đất badan và đất xám thích hợp với cây công nghiệp lâu năm. Tăng trưởng đô thị làm tăng nhu cầu vận tải và xử lí chất thải.",
+    "questions": [
+      {
+        "id": "g9_l16_mcq_1",
+        "prompt": "Diện tích tự nhiên Đông Nam Bộ năm 2024 hơn",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: 28,0 nghìn km². Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. 28,0 nghìn km²",
+          "B. 51,2 nghìn km²",
+          "C. 92,5 nghìn km²",
+          "D. 36,4 nghìn km²"
+        ],
+        "answer": "A. 28,0 nghìn km²"
+      },
+      {
+        "id": "g9_l16_mcq_2",
+        "prompt": "Dân số Đông Nam Bộ năm 2024 gần",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: 21,0 triệu người. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. 21,0 triệu người",
+          "B. 15,8 triệu người",
+          "C. 12,6 triệu người",
+          "D. 24,75 triệu người"
+        ],
+        "answer": "A. 21,0 triệu người"
+      },
+      {
+        "id": "g9_l16_mcq_3",
+        "prompt": "Đối với vùng Đông Nam Bộ, mật độ dân số năm 2024 là",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: 749 người/km². Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. 749 người/km²",
+          "B. 434 người/km²",
+          "C. 1 034 người/km²",
+          "D. 221 người/km²"
+        ],
+        "answer": "A. 749 người/km²"
+      },
+      {
+        "id": "g9_l16_mcq_4",
+        "prompt": "Đối với vùng Đông Nam Bộ, nhóm 15–64 tuổi năm 2024 chiếm",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: 73,0%. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. 73,0%",
+          "B. 64,6%",
+          "C. 70,2%",
+          "D. 67,5%"
+        ],
+        "answer": "A. 73,0%"
+      },
+      {
+        "id": "g9_l16_mcq_5",
+        "prompt": "Đối với vùng Đông Nam Bộ, tỉ lệ dân thành thị năm 2024 là",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: 62,8%. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. 62,8%",
+          "B. 38,1%",
+          "C. 37,1%",
+          "D. 28,6%"
+        ],
+        "answer": "A. 62,8%"
+      },
+      {
+        "id": "g9_l16_mcq_6",
+        "prompt": "Đối với vùng Đông Nam Bộ, năm 2024, GRDP vùng chiếm",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: 31,5% GDP cả nước. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. 31,5% GDP cả nước",
+          "B. 12,2%",
+          "C. 10,6%",
+          "D. 7,3%"
+        ],
+        "answer": "A. 31,5% GDP cả nước"
+      },
+      {
+        "id": "g9_l16_mcq_7",
+        "prompt": "Đối với vùng Đông Nam Bộ, giá trị sản xuất công nghiệp vùng năm 2024 chiếm",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: 34,9% cả nước. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. 34,9% cả nước",
+          "B. 36,5%",
+          "C. 6,4%",
+          "D. 6,3%"
+        ],
+        "answer": "A. 34,9% cả nước"
+      },
+      {
+        "id": "g9_l16_mcq_8",
+        "prompt": "Đối với vùng Đông Nam Bộ, trị giá xuất khẩu của vùng năm 2024 chiếm khoảng",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: 33,3% cả nước. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. 33,3% cả nước",
+          "B. 39,6%",
+          "C. 24,9%",
+          "D. 28,9%"
+        ],
+        "answer": "A. 33,3% cả nước"
+      },
+      {
+        "id": "g9_l16_mcq_9",
+        "prompt": "Đối với vùng Đông Nam Bộ, diện tích cây công nghiệp lâu năm năm 2024 là",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: 773,4 nghìn ha. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. 773,4 nghìn ha",
+          "B. 537,5 nghìn ha",
+          "C. 183,2 nghìn ha",
+          "D. 176,1 nghìn ha"
+        ],
+        "answer": "A. 773,4 nghìn ha"
+      },
+      {
+        "id": "g9_l16_mcq_10",
+        "prompt": "Đối với vùng Đông Nam Bộ, năm 2024, GRDP Thành phố Hồ Chí Minh chiếm khoảng bao nhiêu GRDP vùng?",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: 74,4%. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. 74,4%",
+          "B. 41%",
+          "C. 23,6%",
+          "D. 34,9%"
+        ],
+        "answer": "A. 74,4%"
+      },
+      {
+        "id": "g9_l16_sa_1",
+        "prompt": "Tính mức tăng số dân thành thị của vùng giai đoạn 1999–2024.",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Mức tăng dân số thành thị: 11,8 triệu - 4,3 triệu = 7,5 triệu người.",
+        "answer": "7.5"
+      },
+      {
+        "id": "g9_l16_sa_2",
+        "prompt": "Tính mức tăng tỉ lệ dân thành thị giai đoạn 1999–2024 theo %.",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Mức tăng tỉ lệ dân thành thị: 66,5% - 51,5% = 15,0%.",
+        "answer": "15.0"
+      },
+      {
+        "id": "g9_l16_sa_3",
+        "prompt": "Cho các số liệu: 100% - 66,5% (thành thị). Tính tỉ lệ dân nông thôn năm 2024.",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Tỉ lệ dân nông thôn: 100% - 66,5% (thành thị) = 33,5%.",
+        "answer": "33.5"
+      },
+      {
+        "id": "g9_l16_sa_4",
+        "prompt": "Tính mức tăng tổng mức bán lẻ hàng hoá và doanh thu dịch vụ tiêu dùng giai đoạn 2010–2024.",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Mức tăng tổng mức bán lẻ: 1 650 - 450 = 1 200 nghìn tỉ đồng.",
+        "answer": "1200"
+      },
+      {
+        "id": "g9_l16_sa_5",
+        "prompt": "Tính mức tăng diện tích cao su từ năm 2010 đến năm 2024.",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Mức tăng diện tích cao su: 480 - 390 = 90 nghìn ha.",
+        "answer": "90"
+      },
+      {
+        "id": "g9_l16_sa_6",
+        "prompt": "Tính mức giảm diện tích điều từ năm 2010 đến năm 2024.",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Mức giảm diện tích điều: 240 - 175 = 65 nghìn ha.",
+        "answer": "65"
+      },
+      {
+        "id": "g9_l16_sa_7",
+        "prompt": "Năm 2024, nhóm dưới 15 tuổi chiếm 19,9% và nhóm từ 65 tuổi trở lên chiếm 7,1%. Tính tỉ số phụ thuộc chung theo công thức: (dân số dưới 15 tuổi + dân số từ 65 tuổi trở lên) / dân số 15–64 tuổi × 100. Làm tròn 1 chữ số thập phân.",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Tỉ lệ nhóm 15-64 tuổi: 100% - 19.9% - 7.1% = 73.0%.",
+        "answer": "73.0"
+      }
+    ]
+  },
+  {
+    "id": "g9_l17",
+    "title": "Bài 18. Kết nối liên vùng ở Đông Nam Bộ",
+    "summary": "Đường bộ, cảng biển và các đầu mối vận tải kết nối vùng nguyên liệu, nhà máy và thị trường. Khi phân tích một tuyến vận tải, xác định điểm đầu, điểm cuối, hàng hoá và tác động đến chi phí lưu thông.",
+    "questions": [
+      {
+        "id": "g9_l17_mcq_1",
+        "prompt": "Bài thực hành về kết nối liên vùng ở Đông Nam Bộ tập trung phân tích nội dung nào?",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: ý nghĩa của tăng cường kết nối liên vùng đối với Đông Nam Bộ. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. ý nghĩa của tăng cường kết nối liên vùng đối với Đông Nam Bộ",
+          "B. cơ cấu dân số cả nước",
+          "C. phân bố khoáng sản Bắc Trung Bộ",
+          "D. đô thị hoá Đồng bằng sông Hồng"
+        ],
+        "answer": "A. ý nghĩa của tăng cường kết nối liên vùng đối với Đông Nam Bộ"
+      },
+      {
+        "id": "g9_l17_mcq_2",
+        "prompt": "Một nội dung gợi ý phân tích là",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: quan niệm về kết nối liên vùng. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. quan niệm về kết nối liên vùng",
+          "B. chỉ số sinh",
+          "C. tỉ lệ tử",
+          "D. cơ cấu tuổi"
+        ],
+        "answer": "A. quan niệm về kết nối liên vùng"
+      },
+      {
+        "id": "g9_l17_mcq_3",
+        "prompt": "Kết nối liên vùng giúp Đông Nam Bộ",
+        "type": "choice",
+        "level": "hiểu",
+        "explanation": "Đáp án A: mở rộng không gian, thị trường. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. mở rộng không gian, thị trường",
+          "B. thu hẹp thị trường",
+          "C. giảm giao lưu",
+          "D. tách khỏi vùng lân cận"
+        ],
+        "answer": "A. mở rộng không gian, thị trường"
+      },
+      {
+        "id": "g9_l17_mcq_4",
+        "prompt": "Kết nối với Duyên hải Nam Trung Bộ và Tây Nguyên giúp Đông Nam Bộ tiếp cận",
+        "type": "choice",
+        "level": "hiểu",
+        "explanation": "Đáp án A: tài nguyên thiên nhiên. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. tài nguyên thiên nhiên",
+          "B. chỉ lao động",
+          "C. chỉ vốn",
+          "D. chỉ dịch vụ"
+        ],
+        "answer": "A. tài nguyên thiên nhiên"
+      },
+      {
+        "id": "g9_l17_mcq_5",
+        "prompt": "Kết nối với Đồng bằng sông Cửu Long giúp tiếp cận",
+        "type": "choice",
+        "level": "hiểu",
+        "explanation": "Đáp án A: vùng sản xuất lương thực, thực phẩm trọng điểm. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. vùng sản xuất lương thực, thực phẩm trọng điểm",
+          "B. vùng than lớn nhất",
+          "C. vùng bô-xít lớn nhất",
+          "D. vùng chè lớn nhất"
+        ],
+        "answer": "A. vùng sản xuất lương thực, thực phẩm trọng điểm"
+      },
+      {
+        "id": "g9_l17_mcq_6",
+        "prompt": "Một ý nghĩa của kết nối liên vùng là",
+        "type": "choice",
+        "level": "hiểu",
+        "explanation": "Đáp án A: thu hút lao động, khoa học – công nghệ. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. thu hút lao động, khoa học – công nghệ",
+          "B. giảm lao động",
+          "C. hạn chế công nghệ",
+          "D. thu hẹp dịch vụ"
+        ],
+        "answer": "A. thu hút lao động, khoa học – công nghệ"
+      },
+      {
+        "id": "g9_l17_mcq_7",
+        "prompt": "Kết nối liên vùng còn giúp",
+        "type": "choice",
+        "level": "hiểu",
+        "explanation": "Đáp án A: thúc đẩy các vùng khác cùng phát triển. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. thúc đẩy các vùng khác cùng phát triển",
+          "B. chỉ Đông Nam Bộ phát triển",
+          "C. giảm trao đổi",
+          "D. tăng cô lập"
+        ],
+        "answer": "A. thúc đẩy các vùng khác cùng phát triển"
+      },
+      {
+        "id": "g9_l17_mcq_8",
+        "prompt": "Trong phân tích kết nối liên vùng, mỗi vùng có đặc điểm nào?",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: thế mạnh và hạn chế riêng. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. thế mạnh và hạn chế riêng",
+          "B. điều kiện hoàn toàn giống nhau",
+          "C. không có hạn chế",
+          "D. không cần liên kết"
+        ],
+        "answer": "A. thế mạnh và hạn chế riêng"
+      },
+      {
+        "id": "g9_l17_mcq_9",
+        "prompt": "Nguồn tư liệu thực hành có thể lấy từ",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: sách, báo, internet và thông tin tham khảo trong bài. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. sách, báo, internet và thông tin tham khảo trong bài",
+          "B. chỉ truyện văn học",
+          "C. chỉ một nguồn không kiểm chứng",
+          "D. không cần nguồn"
+        ],
+        "answer": "A. sách, báo, internet và thông tin tham khảo trong bài"
+      },
+      {
+        "id": "g9_l17_mcq_10",
+        "prompt": "Kết nối liên vùng tăng cường chủ yếu",
+        "type": "choice",
+        "level": "hiểu",
+        "explanation": "Đáp án A: mối liên hệ giữa các vùng. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. mối liên hệ giữa các vùng",
+          "B. sự chia cắt",
+          "C. tính biệt lập",
+          "D. sự phụ thuộc vào một thị trường"
+        ],
+        "answer": "A. mối liên hệ giữa các vùng"
+      }
+    ]
+  },
+  {
+    "id": "g9_l18",
+    "title": "Bài 19. Đồng bằng sông Cửu Long",
+    "summary": "Địa hình thấp, phù sa và kênh rạch dày đặc thuận lợi cho lúa, cây ăn quả và thuỷ sản. Nguồn nước ngọt thay đổi theo mùa, vùng ven biển chịu ảnh hưởng mặn. Cơ cấu sản xuất cần phù hợp với từng tiểu vùng nước ngọt, lợ và mặn.",
+    "questions": [
+      {
+        "id": "g9_l18_mcq_1",
+        "prompt": "Đối với vùng Đồng bằng sông Cửu Long, diện tích tự nhiên của vùng năm 2024 khoảng",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: 36,4 nghìn km². Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. 36,4 nghìn km²",
+          "B. 28,0 nghìn km²",
+          "C. 99,2 nghìn km²",
+          "D. 51,2 nghìn km²"
+        ],
+        "answer": "A. 36,4 nghìn km²"
+      },
+      {
+        "id": "g9_l18_mcq_2",
+        "prompt": "Đối với vùng Đồng bằng sông Cửu Long, dân số vùng năm 2024 khoảng",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: 15,8 triệu người. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. 15,8 triệu người",
+          "B. 21,0 triệu người",
+          "C. 24,75 triệu người",
+          "D. 11,3 triệu người"
+        ],
+        "answer": "A. 15,8 triệu người"
+      },
+      {
+        "id": "g9_l18_mcq_3",
+        "prompt": "Đối với vùng Đồng bằng sông Cửu Long, mật độ dân số năm 2024 là",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: 434 người/km². Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. 434 người/km²",
+          "B. 749 người/km²",
+          "C. 221 người/km²",
+          "D. 160 người/km²"
+        ],
+        "answer": "A. 434 người/km²"
+      },
+      {
+        "id": "g9_l18_mcq_4",
+        "prompt": "Đối với vùng Đồng bằng sông Cửu Long, tỉ lệ dân thành thị năm 2024 là",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: 28,6%. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. 28,6%",
+          "B. 62,8%",
+          "C. 38,1%",
+          "D. 37,1%"
+        ],
+        "answer": "A. 28,6%"
+      },
+      {
+        "id": "g9_l18_mcq_5",
+        "prompt": "Đối với vùng Đồng bằng sông Cửu Long, nhóm 15–64 tuổi năm 2024 chiếm",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: 70,2%. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. 70,2%",
+          "B. 73,0%",
+          "C. 64,6%",
+          "D. 67,5%"
+        ],
+        "answer": "A. 70,2%"
+      },
+      {
+        "id": "g9_l18_mcq_6",
+        "prompt": "Đối với vùng Đồng bằng sông Cửu Long, vùng sản xuất lúa lớn nhất cả nước là",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: Đồng bằng sông Cửu Long. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. Đồng bằng sông Cửu Long",
+          "B. Đồng bằng sông Hồng",
+          "C. Bắc Trung Bộ",
+          "D. Đông Nam Bộ"
+        ],
+        "answer": "A. Đồng bằng sông Cửu Long"
+      },
+      {
+        "id": "g9_l18_mcq_7",
+        "prompt": "Đối với vùng Đồng bằng sông Cửu Long, bình quân sản lượng lúa đầu người năm 2024 đạt",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: 1 348,1 kg/người. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. 1 348,1 kg/người",
+          "B. 434 kg/người",
+          "C. 306 kg/người",
+          "D. 749 kg/người"
+        ],
+        "answer": "A. 1 348,1 kg/người"
+      },
+      {
+        "id": "g9_l18_mcq_8",
+        "prompt": "Đối với vùng Đồng bằng sông Cửu Long, sản lượng thủy sản vùng năm 2024 chiếm",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: trên 50% cả nước. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. trên 50% cả nước",
+          "B. dưới 20%",
+          "C. khoảng 10%",
+          "D. 100%"
+        ],
+        "answer": "A. trên 50% cả nước"
+      },
+      {
+        "id": "g9_l18_mcq_9",
+        "prompt": "Đối với vùng Đồng bằng sông Cửu Long, năm 2024, điện sản xuất của vùng đạt",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: 99,4 tỉ kWh. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. 99,4 tỉ kWh",
+          "B. 81,2 tỉ kWh",
+          "C. 65,3 tỉ kWh",
+          "D. 32,0 tỉ kWh"
+        ],
+        "answer": "A. 99,4 tỉ kWh"
+      },
+      {
+        "id": "g9_l18_mcq_10",
+        "prompt": "Đối với vùng Đồng bằng sông Cửu Long, một hạn chế tự nhiên lớn là",
+        "type": "choice",
+        "level": "hiểu",
+        "explanation": "Đáp án A: xâm nhập mặn, hạn hán và đất phèn – mặn. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. xâm nhập mặn, hạn hán và đất phèn – mặn",
+          "B. thiếu sông ngòi",
+          "C. địa hình quá cao",
+          "D. không có biển"
+        ],
+        "answer": "A. xâm nhập mặn, hạn hán và đất phèn – mặn"
+      },
+      {
+        "id": "g9_l18_sa_1",
+        "prompt": "Tính mức giảm tỉ trọng nông, lâm nghiệp và thủy sản từ năm 2010 đến năm 2024.",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Mức giảm tỉ trọng nông-lâm-thủy sản: 38,5% - 28,5% = 10,0%.",
+        "answer": "10.0"
+      },
+      {
+        "id": "g9_l18_sa_2",
+        "prompt": "Tính mức tăng tỉ trọng công nghiệp và xây dựng từ năm 2010 đến năm 2024.",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Mức tăng tỉ trọng công nghiệp-xây dựng: 32,0% - 24,0% = 8,0%.",
+        "answer": "8.0"
+      },
+      {
+        "id": "g9_l18_sa_3",
+        "prompt": "Tính mức tăng tỉ trọng dịch vụ từ năm 2010 đến năm 2024.",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Mức tăng tỉ trọng dịch vụ: 39,5% - 37,5% = 2,0%.",
+        "answer": "2.0"
+      },
+      {
+        "id": "g9_l18_sa_4",
+        "prompt": "Năm 2024, tính tỉ lệ diện tích lúa của vùng so với cả nước. Làm tròn 1 chữ số thập phân.",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Tỉ lệ diện tích lúa vùng ĐBSCL so với cả nước: 54,5%.",
+        "answer": "54.5"
+      },
+      {
+        "id": "g9_l18_sa_5",
+        "prompt": "Tính năng suất lúa của vùng năm 2024 (tấn/ha). Làm tròn 1 chữ số thập phân.",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Năng suất lúa: 24,0 triệu tấn : 3,8 triệu ha ≈ 6,3 tấn/ha.",
+        "answer": "6.3"
+      },
+      {
+        "id": "g9_l18_sa_6",
+        "prompt": "Tính mức tăng sản lượng thủy sản của vùng từ năm 2010 đến năm 2024.",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Mức tăng sản lượng thủy sản: 4,8 - 3,0 = 1,8 triệu tấn.",
+        "answer": "1.8"
+      },
+      {
+        "id": "g9_l18_sa_7",
+        "prompt": "Năm 2024, tính tỉ trọng sản lượng thủy sản của vùng so với cả nước. Làm tròn 1 chữ số thập phân.",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Tỉ trọng sản lượng thủy sản vùng ĐBSCL so với cả nước: 56,2%.",
+        "answer": "56.2"
+      },
+      {
+        "id": "g9_l18_sa_8",
+        "prompt": "Năm 2024, tỉ lệ dân thành thị của vùng là 28,6%. Tính tỉ lệ dân nông thôn.",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Tỉ lệ dân nông thôn: 100% - 28.6% = 71,4%.",
+        "answer": "71.4"
+      }
+    ]
+  },
+  {
+    "id": "g9_l19",
+    "title": "Bài 20. Biến đổi khí hậu ở Đồng bằng sông Cửu Long",
+    "summary": "Hạn, xâm nhập mặn, nước biển dâng và sạt lở ảnh hưởng đến nước sinh hoạt, mùa vụ và hạ tầng. Có thể theo dõi độ mặn, tích nước ngọt, điều chỉnh lịch gieo trồng và bảo vệ rừng ngập mặn để thích ứng.",
+    "questions": [
+      {
+        "id": "g9_l19_mcq_1",
+        "prompt": "Nội dung thực hành yêu cầu phân tích",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: tác động của biến đổi khí hậu đối với Đồng bằng sông Cửu Long. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. tác động của biến đổi khí hậu đối với Đồng bằng sông Cửu Long",
+          "B. thương mại điện tử",
+          "C. đô thị hoá Đông Nam Bộ",
+          "D. công nghiệp Bắc Trung Bộ"
+        ],
+        "answer": "A. tác động của biến đổi khí hậu đối với Đồng bằng sông Cửu Long"
+      },
+      {
+        "id": "g9_l19_mcq_2",
+        "prompt": "Đồng thời, học sinh cần",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: đề xuất giải pháp ứng phó. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. đề xuất giải pháp ứng phó",
+          "B. chỉ nêu số dân",
+          "C. chỉ vẽ bản đồ",
+          "D. chỉ tính GDP"
+        ],
+        "answer": "A. đề xuất giải pháp ứng phó"
+      },
+      {
+        "id": "g9_l19_mcq_3",
+        "prompt": "Nguồn tư liệu có thể tìm từ",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: sách, báo, truyền hình, internet, thực tế. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. sách, báo, truyền hình, internet, thực tế",
+          "B. chỉ một nguồn không kiểm chứng",
+          "C. chỉ văn học",
+          "D. không cần nguồn"
+        ],
+        "answer": "A. sách, báo, truyền hình, internet, thực tế"
+      },
+      {
+        "id": "g9_l19_mcq_4",
+        "prompt": "Tác động cần phân tích đối với",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: tự nhiên, hoạt động sản xuất và đời sống con người. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. tự nhiên, hoạt động sản xuất và đời sống con người",
+          "B. chỉ tự nhiên",
+          "C. chỉ sản xuất",
+          "D. chỉ đời sống"
+        ],
+        "answer": "A. tự nhiên, hoạt động sản xuất và đời sống con người"
+      },
+      {
+        "id": "g9_l19_mcq_5",
+        "prompt": "Giải pháp ứng phó được chia thành",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: giảm nhẹ và thích ứng. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. giảm nhẹ và thích ứng",
+          "B. khai thác và xuất khẩu",
+          "C. đô thị và nông thôn",
+          "D. sinh và tử"
+        ],
+        "answer": "A. giảm nhẹ và thích ứng"
+      },
+      {
+        "id": "g9_l19_mcq_6",
+        "prompt": "Giảm nhẹ biến đổi khí hậu chủ yếu nhằm",
+        "type": "choice",
+        "level": "hiểu",
+        "explanation": "Đáp án A: hạn chế nguyên nhân và phát thải gây biến đổi khí hậu. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. hạn chế nguyên nhân và phát thải gây biến đổi khí hậu",
+          "B. tăng phát thải",
+          "C. tăng xâm nhập mặn",
+          "D. giảm dự báo"
+        ],
+        "answer": "A. hạn chế nguyên nhân và phát thải gây biến đổi khí hậu"
+      },
+      {
+        "id": "g9_l19_mcq_7",
+        "prompt": "Thích ứng biến đổi khí hậu chủ yếu nhằm",
+        "type": "choice",
+        "level": "hiểu",
+        "explanation": "Đáp án A: giảm thiệt hại và điều chỉnh trước tác động. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. giảm thiệt hại và điều chỉnh trước tác động",
+          "B. làm khí hậu biến đổi nhanh hơn",
+          "C. không thay đổi sản xuất",
+          "D. tăng rủi ro"
+        ],
+        "answer": "A. giảm thiệt hại và điều chỉnh trước tác động"
+      },
+      {
+        "id": "g9_l19_mcq_8",
+        "prompt": "Khi phân tích tác động đến sản xuất, cần chú ý",
+        "type": "choice",
+        "level": "vận dụng",
+        "explanation": "Đáp án A: các biểu hiện và dẫn chứng phù hợp nguồn tư liệu. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. các biểu hiện và dẫn chứng phù hợp nguồn tư liệu",
+          "B. không cần dẫn chứng",
+          "C. tự tạo số liệu",
+          "D. chỉ nêu một ý"
+        ],
+        "answer": "A. các biểu hiện và dẫn chứng phù hợp nguồn tư liệu"
+      },
+      {
+        "id": "g9_l19_mcq_9",
+        "prompt": "Khi sử dụng thông tin internet cần",
+        "type": "choice",
+        "level": "vận dụng",
+        "explanation": "Đáp án A: kiểm tra nguồn và độ tin cậy. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. kiểm tra nguồn và độ tin cậy",
+          "B. sao chép không kiểm chứng",
+          "C. bỏ nguồn",
+          "D. ưu tiên số liệu không rõ năm"
+        ],
+        "answer": "A. kiểm tra nguồn và độ tin cậy"
+      },
+      {
+        "id": "g9_l19_mcq_10",
+        "prompt": "Tài liệu Bài 20 có sẵn bảng số liệu định lượng để tính toán không?",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: Không. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. Không",
+          "B. Có một bảng",
+          "C. Có hai bảng",
+          "D. Có ba bảng"
+        ],
+        "answer": "A. Không"
+      }
+    ]
+  },
+  {
+    "id": "g9_l20",
+    "title": "Bài 21. Phát triển tổng hợp kinh tế và bảo vệ biển đảo",
+    "summary": "Khai thác và nuôi trồng thuỷ sản, du lịch, giao thông và năng lượng cùng sử dụng không gian biển. Phối hợp các ngành giúp giảm xung đột lợi ích và bảo vệ hệ sinh thái ven bờ.",
+    "questions": [
+      {
+        "id": "g9_l20_mcq_1",
+        "prompt": "Vùng biển Việt Nam bao gồm những bộ phận nào?",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: Nội thuỷ, lãnh hải, vùng tiếp giáp lãnh hải, vùng đặc quyền kinh tế và thềm lục địa. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. Nội thuỷ, lãnh hải, vùng tiếp giáp lãnh hải, vùng đặc quyền kinh tế và thềm lục địa.",
+          "B. Nội thuỷ, lãnh hải và vùng trời.",
+          "C. Lãnh hải, vùng núi và thềm lục địa.",
+          "D. Nội thuỷ, vùng trời và vùng đất ven biển."
+        ],
+        "answer": "A. Nội thuỷ, lãnh hải, vùng tiếp giáp lãnh hải, vùng đặc quyền kinh tế và thềm lục địa."
+      },
+      {
+        "id": "g9_l20_mcq_2",
+        "prompt": "Chiều rộng lãnh hải Việt Nam theo sơ đồ Hình 21.1 là",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án B: 12 hải lí. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. 6 hải lí.",
+          "B. 12 hải lí.",
+          "C. 24 hải lí.",
+          "D. 200 hải lí."
+        ],
+        "answer": "B. 12 hải lí."
+      },
+      {
+        "id": "g9_l20_mcq_3",
+        "prompt": "Vùng đặc quyền kinh tế được thể hiện trên Hình 21.1 có chiều rộng tối đa là",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án D: 200 hải lí. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. 12 hải lí.",
+          "B. 24 hải lí.",
+          "C. 100 hải lí.",
+          "D. 200 hải lí."
+        ],
+        "answer": "D. 200 hải lí."
+      },
+      {
+        "id": "g9_l20_mcq_4",
+        "prompt": "Hoạt động nào sau đây thuộc phát triển tổng hợp kinh tế biển, đảo?",
+        "type": "choice",
+        "level": "hiểu",
+        "explanation": "Đáp án C: Du lịch biển, giao thông vận tải biển, khai thác khoáng sản biển, khai thác và nuôi trồng hải sản. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. Chỉ khai thác dầu khí.",
+          "B. Chỉ nuôi trồng hải sản.",
+          "C. Du lịch biển, giao thông vận tải biển, khai thác khoáng sản biển, khai thác và nuôi trồng hải sản.",
+          "D. Chỉ phát triển du lịch biển."
+        ],
+        "answer": "C. Du lịch biển, giao thông vận tải biển, khai thác khoáng sản biển, khai thác và nuôi trồng hải sản."
+      },
+      {
+        "id": "g9_l20_mcq_5",
+        "prompt": "Điều kiện nổi bật để nước ta phát triển giao thông vận tải biển là",
+        "type": "choice",
+        "level": "hiểu",
+        "explanation": "Đáp án A: có nhiều tuyến đường biển quốc tế quan trọng và nhiều vũng vịnh có thể xây dựng cảng nước sâu. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. có nhiều tuyến đường biển quốc tế quan trọng và nhiều vũng vịnh có thể xây dựng cảng nước sâu.",
+          "B. mọi tỉnh đều có cảng biển quốc tế.",
+          "C. chỉ có một loại hình vận tải biển.",
+          "D. không có vùng biển sâu."
+        ],
+        "answer": "A. có nhiều tuyến đường biển quốc tế quan trọng và nhiều vũng vịnh có thể xây dựng cảng nước sâu."
+      },
+      {
+        "id": "g9_l20_mcq_6",
+        "prompt": "Khoáng sản biển quan trọng nhất được nêu trong bài là",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án B: dầu mỏ và khí tự nhiên. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. than nâu.",
+          "B. dầu mỏ và khí tự nhiên.",
+          "C. bô-xít.",
+          "D. sắt."
+        ],
+        "answer": "B. dầu mỏ và khí tự nhiên."
+      },
+      {
+        "id": "g9_l20_mcq_7",
+        "prompt": "Khai thác hải sản bền vững cần ưu tiên",
+        "type": "choice",
+        "level": "hiểu",
+        "explanation": "Đáp án C: khai thác xa bờ theo quy định pháp luật và tái sinh nguồn lợi hải sản. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. đánh bắt tận diệt.",
+          "B. khai thác không khai báo.",
+          "C. khai thác xa bờ theo quy định pháp luật và tái sinh nguồn lợi hải sản.",
+          "D. tăng khai thác ở khu vực cấm."
+        ],
+        "answer": "C. khai thác xa bờ theo quy định pháp luật và tái sinh nguồn lợi hải sản."
+      },
+      {
+        "id": "g9_l20_mcq_8",
+        "prompt": "Ý nghĩa của phát triển tổng hợp kinh tế biển, đảo đối với chủ quyền là",
+        "type": "choice",
+        "level": "hiểu",
+        "explanation": "Đáp án B: góp phần giữ vững chủ quyền, các quyền và lợi ích hợp pháp của Việt Nam ở Biển Đông. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. làm giảm vai trò của biển, đảo.",
+          "B. góp phần giữ vững chủ quyền, các quyền và lợi ích hợp pháp của Việt Nam ở Biển Đông.",
+          "C. chỉ có ý nghĩa về du lịch.",
+          "D. không liên quan đến quốc phòng, an ninh."
+        ],
+        "answer": "B. góp phần giữ vững chủ quyền, các quyền và lợi ích hợp pháp của Việt Nam ở Biển Đông."
+      },
+      {
+        "id": "g9_l20_mcq_9",
+        "prompt": "Biện pháp phù hợp để bảo vệ môi trường biển, đảo là",
+        "type": "choice",
+        "level": "hiểu",
+        "explanation": "Đáp án C: ngăn ngừa, kiểm soát và giảm ô nhiễm, nhất là rác thải nhựa. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. tăng xả thải nhựa ra biển.",
+          "B. khai thác tài nguyên không giới hạn.",
+          "C. ngăn ngừa, kiểm soát và giảm ô nhiễm, nhất là rác thải nhựa.",
+          "D. thu hẹp khu bảo tồn biển."
+        ],
+        "answer": "C. ngăn ngừa, kiểm soát và giảm ô nhiễm, nhất là rác thải nhựa."
+      },
+      {
+        "id": "g9_l20_mcq_10",
+        "prompt": "Phát triển tổng hợp kinh tế biển, đảo cần gắn chặt với",
+        "type": "choice",
+        "level": "vận dụng",
+        "explanation": "Đáp án B: bảo vệ tài nguyên, môi trường và phát triển bền vững. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. khai thác tối đa tài nguyên bằng mọi giá.",
+          "B. bảo vệ tài nguyên, môi trường và phát triển bền vững.",
+          "C. giảm đầu tư hạ tầng.",
+          "D. thu hẹp hợp tác quốc tế."
+        ],
+        "answer": "B. bảo vệ tài nguyên, môi trường và phát triển bền vững."
+      },
+      {
+        "id": "g9_l20_sa_1",
+        "prompt": "Đổi 12 hải lí ra ki-lô-mét (làm tròn 1 chữ số thập phân).",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Đổi 12 hải lí ra km: 12 × 1,852 km = 22,224 km ≈ 22,2 km.",
+        "answer": "22.2"
+      },
+      {
+        "id": "g9_l20_sa_2",
+        "prompt": "Tính chênh lệch giữa 200 hải lí và 12 hải lí theo đơn vị hải lí.",
+        "type": "short",
+        "level": "hiểu",
+        "explanation": "Chênh lệch: 200 - 12 = 188 hải lí.",
+        "answer": "188"
+      },
+      {
+        "id": "g9_l20_sa_3",
+        "prompt": "Tính xem 200 hải lí gấp bao nhiêu lần 12 hải lí (làm tròn 1 chữ số thập phân).",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "200 / 12 ≈ 16,7 lần.",
+        "answer": "16.7"
+      },
+      {
+        "id": "g9_l20_sa_4",
+        "prompt": "Nếu chia đều chiều dài bờ biển 3 260 km cho 21 tỉnh, thành phố giáp biển, trung bình mỗi địa phương tương ứng bao nhiêu km bờ biển? (Chỉ là phép tính trung bình, làm tròn 1 chữ số thập phân.)",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Chiều dài bờ biển trung bình mỗi tỉnh: 3 260 km : 21 = 155,238 km ≈ 155,2 km.",
+        "answer": "155.2"
+      },
+      {
+        "id": "g9_l20_sa_5",
+        "prompt": "Tính tỉ số giữa diện tích vùng biển (1 000 000 km²) và chiều dài bờ biển (3 260 km), đơn vị km²/km; làm tròn 1 chữ số thập phân.",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Tỉ số diện tích biển và bờ biển: 1 000 000 km² : 3 260 km = 306,748 ≈ 306,7 km²/km.",
+        "answer": "306.7"
+      },
+      {
+        "id": "g9_l20_sa_6",
+        "prompt": "Từ 12 hải lí và 1 hải lí = 1 852 m, tính chiều rộng lãnh hải theo mét.",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "12 × 1 852 m = 22 224 m.",
+        "answer": "22224"
+      }
+    ]
+  },
+  {
+    "id": "g9_dothi",
+    "title": "Chủ đề 1. Đô thị: Lịch sử và hiện tại",
+    "summary": "Đô thị là nơi tập trung dân cư, hoạt động sản xuất và dịch vụ. Sự hình thành các đầu mối giao thông và trung tâm công nghiệp thúc đẩy quá trình đô thị hoá. Mở rộng đô thị làm tăng nhu cầu nhà ở, nước sạch và vận tải công cộng.",
+    "questions": [
+      {
+        "id": "g9_dothi_1",
+        "type": "choice",
+        "level": "hiểu",
+        "prompt": "Một đô thị phát triển nhanh quanh cảng biển cần ưu tiên giải pháp nào để giảm ùn tắc?",
+        "options": [
+          "Kết nối cảng với mạng lưới vận tải và tổ chức luồng hàng",
+          "Tập trung toàn bộ vận tải hàng hoá vào giờ cao điểm",
+          "Thu hẹp các tuyến giao thông kết nối cảng"
+        ],
+        "answer": "Kết nối cảng với mạng lưới vận tải và tổ chức luồng hàng"
+      }
+    ]
+  },
+  {
+    "id": "g9_l21",
+    "title": "Chủ đề 2. Văn minh châu thổ sông Hồng và sông Cửu Long",
+    "summary": "Sông ngòi, đất bồi tụ và chế độ lũ góp phần định hình cư trú và sản xuất. So sánh biến động nhiệt độ, lượng mưa và nguồn nước qua các giai đoạn để giải thích nhu cầu thích ứng tại hai châu thổ.",
+    "questions": [
+      {
+        "id": "g9_l21_mcq_1",
+        "prompt": "Nét văn hoá nổi bật của châu thổ sông Hồng được hình thành trên nền tảng chủ yếu nào?",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: Văn minh lúa nước. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. Văn minh lúa nước.",
+          "B. Văn minh du mục.",
+          "C. Văn minh hoang mạc.",
+          "D. Văn minh băng tuyết."
+        ],
+        "answer": "A. Văn minh lúa nước."
+      },
+      {
+        "id": "g9_l21_mcq_2",
+        "prompt": "Di sản văn hoá vật thể tiêu biểu ở châu thổ sông Hồng được nêu trong bài là",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: Thành Cổ Loa. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. Thành Cổ Loa.",
+          "B. Chợ nổi Cái Răng.",
+          "C. Đờn ca tài tử Nam Bộ.",
+          "D. Lễ hội đua ghe Ngo."
+        ],
+        "answer": "A. Thành Cổ Loa."
+      },
+      {
+        "id": "g9_l21_mcq_3",
+        "prompt": "Nét văn hoá đặc sắc của châu thổ sông Cửu Long gắn chặt với",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án A: văn hoá sông nước. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. văn hoá sông nước.",
+          "B. văn hoá núi cao.",
+          "C. văn hoá hoang mạc.",
+          "D. văn hoá băng tuyết."
+        ],
+        "answer": "A. văn hoá sông nước."
+      },
+      {
+        "id": "g9_l21_mcq_4",
+        "prompt": "Loại hình nghệ thuật được UNESCO ghi danh và gắn với châu thổ sông Cửu Long là",
+        "type": "choice",
+        "level": "biết",
+        "explanation": "Đáp án B: Đờn ca tài tử Nam Bộ. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. Quan họ Bắc Ninh.",
+          "B. Đờn ca tài tử Nam Bộ.",
+          "C. Ca trù.",
+          "D. Hát xoan."
+        ],
+        "answer": "B. Đờn ca tài tử Nam Bộ."
+      },
+      {
+        "id": "g9_l21_mcq_5",
+        "prompt": "Biểu hiện chung của biến đổi khí hậu ở cả hai châu thổ giai đoạn 1961–2020 là",
+        "type": "choice",
+        "level": "hiểu",
+        "explanation": "Đáp án A: nhiệt độ trung bình năm có xu thế tăng. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. nhiệt độ trung bình năm có xu thế tăng.",
+          "B. nhiệt độ giảm liên tục.",
+          "C. lượng mưa không biến động.",
+          "D. không xuất hiện thời tiết cực đoan."
+        ],
+        "answer": "A. nhiệt độ trung bình năm có xu thế tăng."
+      },
+      {
+        "id": "g9_l21_mcq_6",
+        "prompt": "Tác động nổi bật của biến đổi khí hậu ở châu thổ sông Cửu Long là",
+        "type": "choice",
+        "level": "hiểu",
+        "explanation": "Đáp án A: xâm nhập mặn và hạn hán gia tăng. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. xâm nhập mặn và hạn hán gia tăng.",
+          "B. rét đậm kéo dài hơn.",
+          "C. băng tuyết thường xuyên.",
+          "D. không ảnh hưởng sản xuất nông nghiệp."
+        ],
+        "answer": "A. xâm nhập mặn và hạn hán gia tăng."
+      },
+      {
+        "id": "g9_l21_mcq_7",
+        "prompt": "Biện pháp thích ứng phù hợp ở châu thổ sông Hồng là",
+        "type": "choice",
+        "level": "hiểu",
+        "explanation": "Đáp án A: thay đổi thời gian mùa vụ, ứng dụng kĩ thuật canh tác. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. thay đổi thời gian mùa vụ, ứng dụng kĩ thuật canh tác.",
+          "B. mở rộng phát thải khí nhà kính.",
+          "C. bỏ theo dõi dự báo thời tiết.",
+          "D. tăng phụ thuộc vào cây vụ đông bất kể thời tiết."
+        ],
+        "answer": "A. thay đổi thời gian mùa vụ, ứng dụng kĩ thuật canh tác."
+      },
+      {
+        "id": "g9_l21_mcq_8",
+        "prompt": "Biện pháp thích ứng phù hợp ở châu thổ sông Cửu Long là",
+        "type": "choice",
+        "level": "hiểu",
+        "explanation": "Đáp án A: xây dựng cống ngăn mặn, bảo vệ rừng ngập mặn. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. xây dựng cống ngăn mặn, bảo vệ rừng ngập mặn.",
+          "B. tăng phá rừng ngập mặn.",
+          "C. chỉ trồng cây không chịu mặn.",
+          "D. hạn chế dự trữ nước."
+        ],
+        "answer": "A. xây dựng cống ngăn mặn, bảo vệ rừng ngập mặn."
+      },
+      {
+        "id": "g9_l21_mcq_9",
+        "prompt": "Tác động của nước biển dâng ở châu thổ sông Cửu Long có thể là",
+        "type": "choice",
+        "level": "hiểu",
+        "explanation": "Đáp án A: sạt lở bờ biển, thu hẹp đất nông nghiệp và rừng ngập mặn. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. sạt lở bờ biển, thu hẹp đất nông nghiệp và rừng ngập mặn.",
+          "B. làm giảm xâm nhập mặn.",
+          "C. không ảnh hưởng đất sản xuất.",
+          "D. làm tăng diện tích rừng ngập mặn tự nhiên trong mọi trường hợp."
+        ],
+        "answer": "A. sạt lở bờ biển, thu hẹp đất nông nghiệp và rừng ngập mặn."
+      },
+      {
+        "id": "g9_l21_mcq_10",
+        "prompt": "Ứng phó với biến đổi khí hậu cần thực hiện đồng thời",
+        "type": "choice",
+        "level": "vận dụng",
+        "explanation": "Đáp án C: giảm nhẹ và thích ứng. Đây là phương án phù hợp với kiến thức và dữ kiện của câu hỏi.",
+        "options": [
+          "A. chỉ giảm nhẹ.",
+          "B. chỉ thích ứng.",
+          "C. giảm nhẹ và thích ứng.",
+          "D. không cần biện pháp nào."
+        ],
+        "answer": "C. giảm nhẹ và thích ứng."
+      },
+      {
+        "id": "g9_l21_sa_1",
+        "prompt": "Tính mức tăng nhiệt độ trung bình năm của trạm Thái Bình từ thập kỉ 1961–1970 đến 2011–2020.",
+        "type": "short",
+        "level": "hiểu",
+        "explanation": "Mức tăng nhiệt độ trạm Thái Bình: 23,8°C - 23,2°C = 0,6°C.",
+        "answer": "0.6"
+      },
+      {
+        "id": "g9_l21_sa_2",
+        "prompt": "Tính mức tăng nhiệt độ trung bình năm của trạm Cần Thơ từ thập kỉ 1961–1970 đến 2011–2020.",
+        "type": "short",
+        "level": "hiểu",
+        "explanation": "Mức tăng nhiệt độ trạm Cần Thơ: 27,4°C - 26,6°C = 0,8°C.",
+        "answer": "0.8"
+      },
+      {
+        "id": "g9_l21_sa_3",
+        "prompt": "Cho các số liệu: 0,8°C - 0,6°C. Mức tăng nhiệt độ của Cần Thơ lớn hơn Thái Bình bao nhiêu °C?",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Chênh lệch mức tăng nhiệt độ: 0,8°C - 0,6°C = 0,2°C.",
+        "answer": "0.2"
+      },
+      {
+        "id": "g9_l21_sa_4",
+        "prompt": "Tính nhiệt độ trung bình của 6 thập kỉ tại trạm Cần Thơ (làm tròn 0,1°C).",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Nhiệt độ trung bình 6 thập kỉ tại Cần Thơ: 27,0°C.",
+        "answer": "27.0"
+      },
+      {
+        "id": "g9_l21_sa_5",
+        "prompt": "Cho các số liệu: 1 850 mm - 1 620 mm. Tính biên độ dao động lượng mưa của trạm Thái Bình trong 6 thập kỉ (lấy lớn nhất trừ nhỏ nhất).",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Biên độ lượng mưa trạm Thái Bình: 1 850 mm - 1 620 mm = 230 mm.",
+        "answer": "230"
+      },
+      {
+        "id": "g9_l21_sa_6",
+        "prompt": "Cho các số liệu: 2 100 mm - 1 800 mm. Tính biên độ dao động lượng mưa của trạm Cần Thơ trong 6 thập kỉ.",
+        "type": "short",
+        "level": "vận dụng",
+        "explanation": "Biên độ lượng mưa trạm Cần Thơ: 2 100 mm - 1 800 mm = 300 mm.",
+        "answer": "300"
+      },
+      {
+        "id": "g9_l21_sa_7",
+        "prompt": "Tính chênh lệch lượng mưa giữa Thái Bình và Cần Thơ ở thập kỉ 2011–2020.",
+        "type": "short",
+        "level": "hiểu",
+        "explanation": "Chênh lệch lượng mưa thập kỉ 2011-2020: 2 050 mm - 1 780 mm = 270 mm.",
+        "answer": "270"
+      },
+      {
+        "id": "g9_l21_sa_8",
+        "prompt": "Tính mức thay đổi lượng mưa của Cần Thơ từ thập kỉ 1961–1970 đến 2011–2020 (mm).",
+        "type": "short",
+        "level": "hiểu",
+        "explanation": "Mức thay đổi lượng mưa Cần Thơ: 2 050 mm - 1 920 mm = 130 mm.",
+        "answer": "130"
+      }
+    ]
+  },
+  {
+    "id": "g9_biendong",
+    "title": "Chủ đề 3. Bảo vệ chủ quyền, các quyền và lợi ích hợp pháp của Việt Nam ở Biển Đông",
+    "summary": "Hoạt động kinh tế biển gắn với đời sống cư dân ven biển và hải đảo. Khi tìm hiểu một ngư trường hay tuyến hàng hải, cần xác định vị trí trên bản đồ, xem nguồn tư liệu và phân tích cách khai thác đi đôi với bảo vệ môi trường.",
+    "questions": [
+      {
+        "id": "g9_biendong_1",
+        "type": "choice",
+        "level": "hiểu",
+        "prompt": "Khi tìm hiểu vị trí một quần đảo, em nên ưu tiên nguồn nào?",
+        "options": [
+          "Bản đồ có cơ quan xuất bản, chú giải và tỉ lệ rõ ràng",
+          "Hình vẽ trang trí không có chú giải",
+          "Bài đăng ẩn danh không ghi nguồn"
+        ],
+        "answer": "Bản đồ có cơ quan xuất bản, chú giải và tỉ lệ rõ ràng"
+      }
+    ]
+  }
+]
