@@ -1,42 +1,62 @@
 <!doctype html>
 <html lang="vi">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#f9f8f2"><title>Atlat Việt · Bản đồ học tập</title>
-  <meta name="description" content="Khám phá Địa lí lớp 8 và 9 qua bản đồ Việt Nam, bài học theo vùng và các hoạt động ôn tập.">
-  <link rel="stylesheet" href="/style.css"><link rel="icon" href="/atlas/mark.svg">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#173d37">
+  <title>Atlat Việt · Khám phá địa lí Việt Nam</title>
+  <meta name="description" content="Giới thiệu Atlat Việt, bản đồ, góc học tập và phòng học.">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="icon" href="/atlas/mark.svg">
 </head>
 <body>
-<header class="site-head"><div class="head-inner">
-  <a href="#atlas" class="brand" aria-label="Atlat Việt, bản đồ học tập"><img src="/atlas/mark.svg" width="40" height="40" alt="">Atlat Việt</a>
-  <nav class="main-nav" aria-label="Điều hướng chính"><a href="#atlas" aria-current="page"><i data-icon="map"></i>Bản đồ</a><button data-mode="practice"><i data-icon="book"></i>Luyện tập</button><button data-mode="exam"><i data-icon="pen"></i>Thi thử</button><button data-mode="classroom"><i data-icon="users"></i>Lớp học</button></nav>
-  <button class="account-btn" data-mode="account"><i data-icon="user"></i><span>Tài khoản</span></button>
-</div></header>
-<main class="atlas-shell" id="atlas">
-  <div class="intro"><div><p class="section-label"><i data-icon="compass"></i> ATLAT ĐỊA LÍ THCS</p>
-  <h1>Khám phá địa lí <em>Việt Nam</em></h1><p class="lead">Chọn một vùng trên bản đồ để khám phá thiên nhiên, con người và bài học liên quan.</p></div>
-  <div class="grade-toggle" aria-label="Chọn khối lớp"><button data-grade="8" aria-pressed="true">Lớp 8</button><button data-grade="9" aria-pressed="false">Lớp 9</button></div></div>
-  <div class="atlas-layout">
-    <section class="map-card" aria-labelledby="map-title">
-      <div class="card-heading"><div class="heading-icon"><i data-icon="map"></i></div><div><h2 id="map-title">Bản đồ các vùng</h2><p>Việt Nam · 6 vùng địa lí</p></div></div>
-      <div class="map-viewport"><svg id="geomap" viewBox="0 0 800 550" aria-label="Lược đồ tương tác các vùng Việt Nam"></svg>
-      <div class="map-compass" aria-hidden="true"><b>B</b><svg viewBox="0 0 30 38"><path d="M15 1 24 29 15 24 6 29Z" fill="#faf9e9" stroke="#405a4c" stroke-width="1.4"/><path d="M15 1 15 24 6 29Z" fill="#405a4c"/></svg></div></div>
-      <div class="legend" id="legend" aria-label="Chọn vùng địa lí"></div>
-      <details class="map-source"><summary>Nguồn lược đồ</summary><p>Ranh giới nền từ <a href="https://www.geoboundaries.org/" target="_blank" rel="noreferrer">geoBoundaries</a> (VNM ADM1 2008), gộp theo sáu vùng trong SGK Địa lí 9 năm học 2026–2027. Đường bờ và các nước lân cận từ <a href="https://www.naturalearthdata.com/" target="_blank" rel="noreferrer">Natural Earth</a>. Kí hiệu quần đảo thể hiện vị trí khái quát.</p></details>
-    </section>
-    <aside class="region-card" aria-label="Thông tin vùng"><div class="region-photo" id="photo"><div class="photo-tag"><i data-icon="pin"></i> VÙNG ĐANG KHÁM PHÁ</div></div>
-      <div class="region-body"><h2 id="region-title"></h2><p id="region-summary"></p>
-      <div class="lesson-block"><h3><i data-icon="book"></i> Bài học liên quan</h3><div id="region-lessons" aria-live="polite"></div></div></div>
+<header class="site-head"></header>
+<main class="atlas-shell home-shell">
+  <section class="editorial-hero" aria-labelledby="page-title">
+    <div class="intro-copy">
+      <h1 id="page-title">Khám phá<br><em>địa lí Việt Nam</em></h1>
+      <p class="lead">Quan sát sáu vùng trên bản đồ nổi, luyện tập theo khối lớp và cùng học qua trò chơi trên lớp.</p>
+      <a class="hero-action" href="/ban-do">Khám phá bản đồ</a>
+    </div>
+    <div class="hero-map">
+      <svg id="hero-map-preview" viewBox="210 10 450 542" aria-label="Xem trước ảnh của các vùng Việt Nam"></svg>
+    </div>
+    <aside class="hero-region" aria-label="Giới thiệu các vùng địa lí" hidden>
+      <figure class="hero-region-link">
+        <img id="hero-region-photo" alt="" width="360" height="280">
+        <figcaption class="hero-region-info" aria-live="polite">
+          <strong id="hero-region-title"></strong>
+        </figcaption>
+      </figure>
     </aside>
-  </div>
-  <section class="study-section" aria-labelledby="study-heading"><div class="study-head"><h2 id="study-heading">Góc học tập</h2><button class="text-button" data-mode="progress"><i data-icon="chart"></i>Sổ học tập</button></div>
-  <div class="study-grid">
-    <button data-mode="practice"><i data-icon="book"></i><span><strong>Luyện tập theo bài</strong><small>Ôn kiến thức theo từng chủ đề</small></span><i data-icon="chevron"></i></button>
-    <button data-mode="exam"><i data-icon="pen"></i><span><strong>Phòng thi thử</strong><small>Thử sức với ba dạng câu hỏi</small></span><i data-icon="chevron"></i></button>
-    <button data-mode="classroom"><i data-icon="users"></i><span><strong>Trò chơi lớp học</strong><small>Tham gia cùng thầy cô và bạn bè</small></span><i data-icon="chevron"></i></button>
-  </div></section>
+    <small class="hero-background-credit">Vịnh Hạ Long, Quảng Ninh</small>
+  </section>
+  <section class="home-features" aria-labelledby="feature-heading">
+    <h2 id="feature-heading">Khám phá Atlat Việt</h2>
+    <article class="feature-band feature-band-map">
+      <div class="band-copy">
+        <h3>Bản đồ Việt Nam</h3>
+        <p>Khám phá địa danh, cảnh quan và đời sống của sáu vùng. Chọn một điểm trên bản đồ để xem ảnh và mở thông tin chi tiết.</p>
+        <a class="hero-action" href="/ban-do">Mở bản đồ</a>
+      </div>
+    </article>
+    <article class="feature-band feature-band-study">
+      <div class="band-copy">
+        <h3>Góc học tập</h3>
+        <p>Luyện tập theo bài, làm đề thi thử và xem tiến độ của mình trong sổ học tập.</p>
+        <a class="hero-action" href="/hoc-tap">Vào góc học tập</a>
+      </div>
+    </article>
+    <article class="feature-band feature-band-room">
+      <div class="band-copy">
+        <h3>Phòng học</h3>
+        <p>Giáo viên tạo lượt chơi Địa lí. Học sinh dùng mã phòng để tham gia và trả lời cùng cả lớp.</p>
+        <a class="hero-action" href="/phong-hoc">Vào phòng học</a>
+      </div>
+    </article>
+  </section>
 </main>
-<dialog id="activity"></dialog>
-<script type="module" src="/activities.js"></script><script type="module" src="/atlas.js"></script>
+<script type="module" src="/navigation.js"></script>
+<script type="module" src="/home.js"></script>
 </body>
 </html>

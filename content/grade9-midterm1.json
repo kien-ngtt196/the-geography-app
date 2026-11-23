@@ -1,0 +1,197 @@
+[
+  {
+    "id": "hk1_9_I_1",
+    "lessonId": "g9_l1",
+    "type": "choice",
+    "level": "biết",
+    "prompt": "Việt Nam có bao nhiêu dân tộc?",
+    "options": [
+      "A. 45",
+      "B. 54",
+      "C. 15",
+      "D. 85"
+    ],
+    "answer": "B. 54",
+    "explanation": "Theo SGK Địa lí 9, bài 1, nước ta có 54 dân tộc."
+  },
+  {
+    "id": "hk1_9_I_2",
+    "lessonId": "g9_l1",
+    "type": "choice",
+    "level": "hiểu",
+    "prompt": "So sánh năm 1999 với năm 2024, cơ cấu dân số theo nhóm tuổi của nước ta thay đổi như thế nào?",
+    "options": [
+      "A. Tăng tỉ trọng nhóm 0–14 tuổi.",
+      "B. Tăng tỉ trọng nhóm 15–64 tuổi.",
+      "C. Giảm tỉ trọng nhóm 15–64 tuổi.",
+      "D. Giảm tỉ trọng nhóm từ 65 tuổi trở lên."
+    ],
+    "answer": "B. Tăng tỉ trọng nhóm 15–64 tuổi.",
+    "explanation": "Bảng 1.2, SGK Địa lí 9, trang 119: nhóm 15–64 tuổi chiếm 61,1% năm 1999 và 67,4% năm 2024. Sự tăng này được xác định bằng cách so sánh hai mốc năm."
+  },
+  {
+    "id": "hk1_9_I_3",
+    "lessonId": "g9_l1",
+    "type": "choice",
+    "level": "biết",
+    "prompt": "Năm 2024, quy mô dân số nước ta đứng thứ mấy trong khu vực Đông Nam Á?",
+    "options": [
+      "A. 4",
+      "B. 2",
+      "C. 1",
+      "D. 3"
+    ],
+    "answer": "D. 3",
+    "explanation": "Theo SGK Địa lí 9 trang 118, Việt Nam đứng sau In-đô-nê-xi-a và Phi-líp-pin."
+  },
+  {
+    "id": "hk1_9_I_4",
+    "lessonId": "g9_l5",
+    "type": "choice",
+    "level": "biết",
+    "prompt": "Nhân tố tự nhiên nào là tư liệu sản xuất quan trọng nhất của ngành nông nghiệp?",
+    "options": [
+      "A. Đất đai.",
+      "B. Khí hậu.",
+      "C. Nguồn nước.",
+      "D. Sinh vật."
+    ],
+    "answer": "A. Đất đai.",
+    "explanation": "Đất là tư liệu sản xuất quan trọng của nông nghiệp, đặc biệt là trồng trọt."
+  },
+  {
+    "id": "hk1_9_I_5",
+    "lessonId": "g9_l5",
+    "type": "choice",
+    "level": "hiểu",
+    "prompt": "Ngành chăn nuôi của nước ta hiện nay có đặc điểm nào?",
+    "options": [
+      "A. Chiếm tỉ trọng cao nhất trong cơ cấu giá trị sản xuất nông nghiệp.",
+      "B. Phát triển theo hướng ứng dụng công nghệ cao và sản xuất quy mô lớn.",
+      "C. Chưa chú trọng chế biến, tiêu thụ và an toàn thực phẩm.",
+      "D. Số lượng tất cả các vật nuôi chính đều ngày càng tăng."
+    ],
+    "answer": "B. Phát triển theo hướng ứng dụng công nghệ cao và sản xuất quy mô lớn.",
+    "explanation": "Xu hướng phát triển của chăn nuôi là sản xuất hàng hoá, tập trung và ứng dụng công nghệ."
+  },
+  {
+    "id": "hk1_9_I_6",
+    "lessonId": "g9_l5",
+    "type": "choice",
+    "level": "biết",
+    "prompt": "Sản xuất nông nghiệp nước ta có xu hướng nào?",
+    "options": [
+      "A. Tỉ trọng ngành trồng trọt ngày càng tăng.",
+      "B. Ít chú trọng đầu tư vào phát triển chăn nuôi.",
+      "C. Phần lớn chỉ chú trọng vào nông sản xuất khẩu.",
+      "D. Ngày càng quan tâm áp dụng công nghệ cao."
+    ],
+    "answer": "D. Ngày càng quan tâm áp dụng công nghệ cao.",
+    "explanation": "SGK Địa lí 9 trang 131 nêu nông nghiệp công nghệ cao được thúc đẩy phát triển. Bản hướng dẫn chấm ghi B ở câu I.6. Bản ôn tập dùng D theo nội dung SGK."
+  },
+  {
+    "id": "hk1_9_I_7",
+    "lessonId": "g9_l3",
+    "type": "choice",
+    "level": "biết",
+    "prompt": "Giải pháp nào phù hợp với phương hướng giải quyết việc làm?",
+    "options": [
+      "A. Giảm đào tạo nghề.",
+      "B. Hạn chế thông tin thị trường lao động.",
+      "C. Đẩy mạnh đào tạo, dạy nghề để nâng cao chất lượng lao động.",
+      "D. Thu hẹp hợp tác quốc tế về lao động."
+    ],
+    "answer": "C. Đẩy mạnh đào tạo, dạy nghề để nâng cao chất lượng lao động.",
+    "explanation": "Nâng cao chất lượng nguồn lao động thông qua đào tạo, dạy nghề là một phương hướng giải quyết việc làm."
+  },
+  {
+    "id": "hk1_9_I_8",
+    "lessonId": "g9_l5",
+    "type": "choice",
+    "level": "biết",
+    "prompt": "Loại đất nào chủ yếu ở khu vực đồi núi, thuận lợi cho cây công nghiệp và cây ăn quả?",
+    "options": [
+      "A. Đất phù sa.",
+      "B. Đất feralit.",
+      "C. Đất mặn.",
+      "D. Đất phèn."
+    ],
+    "answer": "B. Đất feralit.",
+    "explanation": "Đất feralit phổ biến ở vùng đồi núi nước ta."
+  },
+  {
+    "id": "hk1_9_II_1",
+    "lessonId": "g9_l5",
+    "type": "boolean",
+    "level": "hiểu",
+    "context": "Nước ta có địa hình đa dạng, đất phong phú, khí hậu nhiệt đới ẩm gió mùa, nguồn nước dồi dào và sinh vật phong phú. Nông nghiệp còn được hỗ trợ bởi nguồn lao động đông, tiến bộ khoa học công nghệ, cơ sở vật chất kĩ thuật, chính sách phát triển và thị trường ngày càng mở rộng.",
+    "prompt": "Dựa vào tư liệu và kiến thức đã học, hãy xác định từng nhận định đúng hay sai.",
+    "options": [
+      "Khí hậu nước ta thuận lợi để phát triển nền nông nghiệp nhiệt đới.",
+      "Cơ sở vật chất kĩ thuật hoàn thiện và lao động dồi dào là nguyên nhân chính làm cho cơ cấu cây trồng, vật nuôi đa dạng.",
+      "Các nhân tố tự nhiên quyết định quy mô, cơ cấu ngành nông nghiệp và thúc đẩy sản xuất hàng hoá.",
+      "Khoa học công nghệ góp phần nâng cao năng suất, chất lượng nông sản và mở rộng thị trường."
+    ],
+    "answer": [
+      "Đ",
+      "S",
+      "S",
+      "Đ"
+    ],
+    "explanation": "Sự đa dạng của điều kiện tự nhiên tạo cơ sở cho cơ cấu cây trồng, vật nuôi đa dạng. Các nhân tố kinh tế – xã hội có tác động quyết định đối với quy mô và tổ chức sản xuất hàng hoá."
+  },
+  {
+    "id": "hk1_9_II_2",
+    "lessonId": "g9_l2",
+    "type": "boolean",
+    "level": "hiểu",
+    "context": "Trong những thập kỉ qua, phân bố dân cư thay đổi theo hướng ngày càng hợp lí hơn dưới tác động của vị trí địa lí, điều kiện tự nhiên, tài nguyên thiên nhiên, chính sách dân số và trình độ phát triển kinh tế. Các vùng kinh tế phát triển năng động thu hút đông dân cư.",
+    "prompt": "Dựa vào tư liệu và kiến thức đã học, hãy xác định từng nhận định đúng hay sai.",
+    "options": [
+      "Phân bố dân cư thay đổi do tác động của cả nhân tố tự nhiên và kinh tế – xã hội.",
+      "Các vùng kinh tế phát triển năng động có khả năng thu hút dân cư.",
+      "Sự phát triển kinh tế không ảnh hưởng đến phân bố dân cư.",
+      "Sự thay đổi phân bố dân cư trong những thập kỉ qua có xu hướng ngày càng hợp lí hơn."
+    ],
+    "answer": [
+      "Đ",
+      "Đ",
+      "S",
+      "Đ"
+    ],
+    "explanation": "Tư liệu nêu cả yếu tố tự nhiên và kinh tế – xã hội, đồng thời chỉ ra sức hút của các vùng kinh tế phát triển."
+  },
+  {
+    "id": "hk1_9_III_1",
+    "lessonId": "g9_l2",
+    "type": "short",
+    "level": "vận dụng",
+    "prompt": "Năm 2025, diện tích Việt Nam là 331 345,7 km² và dân số là 102,3 triệu người. Tính mật độ dân số (người/km²). Nhập số đã làm tròn đến hàng đơn vị.",
+    "answer": "309",
+    "explanation": "102 300 000 / 331 345,7 ≈ 308,741 người/km², làm tròn được 309 người/km².",
+    "numberFields": [
+      {
+        "label": "Kết quả",
+        "unit": "người/km²"
+      }
+    ]
+  },
+  {
+    "id": "hk1_9_III_2",
+    "lessonId": "g9_l2",
+    "type": "short",
+    "level": "vận dụng",
+    "prompt": "Năm 2023, dân số Việt Nam là 100,31 triệu người và dân số Đông Nam Bộ là 19 018,9 nghìn người. Tính tỉ lệ dân số Đông Nam Bộ trong cả nước (%). Nhập số đã làm tròn đến một chữ số thập phân.",
+    "answer": "19,0",
+    "acceptedAnswers": [
+      "18,9"
+    ],
+    "explanation": "19,0189 / 100,31 × 100 ≈ 18,9601%, làm tròn được 19,0%. Hướng dẫn chấm của đề mẫu cũng chấp nhận 18,9%.",
+    "numberFields": [
+      {
+        "label": "Kết quả",
+        "unit": "%"
+      }
+    ]
+  }
+]

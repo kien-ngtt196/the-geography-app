@@ -6,10 +6,11 @@ import { fail, fraction, selectQuestions, safeQuestion } from './learning.js';
 export function roomAction({ path, method, body, user, session }) {
   if (path === '/api/rooms' && method === 'POST') {
     if (user?.role !== 'teacher') fail(403,'Giáo viên cần đăng nhập để mở phòng.');
-    const questions = selectQuestions(Number(body.grade), null, 'room', false);
+    const grade = Number(body.grade);
+    const questions = selectQuestions(grade, null, 'room', false);
     let code;
     do { code = String(randomInt(100000,1000000)); } while (one('SELECT 1 FROM rooms WHERE code=?',code));
-    run("INSERT INTO rooms VALUES(?,?,?,'lobby',-1,?,?)",code,user.id,Number(body.teamMode === true),JSON.stringify(questions),Date.now());
+    run("INSERT INTO rooms(code,teacher,team_mode,state,idx,questions,created,grade) VALUES(?,?,?,'lobby',-1,?,?,?)",code,user.id,Number(body.teamMode === true),JSON.stringify(questions),Date.now(),grade);
     return {code};
   }
   const match = path.match(/^\/api\/rooms\/(\d{6})(?:\/(join|next|answer))?$/);
@@ -17,6 +18,9 @@ export function roomAction({ path, method, body, user, session }) {
   const [,code,action] = match;
   const room = one('SELECT * FROM rooms WHERE code=?',code);
   if (!room) fail(404,'Mã phòng không hợp lệ.');
+  if (user?.role === 'student' && room.grade && user.grade !== room.grade) {
+    fail(403,'Phòng này dành cho học sinh lớp '+room.grade+'.');
+  }
   const questions = JSON.parse(room.questions);
   const host = user?.id === room.teacher;
   const player = one('SELECT name,team FROM players WHERE code=? AND token=?',code,session);
@@ -69,5 +73,5 @@ export function roomAction({ path, method, body, user, session }) {
 
 export function roomQR(code, origin) {
   if (!one('SELECT 1 FROM rooms WHERE code=?',code)) fail(404,'Không tìm thấy phòng.');
-  return QRCode.toString(new URL('/?room='+code,origin).href,{type:'svg',margin:3,width:240});
+  return QRCode.toString(new URL('/phong-hoc?room='+code,origin).href,{type:'svg',margin:3,width:240});
 }

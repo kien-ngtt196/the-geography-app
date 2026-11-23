@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#173d37">
+  <title>Bản đồ các vùng · Atlat Việt</title>
+  <meta name="description" content="Khám phá sáu vùng địa lí Việt Nam.">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="icon" href="/atlas/mark.svg">
+</head>
+<body>
+<header class="site-head"></header>
+<main class="feature-page map-page">
+<div class="atlas-shell map-shell">
+  <nav class="breadcrumbs" aria-label="Đường dẫn"><a href="/">Trang chủ</a></nav>
+  <div class="map-layout">
+    <section class="map-intro map-directory" aria-labelledby="map-page-title">
+      <h1 id="map-page-title">Bản đồ Việt Nam</h1>
+      <p>Chọn một vùng hoặc địa danh để xem thông tin và ảnh minh hoạ khi có.</p>
+      <label for="map-search">Tìm vùng hoặc địa danh</label>
+      <input type="search" id="map-search" placeholder="Ví dụ: Sa Pa, Hà Nội…" autocomplete="off" aria-controls="map-results">
+      <div class="map-filters" aria-label="Loại kết quả">
+        <button type="button" data-filter="all" aria-pressed="true">Tất cả</button>
+        <button type="button" data-filter="region" aria-pressed="false">Vùng</button>
+        <button type="button" data-filter="place" aria-pressed="false">Địa danh</button>
+      </div>
+      <p id="map-result-count" class="map-result-count" role="status"></p>
+      <ul id="map-results" class="map-results" aria-label="Kết quả tìm kiếm"></ul>
+    </section>
+    <section class="map-card" aria-labelledby="map-title">
+      <div class="card-heading">
+        <div class="sticker-heading">
+          <span class="feature-sticker" data-sticker="compass" aria-hidden="true"></span>
+          <div><h2 id="map-title">Bản đồ các vùng</h2><p>Việt Nam · 6 vùng địa lí</p></div>
+        </div>
+        <div class="map-controls">
+          <button class="view-toggle" id="pin-toggle" type="button" aria-pressed="true">Điểm gợi ý</button>
+          <button class="view-toggle" id="view-toggle" type="button" aria-pressed="true">Góc nhìn 3D</button>
+        </div>
+      </div>
+      <div class="map-viewport">
+        <svg id="geomap" viewBox="100 3 665 548" aria-label="Lược đồ tương tác các vùng Việt Nam"></svg>
+        <div class="map-compass" aria-hidden="true"><b>B</b><svg viewBox="0 0 30 38"><path d="M15 1 24 29 15 24 6 29Z" fill="#faf9e9" stroke="#405a4c" stroke-width="1.4"/><path d="M15 1 15 24 6 29Z" fill="#405a4c"/></svg></div>
+        <div class="map-camera" aria-label="Thu phóng bản đồ">
+          <button type="button" id="zoom-in" aria-label="Phóng to">+</button>
+          <button type="button" id="zoom-out" aria-label="Thu nhỏ">−</button>
+          <button type="button" id="zoom-reset" aria-label="Xem lại toàn Việt Nam">↺</button>
+        </div>
+      </div>
+      <div class="legend" id="legend" aria-label="Chọn vùng địa lí"></div>
+      <details class="map-source"><summary>Nguồn lược đồ</summary><p>Ranh giới từ <a href="https://www.geoboundaries.org/" target="_blank" rel="noreferrer">geoBoundaries</a> và <a href="https://www.naturalearthdata.com/" target="_blank" rel="noreferrer">Natural Earth</a>, gộp theo sáu vùng trong SGK Địa lí 9. Địa danh đánh dấu ở vị trí gần đúng. Độ cao và độ dày các lớp là minh hoạ.</p></details>
+    </section>
+    <aside class="map-info" aria-label="Thông tin vùng và địa danh">
+      <p id="map-info-hint">Rê chuột để xem thông tin. Bấm vào vùng hoặc địa danh để giữ nội dung ở đây.</p>
+      <section id="region-popup" aria-labelledby="region-title" hidden>
+        <figure class="region-photo" id="place-photo"><img id="photo" alt=""><figcaption id="photo-credit"></figcaption></figure>
+        <div class="region-body" aria-live="polite"><h2 id="region-title"></h2><p id="region-summary"></p></div>
+        <div class="place-links" id="place-links"></div>
+        <section class="map-details" id="map-details" aria-labelledby="detail-title" hidden>
+          <header><h3 id="detail-title"></h3></header>
+          <div class="detail-grid" id="detail-sections"></div>
+        </section>
+      </section>
+    </aside>
+  </div>
+</div>
+</main>
+<script type="module" src="/navigation.js"></script>
+<script type="module" src="/atlas.js"></script>
+</body>
+</html>

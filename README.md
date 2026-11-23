@@ -19,8 +19,8 @@ Máy chủ tự tạo thư mục `.storage`, tệp cơ sở dữ liệu và mã 
 
 | Người dùng | Thao tác | Kết quả |
 | --- | --- | --- |
-| Khách | Chọn khối, rê chuột, chạm hoặc dùng bàn phím chọn vùng. Mở một bài và bắt đầu học thử. | Đọc tóm tắt và làm ba câu mẫu cố định của khối. Có lời mời đăng ký sau khi xem đáp án. |
-| Học sinh | Đăng ký, nhập mã lớp ngay hoặc trong mục Tài khoản. Chọn vùng, bài học và luyện tập. | Luyện tối đa 10 câu mỗi lượt trong bài đã chọn. Sau khi nộp, xem điểm, kết quả từng câu và đáp án. |
+| Khách | Rê chuột, chạm hoặc dùng bàn phím chọn vùng. | Xem ảnh SGK và tóm tắt từng vùng trong cửa sổ thông tin. |
+| Học sinh | Chọn khối khi đăng ký, nhập mã lớp nếu giáo viên cung cấp, rồi mở Góc học tập. | Xem học liệu của khối trong tài khoản. Luyện tối đa 10 câu mỗi lượt, xem điểm và đáp án sau khi nộp. |
 | Học sinh thi thử | Chọn khối, mở Thi thử, trả lời và xem lại trước khi nộp. | Làm đề 45 phút. Điểm được lưu vào sổ học tập. Khi đang mở đề, giao diện tự nộp lúc hết giờ. |
 | Học sinh ôn lại | Mở Sổ học tập sau một số lượt học. | Xem lịch sử và mở lại bài có tỉ lệ sai cao nhất trong các lượt đã nộp. |
 | Giáo viên | Tạo lượt chơi theo đội hoặc cá nhân, chiếu QR. Học sinh quét hoặc nhập mã phòng và đặt tên. Giáo viên lần lượt mở 10 câu. | Mỗi phòng có cả ba mức biết, hiểu và vận dụng. Mỗi người gửi một đáp án cho mỗi câu. Bảng điểm cá nhân và tổng điểm đội cập nhật theo lượt. Cuối phòng có thống kê đúng, sai, bỏ qua và tỉ lệ đúng theo câu. |
@@ -28,19 +28,29 @@ Máy chủ tự tạo thư mục `.storage`, tệp cơ sở dữ liệu và mã 
 
 ## Thiết kế giao diện và nội dung
 
-Bản đồ SVG gồm sáu vùng theo cách chia trong SGK Địa lí 9 được cung cấp. Mỗi vùng có màu, tên và nút tương ứng trong chú giải. Thẻ bên cạnh bản đồ cập nhật ngay khi chọn vùng. Trên điện thoại, thẻ nằm dưới bản đồ. Lớp 8 liên kết địa phương với các chủ đề tự nhiên xuyên vùng như địa hình, khí hậu, đất và nước. Lớp 9 liên kết trực tiếp với bài về vùng và các ngành kinh tế liên quan. Danh mục Luyện tập cho phép mở cả những bài không gắn riêng với một vùng.
+Bản đồ gồm sáu vùng theo cách chia trong SGK Địa lí 9. Các lớp SVG tạo chiều sâu và có thể chuyển sang góc nhìn phẳng. Mỗi vùng có màu, tên và nút chú giải. Khi rê chuột, chạm hoặc dùng bàn phím, cửa sổ nổi hiển thị ảnh và thông tin vùng. Danh mục Luyện tập nằm trong Góc học tập sau đăng nhập. Học sinh thấy khối đã đăng ký và giáo viên thấy cả hai khối.
 
-Giao diện kết hợp ba cách trình bày theo mục đích sử dụng: atlat minh hoạ để khám phá, thẻ bài học để tự ôn và màn hình phòng chơi để chiếu QR, câu hỏi và bảng điểm. Dữ liệu nền lược đồ lấy từ geoBoundaries và Natural Earth, có ghi nguồn trong mục Nguồn lược đồ. Ranh giới đã được giản lược phục vụ học theo vùng. Ảnh phong cảnh từ phiên bản trước của dự án dùng để minh hoạ thẻ vùng.
+Trang chủ đặt bản đồ nổi Việt Nam trên nền ảnh Vịnh Hạ Long. Rê chuột, chạm hoặc dùng bàn phím trên bản đồ để xem tên và ảnh SGK của từng vùng. Nút Khám phá bản đồ mở trang bản đồ riêng. Ba dải giới thiệu Bản đồ, Góc học tập và Phòng học có nền toàn chiều ngang. Trên màn hình rộng, ảnh chính hòa vào một lớp ảnh nền cùng tông để hạn chế phóng lớn. Nội dung hiện dần khi cuộn đến từng mục. Các biểu tượng trang trí trong ô tính năng được cắt hiển thị từ hai ảnh gốc trong `public/decor`. Ảnh Wikimedia Commons của các địa danh nằm trong `public/atlas/places`, kèm tên tác giả, nguồn và thông tin giấy phép trong `public/map-place-media.js`.
+
+Các lớp nền bổ sung dùng ảnh Đà Lạt từ bộ ảnh được cung cấp, bản đồ lịch sử trong *Scottish Geographical Magazine* (1886) và ảnh lớp học của Thúy Quỳnh Ngô. [Bản đồ lịch sử](https://commons.wikimedia.org/wiki/File:Indochina_map_1886.jpg) · [Ảnh lớp học](https://www.pexels.com/photo/empty-classroom-with-sunlight-streaming-through-windows-30105084/) · [Giấy phép Pexels](https://www.pexels.com/license/)
+
+Trong trang bản đồ, danh mục bên trái hỗ trợ tìm theo tên vùng hoặc địa danh có dấu và không dấu. Rê chuột để xem trước và bấm để ghim thông tin, ảnh và nguồn ở khung bên cạnh. Khi ghim một địa danh, bản đồ chỉ hiển thị điểm của địa danh đó nếu có toạ độ. Người dùng có thể bật tắt các điểm gợi ý khi xem tổng quan, thu phóng và đọc thông tin tự nhiên, dân cư, kinh tế của từng vùng. Các số liệu ghi năm và nguồn SGK. Các màn hình dùng Be Vietnam Pro cho chữ nội dung và Lora cho tiêu đề. Chuyển động được tắt khi thiết bị yêu cầu giảm chuyển động. Nguồn bản đồ được ghi trong mục Nguồn lược đồ. Thư mục `design/references` lưu ảnh thiết kế tham khảo đã gửi.
+
+Câu trả lời ngắn hiển thị đơn vị cạnh ô nhập. Với vĩ độ, học sinh điền số độ và số phút vào hai ô. Máy chủ chấp nhận dấu phẩy hoặc dấu chấm thập phân.
 
 | Học liệu | Phạm vi |
 | --- | --- |
-| Địa lí 8 | 12 bài và 2 chủ đề chung, 340 câu |
-| Địa lí 9 | 21 bài và 3 chủ đề chung, 355 câu |
-| Tư liệu trực quan trích từ SGK | Hình 6.5 trang 124 lớp 8 về lưu vực sông Thu Bồn. Bảng 5.1 và hình 5.1 trang 131 lớp 9 về lương thực và nông nghiệp. |
+| Địa lí 8 | 12 bài và 2 chủ đề chung, 341 câu luyện tập |
+| Địa lí 9 | 21 bài và 3 chủ đề chung, 465 câu luyện tập và 12 câu đề giữa kì I |
+| Tư liệu gắn vào câu hỏi | Hình 6.5 trang 124 lớp 8 về lưu vực sông Thu Bồn. Bảng 5.1 và hình 5.1 trang 131 lớp 9 về lương thực và nông nghiệp. Hình 21.1 trang 214 lớp 9 về các vùng biển. |
 
-Hai ngân hàng DOCX và hai SGK trong `documents` trùng nội dung tệp đầu vào của phiên bản trước theo mã băm Git. Bộ dữ liệu hiện tại kế thừa 689 câu đã chuẩn hoá trong nhánh cũ, bổ sung sáu câu, trong đó có ba câu đọc tư liệu SGK. Một số bài bổ sung hiện có một câu. Tệp đầy đủ của SGK, đề có chữ ký và dữ liệu học sinh được giữ ngoài thư mục web. Tóm tắt và các câu bổ sung là nội dung biên soạn của bản dùng thử, cần giáo viên duyệt trước khi dùng để đánh giá chính thức.
+Ngân hàng luyện tập gồm 800 câu từ hai bộ DOCX, được đối chiếu theo bài, phần, số câu và khóa đáp án. Mỗi câu dẫn lại vị trí trong DOCX. Có 171 câu kèm bảng dữ liệu HTML. Hai câu cuối của chủ đề châu thổ lớp 9 thiếu khóa trong DOCX. Đáp án được tính từ số liệu đề bài và có lời giải. Sáu câu do dự án biên soạn dành cho bài bổ sung và đọc tư liệu SGK. Một số bài bổ sung hiện có một câu. Đợt đối chiếu kiểm tra nội dung nhập từ DOCX và xử lý các điểm lệch được phát hiện, còn việc xác nhận từng dữ kiện trong khóa DOCX với SGK là một mức rà soát riêng.
 
-**Quy ước thi thử.** Đề giữa kỳ lớp 9 có 8 câu nhiều lựa chọn, 2 câu đúng sai mỗi câu 4 ý, 2 câu trả lời ngắn và phần tự luận. Website thực hiện ba dạng khách quan theo yêu cầu trong Google Docs. Điểm ba phần có trọng số 4, 2, 1 theo đề mẫu, sau đó quy đổi tổng 7 điểm sang thang 10. Mỗi ý đúng trong một câu đúng sai được tính riêng. Cả hai khối dùng quy ước này cho bản thử. Đề chọn ngẫu nhiên trong khối, còn luyện tập cho phép giới hạn theo bài.
+**Quy ước thi thử.** Lớp 9 có lựa chọn giữa kì I theo phần khách quan của đề mẫu và đề ôn tổng hợp cả năm. Lớp 8 có đề ôn tổng hợp. Mỗi đề gồm 8 câu nhiều lựa chọn, 2 câu đúng sai mỗi câu 4 ý và 2 câu trả lời ngắn. Điểm lần lượt là 0,5 điểm mỗi câu nhiều lựa chọn, 0,25 điểm mỗi ý đúng sai và 0,5 điểm mỗi câu trả lời ngắn. Kết quả hiển thị điểm khách quan trên 7 và điểm quy đổi trên 10. Đề gốc còn 3 điểm tự luận.
+
+  - Câu I.2 ghi rõ giai đoạn 1999–2024 theo SGK 9 trang 119.
+  - Câu I.6 chấm D theo nội dung ứng dụng công nghệ cao trong SGK 9 trang 131. Khóa PDF ghi B.
+  - Câu III.2 có kết quả tính được là 18,9601%, làm tròn thành 19,0%. Website cũng chấp nhận 18,9% theo hướng dẫn chấm của đề mẫu.
 
 ## Backend và cơ sở dữ liệu
 
@@ -58,9 +68,29 @@ SQLite phù hợp với một máy chủ thử nghiệm cho trường vì có gi
 
 ## Dùng QR với điện thoại và đưa lên máy chủ
 
+Trong phòng chờ của giáo viên, mã QR nằm cạnh mã phòng. Học sinh quét mã để mở thẳng màn hình nhập tên tham gia. Mã phòng vẫn có thể nhập bằng tay.
+
 Để chơi qua Wi-Fi lớp học, cấu hình `HOST=0.0.0.0` và `PUBLIC_ORIGIN=http://<IP-máy-giáo-viên>:3000` trong `.env`, khởi động lại rồi mở chính địa chỉ mạng LAN đó trên máy chiếu. Điện thoại cần truy cập được cùng địa chỉ. Địa chỉ 127.0.0.1 trên điện thoại chỉ về bản thân điện thoại.
 
 Để học ở nhà, chạy ứng dụng trên một máy chủ Node với thư mục lưu trữ bền vững, cấu hình tên miền HTTPS và đặt `PUBLIC_ORIGIN` thành địa chỉ đó. Có thể đổi `DATA_DIR`, `HOST` và `PORT` theo môi trường. Khi sao lưu bằng cách sao chép tệp, dừng ứng dụng trước rồi sao lưu cả thư mục dữ liệu. GitHub lưu mã nguồn. GitHub Pages chỉ phục vụ tệp tĩnh nên luồng đăng nhập, chấm bài và phòng chơi cần một dịch vụ chạy Node riêng.
+
+## Triển khai trên Render
+
+1. Tạo một **Web Service** từ kho `kien-ngtt196/the-study-app`. Chọn nhánh `codex/atlas-viet-nam`, môi trường Node và giữ thư mục gốc mặc định.
+2. Đặt **Build Command** là `npm ci` và **Start Command** là `npm start`. Chọn gói hỗ trợ đĩa lưu trữ bền vững. Gắn đĩa tại `/var/data` trong phần **Advanced**.
+3. Thêm các biến môi trường dưới đây. Render cấp `PORT` cho dịch vụ. Sau khi biết địa chỉ HTTPS thực tế, cập nhật `PUBLIC_ORIGIN` theo địa chỉ đó, bỏ dấu gạch chéo cuối và triển khai lại.
+
+| Biến môi trường | Giá trị |
+| --- | --- |
+| `NODE_VERSION` | `24.22.1` |
+| `HOST` | `0.0.0.0` |
+| `DATA_DIR` | `/var/data` |
+| `PUBLIC_ORIGIN` | Địa chỉ HTTPS thực của dịch vụ |
+| `TEACHER_KEY` | Mã bí mật do bạn đặt để đăng ký giáo viên |
+
+Ứng dụng tự tạo `/var/data/atlas.sqlite` và các bảng trong lần khởi động đầu tiên. Tài khoản thử trên máy phát triển nằm trong cơ sở dữ liệu cục bộ. Trên bản triển khai mới, đăng ký giáo viên bằng `TEACHER_KEY`, tạo phòng và quét QR bằng điện thoại để kiểm tra địa chỉ đã cấu hình. [Web Services](https://render.com/docs/web-services) · [Persistent Disks](https://render.com/docs/disks) · [Node.js trên Render](https://render.com/docs/node-version)
+
+Nếu dùng Vercel cho toàn bộ ứng dụng, cần chuyển dữ liệu khỏi SQLite cục bộ sang cơ sở dữ liệu bền vững bên ngoài và điều chỉnh máy chủ để chạy theo mô hình Vercel Functions. [Lưu trữ dữ liệu trên Vercel](https://vercel.com/academy/agent-friendly-apis/setup-project)
 
 ## Kiểm tra trước khi thử với lớp
 

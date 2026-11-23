@@ -16,9 +16,13 @@ export function shuffle(list) {
   }
   return result;
 }
-export function safeQuestion({ answer, explanation, ...question }) { return question; }
-export function selectQuestions(grade, lessonId, mode, guest) {
+export function safeQuestion({ answer, acceptedAnswers, explanation, ...question }) { return question; }
+export function selectQuestions(grade, lessonId, mode, guest, examPaper = 'general') {
   const catalog = lessons(grade);
+  if (mode === 'exam' && examPaper !== 'general') {
+    if (grade !== 9 || examPaper !== 'midterm1') fail(400, 'Đề giữa kì I trong tài liệu chỉ dành cho lớp 9.');
+    return JSON.parse(readFileSync(new URL('./content/grade9-midterm1.json', import.meta.url)));
+  }
   const lesson = lessonId ? catalog.find(item => item.id === lessonId) : null;
   if (lessonId && !lesson) fail(404, 'Không tìm thấy bài học.');
   const pool = (lesson ? [lesson] : catalog).flatMap(l => l.questions.map(q => ({ ...q, lessonId: l.id })));
@@ -32,24 +36,46 @@ export function selectQuestions(grade, lessonId, mode, guest) {
     return shuffle(required.concat(shuffled.filter(q => !required.includes(q))).slice(0, 10));
   }
   if (mode === 'exam') {
-    return ['choice','boolean','short'].flatMap((type, i) => shuffle(pool.filter(q => q.type === type)).slice(0, [8,2,2][i]));
+    return ['choice','boolean','short'].flatMap((type, i) => {
+      const candidates = pool.filter(q => q.type === type && (type !== 'boolean' || q.answer.length === 4));
+      const count = [8,2,2][i];
+      if (candidates.length < count) fail(409, 'Ngân hàng chưa đủ câu hỏi cho cấu trúc đề này.');
+      return shuffle(candidates).slice(0,count);
+    });
   }
   return shuffle(pool).slice(0, 10);
 }
 function normalized(value) {
-  return String(value ?? '').normalize('NFC').trim().toLocaleLowerCase('vi').replace(/\s+/g,' ').replace(/^(\-?\d+),(\d+)$/, '$1.$2');
+  return String(value ?? '').normalize('NFC').trim().toLocaleLowerCase('vi').replace(/\s+/g,' ');
+}
+function normalizedShort(value) {
+  const text = normalized(value)
+    .replace(/−/g, '-')
+    .replace(/\s*°\s*/g, '°')
+    .replace(/\s*['’′]$/g, '′');
+  if (/^-?\d{1,3}( \d{3})+([.,]\d+)?$/.test(text)) return text.replaceAll(' ', '').replace(',', '.');
+  return /^-?\d+,\d+$/.test(text) ? text.replace(',', '.') : text;
 }
 export function fraction(q, value) {
   if (q.type === 'boolean') {
     if (!Array.isArray(value) || value.length !== q.answer.length) return 0;
     return q.answer.filter((a, i) => normalized(a) === normalized(value[i])).length / q.answer.length;
   }
-  const answer = normalized(q.answer), submitted = normalized(value);
-  if (!submitted || typeof value !== 'string') return 0;
-  if (q.type === 'short' && /^-?\d+(\.\d+)?$/.test(answer) && /^-?\d+(\.\d+)?$/.test(submitted)) {
-    return Number(answer) === Number(submitted) ? 1 : 0;
+  if (q.type === 'short' && Array.isArray(value) && q.numberFields?.length > 1) {
+    if (value.length !== q.numberFields.length || !value.every(part=>typeof part === 'string' && /^\d+$/.test(part.trim()))) return 0;
+    value = value.map((part,index)=>Number(part) + q.numberFields[index].unit).join('');
   }
-  return Number(answer === submitted);
+  if (typeof value !== 'string' || !value.trim()) return 0;
+  if (q.type === 'short') {
+    const submitted = normalizedShort(value);
+    return Number([q.answer, ...(q.acceptedAnswers || [])].some(value => {
+      const expected = normalizedShort(value);
+      const numeric = /^-?\d+(\.\d+)?$/;
+      if (numeric.test(expected) && numeric.test(submitted)) return Number(expected) === Number(submitted);
+      return expected === submitted;
+    }));
+  }
+  return Number(normalized(q.answer) === normalized(value));
 }
 export function gradeAttempt(questions, answers, mode) {
   // Preserve the 4:2:1 objective section weights in the supplied paper.
@@ -62,5 +88,7 @@ export function gradeAttempt(questions, answers, mode) {
     score += part * (mode === 'exam' ? weights[q.type] / counts[q.type] / weightSum : 1 / questions.length);
     return { id:q.id, correct:part === 1, answer:q.answer, lessonId:q.lessonId, explanation:q.explanation || '' };
   });
-  return { score: Math.round(score * 1000) / 100, total:10, items };
+  const result = { score: Math.round(score * 1000) / 100, total:10, items };
+  if (mode === 'exam') result.objectiveScore = Math.round(score * 700) / 100;
+  return result;
 }

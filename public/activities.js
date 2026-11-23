@@ -11,6 +11,7 @@ const titles = {
   practice: 'Luyện tập', exam: 'Thi thử', progress: 'Sổ học tập',
   classroom: 'Phòng học', account: 'Tài khoản'
 };
+const activityStickers = {practice:'book',exam:'compass',progress:'photos',classroom:'mountains',account:'globe'};
 const formatScore = value => Number(value).toLocaleString('vi-VN', {maximumFractionDigits: 2});
 let user, mode, options, attempt, timer, revision = 0, returnTo;
 const drafts = new Map();
@@ -28,11 +29,11 @@ async function api(path, data) {
 }
 
 function view(title, body, subtitle = '') {
-  dialog.innerHTML = `<header class="act-head"><div>${subtitle ? `<small>${esc(subtitle)}</small>` : ''}<h2 id="activity-title" tabindex="-1">${esc(title)}</h2></div><button class="act-close" type="button" aria-label="Đóng cửa sổ">×</button></header>
+  dialog.innerHTML = `<header class="act-head"><div>${subtitle ? `<small>${esc(subtitle)}</small>` : ''}<h1 id="activity-title" tabindex="-1">${esc(title)}</h1></div>
+    <span class="feature-sticker" data-sticker="${activityStickers[mode]}" aria-hidden="true"></span></header>
     <div class="act-body">${body}<p id="act-error" class="act-error" role="alert"></p></div>`;
   dialog.setAttribute('aria-labelledby', 'activity-title');
-  dialog.querySelector('.act-close').onclick = () => dialog.close();
-  byId('activity-title').focus({preventScroll:true});
+  byId('activity-title').focus();
 }
 function error(message) {
   const target = byId('act-error');
@@ -62,7 +63,16 @@ function accountGate(message) {
 }
 function accountPage(register = false) {
   if (user) {
-    view(user.name, `<dl class="act-data"><dt>Vai trò</dt><dd>${user.role === 'teacher' ? 'Giáo viên' : 'Học sinh'}</dd><dt>Mã lớp</dt><dd>${esc(user.classCode || 'Chưa tham gia lớp')}</dd></dl>${user.role === 'student' ? '<form id="class-code" class="act-form"><label>Tham gia lớp bằng mã giáo viên cung cấp<input name="classCode" required maxlength="32"></label><button class="act-btn">Lưu lớp</button></form>' : ''}${button('logout','Đăng xuất',true)}`, 'Tài khoản');
+    const role = user.role === 'teacher' ? 'Giáo viên' : user.grade ? 'Học sinh lớp ' + user.grade : 'Học sinh';
+    const gradeForm = user.role === 'student' && !user.grade ? '<form id="set-grade" class="act-form"><label>Khối lớp<select name="grade"><option value="8">Lớp 8</option><option value="9">Lớp 9</option></select></label><button class="act-btn">Lưu khối lớp</button></form>' : '';
+    view(user.name, `<dl class="act-data"><dt>Vai trò</dt><dd>${role}</dd><dt>Mã lớp</dt><dd>${esc(user.classCode || 'Chưa tham gia lớp')}</dd></dl>${gradeForm}${user.role === 'student' ? '<form id="class-code" class="act-form"><label>Tham gia lớp bằng mã giáo viên cung cấp<input name="classCode" required maxlength="32"></label><button class="act-btn">Lưu lớp</button></form>' : ''}${button('logout','Đăng xuất',true)}`, 'Tài khoản');
+    if (gradeForm) submit('set-grade', async () => {
+      const result = await api('student-grade', Object.fromEntries(new FormData(byId('set-grade'))));
+      user = result.user;
+      window.dispatchEvent(new Event('study:account'));
+      if (returnTo) { const next = returnTo; returnTo = null; await openActivity(...next); }
+      else location.assign('/hoc-tap');
+    });
     if (user.role === 'student') submit('class-code', async () => {
       await api('class', Object.fromEntries(new FormData(byId('class-code'))));
       user = (await api('me')).user; accountPage();
@@ -76,12 +86,14 @@ function accountPage(register = false) {
   view(register ? 'Tạo tài khoản' : 'Đăng nhập', `<form id="credentials" class="act-form">
     <label>Tên đăng nhập<input name="name" autocomplete="username" required maxlength="64"></label>
     <label>Mật khẩu<input name="password" type="password" autocomplete="${register ? 'new-password' : 'current-password'}" ${register ? 'minlength="8"' : ''} required></label>
-    ${register ? `<label>Vai trò<select name="role"><option value="student">Học sinh</option><option value="teacher">Giáo viên</option></select></label><label id="class-label">Mã lớp do giáo viên cung cấp (nếu có)<input name="classCode" maxlength="32"></label><label id="teacher-key" hidden>Mã đăng kí dành cho giáo viên<input name="teacherKey" type="password" autocomplete="off" disabled required></label>` : ''}
+    ${register ? `<label>Vai trò<select name="role"><option value="student">Học sinh</option><option value="teacher">Giáo viên</option></select></label><label id="grade-label">Khối lớp<select name="grade" required><option value="">Chọn khối lớp</option><option value="8">Lớp 8</option><option value="9">Lớp 9</option></select></label><label id="class-label">Mã lớp do giáo viên cung cấp (nếu có)<input name="classCode" maxlength="32"></label><label id="teacher-key" hidden>Mã đăng kí dành cho giáo viên<input name="teacherKey" type="password" autocomplete="off" disabled required></label>` : ''}
     <button class="act-btn">${register ? 'Tạo tài khoản' : 'Đăng nhập'}</button></form>
     <button type="button" class="act-link" id="switch-account">${register ? 'Đã có tài khoản? Đăng nhập' : 'Chưa có tài khoản? Đăng kí'}</button>`);
   const form = byId('credentials');
   if (register) form.elements.role.onchange = () => {
     byId('class-label').hidden = form.elements.role.value === 'teacher';
+    byId('grade-label').hidden = byId('class-label').hidden;
+    form.elements.grade.disabled = byId('grade-label').hidden;
     form.elements.classCode.disabled = byId('class-label').hidden;
     byId('teacher-key').hidden = form.elements.role.value !== 'teacher';
     form.elements.teacherKey.disabled = byId('teacher-key').hidden;
@@ -94,12 +106,13 @@ function accountPage(register = false) {
     if (!current(token)) return;
     user = result.user; window.dispatchEvent(new Event('study:account'));
     if (returnTo) { const next = returnTo; returnTo = null; await openActivity(...next); }
-    else accountPage();
+    else if (user.role === 'student' && !user.grade) accountPage();
+    else location.assign('/hoc-tap');
   });
 }
 const draftKey = () => [user?.id || 'guest', mode, options.grade, options.lessonId || ''].join('/');
 async function startPage(token) {
-  if (mode === 'exam' && !user) return accountGate('Đăng nhập để làm đề thi thử và lưu kết quả.');
+  if (!user) return accountGate('Đăng nhập để mở học liệu đúng khối lớp.');
   attempt = drafts.get(draftKey());
   if (attempt) return questionPage();
   const {lessons} = await api('catalog?grade=' + enc(options.grade));
@@ -107,17 +120,26 @@ async function startPage(token) {
   const lesson = lessons.find(l => l.id === options.lessonId);
   const practice = mode === 'practice';
   const picker = practice && !lesson ? `<label>Chủ đề<select id="act-lesson"><option value="">Ôn tập tổng hợp</option>${lessons.map(l => `<option value="${esc(l.id)}">${esc(l.title)}</option>`).join('')}</select></label>` : '';
+  const examPicker = !practice && options.grade === 9 ? '<label>Chọn đề<select id="act-paper"><option value="midterm1">Giữa kì I · Theo đề mẫu của trường</option><option value="general">Ôn tập tổng hợp cả năm</option></select></label>' : '';
+  const midtermScope = 'Ôn phần trắc nghiệm về dân cư, lao động và nông nghiệp trong đề giữa kì I lớp 9 của Trường THCS Nguyễn Du. Đề gốc dành 3 điểm cho phần tự luận.';
+  const generalScope = 'Câu hỏi được chọn ngẫu nhiên từ các bài trong cả năm học của lớp ' + options.grade + '.';
   view(lesson?.title || (practice ? 'Luyện tập Địa lí' : 'Thi thử Địa lí'), `
-    <p id="lesson-summary">${esc(lesson?.summary || (practice ? 'Ôn lại kiến thức bằng câu hỏi và đối chiếu đáp án sau khi nộp bài.' : 'Đề gồm 8 câu nhiều lựa chọn, 2 câu đúng sai và 2 câu trả lời ngắn trong 45 phút. Ba phần có trọng số 4, 2 và 1, quy đổi về thang 10.'))}</p>
+    ${examPicker ? '<div class="act-form">'+examPicker+'</div>' : ''}
+    <p id="lesson-summary">${esc(lesson?.summary || (practice ? 'Ôn lại kiến thức bằng câu hỏi và đối chiếu đáp án sau khi nộp bài.' : examPicker ? midtermScope : generalScope))}</p>
+    ${practice ? '' : '<p>45 phút · 8 câu nhiều lựa chọn, 2 câu đúng sai (mỗi câu 4 ý) và 2 câu trả lời ngắn. Phần trắc nghiệm có 7 điểm, quy đổi sang thang 10 để lưu vào sổ học tập.</p>'}
     ${!user ? '<p class="act-note">Lượt học thử gồm ba câu mẫu của khối lớp. Đăng kí để luyện theo từng bài và lưu tiến độ.</p>' : ''}
     <div class="act-form">${user ? picker : ''}${button('begin', practice ? 'Bắt đầu luyện tập' : 'Bắt đầu thi thử')}</div>`, 'Địa lí ' + options.grade);
   const selector = byId('act-lesson');
+  const paperSelector = byId('act-paper');
+  if (paperSelector) paperSelector.onchange = () => {
+    byId('lesson-summary').textContent = paperSelector.value === 'midterm1' ? midtermScope : generalScope;
+  };
   if (selector) selector.onchange = () => {
     byId('lesson-summary').textContent = lessons.find(l => l.id === selector.value)?.summary || 'Ôn lại kiến thức bằng câu hỏi và đối chiếu đáp án sau khi nộp bài.';
   };
   action('begin', async () => {
     const lessonId = byId('act-lesson')?.value || options.lessonId;
-    const result = await api('attempts', {grade:options.grade, mode, lessonId:lessonId || undefined});
+    const result = await api('attempts', {grade:options.grade, mode, lessonId:lessonId || undefined, examPaper:paperSelector?.value});
     if (!current(token)) return;
     if (!result.questions?.length) throw new Error('Bài này chưa có câu hỏi.');
     attempt = {...result, index:0, answers:{}};
@@ -127,8 +149,15 @@ async function startPage(token) {
 
 function questionMarkup(q, value) {
   const media = q.media?.startsWith('/media/') ? `<img class="act-media" src="${esc(q.media)}" alt="Tư liệu minh họa cho câu hỏi">` : '';
-  const lead = `${q.context ? `<div class="act-context">${esc(q.context)}</div>` : ''}${media}<h3>${esc(q.prompt)}</h3>`;
-  if (q.type === 'short') return lead + `<label>Câu trả lời<input name="short" maxlength="220" value="${esc(value)}" autocomplete="off"></label>`;
+  const lead = `${q.context ? `<div class="act-context">${esc(q.context)}</div>` : ''}${q.table?.length ? table(q.table[0],q.table.slice(1)) : ''}${media}<h3>${esc(q.prompt)}</h3>`;
+  if (q.type === 'short') {
+    if (!q.numberFields) return lead + `<label>Câu trả lời<input name="short" maxlength="220" value="${esc(value)}" autocomplete="off"></label>`;
+    const fields = q.numberFields.map(({label,unit}, i) => {
+      const fieldValue = q.numberFields.length === 1 ? value : value?.[i];
+      return `<label>${esc(label)}<span class="act-number"><input name="number-${i}" inputmode="${q.numberFields.length === 1 ? 'decimal' : 'numeric'}" maxlength="32" value="${esc(fieldValue)}" autocomplete="off" ${unit ? `aria-describedby="unit-${i}"` : ''}>${unit ? `<span id="unit-${i}">${esc(unit)}</span>` : ''}</span></label>`;
+    });
+    return lead + `<div class="act-numbers">${fields.join('')}</div>`;
+  }
   if (q.type === 'boolean') {
     const statements = q.options?.length ? q.options : ['Nhận định trên'];
     return lead + statements.map((s, i) => `<fieldset class="act-statement"><legend>${esc(s)}</legend>${['Đ','S'].map((v,j) => `<label><input type="radio" name="statement-${i}" value="${v}" ${value?.[i] === v ? 'checked' : ''}>${['Đúng','Sai'][j]}</label>`).join('')}</fieldset>`).join('');
@@ -138,6 +167,11 @@ function questionMarkup(q, value) {
 function readAnswer(form, q) {
   const data = new FormData(form);
   if (q.type === 'boolean') return Array.from({length:q.options?.length || 1}, (_,i) => data.get('statement-'+i) || '');
+  if (q.type === 'short' && q.numberFields) {
+    const parts = q.numberFields.map((_,i) => String(data.get('number-'+i) || '').trim());
+    if (q.numberFields.length === 1) return parts[0];
+    return parts;
+  }
   return String(data.get(q.type) || '').trim();
 }
 function complete(value) { return Array.isArray(value) ? value.every(Boolean) : !!value; }
@@ -153,11 +187,18 @@ async function finishAttempt() {
     clearInterval(timer);
     const rows = result.items.map((item, i) => {
       const q = session.questions.find(x => x.id === item.id);
-      const display = a => Array.isArray(a) ? a.map(v => v === 'Đ' ? 'Đúng' : v === 'S' ? 'Sai' : v || '—').join(' · ') : a || '—';
-      return `<details class="act-detail"><summary><span>Câu ${i+1}</span><strong>${item.correct ? 'Đúng' : 'Cần ôn lại'}</strong></summary><p>${esc(q?.prompt)}</p><p>Bạn chọn <b>${esc(display(session.answers[item.id]))}</b></p><p>Đáp án <b>${esc(display(item.answer))}</b></p>${item.explanation ? `<p>${esc(item.explanation)}</p>` : ''}</details>`;
+      const display = a => {
+        if (q?.numberFields?.length > 1 && Array.isArray(a)) {
+          return a.map((value,index)=> value ? value + q.numberFields[index].unit : '—').join(' ');
+        }
+        if (q?.numberFields?.length === 1 && a) return [a,q.numberFields[0].unit].filter(Boolean).join(' ');
+        return Array.isArray(a) ? a.map(v => v === 'Đ' ? 'Đúng' : v === 'S' ? 'Sai' : v || '—').join(' · ') : a || '—';
+      };
+      return `<details class="act-detail"><summary><span>Câu ${i+1}</span><strong>${item.correct ? 'Đúng' : 'Cần ôn lại'}</strong></summary><p>${esc(q?.prompt)}</p><p>Bạn chọn <b>${esc(display(session.answers[item.id]))}</b></p><p>Đáp án <b>${esc(display(item.answer))}</b></p>${item.explanation ? `<p>${esc(item.explanation)}</p>` : ''}${q?.source ? `<small>${esc(q.source)}</small>` : ''}</details>`;
     }).join('');
-    view('Kết quả bài làm', `<div class="act-score">${formatScore(result.score)} <small>/ ${formatScore(result.total)}</small></div>${rows}<div class="act-actions">${button('continue',user ? 'Xem sổ học tập' : 'Tạo tài khoản')}</div>`, titles[mode] + ' · Lớp ' + options.grade);
-    action('continue', () => user ? openActivity('progress',options) : accountPage(true));
+    const objective = result.objectiveScore === undefined ? '' : `<p>Phần trắc nghiệm đạt <b>${formatScore(result.objectiveScore)} / 7</b> điểm. Điểm quy đổi trong sổ học tập:</p>`;
+    view('Kết quả bài làm', `${objective}<div class="act-score">${formatScore(result.score)} <small>/ ${formatScore(result.total)}</small></div>${rows}<div class="act-actions">${button('continue',user ? 'Xem sổ học tập' : 'Tạo tài khoản')}</div>`, titles[mode] + ' · Lớp ' + options.grade);
+    action('continue', () => user ? location.assign('/so-hoc-tap') : accountPage(true));
   } catch (e) {
     if (e.status === 409 && session.expiresAt && Date.now() > session.expiresAt) {
       drafts.delete(key);
@@ -214,13 +255,13 @@ async function progressPage(token) {
   view('Sổ học tập', `${user.role === 'teacher' ? `<h3>Kết quả lớp ${esc(user.classCode)}</h3>${students.length ? table(['Học sinh','Bài đã làm','Tổng điểm','Bài gần nhất','Ngày'],students.map(s => [s.name,s.attempts,formatScore(s.score)+' / '+formatScore(s.total),s.lastLesson || '—',s.lastDate ? date(s.lastDate) : '—'])) : '<p>Chưa có kết quả từ học sinh trong lớp. Học sinh có thể nhập mã lớp trong tài khoản.</p>'}` : ''}
     ${rec ? `<div class="act-note"><small>Gợi ý ôn tập · Lớp ${esc(rec.grade)}</small><h3>${esc(rec.title)}</h3>${button('recommend','Ôn bài này')}</div>` : ''}
     <h3>Bài đã làm</h3>${result.attempts.length ? table(['Ngày','Hoạt động','Điểm'],result.attempts.map(a => [date(a.date),(a.lesson || titles[a.mode])+' · Lớp '+a.grade,formatScore(a.score)+' / '+formatScore(a.total)])) : '<p>Bài đã nộp sẽ xuất hiện tại đây.</p>'}`, user.name);
-  if (rec) action('recommend', () => openActivity('practice',{grade:rec.grade,lessonId:rec.id}));
+  if (rec) action('recommend', () => location.assign('/luyen-tap?grade='+enc(rec.grade)+'&lesson='+enc(rec.id)));
 }
 
 function classroomHome() {
   view('Phòng học', `${user?.role === 'teacher' ? `<h3>Tạo lượt chơi</h3><form id="create-room" class="act-form"><label>Khối lớp<select name="grade"><option value="8">Địa lí 8</option><option value="9" ${options.grade === 9 ? 'selected' : ''}>Địa lí 9</option></select></label>
     <label>Hình thức<select name="teamMode"><option value="false">Cá nhân</option><option value="true">Theo đội</option></select></label><button class="act-btn">Tạo phòng</button></form>` : ''}
-    <h3>Tham gia lượt chơi</h3><form id="find-room" class="act-form"><label>Mã phòng<input name="code" maxlength="16" required autocomplete="off"></label><button class="act-btn">Tìm phòng</button></form>
+    <h3>Tham gia lượt chơi</h3><p>Quét mã QR trên màn hình giáo viên hoặc nhập mã phòng bên dưới.</p><form id="find-room" class="act-form"><label>Mã phòng<input name="code" maxlength="16" required autocomplete="off"></label><button class="act-btn">Tìm phòng</button></form>
     ${!user ? button('teacher-login','Đăng nhập giáo viên',true) : ''}`);
   if (!user) action('teacher-login', () => { returnTo = ['classroom',options]; return openActivity('account',options); });
   if (user?.role === 'teacher') submit('create-room', async () => {
@@ -268,7 +309,10 @@ function renderRoom(room) {
   const lobby = state === 'lobby', playing = state === 'playing';
   const finalStats = host && state === 'ended' && stats?.length ? `<h3>Kết quả từng câu</h3>${table(['Câu hỏi','Đúng','Sai','Bỏ qua','Tỉ lệ đúng trong số đã trả lời'], stats.map(s => [s.prompt,s.right,s.wrong,s.skipped,(s.right+s.wrong) ? Math.round(100*s.right/(s.right+s.wrong))+'%' : '—']))}` : '';
   view(lobby ? 'Phòng chờ' : playing ? 'Thử thách trên lớp' : 'Kết quả lượt chơi', `
-    ${lobby ? `<div class="act-room-code"><span>Mã phòng</span><strong>${esc(code)}</strong></div>${host ? `<figure><img class="act-qr" src="/api/qr?code=${enc(code)}" alt="Mã QR tham gia phòng ${esc(code)}"><figcaption>Quét mã để tham gia trên điện thoại</figcaption></figure>` : '<p>Giáo viên sẽ bắt đầu khi lớp sẵn sàng.</p>'}` : ''}
+    ${lobby ? `<div class="act-room-invite">
+      <div class="act-room-code"><span>Mã phòng</span><strong>${esc(code)}</strong></div>
+      ${host ? `<figure class="act-room-qr"><img class="act-qr" src="/api/qr?code=${enc(code)}" width="240" height="240" alt="Mã QR tham gia phòng ${esc(code)}"><figcaption>Quét mã QR bằng điện thoại, rồi nhập tên để vào phòng.</figcaption></figure>` : '<p>Giáo viên sẽ bắt đầu khi lớp sẵn sàng.</p>'}
+    </div>` : ''}
     ${playing && q ? `<p class="act-meta">Câu ${room.index+1} / ${room.count} · ${esc(q.level)}</p>${host ? `<fieldset class="act-projection" disabled>${questionMarkup(q)}</fieldset>` : room.answered ? '<p role="status">Đã ghi nhận câu trả lời.</p>' : `<form id="room-answer" class="act-form">${questionMarkup(q)}<button class="act-btn">Gửi đáp án</button></form>`}` : ''}
     ${host && state !== 'ended' ? button('room-next',lobby ? 'Bắt đầu lượt chơi' : room.index+1 === room.count ? 'Kết thúc lượt chơi' : 'Chuyển câu tiếp') : ''}
     <h3>${lobby ? 'Người chơi' : 'Bảng điểm'}</h3><div id="scoreboard">${board}</div>${finalStats}`, (teamMode ? 'Theo đội' : 'Cá nhân') + ' · ' + code);
@@ -302,17 +346,22 @@ function watchRoom(room) {
   };
   timer = setTimeout(poll,1400);
 }
-async function openActivity(nextMode, args = {}) {
+export async function openActivity(nextMode, args = {}) {
   if (!titles[nextMode]) return;
   const token = ++revision;
   clearInterval(timer); roomViewKey = ''; mode = nextMode;
   options = {...args,grade:Number(args.grade) === 9 ? 9 : 8};
-  if (!dialog.open) dialog.showModal();
+  if (!dialog.open) dialog.show();
   view(titles[mode],'<p role="status">Đang tải…</p>');
   try {
     const result = await api('me');
     if (!current(token)) return;
     user = result.user;
+    if (user?.role === 'student' && user.grade) options.grade = user.grade;
+    if (user?.role === 'student' && !user.grade && mode !== 'account') {
+      returnTo = [mode,options];
+      return openActivity('account',options);
+    }
     if (mode === 'account') accountPage();
     if (mode === 'practice' || mode === 'exam') await startPage(token);
     if (mode === 'progress') await progressPage(token);
@@ -324,6 +373,3 @@ async function openActivity(nextMode, args = {}) {
 dialog.addEventListener('close', () => {
   clearInterval(timer); revision++; returnTo = null;
 });
-window.study = {open:openActivity};
-const invited = new URL(location.href).searchParams.get('room');
-if (invited) openActivity('classroom',{code:invited.trim().toUpperCase()});

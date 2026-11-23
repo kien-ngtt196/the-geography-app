@@ -1,18 +1,17 @@
 #activity {
   box-sizing: border-box;
-  width: min(640px, calc(100vw - 28px));
-  max-height: min(85dvh, 850px);
-  margin: auto;
+  position: static;
+  width: 100%;
+  margin: 0;
   padding: 0;
-  overflow: auto;
+  overflow: visible;
   border: 1px solid #c6d1c2;
-  border-radius: 22px;
+  border-radius: 20px;
   background: #fffefa;
   color: #233d34;
-  box-shadow: 0 24px 90px #172f3355;
-  font: 400 1rem/1.55 'Be Vietnam Pro','Segoe UI',sans-serif;
+  box-shadow: 0 4px 18px #203b2410;
+  font: 400 1rem/1.55 var(--sans);
 }
-#activity::backdrop { background: #132e309e; }
 #activity *,
 #activity *::before,
 #activity *::after { box-sizing: border-box; }
@@ -26,8 +25,8 @@
   border-bottom: 1px solid #d9dfd2;
   background: #edf2e7;
 }
-#activity h2 { color: #1f4135; font: 600 clamp(1.45rem,4vw,2rem)/1.25 Georgia,serif; margin: 0; }
-#activity h3 { font: 650 1.08rem/1.5 inherit; font-size: 1.08rem; line-height: 1.5; margin: 1em 0 .55em; color: #233d34; }
+#activity h1 { color: #1f4135; font: 600 clamp(1.65rem,4vw,2.4rem)/1.25 var(--serif); margin: 0; }
+#activity h3 { font-weight: 600; font-size: 1.08rem; line-height: 1.5; margin: 1em 0 .55em; color: #233d34; }
 #activity small { font-size: .85rem; }
 #activity p, #activity h3, #activity td, #activity summary { overflow-wrap: anywhere; }
 #activity p { margin: 0 0 14px; }
@@ -35,11 +34,6 @@
 #activity button, #activity input, #activity select { font: inherit; }
 #activity button { cursor: pointer; }
 #activity button:disabled { opacity: .7; cursor: wait; }
-#activity .act-close {
-  display: grid; place-items: center; flex: 0 0 42px; height: 42px;
-  border: 1px solid #b3c5b5; border-radius: 50%; background: transparent;
-  color: #214032; font-size: 1.7rem; line-height: 1;
-}
 #activity .act-form { display: grid; gap: 13px; margin-bottom: 16px; }
 #activity label { display: grid; gap: 6px; font-weight: 550; }
 #activity input:not([type=radio]), #activity select {
@@ -85,13 +79,29 @@
 #activity th { background: #f0f4eb; }
 #activity .act-data { display: grid; grid-template-columns: max-content 1fr; gap: 6px 16px; margin-top: 0; }
 #activity dd { margin: 0; font-weight: 650; }
+#activity .act-room-invite {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: center;
+  gap: 18px clamp(20px,5vw,64px); margin-bottom: 20px; padding: 18px;
+  border: 1px solid #d9dfd2; border-radius: 12px; background: #f4f6ee;
+}
+#activity .act-room-invite > p { margin: 0; }
 #activity .act-room-code { display: grid; text-align: center; }
 #activity .act-room-code strong { font-size: 2rem; letter-spacing: .14em; }
 #activity figure { text-align: center; margin: 12px 0; }
-#activity .act-qr { display: block; width: min(190px,100%); margin: 0 auto; }
+#activity .act-room-qr { max-width: 240px; margin: 0; }
+#activity .act-qr { display: block; width: min(240px,100%); height: auto; margin: 0 auto 8px; }
 #activity figcaption { font-size: .9rem; }
 @media (max-width:500px) {
-  #activity { max-height: 92dvh; }
   #activity .act-head { padding-block: 15px; }
   #activity .act-detail strong { float: none; margin-left: 10px; }
 }
+
+@media (hover:hover) {
+  #activity .act-option:hover { border-color: #779b86; }
+  #activity .act-option, #activity .act-btn { transition: background-color 150ms, border-color 150ms; }
+}
+#activity .act-numbers { display: flex; flex-wrap: wrap; gap: 12px; }
+#activity .act-numbers label { flex: 1 1 125px; }
+#activity .act-number { display: flex; align-items: stretch; border: 1px solid #9eafa1; border-radius: 9px; background: #f1f4eb; }
+#activity .act-number input { border: 0; }
+#activity .act-number span { align-self: center; padding-inline: 10px; font-size: .93rem; }

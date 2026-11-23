@@ -8,12 +8,13 @@ import { randomBytes, randomUUID, createHash, scrypt, timingSafeEqual } from 'no
 import { db, one, all, run, teacherKey } from './storage.js';
 import { fail, gradeAttempt, lessons, safeQuestion, selectQuestions } from './learning.js';
 import { roomAction, roomQR } from './rooms.js';
+import { pages } from './public/routes.js';
 
 const derive = promisify(scrypt);
 const files = fileURLToPath(new URL('./public/',import.meta.url));
 const hash = s => createHash('sha256').update(s).digest('hex');
 const month = 30*86400000;
-const types = {'.html':'text/html','.css':'text/css','.js':'text/javascript','.svg':'image/svg+xml','.json':'application/json','.jpg':'image/jpeg','.png':'image/png','.webp':'image/webp','.woff2':'font/woff2'};
+const types = {'.html':'text/html','.css':'text/css','.js':'text/javascript','.svg':'image/svg+xml','.json':'application/json','.jpg':'image/jpeg','.png':'image/png','.webp':'image/webp','.woff2':'font/woff2','.ttf':'font/ttf'};
 const limits = new Map();
 function limit(key, maximum) {
   const previous = limits.get(key);
@@ -42,7 +43,7 @@ async function jsonBody(req) {
   fail(400,'Dữ liệu gửi lên không hợp lệ.');
 }
 function currentUser(id) {
-  return id ? one(`SELECT u.id,u.name,u.role,COALESCE(u.class_code,t.class_code,'') classCode
+  return id ? one(`SELECT u.id,u.name,u.role,u.grade,COALESCE(u.class_code,t.class_code,'') classCode
     FROM users u LEFT JOIN users t ON t.id=u.teacher_id WHERE u.id=?`,id) : null;
 }
 function setSession(res, userId) {
@@ -72,6 +73,8 @@ async function authenticate(path,body) {
   }
   if (!['teacher','student'].includes(body.role) || password.length<8) fail(400,'Chọn vai trò và nhập mật khẩu từ 8 ký tự.');
   const teacher = body.role === 'teacher';
+  const grade = teacher ? null : Number(body.grade);
+  if (!teacher && ![8,9].includes(grade)) fail(400,'Hãy chọn khối lớp của học sinh.');
   if (teacher && hash(String(body.teacherKey || '')) !== hash(teacherKey)) fail(403,'Mã đăng ký giáo viên chưa đúng.');
   const teacherId = !teacher && body.classCode ? teacherByCode(body.classCode) : null;
   const salt = randomBytes(16).toString('hex');
@@ -79,11 +82,11 @@ async function authenticate(path,body) {
   if (one('SELECT 1 FROM users WHERE login=?',login)) fail(409,'Tên đăng nhập đã được dùng.');
   let code = null;
   if (teacher) do {code=randomBytes(4).toString('hex').toUpperCase();} while(one('SELECT 1 FROM users WHERE class_code=?',code));
-  return run('INSERT INTO users(name,login,password,role,class_code,teacher_id) VALUES(?,?,?,?,?,?)',name,login,salt+':'+digest,body.role,code,teacherId).lastInsertRowid;
+  return run('INSERT INTO users(name,login,password,role,class_code,teacher_id,grade) VALUES(?,?,?,?,?,?,?)',name,login,salt+':'+digest,body.role,code,teacherId,grade).lastInsertRowid;
 }
 
 function progress(user) {
-  const attempts = all('SELECT grade,mode,lesson,date,result FROM attempts WHERE user_id=? AND result IS NOT NULL ORDER BY date DESC',user.id);
+  const attempts = all('SELECT grade,mode,lesson,date,result FROM attempts WHERE user_id=? AND result IS NOT NULL AND (? IS NULL OR grade=?) ORDER BY date DESC',user.id,user.grade,user.grade);
   const misses = new Map();
   const history = attempts.map(({result,...a}) => {
     const {score,total,items} = JSON.parse(result);
@@ -115,7 +118,9 @@ async function handle(req,res) {
   res.setHeader('X-Content-Type-Options','nosniff');
   if (!path.startsWith('/api/')) {
     if (method!=='GET' && method!=='HEAD') fail(405,'Phương thức không hợp lệ.');
-    const target = resolve(files,'.'+(path==='/' ? '/index.html' : path));
+    const route = path.replace(/\/$/,'') || '/';
+    const page = Object.hasOwn(pages,route) ? pages[route] : null;
+    const target = resolve(files,page?.file || '.'+path);
     if (!target.startsWith(resolve(files)+sep)) fail(404,'Không tìm thấy.');
     const info = await stat(target).catch(()=>null);
     if (!info?.isFile()) fail(404,'Không tìm thấy tệp.');
@@ -129,6 +134,9 @@ async function handle(req,res) {
   let session = secret && one('SELECT token,user_id FROM sessions WHERE token=? AND expires>?',hash(secret),Date.now());
   const user = currentUser(session?.user_id);
   const mustLogin = () => { if (!user) fail(401,'Hãy đăng nhập để tiếp tục.'); };
+  const checkGrade = grade => {
+    if (user?.role === 'student' && user.grade !== grade) fail(403,'Hãy dùng học liệu đúng khối lớp trong tài khoản.');
+  };
   let body = {};
   if (method==='POST') {
     const origin = req.headers.origin;
@@ -142,7 +150,10 @@ async function handle(req,res) {
   let output;
   if (method==='GET' && path==='/api/me') output={user};
   else if (method==='GET' && path==='/api/catalog') {
-    output={lessons:lessons(Number(url.searchParams.get('grade'))).map(({id,title,summary,questions})=>({id,title,summary,count:questions.length}))};
+    mustLogin();
+    const grade = Number(url.searchParams.get('grade'));
+    checkGrade(grade);
+    output={lessons:lessons(grade).map(({id,title,summary,questions})=>({id,title,summary,count:questions.length}))};
   } else if (method==='POST' && ['/api/login','/api/register'].includes(path)) {
     limit('auth:'+req.socket.remoteAddress,120);
     const id = await authenticate(path,body);
@@ -154,6 +165,13 @@ async function handle(req,res) {
   } else if (method==='POST' && path==='/api/class') {
     mustLogin(); if(user.role!=='student') fail(403,'Chỉ học sinh được tham gia lớp.');
     run('UPDATE users SET teacher_id=? WHERE id=?',teacherByCode(body.classCode),user.id); output={user:currentUser(user.id)};
+  } else if (method==='POST' && path==='/api/student-grade') {
+    mustLogin();
+    const grade = Number(body.grade);
+    if (user.role !== 'student' || user.grade !== null) fail(403,'Khối lớp đã được thiết lập.');
+    if (![8,9].includes(grade)) fail(400,'Hãy chọn lớp 8 hoặc lớp 9.');
+    run('UPDATE users SET grade=? WHERE id=? AND grade IS NULL',grade,user.id);
+    output={user:currentUser(user.id)};
   } else if (method==='GET' && path==='/api/progress') {
     mustLogin(); output=progress(user);
   } else if (method==='POST' && path==='/api/attempts') {
@@ -161,10 +179,12 @@ async function handle(req,res) {
     if (body.mode==='exam') mustLogin();
     limit('attempt:'+session.token,120);
     const grade = Number(body.grade);
+    checkGrade(grade);
     const lessonId = user && body.mode==='practice' ? body.lessonId : null;
-    const questions = selectQuestions(grade,lessonId,body.mode,!user);
+    const questions = selectQuestions(grade,lessonId,body.mode,!user,body.examPaper);
     if (!questions.length) fail(404,'Bài này chưa có câu hỏi.');
-    const label = lessons(grade).find(l=>l.id===lessonId)?.title || (user?'Ôn tập tổng hợp':'Trải nghiệm');
+    const label = body.mode==='exam' && body.examPaper==='midterm1' ? 'Giữa kì I · Phần trắc nghiệm' :
+      lessons(grade).find(l=>l.id===lessonId)?.title || (user?'Ôn tập tổng hợp':'Trải nghiệm');
     const id = randomUUID(), expiresAt = body.mode==='exam' ? Date.now()+45*60000 : null;
     run('INSERT INTO attempts VALUES(?,?,?,?,?,?,?,?,NULL,?)',id,session.token,user?.id || null,grade,body.mode,label,JSON.stringify(questions),expiresAt,new Date().toISOString());
     output={id,questions:questions.map(safeQuestion),expiresAt};

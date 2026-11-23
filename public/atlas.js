@@ -1,74 +1,299 @@
-const regions = [
-  {name:'Trung du và miền núi phía Bắc',short:'Miền núi phía Bắc',color:'#81a981',photo:'vietnam_hero',summary:'Từ thung lũng tới núi cao, địa hình tạo nên nhiều đai khí hậu. Khám phá mối liên hệ giữa độ cao, cây trồng và tiềm năng thuỷ điện.',eight:[2,4,7],nine:[11,6,8]},
-  {name:'Đồng bằng sông Hồng',short:'Đồng bằng sông Hồng',color:'#b2c481',photo:'red_river',summary:'Phù sa sông Hồng bồi đắp đồng bằng. Dân cư đông đúc, hệ thống đê và nghề trồng lúa gắn bó với nhau như thế nào?',eight:[6,9,13],nine:[12,2,5]},
-  {name:'Bắc Trung Bộ',short:'Bắc Trung Bộ',color:'#e7bf78',photo:'hue_citadel',summary:'Từ Trường Sơn ra biển là một dải đất hẹp ngang. Theo dấu gió phơn, dòng sông ngắn và mùa lũ để hiểu cách người dân thích ứng.',eight:[4,6,8],nine:[13,14,6]},
-  {name:'Duyên hải Nam Trung Bộ và Tây Nguyên',short:'Nam Trung Bộ và Tây Nguyên',color:'#cc977a',summary:'Các cao nguyên đất badan nối với dải duyên hải qua nhiều tuyến giao thông. Cùng tìm hiểu cây công nghiệp, cảng biển và nguồn nước mùa khô.',eight:[2,6,9],nine:[15,5,20]},
-  {name:'Đông Nam Bộ',short:'Đông Nam Bộ',color:'#b799b1',summary:'Đất badan, đất xám và mạng lưới đô thị tạo nên những vùng cây công nghiệp, trung tâm sản xuất và đầu mối giao thương.',eight:[9,7,2],nine:[16,17,8]},
-  {name:'Đồng bằng sông Cửu Long',short:'Đồng bằng sông Cửu Long',color:'#80b4ac',photo:'mekong_delta',summary:'Mạng lưới kênh rạch đưa nước và phù sa tới ruộng lúa, vườn cây. Quan sát cách vùng châu thổ thích ứng với mùa nước nổi và xâm nhập mặn.',eight:[6,8,13],nine:[18,19,5]}
-];
-const svgNS='http://www.w3.org/2000/svg';
-function svg(tag,attrs,text){
-  const el=document.createElementNS(svgNS,tag);
-  for(const [k,v] of Object.entries(attrs)) el.setAttribute(k,v);
-  if(text)el.textContent=text;
-  return el;
+import { regions, svg } from './geography.js';
+import { places, regionalDetails } from './map-data.js';
+import { extraPlaces, tourismIndex } from './map-places.js';
+
+const map = document.querySelector('#geomap');
+const legend = document.querySelector('#legend');
+const panel = document.querySelector('#region-popup');
+const picture = document.querySelector('#place-photo');
+const photo = document.querySelector('#photo');
+const viewToggle = document.querySelector('#view-toggle');
+const mapViewport = document.querySelector('.map-viewport');
+const details = document.querySelector('#map-details');
+const search = document.querySelector('#map-search');
+const results = document.querySelector('#map-results');
+const initialView = [100,3,665,548];
+const maxZoom = 3;
+const featured = places.map((place,region)=>({...place,region,image:'/atlas/regions/'+regions[region].photo+'.jpg',textbookPhoto:true,overview:true}));
+const catalog = [...featured,...extraPlaces];
+const regionEntries = regions.map((region,index)=>({
+  kind:'region',region:index,name:region.name,locality:'Vùng địa lí',keywords:region.short
+}));
+const placeEntries = catalog.map(place=>({...place,kind:'place'}));
+let zoom = 1;
+let markerLayer;
+let selected;
+let locked;
+let credits = [];
+let hideTimer;
+let filter = 'all';
+
+function appendLink(target,text,href) {
+  const link = document.createElement('a');
+  link.textContent = text;
+  link.href = href;
+  link.target = '_blank';
+  link.rel = 'noopener noreferrer';
+  target.append(link);
 }
-const icons={map:'M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z M9 3v15 M15 6v15',book:'M12 6Q7 3 3 5v14q4-2 9 1 5-3 9-1V5q-4-2-9 1v14',pen:'M4 20l4-1L20 7l-4-4L4 15z M13 6l4 4',users:'M15 20v-2q0-4-6-4t-6 4v2 M14 9a4 4 0 1 0-8 0 4 4 0 0 0 8 0 M16 6q5 0 4 5 M17 15q4 0 4 5',user:'M16 8a4 4 0 1 0-8 0 4 4 0 0 0 8 0 M4 21q0-7 8-7t8 7',pin:'M12 21s7-8 7-13A7 7 0 0 0 5 8q0 5 7 13z M14 8a2 2 0 1 0-4 0 2 2 0 0 0 4 0',compass:'M22 12a10 10 0 1 1-20 0 10 10 0 0 1 20 0 M16 7l-2 7-7 3 3-8z',chart:'M4 3v17h17 M8 15v-4 M13 15V7 M18 15v-6',chevron:'m9 5 7 7-7 7'};
-for(const i of document.querySelectorAll('[data-icon]')){
-  const icon=svg('svg',{viewBox:'0 0 24 24',fill:'none',stroke:'currentColor','stroke-width':1.65,'stroke-linejoin':'round','stroke-linecap':'round','aria-hidden':true});
-  icon.append(svg('path',{d:icons[i.dataset.icon]}));i.replaceChildren(icon);
-}
-const map=document.querySelector('#geomap'),legend=document.querySelector('#legend');
-const catalog=new Map();
-let selected=0, grade=8, terrain;
-function openActivity(mode,lessonId){window.study.open(mode,{grade,lessonId});}
-for(const b of document.querySelectorAll('[data-mode]')) b.onclick=()=>openActivity(b.dataset.mode);
-function update(){
-  const r=regions[selected];
-  document.querySelector('#region-title').textContent=r.name;
-  document.querySelector('#region-summary').textContent=r.summary;
-  const photo=document.querySelector('#photo');
-  if(r.photo) photo.style.backgroundImage='url("/atlas/'+r.photo+'.jpg")';
-  else if(terrain){
-    const inset=svg('svg',{xmlns:svgNS,viewBox:selected===4?'290 390 170 85':'330 300 190 95'});
-    inset.append(svg('rect',{width:800,height:550,fill:'#cde7e7'}),svg('path',{d:terrain.land,fill:'#e8e4c9'}));
-    terrain.region.forEach((d,j)=>inset.append(svg('path',{d,fill:j===selected?r.color:'#c6cfad',stroke:'white','stroke-width':.7})));
-    photo.style.backgroundImage='url("data:image/svg+xml,'+encodeURIComponent(inset.outerHTML)+'")';
-  }
-  document.querySelectorAll('[data-region]').forEach(el=>el.setAttribute('aria-pressed',String(+el.dataset.region===selected)));
-  const list=document.querySelector('#region-lessons');list.replaceChildren();
-  const book=catalog.get(grade);
-  if(!book){list.textContent='Đang tải bài học…';return;}
-  for(const n of grade===8?r.eight:r.nine){
-    const lesson=book.find(l=>l.id==='g'+grade+'_l'+n);if(!lesson)continue;
-    const b=document.createElement('button');b.type='button';b.textContent=lesson.title;b.onclick=()=>openActivity('practice',lesson.id);list.append(b);
-  }
-}
-function select(i){selected=i;update();}
-regions.forEach((r,i)=>{
-  const b=document.createElement('button');b.dataset.region=i;b.style.setProperty('--swatch',r.color);b.textContent=r.short;b.onclick=()=>select(i);legend.append(b);
-});
-function draw(t){
-  terrain=t;
-  map.append(svg('path',{d:t.land,fill:'#e5e5ce',stroke:'#b4c3ac','stroke-width':1}));
-  t.region.forEach((d,i)=>{
-    const p=svg('path',{d,fill:regions[i].color,stroke:'#fff9e8','stroke-width':1.15,tabindex:0,role:'button','data-region':i,'aria-label':regions[i].name});
-    p.onpointerenter=e=>{if(e.pointerType==='mouse')select(i);};p.onfocus=()=>select(i);p.onclick=()=>select(i);p.onkeydown=e=>{if(['Enter',' '].includes(e.key)){e.preventDefault();select(i);}};
-    map.append(p);
+
+function renderDetails(regionIndex) {
+  const profile = regionalDetails[regionIndex];
+  document.querySelector('#detail-title').textContent = regions[regionIndex].name;
+  const sections = [
+    ['Tự nhiên',profile.nature],
+    ['Dân cư',profile.population],
+    ['Kinh tế',profile.economy]
+  ];
+  const cards = sections.map(([heading,content]) => {
+    const article = document.createElement('article');
+    const title = document.createElement('h4');
+    const text = document.createElement('p');
+    title.textContent = heading;
+    text.textContent = content;
+    article.append(title,text);
+    return article;
   });
-  for(const [x,y,s,c] of [[180,190,'LÀO','country'],[220,387,'CAM-PU-CHIA','country'],[470,50,'TRUNG QUỐC','country'],[584,312,'Biển Đông','sea'],[444,169,'Vịnh Bắc Bộ','water'],[585,251,'QĐ. Hoàng Sa','island'],[641,454,'QĐ. Trường Sa','island']]){
-    map.append(svg('text',{x,y,class:c,'text-anchor':'middle','pointer-events':'none'},s));
+  const source = document.createElement('small');
+  source.textContent = profile.source;
+  document.querySelector('#detail-sections').replaceChildren(...cards,source);
+  details.hidden = false;
+}
+
+function showEntry(entry) {
+  clearTimeout(hideTimer);
+  selected = entry;
+  map.classList.toggle('has-selected-place',locked?.kind === 'place');
+  panel.hidden = !entry;
+  document.querySelector('#map-info-hint').hidden = !!entry;
+  document.querySelectorAll('[data-region]').forEach(control=>{
+    const active = control.dataset.entry === entry?.name ||
+      (!!entry && !control.hasAttribute('data-place') && Number(control.dataset.region) === entry.region);
+    control.setAttribute('aria-expanded',String(active));
+  });
+  if (!entry) return;
+
+  const region = regions[entry.region];
+  const place = entry.kind === 'place' ? entry : null;
+  const credit = credits[entry.region];
+  const imagePath = place ? place.image : featured[entry.region]?.image;
+  picture.hidden = !imagePath;
+  if (imagePath && photo.getAttribute('src') !== imagePath) photo.src = imagePath;
+  photo.alt = place?.name || credit?.caption || region?.name || '';
+  const sourceText = place?.credit || ((!place || place.textbookPhoto) && credit
+    ? credit.caption+' · SGK '+credit.grade+', hình '+credit.figure+', tr. '+credit.page : '');
+  document.querySelector('#photo-credit').textContent = sourceText;
+  document.querySelector('#region-title').textContent = entry.name;
+  document.querySelector('#region-summary').textContent = place
+    ? place.note || [place.locality,region?.name].filter(Boolean).join(' · ')
+    : region.summary;
+
+  const links = document.querySelector('#place-links');
+  links.replaceChildren();
+  if (place) {
+    if (place.source) appendLink(links,place.photoSource || place.license ? 'Nguồn ảnh' : 'Tìm hiểu thêm',place.source);
+    if (place.license) appendLink(links,'Giấy phép ảnh',place.license);
   }
-  for(const [x,y] of [[580,230],[589,234],[574,237],[634,432],[645,437],[653,425]]) map.append(svg('circle',{cx:x,cy:y,r:2,fill:'#7d9571','pointer-events':'none'}));
-  update();
+  if (region) renderDetails(entry.region);
+  else details.hidden = true;
 }
-async function loadGrade(g){
-  grade=g;document.querySelectorAll('[data-grade]').forEach(b=>b.setAttribute('aria-pressed',String(+b.dataset.grade===g)));update();
-  try{if(!catalog.has(g)){const res=await fetch('/api/catalog?grade='+g);if(!res.ok)throw Error();catalog.set(g,(await res.json()).lessons);}update();}
-  catch{if(g===grade){const box=document.querySelector('#region-lessons');box.textContent='Chưa tải được bài học. ';const retry=document.createElement('button');retry.textContent='Thử lại';retry.onclick=()=>loadGrade(g);box.append(retry);}}
+
+function select(entry,trigger) {
+  locked = entry;
+  showEntry(entry);
+  if (zoom > 1) setZoom(zoom);
+  if (matchMedia('(max-width: 680px)').matches ||
+      (trigger.closest('#map-results') && matchMedia('(max-width: 1080px)').matches)) {
+    document.querySelector('.map-info').scrollIntoView({block:'nearest'});
+  }
 }
-document.querySelectorAll('[data-grade]').forEach(b=>b.onclick=()=>loadGrade(+b.dataset.grade));
-fetch('/atlas/terrain.json').then(r=>r.json()).then(draw).catch(()=>map.setAttribute('aria-label','Hãy chọn vùng trong chú giải bên dưới.'));
-loadGrade(8);
-async function account(){try{const {user}=await (await fetch('/api/me')).json();document.querySelector('.account-btn span').textContent=user?.name || 'Tài khoản';}catch{}}
-window.addEventListener('study:account',account);account();
+
+const normalize = text => text.toLowerCase().normalize('NFD').replace(/\p{M}/gu,'').replaceAll('đ','d').trim();
+function renderResults() {
+  const terms = normalize(search.value).split(/\s+/).filter(Boolean);
+  const rows = [...regionEntries,...placeEntries].filter(row => (filter === 'all' || row.kind === filter) &&
+    terms.every(word=>normalize([row.name,row.locality,row.keywords].join(' ')).includes(word)));
+  document.querySelector('#map-result-count').textContent = rows.length ? rows.length+' kết quả' : 'Không thấy vùng hoặc địa danh phù hợp.';
+  results.replaceChildren(...rows.map(row=>{
+    const li = document.createElement('li');
+    const button = document.createElement('button');
+    const name = document.createElement('strong');
+    const subtitle = document.createElement('small');
+    button.type = 'button';
+    button.className = 'map-result';
+    button.style.setProperty('--swatch',regions[row.region]?.color || '#c3a77e');
+    name.textContent = row.name;
+    subtitle.textContent = row.locality || regions[row.region]?.short || 'Địa danh trong học liệu';
+    button.append(name,subtitle);
+    regionControl(button,row);
+    li.append(button);
+    return li;
+  }));
+  if (selected) showEntry(selected);
+}
+search.addEventListener('input',renderResults);
+const filters = document.querySelectorAll('[data-filter]');
+filters.forEach(button=>{
+  button.onclick = ()=>{
+    filter = button.dataset.filter;
+    filters.forEach(item=>item.setAttribute('aria-pressed',String(item === button)));
+    renderResults();
+  };
+});
+
+function scheduleClose() {
+  clearTimeout(hideTimer);
+  if (!locked) hideTimer = setTimeout(()=>showEntry(undefined),240);
+}
+
+function regionControl(element,entry) {
+  element.dataset.region = entry.region ?? '';
+  element.dataset.entry = entry.name;
+  if (entry.kind === 'place') element.dataset.place = 'true';
+  element.setAttribute('aria-controls','region-popup');
+  element.setAttribute('aria-expanded','false');
+  element.addEventListener('pointerenter',event=>{
+    if (event.pointerType === 'mouse' && !locked) showEntry(entry);
+  });
+  element.addEventListener('pointerleave',scheduleClose);
+  element.addEventListener('focus',()=>{if (!locked) showEntry(entry);});
+  element.addEventListener('blur',scheduleClose);
+  element.addEventListener('click',()=>select(entry,element));
+  if (element instanceof SVGElement) element.addEventListener('keydown',event=>{
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      select(entry,element);
+    }
+  });
+}
+panel.addEventListener('pointerenter',()=>clearTimeout(hideTimer));
+panel.addEventListener('pointerleave',scheduleClose);
+panel.addEventListener('focusin',()=>clearTimeout(hideTimer));
+regions.forEach((region,index)=>{
+  const button = document.createElement('button');
+  button.type = 'button';
+  button.style.setProperty('--swatch',region.color);
+  button.textContent = region.short;
+  regionControl(button,regionEntries[index]);
+  legend.append(button);
+});
+const selectedRegion = new URLSearchParams(location.search).get('vung');
+const initialIndex = regions.findIndex(region=>region.photo === selectedRegion);
+if (initialIndex >= 0) select(regionEntries[initialIndex],legend.children[initialIndex]);
+renderResults();
+
+function markerPosition(place) {
+  const [longitude,latitude] = place.coordinates;
+  // The outline was projected from longitude/latitude using these extents.
+  return [236.5+(longitude-102.14588)*29.663,35.2+(23.39097-latitude)*32.988];
+}
+function setZoom(level) {
+  zoom = Math.max(1,Math.min(level,maxZoom));
+  const [left,top,width,height] = initialView;
+  const w = width/zoom;
+  const h = height/zoom;
+  let centerX = left+width/2;
+  let centerY = top+height/2;
+  const target = selected?.coordinates ? selected : featured[selected?.region];
+  if (target && markerLayer) {
+    const [x,y] = markerPosition(target);
+    const viewMatrix = map.getCTM();
+    const markerMatrix = markerLayer.getCTM();
+    const matrix = viewMatrix && markerMatrix && viewMatrix.inverse().multiply(markerMatrix);
+    if (matrix) ({x:centerX,y:centerY} = new DOMPoint(x,y).matrixTransform(matrix));
+  }
+  const x = Math.min(Math.max(centerX-w/2,left),left+width-w);
+  const y = Math.min(Math.max(centerY-h/2,top),top+height-h);
+  map.setAttribute('viewBox', [x,y,w,h].join(' '));
+  map.classList.toggle('is-zoomed',zoom >= 1.5);
+  document.querySelector('#zoom-out').disabled = zoom === 1;
+  document.querySelector('#zoom-in').disabled = zoom === maxZoom;
+}
+document.querySelector('#zoom-in').onclick = () => setZoom(zoom+.5);
+document.querySelector('#zoom-out').onclick = () => setZoom(zoom-.5);
+document.querySelector('#zoom-reset').onclick = () => setZoom(1);
+setZoom(1);
+const pinToggle = document.querySelector('#pin-toggle');
+pinToggle.onclick = () => {
+  const visible = pinToggle.getAttribute('aria-pressed') !== 'true';
+  pinToggle.setAttribute('aria-pressed',String(visible));
+  if (markerLayer) markerLayer.classList.toggle('hide-pins',!visible);
+};
+
+function draw(terrain) {
+  const defs = svg('defs',{});
+  terrain.region.forEach((path,index) => {
+    defs.append(svg('path',{id:'shape-'+index,d:path}));
+    const clip = svg('clipPath',{id:'clip-'+index});
+    clip.append(svg('use',{href:'#shape-'+index}));
+    defs.append(clip);
+    const gradient = svg('linearGradient',{id:'ink-'+index,x1:'0%',y1:'0%',x2:'85%',y2:'95%'});
+    gradient.append(svg('stop',{offset:'0%','stop-color':regions[index].light}),svg('stop',{offset:'100%','stop-color':regions[index].color}));
+    defs.append(gradient);
+  });
+  map.append(defs);
+  const scene = svg('g',{class:'map-scene'});
+  scene.append(svg('path',{d:terrain.land,fill:'#eee5c6',stroke:'#bbbf9f','stroke-width':1.15}));
+  const depth = svg('g',{class:'map-depth','pointer-events':'none'});
+  for (const dy of [10,8,6,4,2]) {
+    terrain.region.forEach((_,index) => depth.append(svg('use',{href:'#shape-'+index,transform:'translate(0 '+dy+')',fill:regions[index].side,stroke:regions[index].side,'stroke-width':1})));
+  }
+  scene.append(depth);
+  const surfaces = svg('g',{class:'map-surfaces'});
+  terrain.region.forEach((_,index) => {
+    const face = svg('use',{href:'#shape-'+index,fill:'url(#ink-'+index+')',stroke:'#fff5d7','stroke-width':1.3,tabindex:0,role:'button','aria-label':regions[index].name});
+    regionControl(face,regionEntries[index]);
+    surfaces.append(face);
+  });
+  scene.append(surfaces);
+
+  // Stylized peaks add depth to the model. Their heights are illustrative.
+  const ranges = [
+    [[273,98,20],[295,106,22],[312,82,24],[339,85,13],[350,110,15],[298,125,13]],
+    [], [[318,169,11],[328,191,14],[347,214,12],[359,229,11]],
+    [[394,306,13],[402,331,19],[409,352,20],[398,368,13],[401,388,13]],
+    [], []
+  ];
+  ranges.forEach((peaks,index)=>{
+    const group = svg('g',{class:'map-peaks','clip-path':'url(#clip-'+index+')','pointer-events':'none'});
+    for (const [x,y,h] of peaks) {
+      group.append(svg('path',{d:`M${x-h*.57},${y+4} L${x},${y-h} L${x+h*.7},${y+4} L${x},${y+8}Z`,fill:'#eff0b1',opacity:.82}));
+      group.append(svg('path',{d:`M${x},${y-h} L${x+h*.7},${y+4} L${x},${y+8}Z`,fill:'#264f3b',opacity:.48}));
+    }
+    scene.append(group);
+  });
+  for (const [x,y,caption,cssClass] of [[185,193,'LÀO','country'],[220,383,'CAM-PU-CHIA','country'],[483,68,'TRUNG QUỐC','country'],[578,306,'Biển Đông','sea'],[453,162,'Vịnh Bắc Bộ','water'],[584,244,'QĐ. Hoàng Sa','island'],[602,450,'QĐ. Trường Sa','island']]) {
+    scene.append(svg('text',{x,y,class:cssClass,'text-anchor':'middle','pointer-events':'none'},caption));
+  }
+  for (const [x,y] of [[580,224],[589,228],[574,231],[596,429],[607,434],[614,422]]) {
+    scene.append(svg('circle',{cx:x,cy:y,r:2.2,fill:'#648663','pointer-events':'none'}));
+  }
+  markerLayer = svg('g',{class:'map-markers'});
+  markerLayer.classList.toggle('hide-pins',pinToggle.getAttribute('aria-pressed') !== 'true');
+  placeEntries.filter(place=>place.coordinates).forEach(place => {
+    const [x,y] = markerPosition(place);
+    const marker = svg('g',{transform:'translate('+x+' '+y+')',class:'map-marker',tabindex:0,role:'button','aria-label':place.name});
+    if (place.overview) marker.dataset.overview = 'true';
+    marker.append(svg('circle',{r:12,fill:'transparent'}));
+    marker.append(svg('circle',{r:5,class:'map-marker-dot'}));
+    marker.append(svg('text',{x:8,y:4,class:'map-marker-label'},place.name));
+    regionControl(marker,place);
+    markerLayer.append(marker);
+  });
+  scene.append(markerLayer);
+  map.append(scene);
+  if (selected) showEntry(selected);
+}
+viewToggle.onclick = () => {
+  const now3D = viewToggle.getAttribute('aria-pressed') !== 'true';
+  viewToggle.setAttribute('aria-pressed',String(now3D));
+  viewToggle.textContent = now3D ? 'Góc nhìn 3D' : 'Góc nhìn 2D';
+  mapViewport.classList.toggle('map-flat',!now3D);
+};
+
+fetch('/atlas/terrain.json').then(response=>response.json()).then(draw).catch(()=>map.setAttribute('aria-label','Hãy chọn vùng trong chú giải bên dưới.'));
+fetch('/atlas/regions/credits.json').then(response=>response.json()).then(data=>{
+  credits = data;
+  if (selected) showEntry(selected);
+
+}).catch(()=>{});

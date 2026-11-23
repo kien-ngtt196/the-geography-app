@@ -13,7 +13,8 @@ db.exec(`
   CREATE TABLE IF NOT EXISTS users(
     id INTEGER PRIMARY KEY, name TEXT NOT NULL, login TEXT UNIQUE NOT NULL,
     password TEXT NOT NULL, role TEXT NOT NULL CHECK(role IN ('teacher','student')),
-    class_code TEXT UNIQUE, teacher_id INTEGER REFERENCES users(id)
+    class_code TEXT UNIQUE, teacher_id INTEGER REFERENCES users(id),
+    grade INTEGER CHECK(grade IN (8,9))
   );
   CREATE TABLE IF NOT EXISTS sessions(
     token TEXT PRIMARY KEY, user_id INTEGER REFERENCES users(id), expires INTEGER NOT NULL
@@ -26,7 +27,8 @@ db.exec(`
   CREATE INDEX IF NOT EXISTS attempts_user ON attempts(user_id,date);
   CREATE TABLE IF NOT EXISTS rooms(
     code TEXT PRIMARY KEY, teacher INTEGER NOT NULL REFERENCES users(id), team_mode INTEGER NOT NULL,
-    state TEXT NOT NULL, idx INTEGER NOT NULL, questions TEXT NOT NULL, created INTEGER NOT NULL
+    state TEXT NOT NULL, idx INTEGER NOT NULL, questions TEXT NOT NULL, created INTEGER NOT NULL,
+    grade INTEGER CHECK(grade IN (8,9))
   );
   CREATE TABLE IF NOT EXISTS players(
     code TEXT NOT NULL REFERENCES rooms(code), token TEXT NOT NULL, name TEXT NOT NULL, team TEXT NOT NULL,
@@ -40,6 +42,13 @@ db.exec(`
 export const one = (sql, ...params) => db.prepare(sql).get(...params);
 export const all = (sql, ...params) => db.prepare(sql).all(...params);
 export const run = (sql, ...params) => db.prepare(sql).run(...params);
+
+if (!all('PRAGMA table_info(users)').some(column => column.name === 'grade')) {
+  db.exec('ALTER TABLE users ADD COLUMN grade INTEGER CHECK(grade IN (8,9))');
+}
+if (!all('PRAGMA table_info(rooms)').some(column => column.name === 'grade')) {
+  db.exec('ALTER TABLE rooms ADD COLUMN grade INTEGER CHECK(grade IN (8,9))');
+}
 
 function localTeacherKey() {
   const path = resolve(directory, 'teacher-key.txt');
