@@ -147,26 +147,31 @@ async function startPage(token) {
   });
 }
 
-function questionMarkup(q, value) {
+function questionMarkup(q, value, projection = false) {
   const media = q.media?.startsWith('/media/') ? `<img class="act-media" src="${esc(q.media)}" alt="Tư liệu minh họa cho câu hỏi">` : '';
   const lead = `${q.context ? `<div class="act-context">${esc(q.context)}</div>` : ''}${q.table?.length ? table(q.table[0],q.table.slice(1)) : ''}${media}<h3>${esc(q.prompt)}</h3>`;
   if (q.type === 'short') {
-    if (!q.numberFields) return lead + `<label>Câu trả lời<input name="short" maxlength="220" value="${esc(value)}" autocomplete="off"></label>`;
-    const fields = q.numberFields.map(({label,unit}, i) => {
-      const fieldValue = q.numberFields.length === 1 ? value : value?.[i];
-      return `<label>${esc(label)}<span class="act-number"><input name="number-${i}" inputmode="${q.numberFields.length === 1 ? 'decimal' : 'numeric'}" maxlength="32" value="${esc(fieldValue)}" autocomplete="off" ${unit ? `aria-describedby="unit-${i}"` : ''}>${unit ? `<span id="unit-${i}">${esc(unit)}</span>` : ''}</span></label>`;
-    });
-    return lead + `<div class="act-numbers">${fields.join('')}</div>`;
+    return lead + shortFields(q,value);
   }
   if (q.type === 'boolean') {
     const statements = q.options?.length ? q.options : ['Nhận định trên'];
     return lead + statements.map((s, i) => `<fieldset class="act-statement"><legend>${esc(s)}</legend>${['Đ','S'].map((v,j) => `<label><input type="radio" name="statement-${i}" value="${v}" ${value?.[i] === v ? 'checked' : ''}>${['Đúng','Sai'][j]}</label>`).join('')}</fieldset>`).join('');
   }
+  if (projection) return lead + `<ol class="act-room-choices">${q.options.map((option,i) => `<li class="act-room-choice act-room-choice-${i}">${esc(option)}</li>`).join('')}</ol>`;
   return lead + (q.options || []).map((s, i) => `<label class="act-option"><input type="radio" name="choice" value="${esc(s)}" ${value === s ? 'checked' : ''}><span>${esc(s)}</span></label>`).join('');
+}
+function shortFields(q, value) {
+  if (!q.numberFields) return `<label>Câu trả lời<input name="short" maxlength="220" value="${esc(value)}" autocomplete="off"></label>`;
+  const fields = q.numberFields.map(({label,unit}, i) => {
+    const fieldValue = q.numberFields.length === 1 ? value : value?.[i];
+    const fieldLabel = label || (q.numberFields.length === 1 ? 'Đáp án' : `Ô ${i+1}`);
+    return `<label>${esc(fieldLabel)}<span class="act-number"><input name="number-${i}" inputmode="${q.numberFields.length === 1 ? 'decimal' : 'numeric'}" maxlength="32" value="${esc(fieldValue)}" autocomplete="off" ${unit ? `aria-describedby="unit-${i}"` : ''}>${unit ? `<span id="unit-${i}">${esc(unit)}</span>` : ''}</span></label>`;
+  });
+  return `<div class="act-numbers">${fields.join('')}</div>`;
 }
 function readAnswer(form, q) {
   const data = new FormData(form);
-  if (q.type === 'boolean') return Array.from({length:q.options?.length || 1}, (_,i) => data.get('statement-'+i) || '');
+  if (q.type === 'boolean') return Array.from({length:q.statementCount || q.options?.length || 1}, (_,i) => data.get('statement-'+i) || '');
   if (q.type === 'short' && q.numberFields) {
     const parts = q.numberFields.map((_,i) => String(data.get('number-'+i) || '').trim());
     if (q.numberFields.length === 1) return parts[0];
@@ -278,7 +283,12 @@ async function enterRoom(code) {
   const token = revision;
   const room = await api(roomPath(code));
   if (!current(token)) return;
-  if (room.host || room.joined || visited.has(code) || room.state === 'ended') return watchRoom(room);
+  if (room.host || room.joined || visited.has(code) || room.state === 'ended') {
+    if (location.pathname === '/phong-hoc' && new URLSearchParams(location.search).get('room') !== code) {
+      history.replaceState(history.state,'','/phong-hoc?room='+enc(code));
+    }
+    return watchRoom(room);
+  }
   view('Tham gia phòng ' + code, `<form id="join-room" class="act-form"><label>Tên hiển thị<input name="name" required maxlength="40" value="${esc(user?.name)}"></label>
     ${room.teamMode ? '<label>Tên đội<input name="team" required maxlength="32" placeholder="Nhập cùng tên với đồng đội"></label>' : ''}<button class="act-btn">Vào phòng</button></form>`);
   submit('join-room', async () => {
@@ -296,13 +306,24 @@ function scoreboard(players, teams) {
   for (const p of sorted) totals.set(p.team,(totals.get(p.team) || 0)+Number(p.score));
   return table(['Đội','Tổng điểm'],[...totals].sort((a,b) => b[1]-a[1])) + personal;
 }
-let roomViewKey = '';
+function roomAnswerForm(q) {
+  if (q.type === 'choice') {
+    const choices = Array.from({length:q.optionCount}, (_,i) =>
+      `<button class="act-room-choice act-room-choice-${i}" name="choice" value="${i}">${'ABCD'[i]}</button>`);
+    return `<form id="room-answer"><fieldset id="room-controls" class="act-room-choices" aria-label="Chọn đáp án">${choices.join('')}</fieldset></form>`;
+  }
+  const fields = q.type === 'short' ? shortFields(q) : Array.from({length:q.statementCount}, (_,i) =>
+    `<fieldset class="act-statement"><legend>Ý ${'abcd'[i]}</legend><label><input type="radio" name="statement-${i}" value="Đ" required>Đúng</label><label><input type="radio" name="statement-${i}" value="S" required>Sai</label></fieldset>`).join('');
+  return `<form id="room-answer"><fieldset id="room-controls" class="act-form act-room-fields" aria-label="Nhập đáp án">${fields}<button class="act-btn">Gửi đáp án</button></fieldset></form>`;
+}
+let roomViewKey = '', roomSnapshot, roomClock;
 function renderRoom(room) {
   const {code,state,host,question:q,teamMode,players,stats} = room;
   const key = [code,state,room.index,room.answered,host].join('/');
   const board = scoreboard(players || [],teamMode);
-  if (key === roomViewKey && byId('scoreboard')) {
-    if (byId('scoreboard').innerHTML !== board) byId('scoreboard').innerHTML = board;
+  if (key === roomViewKey) {
+    const scoreboardNode = byId('scoreboard');
+    if (scoreboardNode && scoreboardNode.innerHTML !== board) scoreboardNode.innerHTML = board;
     return;
   }
   roomViewKey = key;
@@ -313,29 +334,55 @@ function renderRoom(room) {
       <div class="act-room-code"><span>Mã phòng</span><strong>${esc(code)}</strong></div>
       ${host ? `<figure class="act-room-qr"><img class="act-qr" src="/api/qr?code=${enc(code)}" width="240" height="240" alt="Mã QR tham gia phòng ${esc(code)}"><figcaption>Quét mã QR bằng điện thoại, rồi nhập tên để vào phòng.</figcaption></figure>` : '<p>Giáo viên sẽ bắt đầu khi lớp sẵn sàng.</p>'}
     </div>` : ''}
-    ${playing && q ? `<p class="act-meta">Câu ${room.index+1} / ${room.count} · ${esc(q.level)}</p>${host ? `<fieldset class="act-projection" disabled>${questionMarkup(q)}</fieldset>` : room.answered ? '<p role="status">Đã ghi nhận câu trả lời.</p>' : `<form id="room-answer" class="act-form">${questionMarkup(q)}<button class="act-btn">Gửi đáp án</button></form>`}` : ''}
-    ${host && state !== 'ended' ? button('room-next',lobby ? 'Bắt đầu lượt chơi' : room.index+1 === room.count ? 'Kết thúc lượt chơi' : 'Chuyển câu tiếp') : ''}
-    <h3>${lobby ? 'Người chơi' : 'Bảng điểm'}</h3><div id="scoreboard">${board}</div>${finalStats}`, (teamMode ? 'Theo đội' : 'Cá nhân') + ' · ' + code);
+    ${playing && q ? `<div class="act-room-timing"><span>Câu ${room.index+1} / ${room.count}${host ? ' · '+esc(q.level) : ''}</span><span id="room-seconds" role="timer" aria-label="Thời gian còn lại"></span><progress id="room-progress" aria-label="Thời gian còn lại" max="${room.durationMs}"></progress></div>${host ? `<fieldset class="act-projection" disabled>${questionMarkup(q,undefined,true)}</fieldset>` : room.answered ? `<p role="status">Đã ghi nhận câu trả lời · <strong>+${formatScore(room.points)} điểm</strong></p>` : roomAnswerForm(q)}` : ''}
+    ${host && state !== 'ended' ? button('room-next',lobby ? 'Bắt đầu lượt chơi' : room.index+1 === room.count ? 'Kết thúc sớm' : 'Chuyển câu sớm') : ''}
+    ${host || !playing ? `<h3>${lobby ? 'Người chơi' : 'Bảng điểm'}</h3><div id="scoreboard">${board}</div>` : ''}${finalStats}`, (teamMode ? 'Theo đội' : 'Cá nhân') + ' · ' + code);
   const token = revision;
   if (byId('room-next')) action('room-next',async () => {
     await api(roomPath(code,'/next'),{index:room.index});
     const updated = await api(roomPath(code));
     if (current(token)) watchRoom(updated);
   });
-  if (byId('room-answer')) submit('room-answer',async () => {
-    const answer = readAnswer(byId('room-answer'),q);
-    if (!complete(answer)) throw new Error('Hãy trả lời đầy đủ trước khi gửi.');
-    await api(roomPath(code,'/answer'),{answer,questionId:q.id});
-    const updated = await api(roomPath(code));
-    if (current(token)) watchRoom(updated);
+  if (byId('room-answer')) submit('room-answer',async event => {
+    const controls = byId('room-controls');
+    const answer = q.type === 'choice' ? Number(event.submitter.value) : readAnswer(byId('room-answer'),q);
+    if (q.type !== 'choice' && !complete(answer)) throw new Error('Hãy trả lời đầy đủ trước khi gửi.');
+    controls.dataset.sending = 'true';
+    controls.disabled = true;
+    try {
+      await api(roomPath(code,'/answer'),{answer,questionId:q.id});
+      const updated = await api(roomPath(code));
+      if (current(token)) watchRoom(updated);
+    } finally {
+      delete controls.dataset.sending;
+      controls.disabled = byId('room-progress')?.value === 0;
+    }
   });
 }
 let pollId = 0;
 function watchRoom(room) {
+  if (roomSnapshot?.code === room.code && (room.index < roomSnapshot.index ||
+      (room.index === roomSnapshot.index && roomSnapshot.answered && !room.answered))) return;
+  roomSnapshot = room;
   clearTimeout(timer);
+  clearInterval(roomClock);
   const token = revision, id = ++pollId;
   renderRoom(room);
   if (room.state === 'ended') return;
+  if (room.state === 'playing') {
+    const localDeadline = performance.now() + room.remainingMs;
+    const updateClock = () => {
+      const remaining = Math.max(0,localDeadline - performance.now());
+      const seconds = byId('room-seconds'), progress = byId('room-progress');
+      seconds.textContent = `${Math.ceil(remaining / 1000)} giây`;
+      progress.value = remaining;
+      progress.classList.toggle('is-urgent', remaining <= 5000);
+      const controls = byId('room-controls');
+      if (controls && !controls.dataset.sending) controls.disabled = remaining === 0;
+    };
+    updateClock();
+    roomClock = setInterval(updateClock,125);
+  }
   const poll = async () => {
     try {
       const updated = await api(roomPath(room.code));
@@ -344,12 +391,12 @@ function watchRoom(room) {
       if (current(token) && id === pollId) { error(e.message); timer = setTimeout(poll,3000); }
     }
   };
-  timer = setTimeout(poll,1400);
+  timer = setTimeout(poll,room.state === 'playing' ? Math.max(200,Math.min(room.remainingMs,1000)) : 1400);
 }
 export async function openActivity(nextMode, args = {}) {
   if (!titles[nextMode]) return;
   const token = ++revision;
-  clearInterval(timer); roomViewKey = ''; mode = nextMode;
+  clearInterval(timer); clearInterval(roomClock); roomViewKey = ''; roomSnapshot = undefined; mode = nextMode;
   options = {...args,grade:Number(args.grade) === 9 ? 9 : 8};
   if (!dialog.open) dialog.show();
   view(titles[mode],'<p role="status">Đang tải…</p>');
@@ -371,5 +418,5 @@ export async function openActivity(nextMode, args = {}) {
   } catch (e) { if (current(token)) error(e.message); }
 }
 dialog.addEventListener('close', () => {
-  clearInterval(timer); revision++; returnTo = null;
+  clearInterval(timer); clearInterval(roomClock); revision++; returnTo = null;
 });

@@ -154,24 +154,51 @@ test('Học thử, đăng ký, luyện tập, thi thử và chơi theo đội', 
     await new Promise(resolve=>rewritten.close(resolve));
   }
   await guest(room+'/join',{name:'Lan',team:'Sen'});
+  await student(room+'/join',{name:'Minh',team:'Sen'});
   assert.equal((await guest(room)).joined,true);
   await guest(room+'/next',{},403);
   await teacher(room+'/next',{});
+  const {run} = await import('../storage.js');
   const levels=new Set();
+  let total = 0;
   for(let i=0;i<10;i++){
-    const {question:q}=await guest(room);
-    assert.ok(q && !('answer' in q));
-    levels.add(q.level);
-    const reply={answer:pool.get(q.id),questionId:q.id};
+    const {question:q, durationMs, remainingMs}=await guest(room);
+    const {question:projected}=await teacher(room);
+    assert.equal(q.id,projected.id);
+    assert.ok(projected.prompt && !('answer' in projected));
+    assert.ok(!['prompt','context','table','media','options','answer'].some(key=>key in q));
+    assert.ok(durationMs >= 15000 && remainingMs > 0 && remainingMs <= durationMs);
+    levels.add(projected.level);
+    const answer = q.type === 'choice' ? projected.options.indexOf(pool.get(q.id)) : pool.get(q.id);
+    if (q.type === 'choice') assert.equal(q.optionCount,4);
+    const reply={answer,questionId:q.id};
     await guest(room+'/answer',reply);
     await guest(room+'/answer',reply);
-    await teacher(room+'/next',{});
+    const {points}=await guest(room);
+    assert.ok(points >= 500 && points <= 1000);
+    total += points;
+    if (i === 0) {
+      await run('UPDATE rooms SET question_started=? WHERE code=?',Date.now()-durationMs/2,code);
+      await student(room+'/answer',reply);
+      const slower = await student(room);
+      assert.ok(slower.points >= 700 && slower.points < points);
+      await run('UPDATE rooms SET question_started=? WHERE code=?',Date.now()-durationMs-5,code);
+      await guest(room+'/answer',reply,409);
+      const synced = await Promise.all([teacher(room), guest(room)]);
+      assert.ok(synced.every(state=>state.index===1));
+      assert.equal(synced[0].deadline,synced[1].deadline);
+      await teacher(room+'/next',{index:0});
+      assert.equal((await guest(room)).index,1);
+    } else if (i === 9) {
+      await run('UPDATE rooms SET question_started=? WHERE code=?',Date.now()-durationMs-5,code);
+    } else await teacher(room+'/next',{index:i});
   }
   assert.equal(levels.size,3);
   const final=await teacher(room);
   assert.equal(final.state,'ended');
-  assert.equal(final.players[0].score,10);
-  assert.ok(final.stats.every(s=>s.right===1 && s.wrong===0 && s.skipped===0));
+  assert.equal(final.players[0].score,total);
+  assert.deepEqual(final.stats[0],{prompt:final.stats[0].prompt,right:2,wrong:0,skipped:0});
+  assert.ok(final.stats.slice(1).every(s=>s.right===1 && s.wrong===0 && s.skipped===1));
   assert.equal((await stranger(room)).players.length,0);
   assert.equal(fraction({type:'short',answer:'3.5'},'3,50'),1);
   for(const grade of [8,9]) {

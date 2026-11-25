@@ -91,6 +91,33 @@
 #activity figure { text-align: center; margin: 12px 0; }
 #activity .act-room-qr { max-width: 240px; margin: 0; }
 #activity .act-qr { display: block; width: min(240px,100%); height: auto; margin: 0 auto 8px; }
+#activity .act-room-timing {
+  display: grid; grid-template-columns: 1fr auto; gap: 8px 16px;
+  align-items: center; margin-bottom: 16px; font-weight: 650;
+}
+#activity #room-seconds { font-variant-numeric: tabular-nums; }
+#activity #room-progress { grid-column: 1 / -1; width: 100%; height: .7rem; accent-color: #2c5c48; }
+#activity #room-progress.is-urgent { accent-color: #9f3c32; }
+#activity .act-room-choices {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px;
+  list-style: none; margin: 0 0 16px; padding: 0; border: 0; min-width: 0;
+}
+#activity .act-room-fields, #activity .act-projection { border: 0; margin-inline: 0; padding: 0; min-width: 0; }
+#activity .act-projection .act-media { max-height: 300px; object-fit: contain; }
+#activity .act-room-choice {
+  display: grid; place-items: center; padding: 12px; min-height: 62px;
+  border: 2px solid transparent; border-radius: 12px; color: #fff;
+  font: inherit; font-weight: 650; text-align: center; overflow-wrap: anywhere;
+}
+#activity button.act-room-choice { min-height: clamp(72px, 16vw, 112px); font-size: 1.6rem; cursor: pointer; }
+#activity .act-room-choice-0 { background: #a23836; }
+#activity .act-room-choice-1 { background: #28598d; }
+#activity .act-room-choice-2 { background: #815400; }
+#activity .act-room-choice-3 { background: #28674e; }
+#activity button.act-room-choice:disabled { opacity: .6; cursor: default; }
+@media (hover:hover) {
+  #activity button.act-room-choice:enabled:hover { border-color: #142e27; }
+}
 #activity figcaption { font-size: .9rem; }
 @media (max-width:500px) {
   #activity .act-head { padding-block: 15px; }

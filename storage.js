@@ -28,17 +28,18 @@ const schema = `
   CREATE TABLE IF NOT EXISTS rooms(
     code TEXT PRIMARY KEY, teacher INTEGER NOT NULL REFERENCES users(id), team_mode INTEGER NOT NULL,
     state TEXT NOT NULL, idx INTEGER NOT NULL, questions TEXT NOT NULL, created BIGINT NOT NULL,
-    grade INTEGER CHECK(grade IN (8,9))
+    grade INTEGER CHECK(grade IN (8,9)), question_started BIGINT
   );
   CREATE TABLE IF NOT EXISTS players(
     code TEXT NOT NULL REFERENCES rooms(code), token TEXT NOT NULL, name TEXT NOT NULL, team TEXT NOT NULL,
     PRIMARY KEY(code,token), UNIQUE(code,name)
   );
   CREATE TABLE IF NOT EXISTS responses(
-    code TEXT NOT NULL, token TEXT NOT NULL, idx INTEGER NOT NULL, correct INTEGER NOT NULL,
+    code TEXT NOT NULL, token TEXT NOT NULL, idx INTEGER NOT NULL, correct INTEGER NOT NULL, points INTEGER,
     PRIMARY KEY(code,token,idx), FOREIGN KEY(code,token) REFERENCES players(code,token)
   );
 `;
+const roomColumns = [['rooms','question_started','BIGINT'], ['responses','points','INTEGER']];
 
 function openSQLite() {
   mkdirSync(directory, { recursive: true });
@@ -47,6 +48,11 @@ function openSQLite() {
   for (const table of ['users','rooms']) {
     if (!database.prepare(`PRAGMA table_info(${table})`).all().some(column=>column.name === 'grade')) {
       database.exec(`ALTER TABLE ${table} ADD COLUMN grade INTEGER CHECK(grade IN (8,9))`);
+    }
+  }
+  for (const [table, column, type] of roomColumns) {
+    if (!database.prepare(`PRAGMA table_info(${table})`).all().some(field=>field.name === column)) {
+      database.exec(`ALTER TABLE ${table} ADD COLUMN ${column} ${type}`);
     }
   }
   return database;
@@ -60,6 +66,9 @@ async function initializePostgres() {
     await client.query('BEGIN');
     await client.query('SELECT pg_advisory_xact_lock(650288031)');
     await client.query(schema);
+    for (const [table, column, type] of roomColumns) {
+      await client.query(`ALTER TABLE ${table} ADD COLUMN IF NOT EXISTS ${column} ${type}`);
+    }
     await client.query('COMMIT');
   } catch (error) {
     await client.query('ROLLBACK').catch(()=>{});

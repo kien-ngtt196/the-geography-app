@@ -31,7 +31,7 @@ export function selectQuestions(grade, lessonId, mode, guest, examPaper = 'gener
     return ['choice', 'boolean', 'short'].map(type => first.find(q => q.type === type && q.media) || first.find(q => q.type === type)).filter(Boolean);
   }
   if (mode === 'room') {
-    const shuffled = shuffle(pool);
+    const shuffled = shuffle(pool.filter(q => q.type !== 'choice' || q.options?.length === 4));
     const required = ['biết','hiểu','vận dụng'].flatMap(level => shuffled.filter(q => q.level === level).slice(0, 3));
     return shuffle(required.concat(shuffled.filter(q => !required.includes(q))).slice(0, 10));
   }

@@ -23,7 +23,7 @@ Máy chủ tự tạo thư mục `.storage`, tệp cơ sở dữ liệu và mã 
 | Học sinh | Chọn khối khi đăng ký, nhập mã lớp nếu giáo viên cung cấp, rồi mở Góc học tập. | Xem học liệu của khối trong tài khoản. Luyện tối đa 10 câu mỗi lượt, xem điểm và đáp án sau khi nộp. |
 | Học sinh thi thử | Chọn khối, mở Thi thử, trả lời và xem lại trước khi nộp. | Làm đề 45 phút. Điểm được lưu vào sổ học tập. Khi đang mở đề, giao diện tự nộp lúc hết giờ. |
 | Học sinh ôn lại | Mở Sổ học tập sau một số lượt học. | Xem lịch sử và mở lại bài có tỉ lệ sai cao nhất trong các lượt đã nộp. |
-| Giáo viên | Tạo lượt chơi theo đội hoặc cá nhân, chiếu QR. Học sinh quét hoặc nhập mã phòng và đặt tên. Giáo viên lần lượt mở 10 câu. | Mỗi phòng có cả ba mức biết, hiểu và vận dụng. Mỗi người gửi một đáp án cho mỗi câu. Bảng điểm cá nhân và tổng điểm đội cập nhật theo lượt. Cuối phòng có thống kê đúng, sai, bỏ qua và tỉ lệ đúng theo câu. |
+| Giáo viên | Tạo lượt chơi theo đội hoặc cá nhân, chiếu QR rồi bắt đầu. Học sinh quét mã hoặc nhập mã phòng, đặt tên và trả lời trên thiết bị riêng. | Màn hình giáo viên chiếu đề. Màn hình học sinh hiển thị các ô đáp án. Mười câu tự chuyển theo thời gian, có đủ mức biết, hiểu và vận dụng. Cuối lượt có bảng điểm và thống kê theo câu. |
 | Giáo viên theo dõi ở nhà | Cấp mã lớp cho học sinh rồi mở Sổ học tập. | Xem số bài đã nộp, tổng điểm và bài làm gần nhất của từng học sinh đang liên kết với mình. |
 
 ## Thiết kế giao diện và nội dung
@@ -54,7 +54,7 @@ Ngân hàng luyện tập gồm 800 câu từ hai bộ DOCX, được đối chi
 
 ## Backend và cơ sở dữ liệu
 
-Máy chủ Node.js phục vụ giao diện và API cùng nguồn. Đáp án nằm trong ngân hàng JSON phía máy chủ. Khi tạo lượt học, máy chủ lưu bản chụp bộ câu hỏi. Khi nộp, máy chủ kiểm tra quyền sở hữu và thời hạn rồi chấm điểm. Nộp lại cùng lượt trả về kết quả đã lưu. API phòng chơi trao đổi trạng thái qua HTTP khoảng mỗi 1,4 giây. Câu trả lời gắn với mã câu hiện hành để lượt gửi muộn không bị tính vào câu sau.
+Máy chủ Node.js phục vụ giao diện và API cùng nguồn. Đáp án nằm trong ngân hàng JSON phía máy chủ. Khi tạo lượt học, máy chủ lưu bản chụp bộ câu hỏi. Khi nộp, máy chủ kiểm tra quyền sở hữu và thời hạn rồi chấm điểm. Nộp lại cùng lượt trả về kết quả đã lưu. Trong lúc chơi, trình duyệt đồng bộ trạng thái phòng khoảng mỗi giây. Máy chủ lưu thời điểm mở câu và từ chối câu trả lời đến sau hạn.
 
 SQLite phù hợp với một máy chủ thử nghiệm cho trường vì có giao dịch, lưu được lịch sử qua các lần khởi động và triển khai cùng ứng dụng. Học liệu dùng JSON để dễ duyệt thay đổi trong Git. Dữ liệu phát sinh nằm trong các bảng sau.
 
@@ -69,6 +69,8 @@ SQLite phù hợp với một máy chủ thử nghiệm cho trường vì có gi
 ## Dùng QR với điện thoại và đưa lên máy chủ
 
 Trong phòng chờ của giáo viên, mã QR nằm cạnh mã phòng. Học sinh quét mã để mở thẳng màn hình nhập tên tham gia. Mã phòng vẫn có thể nhập bằng tay.
+
+Thời gian cơ bản theo ba mức biết, hiểu, vận dụng lần lượt là 15, 25 và 35 giây. Câu trả lời ngắn thêm 5 giây, câu đúng sai thêm 10 giây. Câu có bảng, ngữ cảnh hoặc ảnh thêm 10 giây để đọc. Câu đúng ghi từ 500 đến 1.000 điểm tùy tốc độ. Câu sai hoặc bỏ qua ghi 0 điểm.
 
 Để chơi qua Wi-Fi lớp học, cấu hình `HOST=0.0.0.0` và `PUBLIC_ORIGIN=http://<IP-máy-giáo-viên>:3000` trong `.env`, khởi động lại rồi mở chính địa chỉ mạng LAN đó trên máy chiếu. Điện thoại cần truy cập được cùng địa chỉ. Địa chỉ 127.0.0.1 trên điện thoại chỉ về bản thân điện thoại.
 
