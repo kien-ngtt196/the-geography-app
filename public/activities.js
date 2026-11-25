@@ -301,10 +301,30 @@ function scoreboard(players, teams) {
   if (!players.length) return '<p>Đang chờ người chơi tham gia…</p>';
   const sorted = [...players].sort((a,b) => b.score-a.score);
   const personal = table(['Người chơi',...(teams ? ['Đội'] : []),'Điểm'], sorted.map(p => [p.name,...(teams ? [p.team] : []),p.score]));
-  if (!teams) return personal;
+  return (teams ? teamStandings(sorted) : '') + personal;
+}
+function teamStandings(players) {
   const totals = new Map();
-  for (const p of sorted) totals.set(p.team,(totals.get(p.team) || 0)+Number(p.score));
-  return table(['Đội','Tổng điểm'],[...totals].sort((a,b) => b[1]-a[1])) + personal;
+  for (const p of players) totals.set(p.team,(totals.get(p.team) || 0)+Number(p.score));
+  return table(['Đội','Tổng điểm'],[...totals].sort((a,b) => b[1]-a[1]).map(([team,score]) => [team,formatScore(score)]));
+}
+function roomResults(players, teams) {
+  if (!players.length) return '<p>Chưa có kết quả người chơi.</p>';
+  const ranked = [...players].sort((a,b) => b.score-a.score || a.name.localeCompare(b.name,'vi'));
+  const podium = ranked.slice(0,3).map(({name,team,score},i) => `<li class="act-podium-place" data-rank="${i+1}">
+    <span class="act-podium-name">${esc(name)}</span>
+    ${teams ? `<span class="act-podium-team">${esc(team)}</span>` : ''}
+    <div class="act-podium-step">${i === 0 ? '<span class="act-podium-crown" aria-hidden="true"></span>' : ''}
+      <span class="act-podium-rank" aria-label="Hạng ${i+1}">${i+1}</span><span class="act-podium-score">${formatScore(score)} điểm</span>
+    </div>
+  </li>`).join('');
+  const fireworks = '<div class="act-podium-fireworks" aria-hidden="true">' + Array.from({length:4}, () =>
+    '<span class="act-podium-firework">' + Array.from({length:8}, (_,i) => `<i style="--ray:${i*45}deg"></i>`).join('') + '</span>').join('') + '</div>';
+  const runners = ranked.slice(3,10).map((p,i) => [i+4,p.name,...(teams ? [p.team] : []),formatScore(p.score)]);
+  return `<section class="act-standings" aria-labelledby="standings-title"><div class="act-podium">
+    ${fireworks}<h2 id="standings-title">Bảng xếp hạng</h2><ol class="act-podium-list">${podium}</ol></div>
+    ${runners.length ? `<div class="act-standings-runners">${table(['Hạng','Người chơi',...(teams ? ['Đội'] : []),'Điểm'],runners)}</div>` : ''}
+  </section>${teams ? `<h3>Xếp hạng theo đội</h3>${teamStandings(ranked)}` : ''}`;
 }
 function roomAnswerForm(q) {
   if (q.type === 'choice') {
@@ -320,7 +340,7 @@ let roomViewKey = '', roomSnapshot, roomClock;
 function renderRoom(room) {
   const {code,state,host,question:q,teamMode,players,stats} = room;
   const key = [code,state,room.index,room.answered,host].join('/');
-  const board = scoreboard(players || [],teamMode);
+  const board = state === 'ended' ? '' : scoreboard(players || [],teamMode);
   if (key === roomViewKey) {
     const scoreboardNode = byId('scoreboard');
     if (scoreboardNode && scoreboardNode.innerHTML !== board) scoreboardNode.innerHTML = board;
@@ -336,7 +356,7 @@ function renderRoom(room) {
     </div>` : ''}
     ${playing && q ? `<div class="act-room-timing"><span>Câu ${room.index+1} / ${room.count}${host ? ' · '+esc(q.level) : ''}</span><span id="room-seconds" role="timer" aria-label="Thời gian còn lại"></span><progress id="room-progress" aria-label="Thời gian còn lại" max="${room.durationMs}"></progress></div>${host ? `<fieldset class="act-projection" disabled>${questionMarkup(q,undefined,true)}</fieldset>` : room.answered ? `<p role="status">Đã ghi nhận câu trả lời · <strong>+${formatScore(room.points)} điểm</strong></p>` : roomAnswerForm(q)}` : ''}
     ${host && state !== 'ended' ? button('room-next',lobby ? 'Bắt đầu lượt chơi' : room.index+1 === room.count ? 'Kết thúc sớm' : 'Chuyển câu sớm') : ''}
-    ${host || !playing ? `<h3>${lobby ? 'Người chơi' : 'Bảng điểm'}</h3><div id="scoreboard">${board}</div>` : ''}${finalStats}`, (teamMode ? 'Theo đội' : 'Cá nhân') + ' · ' + code);
+    ${state === 'ended' ? roomResults(players || [],teamMode) : host || lobby ? `<h3>${lobby ? 'Người chơi' : 'Bảng điểm'}</h3><div id="scoreboard">${board}</div>` : ''}${finalStats}`, (teamMode ? 'Theo đội' : 'Cá nhân') + ' · ' + code);
   const token = revision;
   if (byId('room-next')) action('room-next',async () => {
     await api(roomPath(code,'/next'),{index:room.index});
