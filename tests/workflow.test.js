@@ -1,12 +1,13 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { mkdtempSync } from 'node:fs';
+import { existsSync, mkdtempSync, readFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { once } from 'node:events';
 import { createServer } from 'node:http';
 import { Readable } from 'node:stream';
 import { lessons, fraction, selectQuestions, safeQuestion, gradeAttempt } from '../learning.js';
+import { placeMedia } from '../public/map-place-media.js';
 
 test('Đề giữa kì I lớp 9 khớp thứ tự, phạm vi và điểm phần khách quan', () => {
   const questions = selectQuestions(9,null,'exam',false,'midterm1');
@@ -84,7 +85,7 @@ test('Học thử, đăng ký, luyện tập, thi thử và chơi theo đội', 
   assert.match(home,/href="\/ban-do"/);
   assert.doesNotMatch(home,/id="geomap"|id="activity"|id="study-grid"/);
   assert.match(await (await fetch(base+'/ban-do')).text(),/id="geomap"/);
-  for (const path of ['/hoc-tap','/phong-hoc?room=123456','/luyen-tap?grade=8','/thi-thu?grade=9','/so-hoc-tap','/tai-khoan']) {
+  for (const path of ['/hoc-tap','/tom-tat?grade=8','/phong-hoc?room=123456','/luyen-tap?grade=8','/thi-thu?grade=9','/so-hoc-tap','/tai-khoan']) {
     const response = await fetch(base+path);
     assert.equal(response.status,200,path);
     assert.match(await response.text(),/id="workspace"/,path);
@@ -115,6 +116,28 @@ test('Học thử, đăng ký, luyện tập, thi thử và chơi theo đội', 
   await student('register',{name:'Học sinh thử',password:'example123',role:'student',grade:9,classCode:user.classCode});
   await student8('register',{name:'Học sinh lớp 8',password:'example123',role:'student',grade:8,classCode:user.classCode});
   assert.equal((await student8('me')).user.grade,8);
+  await guest('chapters?grade=8',undefined,401);
+  await student8('chapters?grade=9',undefined,403);
+  await student('chapters?grade=8',undefined,403);
+  await teacher('chapters?grade=7',undefined,400);
+  for (const [grade,reader,chapterCount] of [[8,student8,4],[9,student,3]]) {
+    const {chapters} = await reader('chapters?grade='+grade);
+    assert.equal(chapters.filter(chapter=>chapter.name.startsWith('Chương ')).length,chapterCount);
+    assert.equal(chapters.length,6);
+    assert.deepEqual((await teacher('chapters?grade='+grade)).chapters,chapters);
+    for (const chapter of chapters) {
+      assert.ok(chapter.note && chapter.branches.every(branch=>branch.length === 3));
+      const [file] = placeMedia[chapter.photo];
+      assert.ok(existsSync(new URL('../public/atlas/places/'+file+'.webp',import.meta.url)));
+    }
+  }
+  const administration = JSON.parse(readFileSync(new URL('../public/atlas/provinces.json',import.meta.url)));
+  for (const count of [34,63]) {
+    assert.equal(new Set(administration[count].map(p=>p.name)).size,count);
+    assert.ok(administration[count].every(p=>p.path.startsWith('M') && p.coordinates.length === 2));
+  }
+  assert.equal(administration[34].find(p=>p.name === 'Đồng Nai').kind,'Thành phố');
+  assert.equal(administration[63].find(p=>p.name === 'Đồng Nai').kind,'Tỉnh');
   await student8('catalog?grade=9',undefined,403);
   await student8('attempts',{grade:9,mode:'practice'},403);
   await student8('student-grade',{grade:9},403);

@@ -8,6 +8,7 @@ import { one, all, run, teacherKey, hosted } from './storage.js';
 import { fail, gradeAttempt, lessons, safeQuestion, selectQuestions } from './learning.js';
 import { roomAction, roomQR } from './rooms.js';
 import { pages } from './public/routes.js';
+import { chapters } from './content/chapters.js';
 
 const derive = promisify(scrypt);
 const files = fileURLToPath(new URL('./public/',import.meta.url));
@@ -177,6 +178,12 @@ async function handle(req,res) {
     const grade = Number(url.searchParams.get('grade'));
     checkGrade(grade);
     output={lessons:lessons(grade).map(({id,title,summary,questions})=>({id,title,summary,count:questions.length}))};
+  } else if (method==='GET' && path==='/api/chapters') {
+    mustLogin();
+    const grade = Number(url.searchParams.get('grade'));
+    if (!Object.hasOwn(chapters,grade)) fail(400,'Hãy chọn lớp 8 hoặc lớp 9.');
+    checkGrade(grade);
+    output={chapters:chapters[grade]};
   } else if (method==='POST' && ['/api/login','/api/register'].includes(path)) {
     limit('auth:'+address,120);
     const id = await authenticate(path,body);

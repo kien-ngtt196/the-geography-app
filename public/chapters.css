@@ -1,0 +1,52 @@
+.feature-page[data-workspace=chapters] .workspace-layout { width: min(1140px,100%); }
+.chapter-layout { display: grid; grid-template-columns: minmax(210px, .31fr) 1fr; align-items: start; gap: 20px; }
+.chapter-menu, .chapter-article, .chapter-status { color: #213e34; background: #fffefa; border: 1px solid #d3dccc; border-radius: 17px; box-shadow: 0 4px 18px #203b2410; }
+.chapter-status { padding: 18px; }
+.chapter-menu { display: grid; gap: 5px; padding: 14px; }
+.chapter-menu h2 { margin: 0 6px 5px; font: 650 1.28rem var(--serif); }
+.chapter-menu button { border: 0; border-radius: 8px; padding: 11px 9px; color: #29433a; background: transparent; text-align: left; font: inherit; font-size: .87rem; cursor: pointer; }
+.chapter-menu button:hover { background: #eff3eb; }
+.chapter-menu button[aria-current] { color: #fff; background: #295946; }
+.chapter-article { min-width: 0; padding: clamp(16px, 4vw, 34px); scroll-margin-top: 80px; }
+.chapter-masthead { display: grid; grid-template-columns: minmax(0,1.25fr) minmax(0,1fr); align-items: start; gap: 19px; margin-bottom: 22px; }
+.chapter-intro small { color: #466758; font-weight: 650; }
+.chapter-intro h2 { font: 650 clamp(1.55rem,3vw,2.1rem)/1.25 var(--serif); margin: 8px 0 12px; }
+.chapter-intro p { line-height: 1.65; margin: 0; }
+.chapter-photo { margin: 0; border: 1px solid #dce5d7; border-radius: 13px; background: #f3f6ed; overflow: hidden; }
+.chapter-photo img { display: block; width: 100%; height: clamp(155px,20vw,200px); object-fit: cover; }
+.chapter-photo figcaption { padding: 11px 14px; font-size: .8rem; }
+.chapter-photo :is(strong,small) { display: block; }
+.chapter-photo small { margin: 4px 0; color: #496356; }
+.chapter-photo a { display: inline-block; margin-right: 12px; }
+.chapter-article h3 { font: 650 1.3rem var(--serif); margin: 0 0 12px; }
+.chapter-mindmap { padding: clamp(12px,3vw,22px); border: 1px solid #d7e5d8; border-radius: 13px; background: #f4f7ee; }
+.chapter-hub { position: relative; width: fit-content; max-width: 100%; margin: 0 auto 18px; padding: 9px 14px; border-radius: 10px; background: #2c5e4a; color: white; font-weight: 650; text-align: center; }
+.chapter-hub::after { content: ''; position: absolute; top: 100%; height: 18px; left: 50%; border-left: 2px solid #a9c2ad; }
+.chapter-nodes { position: relative; display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 9px 25px; margin: 0; padding: 6px 0 1px; list-style: none; }
+.chapter-nodes::before { content: ''; position: absolute; left: 50%; top: 0; bottom: 16px; border-left: 2px solid #a9c2ad; }
+.chapter-nodes li { position: relative; --branch: #d7ecf2; --branch-ink: #234c61; }
+.chapter-nodes li:nth-child(4n+2) { --branch: #f7e7bb; --branch-ink: #624918; }
+.chapter-nodes li:nth-child(4n+3) { --branch: #f2deda; --branch-ink: #694239; }
+.chapter-nodes li:nth-child(4n+4) { --branch: #e5ddf2; --branch-ink: #554472; }
+.chapter-nodes li::before { content: ''; position: absolute; top: 50%; width: 13px; border-top: 2px solid #a9c2ad; }
+.chapter-nodes li:nth-child(odd)::before { left: 100%; }
+.chapter-nodes li:nth-child(even)::before { right: 100%; }
+.chapter-nodes a { display: block; height: 100%; padding: 9px 10px; border-radius: 9px; color: var(--branch-ink); background: var(--branch); font-size: .88rem; font-weight: 650; text-decoration: none; }
+.chapter-nodes a:hover { text-decoration: underline; }
+.chapter-nodes small { display: block; margin-top: 3px; font-weight: 450; }
+.chapter-notes { margin: 24px 0 19px; }
+.chapter-notes section { padding: 12px 0; border-bottom: 1px solid #dce5da; scroll-margin-top: 90px; }
+.chapter-notes h4 { margin: 0 0 5px; }
+.chapter-notes mark { padding: 2px 4px; background: #f6e9bf; color: #4a3916; }
+.chapter-notes p, .chapter-callout p { margin: 7px 0 0; line-height: 1.65; }
+.chapter-callout { padding: 15px 18px; border-left: 4px solid #987032; border-radius: 9px; background: #f8eed5; }
+.chapter-callout h3 { margin-bottom: 4px; }
+@media (max-width: 760px) {
+  .chapter-layout { grid-template-columns: 1fr; gap: 12px; }
+  .chapter-menu button { padding-block: 8px; }
+  .chapter-nodes { gap: 9px 15px; }
+  .chapter-nodes li::before { width: 8px; }
+}
+@media (max-width: 550px) {
+  .chapter-masthead { grid-template-columns: 1fr; gap: 12px; }
+}

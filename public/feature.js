@@ -15,6 +15,7 @@ function gradeCard(grade) {
   card.className = 'grade-card';
   card.innerHTML = `<div class="sticker-heading"><h2>Địa lí lớp ${grade}</h2>
     <span class="feature-sticker" data-sticker="${grade === 8 ? 'book' : 'globe'}" aria-hidden="true"></span></div>
+    <a class="grade-summary" href="/tom-tat?grade=${grade}">Tóm tắt SGK và sơ đồ tư duy</a>
     <a href="/luyen-tap?grade=${grade}">Luyện tập theo bài</a>
     <a href="/thi-thu?grade=${grade}">Thi thử</a>`;
   return card;
@@ -46,7 +47,10 @@ if (page) {
   document.title = page.title + ' · Atlat Việt';
   featurePage.dataset.workspace = page.mode || 'study';
 }
-if (page?.mode) {
+if (page?.mode === 'chapters') {
+  document.querySelector('#workspace-parent').hidden = false;
+  import('./chapters.js').then(({showChapters})=>showChapters(document.querySelector('#chapters'),url));
+} else if (page?.mode) {
   const mode = page.mode;
   document.querySelector('#workspace-parent').hidden = !['practice','exam','progress'].includes(mode);
   const room = url.searchParams.get('room');

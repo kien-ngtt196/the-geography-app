@@ -251,6 +251,11 @@ i svg { width: 1.1rem; height: 1.1rem; }
 .map-result:hover,.map-result[aria-expanded=true] { background: #34594b; }
 .map-result:focus-visible { outline-offset: -2px; }
 .map-controls { display: flex; flex-wrap: wrap; gap: 6px; justify-content: flex-end; }
+#map-layer {
+  max-width: 100%; padding: 6px 9px; border: 1px solid #a6bdad; border-radius: 9px;
+  background: #eff4e8; color: #213e34; font: inherit; font-size: .8rem;
+}
+.legend[hidden] { display: none; }
 .map-shell .view-toggle { border-color: #7d958a; }
 .map-shell .view-toggle[aria-pressed=true] { color: #1e3429; background: #e4ead0; }
 .map-shell .view-toggle:hover { color: #173329; }

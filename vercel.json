@@ -8,6 +8,7 @@
   "rewrites": [
     { "source": "/ban-do", "destination": "/map.html" },
     { "source": "/hoc-tap", "destination": "/feature.html" },
+    { "source": "/tom-tat", "destination": "/feature.html" },
     { "source": "/luyen-tap", "destination": "/feature.html" },
     { "source": "/thi-thu", "destination": "/feature.html" },
     { "source": "/phong-hoc", "destination": "/feature.html" },

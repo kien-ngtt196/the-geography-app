@@ -17,11 +17,12 @@
   <div class="map-layout">
     <section class="map-intro map-directory" aria-labelledby="map-page-title">
       <h1 id="map-page-title">Bản đồ Việt Nam</h1>
-      <p>Chọn một vùng hoặc địa danh để xem thông tin và ảnh minh hoạ khi có.</p>
-      <label for="map-search">Tìm vùng hoặc địa danh</label>
+      <p>Chọn tỉnh, thành phố, vùng hoặc địa danh để khám phá trên bản đồ.</p>
+      <label for="map-search">Tìm trên bản đồ</label>
       <input type="search" id="map-search" placeholder="Ví dụ: Sa Pa, Hà Nội…" autocomplete="off" aria-controls="map-results">
       <div class="map-filters" aria-label="Loại kết quả">
         <button type="button" data-filter="all" aria-pressed="true">Tất cả</button>
+        <button type="button" data-filter="province" aria-pressed="false">Tỉnh/thành</button>
         <button type="button" data-filter="region" aria-pressed="false">Vùng</button>
         <button type="button" data-filter="place" aria-pressed="false">Địa danh</button>
       </div>
@@ -32,9 +33,14 @@
       <div class="card-heading">
         <div class="sticker-heading">
           <span class="feature-sticker" data-sticker="compass" aria-hidden="true"></span>
-          <div><h2 id="map-title">Bản đồ các vùng</h2><p>Việt Nam · 6 vùng địa lí</p></div>
+          <div><h2 id="map-title">Lược đồ tương tác</h2><p id="map-layer-caption" aria-live="polite"></p></div>
         </div>
         <div class="map-controls">
+          <select id="map-layer" aria-label="Lớp ranh giới">
+            <option value="34">34 tỉnh/thành · hiện hành</option>
+            <option value="63">63 tỉnh/thành · mốc 2024</option>
+            <option value="regions">6 vùng theo SGK</option>
+          </select>
           <button class="view-toggle" id="pin-toggle" type="button" aria-pressed="true">Điểm gợi ý</button>
           <button class="view-toggle" id="view-toggle" type="button" aria-pressed="true">Góc nhìn 3D</button>
         </div>
@@ -49,10 +55,13 @@
         </div>
       </div>
       <div class="legend" id="legend" aria-label="Chọn vùng địa lí"></div>
-      <details class="map-source"><summary>Nguồn lược đồ</summary><p>Ranh giới từ <a href="https://www.geoboundaries.org/" target="_blank" rel="noreferrer">geoBoundaries</a> và <a href="https://www.naturalearthdata.com/" target="_blank" rel="noreferrer">Natural Earth</a>, gộp theo sáu vùng trong SGK Địa lí 9. Địa danh đánh dấu ở vị trí gần đúng. Độ cao và độ dày các lớp là minh hoạ.</p></details>
+      <details class="map-source"><summary>Nguồn lược đồ</summary>
+        <p>34 đơn vị cấp tỉnh theo <a href="https://vanban.chinhphu.vn/?classid=1&amp;docid=213930&amp;orggroupid=1&amp;pageid=27160" target="_blank" rel="noreferrer">Nghị quyết 202/2025/QH15</a>. Thành phố Đồng Nai theo <a href="https://chinhphu.vn/?docid=218009&amp;pageid=27160" target="_blank" rel="noreferrer">Nghị quyết 30/2026/QH16</a>. Hình học lấy từ <a href="https://github.com/truongdinh018/GeoVN" target="_blank" rel="noreferrer">GeoVN</a> và <a href="https://github.com/thanglequoc/vietnamese-provinces-database" target="_blank" rel="noreferrer">Vietnamese Provinces Database</a> (<a href="/atlas/provinces-license.txt" target="_blank" rel="noreferrer">MIT</a>).</p>
+        <p>Lớp 63 đơn vị dùng đường ranh <a href="https://maps.pispace.eu/data/vietnam/" target="_blank" rel="noreferrer">Natural Earth qua PiSpace</a>. Lớp sáu vùng dùng ranh giới tổng quát từ <a href="https://www.geoboundaries.org/" target="_blank" rel="noreferrer">geoBoundaries</a> và <a href="https://www.naturalearthdata.com/" target="_blank" rel="noreferrer">Natural Earth</a>. Các đường ranh, vị trí điểm và độ cao dùng để minh họa trong học tập.</p>
+      </details>
     </section>
     <aside class="map-info" aria-label="Thông tin vùng và địa danh">
-      <p id="map-info-hint">Rê chuột để xem thông tin. Bấm vào vùng hoặc địa danh để giữ nội dung ở đây.</p>
+      <p id="map-info-hint">Rê chuột để xem thông tin. Bấm vào một điểm hoặc khu vực để giữ nội dung ở đây.</p>
       <section id="region-popup" aria-labelledby="region-title" hidden>
         <figure class="region-photo" id="place-photo"><img id="photo" alt=""><figcaption id="photo-credit"></figcaption></figure>
         <div class="region-body" aria-live="polite"><h2 id="region-title"></h2><p id="region-summary"></p></div>

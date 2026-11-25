@@ -12,6 +12,10 @@ const mapViewport = document.querySelector('.map-viewport');
 const details = document.querySelector('#map-details');
 const search = document.querySelector('#map-search');
 const results = document.querySelector('#map-results');
+const layerSelect = document.querySelector('#map-layer');
+const layerCaption = document.querySelector('#map-layer-caption');
+const params = new URLSearchParams(location.search);
+const layerNames = {34:'34 đơn vị hành chính cấp tỉnh hiện hành',63:'63 đơn vị hành chính cấp tỉnh tại mốc 2024',regions:'6 vùng kinh tế – xã hội theo SGK'};
 const initialView = [100,3,665,548];
 const maxZoom = 3;
 const featured = places.map((place,region)=>({...place,region,image:'/atlas/regions/'+regions[region].photo+'.jpg',textbookPhoto:true,overview:true}));
@@ -27,6 +31,8 @@ let locked;
 let credits = [];
 let hideTimer;
 let filter = 'all';
+let layer = params.has('vung') ? 'regions' : Object.hasOwn(layerNames,params.get('lop')) ? params.get('lop') : '34';
+let terrain, provinces = {};
 
 function appendLink(target,text,href) {
   const link = document.createElement('a');
@@ -67,8 +73,8 @@ function showEntry(entry) {
   panel.hidden = !entry;
   document.querySelector('#map-info-hint').hidden = !!entry;
   document.querySelectorAll('[data-region]').forEach(control=>{
-    const active = control.dataset.entry === entry?.name ||
-      (!!entry && !control.hasAttribute('data-place') && Number(control.dataset.region) === entry.region);
+    const active = control.dataset.entry === entry?.name && control.dataset.kind === entry?.kind ||
+      (!!entry && control.dataset.kind === 'region' && Number(control.dataset.region) === entry.region);
     control.setAttribute('aria-expanded',String(active));
   });
   if (!entry) return;
@@ -86,7 +92,7 @@ function showEntry(entry) {
   document.querySelector('#region-title').textContent = entry.name;
   document.querySelector('#region-summary').textContent = place
     ? place.note || [place.locality,region?.name].filter(Boolean).join(' · ')
-    : region.summary;
+    : region?.summary || entry.locality;
 
   const links = document.querySelector('#place-links');
   links.replaceChildren();
@@ -111,9 +117,10 @@ function select(entry,trigger) {
 const normalize = text => text.toLowerCase().normalize('NFD').replace(/\p{M}/gu,'').replaceAll('đ','d').trim();
 function renderResults() {
   const terms = normalize(search.value).split(/\s+/).filter(Boolean);
-  const rows = [...regionEntries,...placeEntries].filter(row => (filter === 'all' || row.kind === filter) &&
+  const entries = layer === 'regions' ? regionEntries : provinces[layer] || [];
+  const rows = [...entries,...placeEntries].filter(row => (filter === 'all' || row.kind === filter) &&
     terms.every(word=>normalize([row.name,row.locality,row.keywords].join(' ')).includes(word)));
-  document.querySelector('#map-result-count').textContent = rows.length ? rows.length+' kết quả' : 'Không thấy vùng hoặc địa danh phù hợp.';
+  document.querySelector('#map-result-count').textContent = rows.length ? rows.length+' kết quả' : 'Không tìm thấy kết quả ở lớp bản đồ này.';
   results.replaceChildren(...rows.map(row=>{
     const li = document.createElement('li');
     const button = document.createElement('button');
@@ -133,10 +140,35 @@ function renderResults() {
 }
 search.addEventListener('input',renderResults);
 const filters = document.querySelectorAll('[data-filter]');
+function setFilter(value) {
+  filter = value;
+  filters.forEach(item=>item.setAttribute('aria-pressed',String(item.dataset.filter === value)));
+}
+function showLayer(value) {
+  layer = value;
+  layerSelect.value = value;
+  layerCaption.textContent = layerNames[value];
+  if (terrain) map.setAttribute('aria-label',layerNames[value]);
+  legend.hidden = value !== 'regions';
+  if ((filter === 'province' && value === 'regions') || (filter === 'region' && value !== 'regions')) setFilter('all');
+  if (locked && locked.kind !== 'place') locked = undefined;
+  if (selected && selected.kind !== 'place') showEntry(undefined);
+  if (terrain) draw(terrain);
+  renderResults();
+  setZoom(zoom);
+}
+layerSelect.onchange = () => {
+  params.delete('vung');
+  params.set('lop',layerSelect.value);
+  history.replaceState(history.state,'',location.pathname+'?'+params);
+  showLayer(layerSelect.value);
+};
 filters.forEach(button=>{
   button.onclick = ()=>{
-    filter = button.dataset.filter;
-    filters.forEach(item=>item.setAttribute('aria-pressed',String(item === button)));
+    const value = button.dataset.filter;
+    if (value === 'region' && layer !== 'regions') showLayer('regions');
+    if (value === 'province' && layer === 'regions' && provinces['34']) showLayer('34');
+    setFilter(value);
     renderResults();
   };
 });
@@ -149,6 +181,7 @@ function scheduleClose() {
 function regionControl(element,entry) {
   element.dataset.region = entry.region ?? '';
   element.dataset.entry = entry.name;
+  element.dataset.kind = entry.kind;
   if (entry.kind === 'place') element.dataset.place = 'true';
   element.setAttribute('aria-controls','region-popup');
   element.setAttribute('aria-expanded','false');
@@ -177,7 +210,7 @@ regions.forEach((region,index)=>{
   regionControl(button,regionEntries[index]);
   legend.append(button);
 });
-const selectedRegion = new URLSearchParams(location.search).get('vung');
+const selectedRegion = params.get('vung');
 const initialIndex = regions.findIndex(region=>region.photo === selectedRegion);
 if (initialIndex >= 0) select(regionEntries[initialIndex],legend.children[initialIndex]);
 renderResults();
@@ -221,6 +254,7 @@ pinToggle.onclick = () => {
 };
 
 function draw(terrain) {
+  map.replaceChildren();
   const defs = svg('defs',{});
   terrain.region.forEach((path,index) => {
     defs.append(svg('path',{id:'shape-'+index,d:path}));
@@ -235,17 +269,30 @@ function draw(terrain) {
   const scene = svg('g',{class:'map-scene'});
   scene.append(svg('path',{d:terrain.land,fill:'#eee5c6',stroke:'#bbbf9f','stroke-width':1.15}));
   const depth = svg('g',{class:'map-depth','pointer-events':'none'});
-  for (const dy of [10,8,6,4,2]) {
-    terrain.region.forEach((_,index) => depth.append(svg('use',{href:'#shape-'+index,transform:'translate(0 '+dy+')',fill:regions[index].side,stroke:regions[index].side,'stroke-width':1})));
-  }
-  scene.append(depth);
   const surfaces = svg('g',{class:'map-surfaces'});
-  terrain.region.forEach((_,index) => {
-    const face = svg('use',{href:'#shape-'+index,fill:'url(#ink-'+index+')',stroke:'#fff5d7','stroke-width':1.3,tabindex:0,role:'button','aria-label':regions[index].name});
-    regionControl(face,regionEntries[index]);
-    surfaces.append(face);
-  });
-  scene.append(surfaces);
+  if (layer === 'regions') {
+    for (const dy of [10,8,6,4,2]) {
+      terrain.region.forEach((_,index) => depth.append(svg('use',{href:'#shape-'+index,transform:'translate(0 '+dy+')',fill:regions[index].side,stroke:regions[index].side,'stroke-width':1})));
+    }
+    terrain.region.forEach((_,index) => {
+      const face = svg('use',{href:'#shape-'+index,fill:'url(#ink-'+index+')',stroke:'#fff5d7','stroke-width':1.3,tabindex:0,role:'button','aria-label':regions[index].name});
+      regionControl(face,regionEntries[index]);
+      surfaces.append(face);
+    });
+  } else {
+    const fills = ['#83b59b','#beda9e','#9bc7ae','#aec9ad','#a4ba84'];
+    (provinces[layer] || []).forEach((province,index)=>{
+      const id = 'province-'+province.code;
+      defs.append(svg('path',{id,d:province.path,'fill-rule':'evenodd'}));
+      const href = '#'+id;
+      depth.append(svg('use',{href,transform:'translate(0 6)',fill:'#47775e',stroke:'#47775e','stroke-width':.7}));
+      const face = svg('use',{href,fill:fills[index%fills.length],stroke:'#faf4df','stroke-width':1,tabindex:0,role:'button','aria-label':province.locality});
+      face.append(svg('title',{},province.locality));
+      regionControl(face,province);
+      surfaces.append(face);
+    });
+  }
+  scene.append(depth,surfaces);
 
   // Stylized peaks add depth to the model. Their heights are illustrative.
   const ranges = [
@@ -254,7 +301,7 @@ function draw(terrain) {
     [[394,306,13],[402,331,19],[409,352,20],[398,368,13],[401,388,13]],
     [], []
   ];
-  ranges.forEach((peaks,index)=>{
+  if (layer === 'regions') ranges.forEach((peaks,index)=>{
     const group = svg('g',{class:'map-peaks','clip-path':'url(#clip-'+index+')','pointer-events':'none'});
     for (const [x,y,h] of peaks) {
       group.append(svg('path',{d:`M${x-h*.57},${y+4} L${x},${y-h} L${x+h*.7},${y+4} L${x},${y+8}Z`,fill:'#eff0b1',opacity:.82}));
@@ -291,7 +338,34 @@ viewToggle.onclick = () => {
   mapViewport.classList.toggle('map-flat',!now3D);
 };
 
-fetch('/atlas/terrain.json').then(response=>response.json()).then(draw).catch(()=>map.setAttribute('aria-label','Hãy chọn vùng trong chú giải bên dưới.'));
+async function loadMapData() {
+  const read = async path => {
+    const response = await fetch('/atlas/'+path);
+    if (!response.ok) throw new Error();
+    return response.json();
+  };
+  const [land,admin] = await Promise.allSettled([read('terrain.json'),read('provinces.json')]);
+  if (land.status === 'fulfilled') terrain = land.value;
+  else map.setAttribute('aria-label','Hãy chọn mục trong danh sách tìm kiếm.');
+  if (admin.status === 'fulfilled') {
+    provinces = Object.fromEntries(Object.entries(admin.value).map(([year,rows])=>[year,rows.map(({kind,...province})=>({
+      ...province,kind:'province',keywords:kind,locality:kind+' '+province.name+' · '+(year === '63' ? 'mốc 2024' : 'hiện hành')
+    }))]));
+  } else {
+    layerSelect.querySelectorAll('option:not([value=regions])').forEach(option=>{ option.disabled = true; });
+    document.querySelector('[data-filter=province]').disabled = true;
+    layer = 'regions';
+  }
+  if (initialIndex >= 0) {
+    layerSelect.value = layer;
+    layerCaption.textContent = layerNames[layer];
+    if (terrain) {
+      map.setAttribute('aria-label',layerNames[layer]);
+      draw(terrain);
+    }
+  } else showLayer(layer);
+}
+loadMapData();
 fetch('/atlas/regions/credits.json').then(response=>response.json()).then(data=>{
   credits = data;
   if (selected) showEntry(selected);
