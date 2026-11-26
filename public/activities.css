@@ -46,9 +46,7 @@
   justify-self: start; padding: 10px 18px; min-height: 44px; color: #fff;
   background: #2f6049; border: 1px solid #2f6049; border-radius: 10px; font-weight: 650;
 }
-#activity .act-btn:hover { background: #264e3d; }
 #activity .act-secondary { background: #fffefa; color: #294b38; border-color: #9dad9e; }
-#activity .act-secondary:hover { background: #eef3ea; }
 #activity .act-link { min-height: 44px; background: transparent; padding: 0; color: #2d6245; border: none; text-decoration: underline; }
 #activity :is(button,input,select,summary):focus-visible { outline: 3px solid #ad6a20; outline-offset: 2px; }
 #activity .act-actions, #activity .act-meta { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
@@ -65,7 +63,9 @@
 }
 #activity .act-option:has(:checked) { background: #eaf2e6; border-color: #43794e; }
 #activity .act-statement { min-width: 0; border: 1px solid #c7d1c6; border-radius: 10px; padding: 8px 14px; }
-#activity .act-statement label { display: inline-flex; align-items: center; margin-right: 20px; min-height: 40px; }
+#activity .act-statement label { display: inline-flex; align-items: center; margin-right: 10px; min-height: 40px; padding-inline: 7px; border-radius: 7px; }
+#activity .act-statement label:has(input:enabled) { cursor: pointer; }
+#activity .act-statement label:has(:checked) { background: #eaf2e6; }
 #activity .act-media { max-width: 100%; height: auto; margin: 0 auto; }
 #activity .act-error { color: #962e29; margin: 12px 0 0; }
 #activity .act-error:empty { display: none; }
@@ -115,9 +115,6 @@
 #activity .act-room-choice-2 { background: #815400; }
 #activity .act-room-choice-3 { background: #28674e; }
 #activity button.act-room-choice:disabled { opacity: .6; cursor: default; }
-@media (hover:hover) {
-  #activity button.act-room-choice:enabled:hover { border-color: #142e27; }
-}
 #activity .act-standings {
   overflow: hidden; border: 1px solid #d4ded1; border-radius: 16px; background: #f2f5ed;
 }
@@ -184,9 +181,17 @@
   #activity .act-detail strong { float: none; margin-left: 10px; }
 }
 
-@media (hover:hover) {
-  #activity .act-option:hover { border-color: #779b86; }
-  #activity .act-option, #activity .act-btn { transition: background-color 150ms, border-color 150ms; }
+@media (hover: hover) {
+  #activity .act-btn:enabled:hover { background: #214733; border-color: #214733; box-shadow: 0 3px 8px #23463435; }
+  #activity .act-secondary:enabled:hover, #activity select:enabled:hover { background: #e4efdf; border-color: #648c72; box-shadow: none; }
+  #activity .act-link:enabled:hover { color: #795520; text-decoration-thickness: 2px; text-underline-offset: .2em; }
+  #activity .act-option, #activity .act-statement label { transition: background-color 150ms, border-color 150ms; }
+  #activity .act-option:has(input:enabled):hover { background: #e4efdf; border-color: #648c72; }
+  #activity .act-option:has(input:checked):hover, #activity .act-statement label:has(input:enabled):hover { background: #dcead9; }
+  #activity .act-detail summary:hover { color: #795520; }
+  #activity button.act-room-choice:enabled:hover {
+    border-color: #ffdf96; box-shadow: inset 0 0 0 1px #fff9e5, 0 3px 8px #203a3340;
+  }
 }
 #activity .act-numbers { display: flex; flex-wrap: wrap; gap: 12px; }
 #activity .act-numbers label { flex: 1 1 125px; }

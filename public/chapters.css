@@ -5,7 +5,6 @@
 .chapter-menu { display: grid; gap: 5px; padding: 14px; }
 .chapter-menu h2 { margin: 0 6px 5px; font: 650 1.28rem var(--serif); }
 .chapter-menu button { border: 0; border-radius: 8px; padding: 11px 9px; color: #29433a; background: transparent; text-align: left; font: inherit; font-size: .87rem; cursor: pointer; }
-.chapter-menu button:hover { background: #eff3eb; }
 .chapter-menu button[aria-current] { color: #fff; background: #295946; }
 .chapter-article { min-width: 0; padding: clamp(16px, 4vw, 34px); scroll-margin-top: 80px; }
 .chapter-masthead { display: grid; grid-template-columns: minmax(0,1.25fr) minmax(0,1fr); align-items: start; gap: 19px; margin-bottom: 22px; }
@@ -57,7 +56,6 @@
 .chapter-nodes img {
   width: 54px; height: 54px; margin-bottom: 7px; object-fit: cover; border-radius: 50%; border: 2px solid #fffefa;
 }
-.chapter-nodes button:hover { box-shadow: 0 3px 8px #264b3825; text-decoration: underline; }
 .chapter-nodes button[aria-pressed=true] { box-shadow: inset 0 0 0 1px var(--branch-ink); border-color: var(--branch-ink); }
 .chapter-nodes small { display: block; margin-top: 4px; font-size: .78rem; font-weight: 450; }
 .chapter-branch-panel {
@@ -73,7 +71,6 @@
 .chapter-branch-example h5 { margin: 0; font-size: .91rem; }
 .chapter-branch-example p { margin: 4px 0 0; }
 .chapter-branch-back { border: 0; border-radius: 6px; padding: 6px 9px; background: var(--branch); color: var(--branch-ink); font: inherit; font-size: .8rem; cursor: pointer; }
-.chapter-branch-back:hover { text-decoration: underline; }
 @container (max-width: 570px) {
   .chapter-graph { --compact: 1; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 13px 20px; }
   .chapter-hub { grid-column: 1/-1; grid-row: 1; width: min(100%,136px); }
@@ -90,6 +87,15 @@
 .chapter-notes p, .chapter-callout p { margin: 7px 0 0; line-height: 1.65; }
 .chapter-callout { padding: 15px 18px; border-left: 4px solid #987032; border-radius: 9px; background: #f8eed5; }
 .chapter-callout h3 { margin-bottom: 4px; }
+@media (hover: hover) {
+  .chapter-menu button:enabled:hover { background: #dce9db; }
+  .chapter-menu button[aria-current]:hover { background: #376b56; }
+  .chapter-nodes button:enabled:hover, .chapter-branch-back:enabled:hover {
+    background: color-mix(in srgb,var(--branch) 89%,var(--branch-edge)); text-decoration: underline;
+  }
+  .chapter-nodes button:enabled:hover { border-color: var(--branch-ink); box-shadow: 0 3px 8px #264b3833; }
+  .chapter-notes summary:hover { color: #795520; }
+}
 @media (max-width: 760px) {
   .chapter-layout { grid-template-columns: 1fr; gap: 12px; }
   .chapter-menu button { padding-block: 8px; }

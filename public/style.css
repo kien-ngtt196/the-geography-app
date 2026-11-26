@@ -36,7 +36,7 @@ body, figure { margin: 0; }
 button, a, input, select, textarea { font: inherit; }
 button { cursor: pointer; color: inherit; border: 0; background: transparent; }
 a { color: var(--green); }
-:where(button,a,summary):focus-visible { outline: 3px solid #a05a25; outline-offset: 3px; }
+:where(button,a,summary,select):focus-visible { outline: 3px solid #a05a25; outline-offset: 3px; }
 i[data-icon] { display: inline-flex; align-items: center; font-style: normal; flex: none; }
 i svg { width: 1.1rem; height: 1.1rem; }
 .site-head { background: #fcfaf0; border-bottom: 1px solid var(--line); }
@@ -50,7 +50,6 @@ i svg { width: 1.1rem; height: 1.1rem; }
   display: inline-flex; align-items: center; gap: 8px;
   padding: 9px 13px; border-radius: 8px; font-size: .9rem; font-weight: 600;
 }
-.main-nav > *:hover, .text-button:hover { background: var(--soft); }
 .account-btn { border: 1px solid #b6c5b3; max-width: 46vw; }
 .account-btn span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .atlas-shell { padding-block: 24px 54px; }
@@ -117,12 +116,6 @@ i svg { width: 1.1rem; height: 1.1rem; }
 .grade-card h2 { font: 650 1.26rem var(--serif); margin: 0 0 9px; }
 .grade-card a { display: inline-flex; align-items: center; gap: 7px; padding: 8px 10px; margin: 2px 6px 2px 0; text-decoration: none; background: #eff3e4; border-radius: 8px; font-size: .9rem; }
 .grade-card a:nth-of-type(2) { background: #f4e7c6; }
-@media (hover:hover) {
-  :is(.hero-action,.account-btn,.grade-card a,.legend button,.view-toggle) { transition: background-color 160ms,box-shadow 160ms,transform 160ms; }
-  .hero-action:hover { background: #286b58; transform: translateY(-2px); box-shadow: 0 5px 8px #25473830; }
-  .account-btn:hover,.legend button:hover,.view-toggle:hover { background: #e6efd9; }
-  .grade-card a:hover { transform: translateY(-2px); box-shadow: 0 4px 7px #32574520; }
-}
 @media (max-width: 900px) {
   .main-nav > * { padding: 8px; }
 }
@@ -182,12 +175,10 @@ i svg { width: 1.1rem; height: 1.1rem; }
 .editorial-hero h1 em { font-style: normal; color: #f1dba8; }
 .editorial-hero .lead { color: #fff5df; max-width: 31ch; }
 .editorial-hero .hero-action { color: #2a3530; background: #eee1fa; box-shadow: 3px 3px 0 #294b3e,4px 4px 0 #eee1fa; }
-.editorial-hero .hero-action:hover { color: #28372b; background: #fff0bd; box-shadow: 3px 5px 0 #294b3e,4px 6px 0 #fff0bd; }
 .editorial-hero :focus-visible { outline-color: #fff1c5; }
 .hero-map { align-self: stretch; display: grid; place-items: center; min-height: 370px; margin: -16px -20% -16px -15%; }
 .hero-map svg { display: block; width: 100%; max-height: 560px; filter: drop-shadow(9px 18px 9px #141d1a66); }
 .hero-map-scene { transform: matrix(1,.06,-.29,.91,81,8); transition: transform 320ms; }
-.hero-map:hover .hero-map-scene { transform: matrix(1,.06,-.29,.91,81,3); }
 .hero-map [data-face] { transition: filter 180ms, stroke 180ms; }
 .hero-map-selected { filter: brightness(1.18) saturate(1.3); stroke: #fff6ce; stroke-width: 2.7; }
 .hero-region { min-width: 0; max-width: 265px; justify-self: end; z-index: 1; }
@@ -196,14 +187,12 @@ i svg { width: 1.1rem; height: 1.1rem; }
   width: 36px; height: 36px; border-radius: 50%; border: 1px solid #fff9e78c; color: #fff9e7;
   font-size: 1.48rem; line-height: 1; transition: background-color 180ms,color 180ms;
 }
-.hero-region-controls button:hover { background: #f4e2bb; color: #493423; }
 .hero-region-controls span { margin-left: auto; font: 500 .94rem var(--serif); }
 .hero-region-link { display: block; color: inherit; text-decoration: none; }
 .hero-region-link img { display: block; width: 100%; height: auto; aspect-ratio: 1.23; object-fit: cover; border-radius: 9px; background: #f1dec7; }
 .hero-region-info { margin-top: 10px; line-height: 1.36; }
 .hero-region-info strong { display: block; font: 600 clamp(1rem,1.6vw,1.36rem)/1.3 var(--serif); }
 .hero-region-info small { display: block; color: #fff0dc; font-size: .78rem; margin-top: 5px; }
-.hero-region-link:hover strong { text-decoration: underline; text-underline-offset: .2em; }
 @media (max-width: 960px) {
   .editorial-hero { grid-template-columns: minmax(0,1.1fr) minmax(0,1fr); gap: 15px; }
   .hero-map { grid-column: 2; grid-row: 1 / 3; margin: 0 -28px 0 -24px; min-height: 330px; align-self: center; }
@@ -221,7 +210,6 @@ i svg { width: 1.1rem; height: 1.1rem; }
 .home-shell .editorial-hero { border-radius: 0; box-shadow: none; padding-bottom: max(48px,4vw); }
 .editorial-hero::after { opacity: .18; }
 .editorial-hero .hero-action { color: #172f27; background: #f0cb87; box-shadow: none; }
-.editorial-hero .hero-action:hover { background: #fce5b7; box-shadow: 0 4px 16px #0a292a55; }
 .hero-region { padding: 12px; border: 1px solid #f8efe862; border-radius: 14px; background: #0c2826c9; }
 .hero-background-credit { position: absolute; bottom: 13px; left: clamp(17px,4vw,66px); color: #fcf3df; font-size: .75rem; }
 
@@ -248,20 +236,19 @@ i svg { width: 1.1rem; height: 1.1rem; }
 .map-result::before { content: ""; grid-row: span 2; width: 8px; height: 8px; border-radius: 50%; background: var(--swatch); }
 .map-result strong { font-size: .82rem; }
 .map-result small { font-size: .74rem; color: #c3d6cb; }
-.map-result:hover,.map-result[aria-expanded=true] { background: #34594b; }
+.map-result[aria-expanded=true] { background: #34594b; }
 .map-result:focus-visible { outline-offset: -2px; }
 .map-controls { display: flex; flex-wrap: wrap; gap: 6px; justify-content: flex-end; }
 #map-layer {
   max-width: 100%; padding: 6px 9px; border: 1px solid #a6bdad; border-radius: 9px;
-  background: #eff4e8; color: #213e34; font: inherit; font-size: .8rem;
+  background: #eff4e8; color: #213e34; font: inherit; font-size: .8rem; cursor: pointer;
 }
 .legend[hidden] { display: none; }
 .map-shell .view-toggle { border-color: #7d958a; }
 .map-shell .view-toggle[aria-pressed=true] { color: #1e3429; background: #e4ead0; }
-.map-shell .view-toggle:hover { color: #173329; }
 .map-shell .map-viewport { background-color: #a8c6ba; }
 .map-shell .map-viewport > svg { height: clamp(425px,64vh,725px); }
-.map-shell .legend button[aria-expanded=true],.map-shell .legend button:hover { background: #37584c; }
+.map-shell .legend button[aria-expanded=true] { background: #37584c; }
 .map-shell .map-source,.map-shell .map-source a { color: #d1e2d8; }
 .map-camera { position: absolute; top: 12px; left: 10px; z-index: 2; display: grid; gap: 3px; }
 .map-camera button { border: 1px solid #284c40; width: 34px; height: 34px; border-radius: 7px; font-size: 1.23rem; background: #18342e; color: #fff5e0; }
@@ -273,7 +260,6 @@ i svg { width: 1.1rem; height: 1.1rem; }
 .map-marker-label { display: none; font: 600 10px var(--sans); paint-order: stroke; stroke: #f5efda; stroke-width: 2.8; fill: #18342e; pointer-events: none; }
 .map-shell .region-card { color: var(--ink); }
 .region-more { margin-top: 7px; padding: 5px 9px; border-radius: 6px; background: #e6efdb; font-size: .8rem; font-weight: 600; }
-.region-more:hover { background: #d5e4c8; }
 .map-details { margin: 17px 0 0; padding: 20px; background: #fffaf0; border: 1px solid #dedcc5; border-radius: 16px; }
 .map-details h2 { font: 650 clamp(1.45rem,3vw,2rem)/1.2 var(--serif); margin: 0 0 12px; }
 .detail-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px; }
@@ -364,7 +350,6 @@ i svg { width: 1.1rem; height: 1.1rem; }
 }
 .band-copy p { margin: 14px 0 22px; max-width: 39ch; color: inherit; }
 .band-copy .hero-action { background: #efcf96; color: #153329; }
-.band-copy .hero-action:hover { background: #ffe2ac; }
 .feature-band.will-reveal:not(:focus-within) > .band-copy {
   opacity: 0; transform: translateX(var(--reveal-from));
 }
@@ -403,7 +388,6 @@ i svg { width: 1.1rem; height: 1.1rem; }
   color: #1a422f; background: #fff8e9; text-decoration: none;
   text-shadow: none; border-radius: 8px; font-size: .82rem;
 }
-.feature-shell .study-head .text-button:hover { background: #f6e8bc; }
 .feature-shell .study-grid { gap: 12px; }
 
 @media (max-width: 940px) {
@@ -451,6 +435,34 @@ i svg { width: 1.1rem; height: 1.1rem; }
 #geomap.has-selected-place .map-marker:not([aria-expanded=true]),
 #geomap:not(.is-zoomed) .map-marker:not([data-overview],[aria-expanded=true]) { display: none; }
 #geomap.is-zoomed:not(.has-selected-place) .map-marker:is(:hover,:focus-visible) .map-marker-label { display: block; }
+
+@media (hover: hover) {
+  :where(button,select,summary,.hero-action,.account-btn,.text-button,.main-nav a,.grade-card a) {
+    transition: background-color 150ms, border-color 150ms, color 150ms, box-shadow 150ms;
+  }
+  :where(button:enabled,select:enabled):hover { box-shadow: inset 0 0 0 1px color-mix(in srgb,currentColor 28%,transparent); }
+  :where(a[href],summary):hover { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: .17em; }
+  .brand:hover { color: #2b664d; }
+  .main-nav a:hover, .account-btn:hover, .text-button:hover { background: #dce8d1; }
+  .main-nav a[aria-current=page]:hover { background: #c9dbbf; }
+  .hero-action:hover { background: #286b58; box-shadow: 0 4px 12px #25473845; }
+  .editorial-hero .hero-action:hover, .band-copy .hero-action:hover { background: #ffe3a8; box-shadow: 0 4px 14px #11292355; }
+  .hero-region-controls button:enabled:hover { background: #f4e2bb; color: #493423; }
+  .hero-region-link:hover strong { text-decoration: underline; text-underline-offset: .2em; }
+  .grade-card a:hover { background: #dce8cf; box-shadow: 0 3px 8px #32574526; }
+  .grade-card a:nth-of-type(2):hover, .feature-shell .study-head .text-button:hover { background: #efdaaa; }
+  .map-filters button:enabled:hover { background: #426656; border-color: #b4d2b9; }
+  .map-filters button[aria-pressed=true]:enabled:hover { background: #ffe1a9; }
+  .map-result:hover, .map-shell .legend button:hover { background: #456d5b; }
+  .map-shell .view-toggle:enabled:hover, #map-layer:hover { color: #173329; background: #f3dcaa; border-color: #dab476; }
+  .map-camera button:enabled:hover { background: #397462; border-color: #eac288; }
+  .popup-close:enabled:hover, .region-more:enabled:hover { background: #d5e4c8; }
+  .map-surfaces > use:hover:not(:focus-visible), .hero-map [data-face]:hover:not(:focus-visible) { filter: saturate(1.35) brightness(1.22); stroke: #ffdb8c; stroke-width: 2.8; }
+  .map-marker:hover:not(:focus-visible) .map-marker-dot { fill: #843024; stroke: #ffd88a; stroke-width: 3; }
+}
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .hero-map:hover .hero-map-scene { transform: matrix(1,.06,-.29,.91,81,3); }
+}
 
 /* Crop the supplied illustration sheets to individual decorative stickers. */
 .feature-sticker {
