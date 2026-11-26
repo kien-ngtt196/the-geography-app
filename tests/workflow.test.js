@@ -126,9 +126,13 @@ test('Học thử, đăng ký, luyện tập, thi thử và chơi theo đội', 
     assert.equal(chapters.length,6);
     assert.deepEqual((await teacher('chapters?grade='+grade)).chapters,chapters);
     for (const chapter of chapters) {
-      assert.ok(chapter.note && chapter.branches.every(branch=>branch.length === 3));
-      const [file] = placeMedia[chapter.photo];
-      assert.ok(existsSync(new URL('../public/atlas/places/'+file+'.webp',import.meta.url)));
+      assert.ok(chapter.note);
+      const illustrations = chapter.branches.map(([, , , illustration])=>illustration);
+      assert.ok(illustrations.every(({caption,example})=>caption && example));
+      for (const {photo} of [chapter,...illustrations]) {
+        const [file] = placeMedia[photo];
+        assert.ok(existsSync(new URL('../public/atlas/places/'+file+'.webp',import.meta.url)));
+      }
     }
   }
   const administration = JSON.parse(readFileSync(new URL('../public/atlas/provinces.json',import.meta.url)));

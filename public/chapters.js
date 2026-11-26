@@ -43,37 +43,68 @@ function chapterMindmap(chapter) {
   const nodes = element('ul',null,'chapter-nodes');
   nodes.setAttribute('role','list');
   const lines = svg('svg',{class:'chapter-connections','aria-hidden':'true',focusable:'false'});
+  const detailPanel = element('section',null,'chapter-branch-panel');
+  detailPanel.id = 'chapter-branch-panel';
+  detailPanel.tabIndex = -1;
+  detailPanel.setAttribute('aria-labelledby','chapter-branch-title');
 
   const hasTopBranch = chapter.branches.length % 2;
   const firstSideRow = 1+hasTopBranch;
   hub.style.setProperty('--first-row',firstSideRow);
   hub.style.setProperty('--row-span',Math.max(1,Math.floor(chapter.branches.length/2)));
-  chapter.branches.forEach(([title,keyword],i)=>{
+  const buttons = chapter.branches.map(([title,keyword,,illustration],i)=>{
     const item = element('li');
     const sideIndex = i-hasTopBranch;
     item.dataset.branch = i+1;
     item.style.setProperty('--column',sideIndex < 0 ? 2 : (sideIndex%2)*2+1);
     item.style.setProperty('--row',sideIndex < 0 ? 1 : firstSideRow+Math.floor(sideIndex/2));
-    const id = chapter.id+'-'+(i+1);
-    const branch = link(title,'#'+id);
-    branch.append(element('small',keyword));
-    branch.onclick = event => {
-      event.preventDefault();
-      const target = document.getElementById(id);
-      target.focus({preventScroll:true});
-      target.scrollIntoView({block:'nearest'});
-    };
+    const branch = element('button');
+    branch.type = 'button';
+    branch.setAttribute('aria-controls',detailPanel.id);
+    const thumb = element('img');
+    thumb.src = '/atlas/places/'+placeMedia[illustration.photo][0]+'.webp';
+    thumb.alt = '';
+    thumb.width = 54;
+    thumb.height = 54;
+    thumb.loading = 'lazy';
+    thumb.decoding = 'async';
+    branch.append(thumb,element('strong',title),element('small',keyword));
+    branch.onclick = () => selectBranch(i,true);
     item.append(branch);
     nodes.append(item);
+    return branch;
   });
+  function selectBranch(index,moveFocus) {
+    const [title,keyword,detail,illustration] = chapter.branches[index];
+    buttons.forEach((button,i)=>button.setAttribute('aria-pressed',String(i === index)));
+    detailPanel.dataset.branch = index+1;
+    const content = element('div',null,'chapter-branch-copy');
+    const titleNode = element('h4',title);
+    titleNode.id = 'chapter-branch-title';
+    const example = element('div',null,'chapter-branch-example');
+    example.append(element('h5','Ví dụ và cách vận dụng'),element('p',illustration.example));
+    const back = element('button','Về các nhánh','chapter-branch-back');
+    back.type = 'button';
+    back.onclick = () => {
+      buttons[index].focus({preventScroll:true});
+      buttons[index].scrollIntoView({block:'nearest'});
+    };
+    content.append(titleNode,element('mark',keyword),element('p',detail),example,back);
+    detailPanel.replaceChildren(content,chapterPhoto(illustration));
+    if (moveFocus) {
+      detailPanel.focus({preventScroll:true});
+      detailPanel.scrollIntoView({block:'nearest'});
+    }
+  }
   graph.append(lines,hub,nodes);
-  diagram.append(heading,graph);
+  diagram.append(heading,graph,detailPanel);
+  selectBranch(0,false);
   return diagram;
 }
 
 function observeMindmap(graph) {
   const hub = graph.querySelector('.chapter-hub');
-  const nodes = [...graph.querySelectorAll('.chapter-nodes a')];
+  const nodes = [...graph.querySelectorAll('.chapter-nodes button')];
   const lines = graph.querySelector('.chapter-connections');
   const observer = new ResizeObserver(()=>{
     const frame = graph.getBoundingClientRect();
@@ -111,8 +142,8 @@ function chapterArticle(chapter,grade) {
   intro.append(element('small',`SGK Lịch sử và Địa lí ${grade} · tr. ${chapter.pages}`),element('h2',chapter.name),element('p',chapter.focus));
   masthead.append(intro,chapterPhoto(chapter));
 
-  const summary = element('section',null,'chapter-notes');
-  summary.append(element('h3','Tóm tắt kiến thức'));
+  const summary = element('details',null,'chapter-notes');
+  summary.append(element('summary','Đọc toàn bộ tóm tắt'));
   chapter.branches.forEach(([title,keyword,detail],i)=>{
     const note = element('section');
     note.id = chapter.id+'-'+(i+1);
