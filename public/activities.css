@@ -44,7 +44,7 @@
 #activity input[type=radio] { width: 18px; height: 18px; accent-color: #326347; }
 #activity .act-btn {
   justify-self: start; padding: 10px 18px; min-height: 44px; color: #fff;
-  background: #2f6049; border: 1px solid #2f6049; border-radius: 10px; font-weight: 650;
+  background: #2f6049; border: 1px solid #2f6049; border-radius: 10px; font-weight: 650; text-decoration: none;
 }
 #activity .act-secondary { background: #fffefa; color: #294b38; border-color: #9dad9e; }
 #activity .act-link { min-height: 44px; background: transparent; padding: 0; color: #2d6245; border: none; text-decoration: underline; }
@@ -182,7 +182,7 @@
 }
 
 @media (hover: hover) {
-  #activity .act-btn:enabled:hover { background: #214733; border-color: #214733; box-shadow: 0 3px 8px #23463435; }
+  #activity .act-btn:is(:enabled,a[href]):hover { background: #214733; border-color: #214733; box-shadow: 0 3px 8px #23463435; }
   #activity .act-secondary:enabled:hover, #activity select:enabled:hover { background: #e4efdf; border-color: #648c72; box-shadow: none; }
   #activity .act-link:enabled:hover { color: #795520; text-decoration-thickness: 2px; text-underline-offset: .2em; }
   #activity .act-option, #activity .act-statement label { transition: background-color 150ms, border-color 150ms; }

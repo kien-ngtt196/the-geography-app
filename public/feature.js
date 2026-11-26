@@ -1,5 +1,5 @@
 import { pages } from './routes.js';
-import { openActivity } from './activities.js';
+import { openActivity, signInGuest } from './activities.js';
 
 const url = new URL(location.href);
 const path = url.pathname.replace(/\/$/,'');
@@ -25,18 +25,31 @@ async function learningPage() {
     const response = await fetch('/api/me',{cache:'no-store'});
     if (!response.ok) throw new Error();
     const {user} = await response.json();
-    const grades = user?.role === 'teacher' ? [8,9] : user?.grade ? [user.grade] : [];
+    const grades = user ? [8,9] : [];
     progress.hidden = grades.length === 0;
-    studyRole.textContent = user?.role === 'teacher' ? 'Giáo viên' : '';
+    studyRole.textContent = {teacher:'Giáo viên',guest:'Phiên khách'}[user?.role] || '';
     grid.replaceChildren(...grades.map(gradeCard));
     if (!grades.length) {
       const message = document.createElement('div');
       message.className = 'study-gate';
-      message.innerHTML = user
-        ? '<p>Chọn khối lớp để mở danh mục bài học.</p><a class="hero-action" href="/tai-khoan">Chọn khối lớp</a>'
-        : '<p>Đăng nhập để luyện tập, thi thử và xem tiến độ theo khối lớp.</p><a class="hero-action" href="/tai-khoan">Đăng nhập</a>';
+      message.innerHTML = '<p>Đăng nhập hoặc dùng thử để mở học liệu lớp 8 và lớp 9.</p><div class="study-entry"><a class="hero-action" href="/tai-khoan">Đăng nhập</a><button class="hero-action study-guest" type="button">Dùng thử với tư cách khách</button></div><p class="study-login-error" role="alert" hidden></p>';
       message.insertAdjacentHTML('beforeend','<span class="feature-sticker" data-sticker="book" aria-hidden="true"></span>');
       grid.append(message);
+      const guest = message.querySelector('button');
+      const feedback = message.querySelector('[role=alert]');
+      guest.onclick = async () => {
+        guest.disabled = true;
+        feedback.hidden = true;
+        try {
+          await signInGuest();
+          await learningPage();
+        } catch (error) {
+          feedback.textContent = error.message;
+          feedback.hidden = false;
+        } finally {
+          guest.disabled = false;
+        }
+      };
     }
   } catch {
     grid.textContent = 'Chưa tải được góc học tập. Hãy tải lại trang.';

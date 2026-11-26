@@ -27,6 +27,11 @@ async function api(path, data) {
   if (!response.ok) throw Object.assign(new Error(result.error || 'Yêu cầu chưa thành công. Hãy thử lại.'),{status:response.status});
   return result;
 }
+export async function signInGuest() {
+  const result = await api('guest-login',{});
+  window.dispatchEvent(new Event('study:account'));
+  return result;
+}
 
 function view(title, body, subtitle = '') {
   dialog.innerHTML = `<header class="act-head"><div>${subtitle ? `<small>${esc(subtitle)}</small>` : ''}<h1 id="activity-title" tabindex="-1">${esc(title)}</h1></div>
@@ -58,11 +63,17 @@ function button(id, label, secondary = false) {
   return `<button type="button" class="act-btn${secondary ? ' act-secondary' : ''}" id="${id}">${esc(label)}</button>`;
 }
 function accountGate(message) {
-  view(titles[mode], `<p>${esc(message)}</p>${button('sign-in', 'Đăng nhập hoặc tạo tài khoản')}`);
+  view(titles[mode], `<p>${esc(message)}</p><div class="act-actions">${button('sign-in','Đăng nhập hoặc tạo tài khoản')}${button('guest-login','Dùng thử với tư cách khách',true)}</div>`);
   action('sign-in', () => { returnTo = [mode, options]; return openActivity('account', options); });
+  action('guest-login', async () => { await signInGuest(); await openActivity(mode,options); });
 }
 function accountPage(register = false) {
   if (user) {
+    if (user.role === 'guest') {
+      view('Phiên khách','<p>Phiên dùng thử cho phép mở học liệu của cả hai khối và tạo phòng chơi thử. Lịch sử học của phiên được lưu trên tài khoản khách trong 24 giờ.</p><div class="act-actions"><a class="act-btn" href="/hoc-tap">Vào Góc học tập</a>'+button('logout','Kết thúc phiên khách',true)+'</div>','Tài khoản');
+      action('logout', logout);
+      return;
+    }
     const role = user.role === 'teacher' ? 'Giáo viên' : user.grade ? 'Học sinh lớp ' + user.grade : 'Học sinh';
     const gradeForm = user.role === 'student' && !user.grade ? '<form id="set-grade" class="act-form"><label>Khối lớp<select name="grade"><option value="8">Lớp 8</option><option value="9">Lớp 9</option></select></label><button class="act-btn">Lưu khối lớp</button></form>' : '';
     view(user.name, `<dl class="act-data"><dt>Vai trò</dt><dd>${role}</dd><dt>Mã lớp</dt><dd>${esc(user.classCode || 'Chưa tham gia lớp')}</dd></dl>${gradeForm}${user.role === 'student' ? '<form id="class-code" class="act-form"><label>Tham gia lớp bằng mã giáo viên cung cấp<input name="classCode" required maxlength="32"></label><button class="act-btn">Lưu lớp</button></form>' : ''}${button('logout','Đăng xuất',true)}`, 'Tài khoản');
@@ -77,10 +88,7 @@ function accountPage(register = false) {
       await api('class', Object.fromEntries(new FormData(byId('class-code'))));
       user = (await api('me')).user; accountPage();
     });
-    action('logout', async () => {
-      await api('logout', {}); user = null; drafts.clear(); returnTo = null;
-      window.dispatchEvent(new Event('study:account')); accountPage();
-    });
+    action('logout', logout);
     return;
   }
   view(register ? 'Tạo tài khoản' : 'Đăng nhập', `<form id="credentials" class="act-form">
@@ -88,7 +96,8 @@ function accountPage(register = false) {
     <label>Mật khẩu<input name="password" type="password" autocomplete="${register ? 'new-password' : 'current-password'}" ${register ? 'minlength="8"' : ''} required></label>
     ${register ? `<label>Vai trò<select name="role"><option value="student">Học sinh</option><option value="teacher">Giáo viên</option></select></label><label id="grade-label">Khối lớp<select name="grade" required><option value="">Chọn khối lớp</option><option value="8">Lớp 8</option><option value="9">Lớp 9</option></select></label><label id="class-label">Mã lớp do giáo viên cung cấp (nếu có)<input name="classCode" maxlength="32"></label><label id="teacher-key" hidden>Mã đăng kí dành cho giáo viên<input name="teacherKey" type="password" autocomplete="off" disabled required></label>` : ''}
     <button class="act-btn">${register ? 'Tạo tài khoản' : 'Đăng nhập'}</button></form>
-    <button type="button" class="act-link" id="switch-account">${register ? 'Đã có tài khoản? Đăng nhập' : 'Chưa có tài khoản? Đăng kí'}</button>`);
+    <div class="act-actions"><button type="button" class="act-link" id="switch-account">${register ? 'Đã có tài khoản? Đăng nhập' : 'Chưa có tài khoản? Đăng kí'}</button>
+    ${button('guest-login','Dùng thử với tư cách khách',true)}</div>`);
   const form = byId('credentials');
   if (register) form.elements.role.onchange = () => {
     byId('class-label').hidden = form.elements.role.value === 'teacher';
@@ -99,20 +108,34 @@ function accountPage(register = false) {
     form.elements.teacherKey.disabled = byId('teacher-key').hidden;
   };
   action('switch-account', () => accountPage(!register));
+  async function resumeAccount(result,token) {
+    if (!current(token)) return;
+    user = result.user;
+    if (user.role !== 'guest') window.dispatchEvent(new Event('study:account'));
+    if (returnTo) { const next = returnTo; returnTo = null; await openActivity(...next); }
+    else location.assign('/hoc-tap');
+  }
+  action('guest-login',async () => {
+    const token = revision;
+    await resumeAccount(await signInGuest(),token);
+  });
   submit('credentials', async () => {
     const token = revision;
-    await api(register ? 'register' : 'login', Object.fromEntries(new FormData(form)));
-    const result = await api('me');
-    if (!current(token)) return;
-    user = result.user; window.dispatchEvent(new Event('study:account'));
-    if (returnTo) { const next = returnTo; returnTo = null; await openActivity(...next); }
-    else if (user.role === 'student' && !user.grade) accountPage();
-    else location.assign('/hoc-tap');
+    const result = await api(register ? 'register' : 'login', Object.fromEntries(new FormData(form)));
+    await resumeAccount(result,token);
   });
+}
+async function logout() {
+  await api('logout', {});
+  user = null;
+  drafts.clear();
+  returnTo = null;
+  window.dispatchEvent(new Event('study:account'));
+  accountPage();
 }
 const draftKey = () => [user?.id || 'guest', mode, options.grade, options.lessonId || ''].join('/');
 async function startPage(token) {
-  if (!user) return accountGate('Đăng nhập để mở học liệu đúng khối lớp.');
+  if (!user) return accountGate('Đăng nhập hoặc dùng thử với tư cách khách để mở học liệu.');
   attempt = drafts.get(draftKey());
   if (attempt) return questionPage();
   const {lessons} = await api('catalog?grade=' + enc(options.grade));
@@ -127,8 +150,7 @@ async function startPage(token) {
     ${examPicker ? '<div class="act-form">'+examPicker+'</div>' : ''}
     <p id="lesson-summary">${esc(lesson?.summary || (practice ? 'Ôn lại kiến thức bằng câu hỏi và đối chiếu đáp án sau khi nộp bài.' : examPicker ? midtermScope : generalScope))}</p>
     ${practice ? '' : '<p>45 phút · 8 câu nhiều lựa chọn, 2 câu đúng sai (mỗi câu 4 ý) và 2 câu trả lời ngắn. Phần trắc nghiệm có 7 điểm, quy đổi sang thang 10 để lưu vào sổ học tập.</p>'}
-    ${!user ? '<p class="act-note">Lượt học thử gồm ba câu mẫu của khối lớp. Đăng kí để luyện theo từng bài và lưu tiến độ.</p>' : ''}
-    <div class="act-form">${user ? picker : ''}${button('begin', practice ? 'Bắt đầu luyện tập' : 'Bắt đầu thi thử')}</div>`, 'Địa lí ' + options.grade);
+    <div class="act-form">${picker}${button('begin', practice ? 'Bắt đầu luyện tập' : 'Bắt đầu thi thử')}</div>`, 'Địa lí ' + options.grade);
   const selector = byId('act-lesson');
   const paperSelector = byId('act-paper');
   if (paperSelector) paperSelector.onchange = () => {
@@ -248,7 +270,7 @@ function table(headers, rows) {
   return `<div class="act-scroll"><table><thead><tr>${headers.map(h => `<th scope="col">${esc(h)}</th>`).join('')}</tr></thead><tbody>${rows.map(row => `<tr>${row.map(v => `<td>${esc(v)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
 }
 async function progressPage(token) {
-  if (!user) return accountGate('Đăng nhập để xem các bài đã làm và chủ đề cần ôn tiếp.');
+  if (!user) return accountGate('Đăng nhập hoặc dùng thử với tư cách khách để xem Sổ học tập.');
   const result = await api('progress');
   if (!current(token)) return;
   const rec = result.recommendation;
@@ -264,12 +286,17 @@ async function progressPage(token) {
 }
 
 function classroomHome() {
-  view('Phòng học', `${user?.role === 'teacher' ? `<h3>Tạo lượt chơi</h3><form id="create-room" class="act-form"><label>Khối lớp<select name="grade"><option value="8">Địa lí 8</option><option value="9" ${options.grade === 9 ? 'selected' : ''}>Địa lí 9</option></select></label>
-    <label>Hình thức<select name="teamMode"><option value="false">Cá nhân</option><option value="true">Theo đội</option></select></label><button class="act-btn">Tạo phòng</button></form>` : ''}
+  const canHost = ['teacher','guest'].includes(user?.role);
+  const demo = user?.role === 'guest';
+  view('Phòng học', `${canHost ? `<h3>${demo ? 'Tạo lượt chơi thử' : 'Tạo lượt chơi'}</h3>${demo ? '<p>Mở mã QR bằng điện thoại hoặc cửa sổ ẩn danh để thử giao diện người chơi.</p>' : ''}<form id="create-room" class="act-form"><label>Khối lớp<select name="grade"><option value="8">Địa lí 8</option><option value="9" ${options.grade === 9 ? 'selected' : ''}>Địa lí 9</option></select></label>
+    <label>Hình thức<select name="teamMode"><option value="false">Cá nhân</option><option value="true">Theo đội</option></select></label><button class="act-btn">${demo ? 'Tạo phòng thử' : 'Tạo phòng'}</button></form>` : ''}
     <h3>Tham gia lượt chơi</h3><p>Quét mã QR trên màn hình giáo viên hoặc nhập mã phòng bên dưới.</p><form id="find-room" class="act-form"><label>Mã phòng<input name="code" maxlength="16" required autocomplete="off"></label><button class="act-btn">Tìm phòng</button></form>
-    ${!user ? button('teacher-login','Đăng nhập giáo viên',true) : ''}`);
-  if (!user) action('teacher-login', () => { returnTo = ['classroom',options]; return openActivity('account',options); });
-  if (user?.role === 'teacher') submit('create-room', async () => {
+    ${!user ? `<div class="act-actions">${button('teacher-login','Đăng nhập giáo viên',true)}${button('guest-login','Dùng thử với tư cách khách',true)}</div>` : ''}`);
+  if (!user) {
+    action('teacher-login', () => { returnTo = ['classroom',options]; return openActivity('account',options); });
+    action('guest-login', async () => { await signInGuest(); await openActivity('classroom',options); });
+  }
+  if (canHost) submit('create-room', async () => {
     const data = new FormData(byId('create-room')), token = revision;
     const result = await api('rooms',{grade:Number(data.get('grade')),teamMode:data.get('teamMode') === 'true'});
     if (current(token)) await enterRoom(result.code);
@@ -417,18 +444,15 @@ export async function openActivity(nextMode, args = {}) {
   if (!titles[nextMode]) return;
   const token = ++revision;
   clearInterval(timer); clearInterval(roomClock); roomViewKey = ''; roomSnapshot = undefined; mode = nextMode;
-  options = {...args,grade:Number(args.grade) === 9 ? 9 : 8};
+  const requestedGrade = Number(args.grade);
+  options = {...args,grade:[8,9].includes(requestedGrade) ? requestedGrade : undefined};
   if (!dialog.open) dialog.show();
   view(titles[mode],'<p role="status">Đang tải…</p>');
   try {
     const result = await api('me');
     if (!current(token)) return;
     user = result.user;
-    if (user?.role === 'student' && user.grade) options.grade = user.grade;
-    if (user?.role === 'student' && !user.grade && mode !== 'account') {
-      returnTo = [mode,options];
-      return openActivity('account',options);
-    }
+    options.grade ??= user?.grade || 8;
     if (mode === 'account') accountPage();
     if (mode === 'practice' || mode === 'exam') await startPage(token);
     if (mode === 'progress') await progressPage(token);

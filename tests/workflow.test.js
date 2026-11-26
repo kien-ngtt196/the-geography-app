@@ -117,14 +117,13 @@ test('Học thử, đăng ký, luyện tập, thi thử và chơi theo đội', 
   await student8('register',{name:'Học sinh lớp 8',password:'example123',role:'student',grade:8,classCode:user.classCode});
   assert.equal((await student8('me')).user.grade,8);
   await guest('chapters?grade=8',undefined,401);
-  await student8('chapters?grade=9',undefined,403);
-  await student('chapters?grade=8',undefined,403);
   await teacher('chapters?grade=7',undefined,400);
   for (const [grade,reader,chapterCount] of [[8,student8,4],[9,student,3]]) {
     const {chapters} = await reader('chapters?grade='+grade);
     assert.equal(chapters.filter(chapter=>chapter.name.startsWith('Chương ')).length,chapterCount);
     assert.equal(chapters.length,6);
     assert.deepEqual((await teacher('chapters?grade='+grade)).chapters,chapters);
+    assert.deepEqual((await (grade===8 ? student : student8)('chapters?grade='+grade)).chapters,chapters);
     for (const chapter of chapters) {
       assert.ok(chapter.note);
       const illustrations = chapter.branches.map(([, , , illustration])=>illustration);
@@ -142,13 +141,17 @@ test('Học thử, đăng ký, luyện tập, thi thử và chơi theo đội', 
   }
   assert.equal(administration[34].find(p=>p.name === 'Đồng Nai').kind,'Thành phố');
   assert.equal(administration[63].find(p=>p.name === 'Đồng Nai').kind,'Tỉnh');
-  await student8('catalog?grade=9',undefined,403);
-  await student8('attempts',{grade:9,mode:'practice'},403);
+  assert.ok((await student8('catalog?grade=9')).lessons.length);
+  const crossGradePractice = await student8('attempts',{grade:9,mode:'practice',lessonId:'g9_l5'});
+  await student8('attempts/'+crossGradePractice.id+'/submit',{answers:{}});
+  const crossGradeExam = await student8('attempts',{grade:8,mode:'exam'});
+  await student8('attempts/'+crossGradeExam.id+'/submit',{answers:{}});
+  assert.deepEqual(new Set((await student8('progress')).attempts.map(a=>a.grade)),new Set([8,9]));
   await student8('student-grade',{grade:9},403);
   const midterm=await student('attempts',{grade:9,mode:'exam',examPaper:'midterm1'});
   assert.equal(midterm.questions[0].id,'hk1_9_I_1');
   assert.ok(midterm.questions.every(q=>!('answer' in q) && !('acceptedAnswers' in q)));
-  await student('attempts',{grade:8,mode:'exam',examPaper:'midterm1'},403);
+  await student('attempts',{grade:8,mode:'exam',examPaper:'midterm1'},400);
   const test=await student('attempts',{grade:9,mode:'exam'});
   assert.equal(test.questions.length,12);
   const pool=new Map(lessons(9).flatMap(l=>l.questions).map(q=>[q.id,q.answer]));
@@ -166,7 +169,8 @@ test('Học thử, đăng ký, luyện tập, thi thử và chơi theo đội', 
   await student('rooms',{grade:8,teamMode:false},403);
   const {code}=await teacher('rooms',{grade:9,teamMode:true});
   const room='rooms/'+code;
-  await student8(room,undefined,403);
+  await student8(room+'/join',{name:'Học sinh lớp 8',team:'Sen'});
+  assert.equal((await student8(room)).joined,true);
   assert.match(await teacher('qr?code='+code),/<svg/);
   const {default:atlas} = await import('../api/atlas.js');
   const rewritten = createServer(atlas).listen(0,'127.0.0.1');
@@ -224,9 +228,49 @@ test('Học thử, đăng ký, luyện tập, thi thử và chơi theo đội', 
   const final=await teacher(room);
   assert.equal(final.state,'ended');
   assert.equal(final.players[0].score,total);
-  assert.deepEqual(final.stats[0],{prompt:final.stats[0].prompt,right:2,wrong:0,skipped:0});
-  assert.ok(final.stats.slice(1).every(s=>s.right===1 && s.wrong===0 && s.skipped===1));
+  assert.deepEqual(final.stats[0],{prompt:final.stats[0].prompt,right:2,wrong:0,skipped:1});
+  assert.ok(final.stats.slice(1).every(s=>s.right===1 && s.wrong===0 && s.skipped===2));
   assert.equal((await stranger(room)).players.length,0);
+  await t.test('Khách dùng thử cả hai khối, tạo phòng riêng và chỉ xem dữ liệu của phiên', async () => {
+    const demo = browser(), other = browser();
+    const {user:demoUser} = await demo('guest-login',{});
+    const {user:otherUser} = await other('guest-login',{});
+    assert.equal(demoUser.role,'guest');
+    assert.notEqual(demoUser.id,otherUser.id);
+    assert.deepEqual((await demo('guest-login',{})).user,demoUser);
+    await student('guest-login',{},409);
+    await demo('class',{classCode:user.classCode},403);
+    await demo('student-grade',{grade:8},403);
+    await demo(room+'/next',{},403);
+    for (const grade of [8,9]) {
+      assert.ok((await demo('catalog?grade='+grade)).lessons.length);
+      assert.ok((await demo('chapters?grade='+grade)).chapters.length);
+      const assessment = await demo('attempts',{grade,mode:'exam'});
+      assert.equal(assessment.questions.length,12);
+      await other('attempts/'+assessment.id+'/submit',{answers:{}},404);
+      await demo('attempts/'+assessment.id+'/submit',{answers:{}});
+    }
+    const demoProgress = await demo('progress');
+    assert.deepEqual(demoProgress.students,[]);
+    assert.deepEqual(new Set(demoProgress.attempts.map(a=>a.grade)),new Set([8,9]));
+    assert.deepEqual((await other('progress')).attempts,[]);
+    const demoRoom = 'rooms/'+(await demo('rooms',{grade:8,teamMode:true})).code;
+    assert.equal((await demo(demoRoom)).host,true);
+    assert.equal((await other(demoRoom)).host,false);
+    await other(demoRoom+'/join',{name:'Khách thử',team:'Sen'});
+    await other(demoRoom+'/next',{},403);
+    await demo(demoRoom+'/next',{index:-1});
+    const {question} = await other(demoRoom);
+    await other(demoRoom+'/answer',{questionId:question.id,answer:''});
+    await run('UPDATE users SET guest_until=? WHERE id=?',Date.now()-120000,demoUser.id);
+    const {cleanExpired} = await import('../app.js');
+    await cleanExpired();
+    await demo('progress',undefined,401);
+    await other(demoRoom,undefined,404);
+    assert.equal((await teacher(room)).state,'ended');
+    await other('logout',{});
+    assert.equal((await other('me')).user,null);
+  });
   assert.equal(fraction({type:'short',answer:'3.5'},'3,50'),1);
   for(const grade of [8,9]) {
     const catalog=await teacher('catalog?grade='+grade);

@@ -14,6 +14,7 @@ const derive = promisify(scrypt);
 const files = fileURLToPath(new URL('./public/',import.meta.url));
 const hash = s => createHash('sha256').update(s).digest('hex');
 const month = 30*86400000;
+const guestLifetime = 86400000;
 const types = {'.html':'text/html','.css':'text/css','.js':'text/javascript','.svg':'image/svg+xml','.json':'application/json','.jpg':'image/jpeg','.png':'image/png','.webp':'image/webp','.woff2':'font/woff2','.ttf':'font/ttf'};
 const limits = new Map();
 function limit(key, maximum) {
@@ -32,9 +33,20 @@ function clientAddress(req) {
 }
 let lastCleanup = Date.now();
 export async function cleanExpired() {
-  for (const [key,entry] of limits) if (entry.until < Date.now()) limits.delete(key);
-  await run('DELETE FROM sessions WHERE expires<?',Date.now());
-  await run('DELETE FROM attempts WHERE user_id IS NULL AND date<?',new Date(Date.now()-month).toISOString());
+  const now = Date.now();
+  for (const [key,entry] of limits) if (entry.until < now) limits.delete(key);
+  await run('DELETE FROM sessions WHERE expires<?',now);
+  await run('DELETE FROM attempts WHERE user_id IS NULL AND date<?',new Date(now-month).toISOString());
+  const cutoff = now-60000;
+  if (!await one('SELECT 1 FROM users WHERE guest_until<? LIMIT 1',cutoff)) return;
+  const guests = 'SELECT id FROM users WHERE guest_until<?';
+  const demoRooms = `SELECT code FROM rooms WHERE teacher IN (${guests})`;
+  await run(`DELETE FROM responses WHERE code IN (${demoRooms})`,cutoff);
+  await run(`DELETE FROM players WHERE code IN (${demoRooms})`,cutoff);
+  await run(`DELETE FROM rooms WHERE teacher IN (${guests})`,cutoff);
+  await run(`DELETE FROM attempts WHERE user_id IN (${guests})`,cutoff);
+  await run(`DELETE FROM sessions WHERE user_id IN (${guests})`,cutoff);
+  await run('DELETE FROM users WHERE guest_until<?',cutoff);
 }
 
 async function jsonBody(req) {
@@ -52,15 +64,16 @@ async function jsonBody(req) {
   fail(400,'Dữ liệu gửi lên không hợp lệ.');
 }
 function currentUser(id) {
-  return id ? one(`SELECT u.id,u.name,u.role,u.grade,COALESCE(u.class_code,t.class_code,'') "classCode"
-    FROM users u LEFT JOIN users t ON t.id=u.teacher_id WHERE u.id=?`,id) : null;
+  return id ? one(`SELECT u.id,u.name,CASE WHEN u.guest_until IS NULL THEN u.role ELSE 'guest' END role,
+    u.grade,COALESCE(u.class_code,t.class_code,'') "classCode"
+    FROM users u LEFT JOIN users t ON t.id=u.teacher_id WHERE u.id=? AND (u.guest_until IS NULL OR u.guest_until>?)`,id,Date.now()) : null;
 }
-async function setSession(res, userId) {
+async function setSession(res, userId, expires = Date.now()+month) {
   const secret = randomBytes(32).toString('hex');
   const token = hash(secret);
-  await run('INSERT INTO sessions VALUES(?,?,?)',token,userId,Date.now()+month);
+  await run('INSERT INTO sessions VALUES(?,?,?)',token,userId,expires);
   const secure = process.env.PUBLIC_ORIGIN?.startsWith('https://') || process.env.VERCEL === '1' ? '; Secure' : '';
-  res.setHeader('Set-Cookie','atlas='+secret+'; Path=/; HttpOnly; SameSite=Lax; Max-Age=2592000'+secure);
+  res.setHeader('Set-Cookie','atlas='+secret+'; Path=/; HttpOnly; SameSite=Lax; Max-Age='+Math.ceil((expires-Date.now())/1000)+secure);
   return token;
 }
 async function teacherByCode(code) {
@@ -74,7 +87,7 @@ async function authenticate(path,body) {
   if (!name || name.length>64 || typeof password!=='string' || password.length>256) fail(400,'Tên hoặc mật khẩu không hợp lệ.');
   const login = name.toLocaleLowerCase('vi');
   if (path.endsWith('/login')) {
-    const row = await one('SELECT id,password FROM users WHERE login=?',login);
+    const row = await one('SELECT id,password FROM users WHERE login=? AND guest_until IS NULL',login);
     const [salt,h] = (row?.password || 'empty:'+ '00'.repeat(64)).split(':');
     const key = await derive(password,salt,64);
     if (!timingSafeEqual(key,Buffer.from(h,'hex')) || !row) fail(401,'Tên hoặc mật khẩu chưa đúng.');
@@ -99,7 +112,7 @@ async function authenticate(path,body) {
 }
 
 async function progress(user) {
-  const attempts = await all('SELECT grade,mode,lesson,date,result FROM attempts WHERE user_id=? AND result IS NOT NULL AND (CAST(? AS INTEGER) IS NULL OR grade=?) ORDER BY date DESC',user.id,user.grade,user.grade);
+  const attempts = await all('SELECT grade,mode,lesson,date,result FROM attempts WHERE user_id=? AND result IS NOT NULL ORDER BY date DESC',user.id);
   const misses = new Map();
   const history = attempts.map(({result,...a}) => {
     const {score,total,items} = JSON.parse(result);
@@ -156,9 +169,6 @@ async function handle(req,res) {
   let session = secret && await one('SELECT token,user_id FROM sessions WHERE token=? AND expires>?',hash(secret),Date.now());
   const user = await currentUser(session?.user_id);
   const mustLogin = () => { if (!user) fail(401,'Hãy đăng nhập để tiếp tục.'); };
-  const checkGrade = grade => {
-    if (user?.role === 'student' && user.grade !== grade) fail(403,'Hãy dùng học liệu đúng khối lớp trong tài khoản.');
-  };
   let body = {};
   let address;
   if (method==='POST') {
@@ -166,7 +176,7 @@ async function handle(req,res) {
     if (origin && origin!==process.env.PUBLIC_ORIGIN && new URL(origin).host!==req.headers.host) fail(403,'Nguồn yêu cầu không hợp lệ.');
     body = await jsonBody(req);
     address = clientAddress(req);
-    if (!session) {
+    if (!session && path!=='/api/guest-login') {
       limit('session:'+address,480);
       session={token:await setSession(res,null)};
     }
@@ -176,14 +186,24 @@ async function handle(req,res) {
   else if (method==='GET' && path==='/api/catalog') {
     mustLogin();
     const grade = Number(url.searchParams.get('grade'));
-    checkGrade(grade);
     output={lessons:lessons(grade).map(({id,title,summary,questions})=>({id,title,summary,count:questions.length}))};
   } else if (method==='GET' && path==='/api/chapters') {
     mustLogin();
     const grade = Number(url.searchParams.get('grade'));
     if (!Object.hasOwn(chapters,grade)) fail(400,'Hãy chọn lớp 8 hoặc lớp 9.');
-    checkGrade(grade);
     output={chapters:chapters[grade]};
+  } else if (method==='POST' && path==='/api/guest-login') {
+    if (user && user.role !== 'guest') fail(409,'Hãy đăng xuất trước khi mở phiên khách.');
+    if (user) output={user};
+    else {
+      limit('guest:'+address,40);
+      const expires = Date.now()+guestLifetime;
+      const {id} = await one("INSERT INTO users(name,login,password,role,guest_until) VALUES(?,?,?,'student',?) RETURNING id",
+        'Khách','guest-'+randomUUID(),'!',expires);
+      await setSession(res,id,expires);
+      if (session) await run('DELETE FROM sessions WHERE token=?',session.token);
+      output={user:await currentUser(id)};
+    }
   } else if (method==='POST' && ['/api/login','/api/register'].includes(path)) {
     limit('auth:'+address,120);
     const id = await authenticate(path,body);
@@ -209,7 +229,6 @@ async function handle(req,res) {
     if (body.mode==='exam') mustLogin();
     limit('attempt:'+session.token,120);
     const grade = Number(body.grade);
-    checkGrade(grade);
     const lessonId = user && body.mode==='practice' ? body.lessonId : null;
     const questions = selectQuestions(grade,lessonId,body.mode,!user,body.examPaper);
     if (!questions.length) fail(404,'Bài này chưa có câu hỏi.');
@@ -230,6 +249,7 @@ async function handle(req,res) {
       if (!saved) output=JSON.parse((await one('SELECT result FROM attempts WHERE id=?',attempt.id)).result);
     }
   } else if (path.startsWith('/api/rooms')) {
+    if (method==='POST' && path==='/api/rooms' && user?.role === 'guest') limit('guest-room:'+session.token,30);
     output=await roomAction({path,method,body,user,session:session?.token || ''});
   } else if (method==='GET' && path==='/api/qr') {
     const scheme = process.env.VERCEL === '1' ? 'https' : 'http';

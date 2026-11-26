@@ -145,6 +145,13 @@ i svg { width: 1.1rem; height: 1.1rem; }
 .study-head h1 { margin-bottom: 0; }
 .study-gate { max-width: 50ch; padding: 15px 18px 21px; border-radius: 12px; background: var(--surface); border: 1px solid var(--line); }
 .study-gate p { margin: 0 0 14px; }
+.study-entry { display: flex; flex-wrap: wrap; gap: 8px; }
+.study-entry .study-guest { color: #24523f; background: #eaf1df; border: 1px solid #a2b4a1; }
+.study-entry .study-guest:disabled { cursor: wait; opacity: .7; }
+.study-gate .study-login-error { margin-top: 10px; color: #962e29; }
+@media (hover: hover) {
+  .study-entry .study-guest:enabled:hover { background: #dce8d1; }
+}
 @media (max-width: 850px) {
   .map-layout { grid-template-columns: 1fr; }
   .map-intro { padding: 16px; }

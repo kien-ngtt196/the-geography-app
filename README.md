@@ -20,7 +20,8 @@ Máy chủ tự tạo thư mục `.storage`, tệp cơ sở dữ liệu và mã 
 | Người dùng | Thao tác | Kết quả |
 | --- | --- | --- |
 | Khách | Rê chuột, chạm hoặc dùng bàn phím chọn vùng. | Xem ảnh SGK và tóm tắt từng vùng trong cửa sổ thông tin. |
-| Học sinh | Chọn khối khi đăng ký, nhập mã lớp nếu giáo viên cung cấp, rồi mở Góc học tập. | Xem học liệu của khối trong tài khoản. Luyện tối đa 10 câu mỗi lượt, xem điểm và đáp án sau khi nộp. |
+| Học sinh | Chọn khối khi đăng ký, nhập mã lớp nếu giáo viên cung cấp, rồi mở Góc học tập. | Xem tóm tắt, luyện tập và thi thử của lớp 8 và lớp 9. Điểm của cả hai khối xuất hiện trong Sổ học tập. |
+| Khách | Chọn Dùng thử với tư cách khách ở Tài khoản, Góc học tập hoặc Phòng học. | Dùng học liệu hai khối, thi thử, xem Sổ học tập của phiên và tổ chức phòng chơi thử. Phiên kéo dài 24 giờ. |
 | Học sinh thi thử | Chọn khối, mở Thi thử, trả lời và xem lại trước khi nộp. | Làm đề 45 phút. Điểm được lưu vào sổ học tập. Khi đang mở đề, giao diện tự nộp lúc hết giờ. |
 | Học sinh ôn lại | Mở Sổ học tập sau một số lượt học. | Xem lịch sử và mở lại bài có tỉ lệ sai cao nhất trong các lượt đã nộp. |
 | Giáo viên | Tạo lượt chơi theo đội hoặc cá nhân, chiếu QR rồi bắt đầu. Học sinh quét mã hoặc nhập mã phòng, đặt tên và trả lời trên thiết bị riêng. | Màn hình giáo viên chiếu đề. Màn hình học sinh hiển thị các ô đáp án. Mười câu tự chuyển theo thời gian, có đủ mức biết, hiểu và vận dụng. Cuối lượt có bảng điểm và thống kê theo câu. |
@@ -28,7 +29,7 @@ Máy chủ tự tạo thư mục `.storage`, tệp cơ sở dữ liệu và mã 
 
 ## Thiết kế giao diện và nội dung
 
-Bản đồ gồm sáu vùng theo cách chia trong SGK Địa lí 9. Các lớp SVG tạo chiều sâu và có thể chuyển sang góc nhìn phẳng. Mỗi vùng có màu, tên và nút chú giải. Khi rê chuột, chạm hoặc dùng bàn phím, cửa sổ nổi hiển thị ảnh và thông tin vùng. Danh mục Luyện tập nằm trong Góc học tập sau đăng nhập. Học sinh thấy khối đã đăng ký và giáo viên thấy cả hai khối.
+Bản đồ gồm sáu vùng theo cách chia trong SGK Địa lí 9. Các lớp SVG tạo chiều sâu và có thể chuyển sang góc nhìn phẳng. Mỗi vùng có màu, tên và nút chú giải. Khi rê chuột, chạm hoặc dùng bàn phím, cửa sổ nổi hiển thị ảnh và thông tin vùng. Danh mục Luyện tập nằm trong Góc học tập. Học sinh, giáo viên và khách đều xem được cả hai khối.
 
 Trang chủ đặt bản đồ nổi Việt Nam trên nền ảnh Vịnh Hạ Long. Rê chuột, chạm hoặc dùng bàn phím trên bản đồ để xem tên và ảnh SGK của từng vùng. Nút Khám phá bản đồ mở trang bản đồ riêng. Ba dải giới thiệu Bản đồ, Góc học tập và Phòng học có nền toàn chiều ngang. Trên màn hình rộng, ảnh chính hòa vào một lớp ảnh nền cùng tông để hạn chế phóng lớn. Nội dung hiện dần khi cuộn đến từng mục. Các biểu tượng trang trí trong ô tính năng được cắt hiển thị từ hai ảnh gốc trong `public/decor`. Ảnh Wikimedia Commons của các địa danh nằm trong `public/atlas/places`, kèm tên tác giả, nguồn và thông tin giấy phép trong `public/map-place-media.js`.
 

@@ -37,7 +37,7 @@ async function advanceExpired(room, questions, now) {
 
 export async function roomAction({ path, method, body, user, session }) {
   if (path === '/api/rooms' && method === 'POST') {
-    if (user?.role !== 'teacher') fail(403,'Giáo viên cần đăng nhập để mở phòng.');
+    if (!['teacher','guest'].includes(user?.role)) fail(403,'Hãy đăng nhập giáo viên hoặc mở phiên khách để tạo phòng.');
     const grade = Number(body.grade);
     const questions = selectQuestions(grade, null, 'room', false);
     let room;
@@ -52,11 +52,8 @@ export async function roomAction({ path, method, body, user, session }) {
   const match = path.match(/^\/api\/rooms\/(\d{6})(?:\/(join|next|answer))?$/);
   if (!match) fail(404,'Không tìm thấy phòng.');
   const [,code,action] = match;
-  let room = await one('SELECT * FROM rooms WHERE code=?',code);
-  if (!room) fail(404,'Mã phòng không hợp lệ.');
-  if (user?.role === 'student' && room.grade && user.grade !== room.grade) {
-    fail(403,'Phòng này dành cho học sinh lớp '+room.grade+'.');
-  }
+  let room = await one('SELECT rooms.*,users.guest_until host_until FROM rooms JOIN users ON users.id=rooms.teacher WHERE rooms.code=?',code);
+  if (!room || (room.host_until && Number(room.host_until) <= Date.now())) fail(404,'Mã phòng không hợp lệ hoặc phòng đã hết hạn.');
   const questions = JSON.parse(room.questions);
   const host = user?.id === room.teacher;
   const player = await one('SELECT name,team FROM players WHERE code=? AND token=?',code,session);
@@ -134,6 +131,6 @@ export async function roomAction({ path, method, body, user, session }) {
 }
 
 export async function roomQR(code, origin) {
-  if (!await one('SELECT 1 FROM rooms WHERE code=?',code)) fail(404,'Không tìm thấy phòng.');
+  if (!await one('SELECT 1 FROM rooms JOIN users ON users.id=rooms.teacher WHERE rooms.code=? AND (users.guest_until IS NULL OR users.guest_until>?)',code,Date.now())) fail(404,'Không tìm thấy phòng.');
   return QRCode.toString(new URL('/phong-hoc?room='+code,origin).href,{type:'svg',margin:3,width:240});
 }
