@@ -3,7 +3,7 @@ export const chapters = {
   8: [
     {
       id:'lanh-tho', name:'Chương 1. Vị trí địa lí và phạm vi lãnh thổ, địa hình và khoáng sản Việt Nam',
-      pages:'95–114', focus:'Vị trí tạo nền tảng tự nhiên nhiệt đới ẩm gió mùa. Địa hình và khoáng sản ảnh hưởng đến nơi cư trú, sản xuất và khai thác tài nguyên.',
+      mapTitle:'Vị trí, địa hình và khoáng sản', pages:'95–114', focus:'Vị trí tạo nền tảng tự nhiên nhiệt đới ẩm gió mùa. Địa hình và khoáng sản ảnh hưởng đến nơi cư trú, sản xuất và khai thác tài nguyên.',
       photo:'Dãy Hoàng Liên Sơn', caption:'Hoàng Liên Sơn minh họa địa hình núi cao ở Tây Bắc.',
       branches:[
         ['Vị trí và lãnh thổ','Rìa đông bán đảo Đông Dương','Việt Nam nằm gần trung tâm Đông Nam Á, giáp Trung Quốc, Lào, Cam-pu-chia trên đất liền và mở ra Biển Đông. Lãnh thổ gồm vùng đất, vùng biển và vùng trời. Vị trí nội chí tuyến và ảnh hưởng của biển góp phần tạo nên tính nhiệt đới ẩm.'],
@@ -13,7 +13,7 @@ export const chapters = {
     },
     {
       id:'khi-hau-thuy-van', name:'Chương 2. Khí hậu và thủy văn Việt Nam',
-      pages:'115–135', focus:'Gió mùa, địa hình và biển tạo nên sự phân hóa khí hậu. Mùa mưa và mùa khô chi phối dòng chảy và cách sử dụng nước.',
+      mapTitle:'Khí hậu và thủy văn', pages:'115–135', focus:'Gió mùa, địa hình và biển tạo nên sự phân hóa khí hậu. Mùa mưa và mùa khô chi phối dòng chảy và cách sử dụng nước.',
       photo:'Lào Cai', caption:'Sông Hồng ở Lào Cai là một phần của hệ thống sông Hồng.',
       branches:[
         ['Khí hậu','Nhiệt đới ẩm gió mùa','Mùa đông, gió mùa Đông Bắc làm miền Bắc có thời kì lạnh. Mùa hạ, gió mùa kết hợp các yếu tố hoàn lưu gây mưa nhiều ở nhiều nơi. Khí hậu còn thay đổi theo độ cao, vĩ độ và vị trí đón hay khuất gió.'],
@@ -25,7 +25,7 @@ export const chapters = {
     },
     {
       id:'dat-va-sinh-vat', name:'Chương 3. Thổ nhưỡng và sinh vật Việt Nam',
-      pages:'136–146', focus:'Đất và sinh vật phân hóa theo điều kiện tự nhiên. Sử dụng hợp lí giúp duy trì độ phì của đất và bảo tồn đa dạng sinh học.',
+      mapTitle:'Thổ nhưỡng và sinh vật', pages:'136–146', focus:'Đất và sinh vật phân hóa theo điều kiện tự nhiên. Sử dụng hợp lí giúp duy trì độ phì của đất và bảo tồn đa dạng sinh học.',
       photo:'Cao nguyên Đắk Lắk', caption:'Cao nguyên Đắk Lắk minh họa cảnh quan Tây Nguyên có đất feralit trên đá badan.',
       branches:[
         ['Thổ nhưỡng','Đất feralit · đất phù sa · đất mùn núi cao','Đất feralit phổ biến ở đồi núi, có thể thích hợp với cây lâu năm tùy đá mẹ và độ dốc. Đất phù sa tập trung ở đồng bằng, thuận lợi cho lúa và hoa màu. Đất mùn núi cao hình thành trong điều kiện mát và ẩm hơn.'],
@@ -35,7 +35,7 @@ export const chapters = {
     },
     {
       id:'bien-dao', name:'Chương 4. Biển đảo Việt Nam',
-      pages:'147–154', focus:'Biển Đông tạo nguồn lực và ảnh hưởng tới thời tiết, đời sống ven bờ. Khai thác biển cần chú ý hệ sinh thái và phòng tránh thiên tai.',
+      mapTitle:'Biển đảo Việt Nam', pages:'147–154', focus:'Biển Đông tạo nguồn lực và ảnh hưởng tới thời tiết, đời sống ven bờ. Khai thác biển cần chú ý hệ sinh thái và phòng tránh thiên tai.',
       photo:'Cù Lao Chàm', caption:'Cù Lao Chàm minh họa cảnh quan biển đảo ven bờ.',
       branches:[
         ['Phạm vi và tự nhiên','Biển Đông · bờ biển · hải đảo','Vùng biển Việt Nam thuộc Biển Đông. Mùa gió, dòng biển và sóng tác động đến vùng ven bờ. Địa hình bờ biển đa dạng, có vịnh, đầm phá, bãi bồi và đảo. Hoàng Sa và Trường Sa là hai quần đảo của Việt Nam.'],
@@ -45,7 +45,7 @@ export const chapters = {
     },
     {
       id:'chau-tho', name:'Chủ đề chung 1. Văn minh châu thổ sông Hồng và sông Cửu Long',
-      pages:'155–161', focus:'Cùng là châu thổ do sông bồi đắp, hai đồng bằng phát triển cách cư trú và ứng xử với nước khác nhau.',
+      mapTitle:'Văn minh hai châu thổ', pages:'155–161', focus:'Cùng là châu thổ do sông bồi đắp, hai đồng bằng phát triển cách cư trú và ứng xử với nước khác nhau.',
       photo:'Cần Thơ', caption:'Cầu Cần Thơ bắc qua sông Hậu, một trục giao thông của châu thổ.',
       branches:[
         ['Nguồn gốc','Phù sa và mạng lưới sông','Phù sa tích tụ qua thời gian tạo nên đồng bằng thấp. Chế độ lũ, địa hình và tác động của biển định hình không gian cư trú.'],
@@ -55,7 +55,7 @@ export const chapters = {
     },
     {
       id:'chu-quyen-bien', name:'Chủ đề chung 2. Bảo vệ chủ quyền, các quyền và lợi ích hợp pháp của Việt Nam ở Biển Đông',
-      pages:'162–171', focus:'Nhận biết chứng cứ lịch sử, căn cứ pháp lí và trách nhiệm bảo vệ chủ quyền, môi trường và lợi ích hợp pháp trên biển.',
+      mapTitle:'Chủ quyền ở Biển Đông', pages:'162–171', focus:'Nhận biết chứng cứ lịch sử, căn cứ pháp lí và trách nhiệm bảo vệ chủ quyền, môi trường và lợi ích hợp pháp trên biển.',
       photo:'Biển Đông', caption:'Ảnh vệ tinh Biển Đông giúp định vị không gian của chủ đề.',
       branches:[
         ['Không gian biển','Đảo, quần đảo và các vùng biển','Đọc lược đồ để xác định vị trí Hoàng Sa và Trường Sa. Các vùng biển gắn với các chế độ pháp lí khác nhau.'],
@@ -67,7 +67,7 @@ export const chapters = {
   9: [
     {
       id:'dan-cu', name:'Chương 1. Địa lí dân cư Việt Nam',
-      pages:'117–128', focus:'Dân cư, nơi cư trú và chất lượng lao động tác động trực tiếp đến nhu cầu việc làm, dịch vụ và tổ chức lãnh thổ.',
+      mapTitle:'Dân cư Việt Nam', pages:'117–128', focus:'Dân cư, nơi cư trú và chất lượng lao động tác động trực tiếp đến nhu cầu việc làm, dịch vụ và tổ chức lãnh thổ.',
       photo:'Hải Phòng', caption:'Khu vực sông Cấm, Hải Phòng minh họa cảnh quan quần cư đô thị.',
       branches:[
         ['Dân tộc và dân số','54 dân tộc · gia tăng · cơ cấu tuổi','Việt Nam có 54 dân tộc. Dân số vẫn có thể tăng dù tốc độ tăng giảm. Cơ cấu tuổi thay đổi theo hướng già hóa, làm thay đổi nhu cầu giáo dục, việc làm và chăm sóc sức khỏe.'],
@@ -78,7 +78,7 @@ export const chapters = {
     },
     {
       id:'cac-nganh-kinh-te', name:'Chương 2. Địa lí các ngành kinh tế',
-      pages:'129–157', focus:'Đất, nước, lao động, công nghệ, hạ tầng và thị trường cùng quyết định sự phân bố của các ngành kinh tế.',
+      mapTitle:'Các ngành kinh tế', pages:'129–157', focus:'Đất, nước, lao động, công nghệ, hạ tầng và thị trường cùng quyết định sự phân bố của các ngành kinh tế.',
       photo:'Cao nguyên Mộc Châu', caption:'Đồi chè Mộc Châu minh họa vùng sản xuất cây công nghiệp lâu năm.',
       branches:[
         ['Nông nghiệp','Trồng trọt, chăn nuôi và sản xuất hàng hóa','Đất, khí hậu và nước quyết định mức độ thích hợp của cây trồng. Vốn, kĩ thuật và thị trường tác động đến quy mô, năng suất và khâu tiêu thụ. Khi báo cáo một mô hình hiệu quả, nêu đầu vào, cách tổ chức, đầu ra và tác động môi trường.'],
@@ -89,7 +89,7 @@ export const chapters = {
     },
     {
       id:'cac-vung-kinh-te', name:'Chương 3. Địa lí các vùng kinh tế – xã hội',
-      pages:'158–220', focus:'So sánh sáu vùng qua vị trí, nguồn lực, thế mạnh và thách thức. Liên hệ giữa các vùng giúp giải thích hướng phát triển.',
+      mapTitle:'Các vùng kinh tế – xã hội', pages:'158–220', focus:'So sánh sáu vùng qua vị trí, nguồn lực, thế mạnh và thách thức. Liên hệ giữa các vùng giúp giải thích hướng phát triển.',
       photo:'Bán đảo Cà Mau', caption:'Mũi Cà Mau minh họa cảnh quan ven biển ở Đồng bằng sông Cửu Long.',
       branches:[
         ['Trung du và miền núi phía Bắc','Khoáng sản, thủy điện, cây cận nhiệt và du lịch','Độ cao và địa hình tạo nhiều đai tự nhiên. Cần phát triển giao thông, bảo vệ rừng đầu nguồn và giảm rủi ro sạt lở.'],
@@ -103,7 +103,7 @@ export const chapters = {
     },
     {
       id:'do-thi', name:'Chủ đề chung 1. Đô thị: Lịch sử và hiện tại (2)',
-      pages:'221–224', focus:'Đô thị Việt Nam thay đổi qua các thời kì cùng với chức năng hành chính, giao thương, công nghiệp và dịch vụ.',
+      mapTitle:'Đô thị xưa và nay', pages:'221–224', focus:'Đô thị Việt Nam thay đổi qua các thời kì cùng với chức năng hành chính, giao thương, công nghiệp và dịch vụ.',
       photo:'Quảng Nam', caption:'Phố cổ Hội An là ví dụ về đô thị gắn với giao thương trong lịch sử.',
       branches:[
         ['Đô thị lịch sử','Trung tâm quản lí và giao thương','Kinh đô, phố thị và cảng thị có chức năng khác nhau. Vị trí gần đường sông, cửa biển hoặc đầu mối giao thông thường thúc đẩy trao đổi hàng hóa.'],
@@ -113,7 +113,7 @@ export const chapters = {
     },
     {
       id:'chau-tho', name:'Chủ đề chung 2. Văn minh châu thổ sông Hồng và sông Cửu Long (2)',
-      pages:'225–229', focus:'Theo dõi cách hai châu thổ phát triển và thích ứng với thay đổi của môi trường, hạ tầng và kinh tế.',
+      mapTitle:'Hai châu thổ và thích ứng', pages:'225–229', focus:'Theo dõi cách hai châu thổ phát triển và thích ứng với thay đổi của môi trường, hạ tầng và kinh tế.',
       photo:'Bạch Đằng', caption:'Cửa sông Bạch Đằng minh họa không gian sông – biển ở phía Bắc.',
       branches:[
         ['Sông Hồng','Đê điều, sản xuất lúa và mạng lưới làng xã','Quá trình trị thủy đi cùng khai thác đồng bằng. Mạng lưới cư trú, nghề nông và nghề thủ công lưu giữ nhiều nét văn hóa.'],
@@ -123,7 +123,7 @@ export const chapters = {
     },
     {
       id:'chu-quyen-bien', name:'Chủ đề chung 3. Bảo vệ chủ quyền, các quyền và lợi ích hợp pháp của Việt Nam ở Biển Đông (2)',
-      pages:'230–235', focus:'Gắn chứng cứ về chủ quyền và pháp luật quốc tế với phát triển bền vững, bảo vệ lợi ích hợp pháp và giữ môi trường hòa bình.',
+      mapTitle:'Chủ quyền và kinh tế biển', pages:'230–235', focus:'Gắn chứng cứ về chủ quyền và pháp luật quốc tế với phát triển bền vững, bảo vệ lợi ích hợp pháp và giữ môi trường hòa bình.',
       photo:'Bán đảo Sơn Trà', caption:'Sơn Trà, Đà Nẵng minh họa không gian ven bờ tiếp giáp Biển Đông.',
       branches:[
         ['Chủ quyền','Chứng cứ lịch sử về Hoàng Sa và Trường Sa','Đặt các tư liệu trong bối cảnh lịch sử. Nhận biết ý nghĩa của hoạt động quản lí nhà nước và thực thi chủ quyền qua các thời kì.'],

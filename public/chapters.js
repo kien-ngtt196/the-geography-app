@@ -1,4 +1,5 @@
 import { placeMedia } from './map-place-media.js';
+import { svg } from './geography.js';
 
 const styles = document.createElement('link');
 styles.rel = 'stylesheet';
@@ -32,19 +33,27 @@ function chapterPhoto(chapter) {
   return figure;
 }
 
-function chapterArticle(chapter,grade) {
-  const masthead = element('div',null,'chapter-masthead');
-  const intro = element('header',null,'chapter-intro');
-  intro.append(element('small',`SGK Lịch sử và Địa lí ${grade} · tr. ${chapter.pages}`),element('h2',chapter.name),element('p',chapter.focus));
-  masthead.append(intro,chapterPhoto(chapter));
-
+function chapterMindmap(chapter) {
   const diagram = element('section',null,'chapter-mindmap');
+  diagram.setAttribute('aria-labelledby','chapter-mindmap-title');
+  const heading = element('h3','Sơ đồ tư duy');
+  heading.id = 'chapter-mindmap-title';
+  const graph = element('div',null,'chapter-graph');
+  const hub = element('p',chapter.mapTitle || chapter.name,'chapter-hub');
   const nodes = element('ul',null,'chapter-nodes');
-  diagram.append(element('h3','Sơ đồ tư duy'),element('p',chapter.name.split('. ')[1],'chapter-hub'),nodes);
-  const summary = element('section',null,'chapter-notes');
-  summary.append(element('h3','Tóm tắt kiến thức'));
-  chapter.branches.forEach(([title,keyword,detail],i)=>{
+  nodes.setAttribute('role','list');
+  const lines = svg('svg',{class:'chapter-connections','aria-hidden':'true',focusable:'false'});
+
+  const hasTopBranch = chapter.branches.length % 2;
+  const firstSideRow = 1+hasTopBranch;
+  hub.style.setProperty('--first-row',firstSideRow);
+  hub.style.setProperty('--row-span',Math.max(1,Math.floor(chapter.branches.length/2)));
+  chapter.branches.forEach(([title,keyword],i)=>{
     const item = element('li');
+    const sideIndex = i-hasTopBranch;
+    item.dataset.branch = i+1;
+    item.style.setProperty('--column',sideIndex < 0 ? 2 : (sideIndex%2)*2+1);
+    item.style.setProperty('--row',sideIndex < 0 ? 1 : firstSideRow+Math.floor(sideIndex/2));
     const id = chapter.id+'-'+(i+1);
     const branch = link(title,'#'+id);
     branch.append(element('small',keyword));
@@ -56,15 +65,64 @@ function chapterArticle(chapter,grade) {
     };
     item.append(branch);
     nodes.append(item);
+  });
+  graph.append(lines,hub,nodes);
+  diagram.append(heading,graph);
+  return diagram;
+}
+
+function observeMindmap(graph) {
+  const hub = graph.querySelector('.chapter-hub');
+  const nodes = [...graph.querySelectorAll('.chapter-nodes a')];
+  const lines = graph.querySelector('.chapter-connections');
+  const observer = new ResizeObserver(()=>{
+    const frame = graph.getBoundingClientRect();
+    const center = node => {
+      const box = node.getBoundingClientRect();
+      return [box.left-frame.left+box.width/2,box.top-frame.top+box.height/2];
+    };
+    const [x,y] = center(hub);
+    const ends = nodes.map(center);
+    const compact = getComputedStyle(graph).getPropertyValue('--compact').trim() === '1';
+    const branches = ends.map(([endX,endY],i)=>{
+      const bend = compact ? x : (x+endX)/2;
+      const start = compact ? Math.max(y,endY-18) : y;
+      return svg('path',{
+        d:`M${x} ${start} C${bend} ${start} ${bend} ${endY} ${endX} ${endY}`,
+        class:'chapter-connection',
+        'data-branch':i+1
+      });
+    });
+    if (compact) {
+      branches.unshift(svg('path',{d:`M${x} ${y} V${Math.max(...ends.map(([,endY])=>endY))-18}`,class:'chapter-connection'}));
+    }
+    lines.setAttribute('viewBox',`0 0 ${frame.width} ${frame.height}`);
+    lines.replaceChildren(...branches);
+  });
+  observer.observe(graph);
+  observer.observe(hub);
+  nodes.forEach(node=>observer.observe(node));
+  return observer;
+}
+
+function chapterArticle(chapter,grade) {
+  const masthead = element('div',null,'chapter-masthead');
+  const intro = element('header',null,'chapter-intro');
+  intro.append(element('small',`SGK Lịch sử và Địa lí ${grade} · tr. ${chapter.pages}`),element('h2',chapter.name),element('p',chapter.focus));
+  masthead.append(intro,chapterPhoto(chapter));
+
+  const summary = element('section',null,'chapter-notes');
+  summary.append(element('h3','Tóm tắt kiến thức'));
+  chapter.branches.forEach(([title,keyword,detail],i)=>{
     const note = element('section');
-    note.id = id;
+    note.id = chapter.id+'-'+(i+1);
     note.tabIndex = -1;
     note.append(element('h4',title),element('mark',keyword),element('p',detail));
     summary.append(note);
   });
   const callout = element('aside',null,'chapter-callout');
   callout.append(element('h3','Lưu ý khi ôn'),element('p',chapter.note));
-  return [masthead,diagram,summary,callout];
+  return [masthead,chapterMindmap(chapter),summary,callout];
 }
 
 export async function showChapters(target,url) {
@@ -88,6 +146,7 @@ export async function showChapters(target,url) {
     menu.setAttribute('aria-label','Mục lục tóm tắt');
     const article = element('article',null,'chapter-article');
     article.tabIndex = -1;
+    let mindmapObserver;
     const buttons = data.chapters.map(chapter=>{
       const button = element('button',chapter.name);
       button.type = 'button';
@@ -99,7 +158,9 @@ export async function showChapters(target,url) {
         if (data.chapters[i] === chapter) button.setAttribute('aria-current','true');
         else button.removeAttribute('aria-current');
       });
+      mindmapObserver?.disconnect();
       article.replaceChildren(...chapterArticle(chapter,grade));
+      mindmapObserver = observeMindmap(article.querySelector('.chapter-graph'));
       if (moveFocus) {
         url.searchParams.set('chuong',chapter.id);
         history.replaceState(history.state,'',url);
