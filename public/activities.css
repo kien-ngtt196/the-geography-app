@@ -32,12 +32,12 @@
 #activity p, #activity h3, #activity td, #activity summary { overflow-wrap: anywhere; }
 #activity p { margin: 0 0 14px; }
 #activity .act-body { padding: 22px clamp(18px, 5vw, 34px) 26px; }
-#activity button, #activity input, #activity select { font: inherit; }
+#activity button, #activity input, #activity select, #activity textarea { font: inherit; }
 #activity button { cursor: pointer; }
 #activity button:disabled { opacity: .7; cursor: wait; }
 #activity .act-form { display: grid; gap: 13px; margin-bottom: 16px; }
 #activity label { display: grid; gap: 6px; font-weight: 550; }
-#activity input:not([type=radio]), #activity select {
+#activity input:not([type=radio]), #activity select, #activity textarea {
   border-radius: 9px; padding: 10px 12px; min-height: 44px;
   border: 1px solid #9eafa1; background: #fff; color: #213b30; width: 100%; min-width: 0;
 }
@@ -48,7 +48,7 @@
 }
 #activity .act-secondary { background: #fffefa; color: #294b38; border-color: #9dad9e; }
 #activity .act-link { min-height: 44px; background: transparent; padding: 0; color: #2d6245; border: none; text-decoration: underline; }
-#activity :is(button,input,select,summary):focus-visible { outline: 3px solid #ad6a20; outline-offset: 2px; }
+#activity :is(button,input,select,summary,textarea,.act-media-link):focus-visible { outline: 3px solid #ad6a20; outline-offset: 2px; }
 #activity .act-actions, #activity .act-meta { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
 #activity .act-meta { justify-content: space-between; font-size: .88rem; color: #466557; }
 #activity .act-actions { margin-top: 15px; }
@@ -67,6 +67,9 @@
 #activity .act-statement label:has(input:enabled) { cursor: pointer; }
 #activity .act-statement label:has(:checked) { background: #eaf2e6; }
 #activity .act-media { max-width: 100%; height: auto; margin: 0 auto; }
+#activity .act-media-link { display: block; width: fit-content; max-width: 100%; margin: 0 auto; cursor: zoom-in; }
+#activity .act-prompt, #activity caption { white-space: pre-line; }
+#activity caption { text-align: left; padding: 0 0 8px; }
 #activity .act-error { color: #962e29; margin: 12px 0 0; }
 #activity .act-error:empty { display: none; }
 #activity .act-score { font-size: 2.8rem; font-weight: 700; color: #326347; margin-bottom: 14px; }

@@ -41,15 +41,14 @@ Câu trả lời ngắn hiển thị đơn vị cạnh ô nhập. Với vĩ đ�
 
 | Học liệu | Phạm vi |
 | --- | --- |
-| Địa lí 8 | 12 bài và 2 chủ đề chung, 341 câu luyện tập |
-| Địa lí 9 | 21 bài và 3 chủ đề chung, 465 câu luyện tập và 12 câu đề giữa kì I |
-| Tư liệu gắn vào câu hỏi | Hình 6.5 trang 124 lớp 8 về lưu vực sông Thu Bồn. Bảng 5.1 và hình 5.1 trang 131 lớp 9 về lương thực và nông nghiệp. Hình 21.1 trang 214 lớp 9 về các vùng biển. |
+| Địa lí 8 | 340 câu luyện tập từ bộ DOCX, gồm 12 bài và 2 chủ đề chung |
+| Địa lí 9 | 460 câu luyện tập từ bộ DOCX, gồm 20 bài và 1 chủ đề chung, cùng 12 câu khách quan trong đề giữa kì I |
+| Tư liệu câu hỏi | Bảng và ngữ liệu từ bộ câu hỏi. Hình, bản đồ và bảng được dẫn chiếu bổ sung từ SGK tương ứng. |
 
-Ngân hàng luyện tập gồm 800 câu từ hai bộ DOCX, được đối chiếu theo bài, phần, số câu và khóa đáp án. Mỗi câu dẫn lại vị trí trong DOCX. Có 171 câu kèm bảng dữ liệu HTML. Hai câu cuối của chủ đề châu thổ lớp 9 thiếu khóa trong DOCX. Đáp án được tính từ số liệu đề bài và có lời giải. Sáu câu do dự án biên soạn dành cho bài bổ sung và đọc tư liệu SGK. Một số bài bổ sung hiện có một câu. Đợt đối chiếu kiểm tra nội dung nhập từ DOCX và xử lý các điểm lệch được phát hiện, còn việc xác nhận từng dữ kiện trong khóa DOCX với SGK là một mức rà soát riêng.
+Ngân hàng luyện tập giữ nguyên câu dẫn, các phương án hoặc nhận định, dạng câu, tư liệu và yêu cầu làm tròn trong hai bộ DOCX. Các nhãn mức độ trong tài liệu được hiển thị riêng. Mỗi câu dẫn lại bài, phần và số câu trong file gốc. Bài 10, Chủ đề 1 và Chủ đề 3 lớp 9 chưa có câu luyện tập trong bộ DOCX. Câu 25 phần III Bài 1 lớp 9 yêu cầu viết công thức và được tự đối chiếu với đáp án gốc. Hai câu cuối của chủ đề châu thổ lớp 9 thiếu khóa trong DOCX. Đáp án được tính từ số liệu đề bài và có lời giải.
 
 **Quy ước thi thử.** Lớp 9 có lựa chọn giữa kì I theo phần khách quan của đề mẫu và đề ôn tổng hợp cả năm. Lớp 8 có đề ôn tổng hợp. Mỗi đề gồm 8 câu nhiều lựa chọn, 2 câu đúng sai mỗi câu 4 ý và 2 câu trả lời ngắn. Điểm lần lượt là 0,5 điểm mỗi câu nhiều lựa chọn, 0,25 điểm mỗi ý đúng sai và 0,5 điểm mỗi câu trả lời ngắn. Kết quả hiển thị điểm khách quan trên 7 và điểm quy đổi trên 10. Đề gốc còn 3 điểm tự luận.
 
-  - Câu I.2 ghi rõ giai đoạn 1999–2024 theo SGK 9 trang 119.
   - Câu I.6 chấm D theo nội dung ứng dụng công nghệ cao trong SGK 9 trang 131. Khóa PDF ghi B.
   - Câu III.2 có kết quả tính được là 18,9601%, làm tròn thành 19,0%. Website cũng chấp nhận 18,9% theo hướng dẫn chấm của đề mẫu.
 

@@ -117,7 +117,7 @@ async function progress(user) {
   const history = attempts.map(({result,...a}) => {
     const {score,total,items} = JSON.parse(result);
     for (const item of items) {
-      if (!item.lessonId) continue;
+      if (!item.lessonId || item.correct === null) continue;
       const key = a.grade+'|'+item.lessonId;
       const v = misses.get(key) || {incorrect:0,count:0};
       v.count++; v.incorrect+=Number(!item.correct); misses.set(key,v);

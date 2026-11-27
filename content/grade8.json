@@ -138,7 +138,7 @@
         "source": "DOCX Địa lí 8, BÀI 1. VỊ TRÍ ĐỊA LÍ VÀ PHẠM VI LÃNH THỔ VIỆT NAM, phần I, câu 10",
         "options": [
           "A. Nằm gần trung tâm khu vực Đông Nam Á.",
-          "B. Tiếp giáp vùng biển rộng lớn.",
+          "B. Tiếp giáp vùng biểun rộng lớn.",
           "C. Nằm hoàn toàn trong đới nóng của bán cầu Bắc.",
           "D. Nằm trên các tuyến hàng hải quốc tế."
         ],
@@ -218,14 +218,13 @@
         "id": "g8_l1_tf_1",
         "type": "boolean",
         "level": "hiểu",
-        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "prompt": "Việt Nam nằm ở rìa phía đông của bán đảo Đông Dương, gần trung tâm khu vực Đông Nam Á. Trên đất liền, nước ta có chung đường biên giới với Trung Quốc, Lào và Cam-pu-chia.",
         "source": "DOCX Địa lí 8, BÀI 1. VỊ TRÍ ĐỊA LÍ VÀ PHẠM VI LÃNH THỔ VIỆT NAM, phần II, câu 16",
-        "context": "Việt Nam nằm ở rìa phía đông của bán đảo Đông Dương, gần trung tâm khu vực Đông Nam Á. Trên đất liền, nước ta có chung đường biên giới với Trung Quốc, Lào và Cam-pu-chia.",
         "options": [
-          "Việt Nam thuộc khu vực Đông Nam Á.",
-          "Trên đất liền, nước ta tiếp giáp với ba quốc gia.",
-          "Vị trí gần trung tâm Đông Nam Á tạo thuận lợi cho Việt Nam tăng cường giao lưu với các nước trong khu vực.",
-          "Vị trí ở rìa phía đông bán đảo Đông Dương làm cho Việt Nam hoàn toàn tách biệt với không gian biển."
+          "a) Việt Nam thuộc khu vực Đông Nam Á.",
+          "b) Trên đất liền, nước ta tiếp giáp với ba quốc gia.",
+          "c) Vị trí gần trung tâm Đông Nam Á tạo thuận lợi cho Việt Nam tăng cường giao lưu với các nước trong khu vực.",
+          "d) Vị trí ở rìa phía đông bán đảo Đông Dương làm cho Việt Nam hoàn toàn tách biệt với không gian biển."
         ],
         "answer": [
           "Đ",
@@ -238,14 +237,13 @@
         "id": "g8_l1_tf_2",
         "type": "boolean",
         "level": "hiểu",
-        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "prompt": "Phần đất liền Việt Nam kéo dài từ khoảng 8°34′B đến 23°23′B và từ khoảng 102°09′Đ đến 109°28′Đ; vùng biển kéo dài về phía nam đến khoảng 6°50′B và về phía đông đến trên 117°20′Đ.",
         "source": "DOCX Địa lí 8, BÀI 1. VỊ TRÍ ĐỊA LÍ VÀ PHẠM VI LÃNH THỔ VIỆT NAM, phần II, câu 17",
-        "context": "Phần đất liền Việt Nam kéo dài từ khoảng 8°34′B đến 23°23′B và từ khoảng 102°09′Đ đến 109°28′Đ; vùng biển kéo dài về phía nam đến khoảng 6°50′B và về phía đông đến trên 117°20′Đ.",
         "options": [
-          "Phần đất liền Việt Nam nằm hoàn toàn ở bán cầu Bắc.",
-          "Khoảng chênh lệch vĩ độ của phần đất liền lớn hơn khoảng chênh lệch kinh độ.",
-          "Lãnh thổ kéo dài theo chiều bắc – nam là một cơ sở làm thiên nhiên phân hóa theo chiều bắc – nam.",
-          "Giới hạn tọa độ cho thấy phần đất liền nước ta trải rộng theo chiều đông – tây hơn chiều bắc – nam."
+          "a) Phần đất liền Việt Nam nằm hoàn toàn ở bán cầu Bắc.",
+          "b) Khoảng chênh lệch vĩ độ của phần đất liền lớn hơn khoảng chênh lệch kinh độ.",
+          "c) Lãnh thổ kéo dài theo chiều bắc – nam là một cơ sở làm thiên nhiên phân hóa theo chiều bắc – nam.",
+          "d) Giới hạn tọa độ cho thấy phần đất liền nước ta trải rộng theo chiều đông – tây hơn chiều bắc – nam."
         ],
         "answer": [
           "Đ",
@@ -258,14 +256,13 @@
         "id": "g8_l1_tf_3",
         "type": "boolean",
         "level": "hiểu",
-        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "prompt": "Lãnh thổ Việt Nam gồm vùng đất, vùng biển và vùng trời. Vùng đất bao gồm toàn bộ phần đất liền và các đảo, quần đảo trên Biển Đông; vùng biển có diện tích khoảng 1 triệu km².",
         "source": "DOCX Địa lí 8, BÀI 1. VỊ TRÍ ĐỊA LÍ VÀ PHẠM VI LÃNH THỔ VIỆT NAM, phần II, câu 18",
-        "context": "Lãnh thổ Việt Nam gồm vùng đất, vùng biển và vùng trời. Vùng đất bao gồm toàn bộ phần đất liền và các đảo, quần đảo trên Biển Đông; vùng biển có diện tích khoảng 1 triệu km².",
         "options": [
-          "Các đảo và quần đảo là bộ phận của vùng đất Việt Nam.",
-          "Vùng trời là một bộ phận cấu thành lãnh thổ nước ta.",
-          "Vùng biển có quy mô lớn góp phần làm tăng mức độ ảnh hưởng của biển đối với thiên nhiên Việt Nam.",
-          "Do vùng biển rộng nên lãnh thổ Việt Nam chỉ gồm vùng đất và vùng biển."
+          "a) Các đảo và quần đảo là bộ phận của vùng đất Việt Nam.",
+          "b) Vùng trời là một bộ phận cấu thành lãnh thổ nước ta.",
+          "c) Vùng biển có quy mô lớn góp phần làm tăng mức độ ảnh hưởng của biển đối với thiên nhiên Việt Nam.",
+          "d) Do vùng biển rộng nên lãnh thổ Việt Nam chỉ gồm vùng đất và vùng biển."
         ],
         "answer": [
           "Đ",
@@ -278,14 +275,13 @@
         "id": "g8_l1_tf_4",
         "type": "boolean",
         "level": "hiểu",
-        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "prompt": "Nước ta nằm hoàn toàn trong đới nóng của bán cầu Bắc, trong khu vực gió mùa châu Á, phần đất liền hẹp ngang và nằm kề Biển Đông.",
         "source": "DOCX Địa lí 8, BÀI 1. VỊ TRÍ ĐỊA LÍ VÀ PHẠM VI LÃNH THỔ VIỆT NAM, phần II, câu 19",
-        "context": "Nước ta nằm hoàn toàn trong đới nóng của bán cầu Bắc, trong khu vực gió mùa châu Á, phần đất liền hẹp ngang và nằm kề Biển Đông.",
         "options": [
-          "Vị trí trong đới nóng là cơ sở tạo nên tính chất nhiệt đới của thiên nhiên nước ta.",
-          "Vị trí trong khu vực gió mùa châu Á có liên quan đến chế độ gió mùa của khí hậu Việt Nam.",
-          "Tiếp giáp Biển Đông góp phần làm tăng nguồn ẩm và làm thiên nhiên nước ta chịu ảnh hưởng sâu sắc của biển.",
-          "Ba đặc điểm vị trí trên là cơ sở để thiên nhiên Việt Nam mang tính chất nhiệt đới ẩm gió mùa."
+          "a) Vị trí trong đới nóng là cơ sở tạo nên tính chất nhiệt đới của thiên nhiên nước ta.",
+          "b) Vị trí trong khu vực gió mùa châu Á có liên quan đến chế độ gió mùa của khí hậu Việt Nam.",
+          "c) Tiếp giáp Biển Đông góp phần làm tăng nguồn ẩm và làm thiên nhiên nước ta chịu ảnh hưởng sâu sắc của biển.",
+          "d) Ba đặc điểm vị trí trên là cơ sở để thiên nhiên Việt Nam mang tính chất nhiệt đới ẩm gió mùa."
         ],
         "answer": [
           "Đ",
@@ -298,14 +294,13 @@
         "id": "g8_l1_tf_5",
         "type": "boolean",
         "level": "hiểu",
-        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "prompt": "Việt Nam là nơi hội tụ của nhiều luồng động, thực vật có nguồn gốc từ Hoa Nam, Hi-ma-lay-a, Ấn Độ – Mi-an-ma và Ma-lai-xi-a, In-đô-nê-xi-a; đồng thời nằm gần các vành đai sinh khoáng lớn.",
         "source": "DOCX Địa lí 8, BÀI 1. VỊ TRÍ ĐỊA LÍ VÀ PHẠM VI LÃNH THỔ VIỆT NAM, phần II, câu 20",
-        "context": "Việt Nam là nơi hội tụ của nhiều luồng động, thực vật có nguồn gốc từ Hoa Nam, Hi-ma-lay-a, Ấn Độ – Mi-an-ma và Ma-lai-xi-a, In-đô-nê-xi-a; đồng thời nằm gần các vành đai sinh khoáng lớn.",
         "options": [
-          "Sinh vật nước ta có nguồn gốc từ nhiều hướng khác nhau.",
-          "Vị trí địa lí góp phần làm sinh vật Việt Nam phong phú, đa dạng.",
-          "Việc nằm gần các vành đai sinh khoáng góp phần làm tài nguyên khoáng sản nước ta phong phú.",
-          "Sự phong phú của sinh vật và khoáng sản không có mối liên hệ với vị trí địa lí của Việt Nam."
+          "a) Sinh vật nước ta có nguồn gốc từ nhiều hướng khác nhau.",
+          "b) Vị trí địa lí góp phần làm sinh vật Việt Nam phong phú, đa dạng.",
+          "c) Việc nằm gần các vành đai sinh khoáng góp phần làm tài nguyên khoáng sản nước ta phong phú.",
+          "d) Sự phong phú của sinh vật và khoáng sản không có mối liên hệ với vị trí địa lí của Việt Nam."
         ],
         "answer": [
           "Đ",
@@ -318,7 +313,7 @@
         "id": "g8_l1_sa_1",
         "type": "short",
         "level": "vận dụng",
-        "prompt": "Phần đất liền Việt Nam kéo dài từ khoảng 8°34′B đến 23°23′B. Hãy tính khoảng chênh lệch vĩ độ giữa điểm cực Bắc và điểm cực Nam của phần đất liền nước ta. Trả lời kết quả theo độ và phút.",
+        "prompt": "Phần đất liền Việt Nam kéo dài từ khoảng 8°34′B đến 23°23′B. Hãy tính khoảng chênh lệch vĩ độ giữa điểm cực Bắc và điểm cực Nam của phần đất liền nước ta.\nTrả lời kết quả theo độ và phút.",
         "source": "DOCX Địa lí 8, BÀI 1. VỊ TRÍ ĐỊA LÍ VÀ PHẠM VI LÃNH THỔ VIỆT NAM, phần III, câu 21",
         "answer": "14°49′",
         "explanation": "23°23′ − 8°34′ = 14°49′.",
@@ -337,7 +332,7 @@
         "id": "g8_l1_sa_2",
         "type": "short",
         "level": "vận dụng",
-        "prompt": "Theo bài học, vùng biển Việt Nam có diện tích khoảng 1 triệu km²; tổng diện tích đất của các đơn vị hành chính là hơn 331,3 nghìn km². Lấy 331,3 nghìn km² làm cơ sở tính, diện tích vùng biển gấp khoảng bao nhiêu lần diện tích đất? Làm tròn kết quả đến một chữ số thập phân.",
+        "prompt": "Theo bài học, vùng biển Việt Nam có diện tích khoảng 1 triệu km²; tổng diện tích đất của các đơn vị hành chính là hơn 331,3 nghìn km². Lấy 331,3 nghìn km² làm cơ sở tính, diện tích vùng biển gấp khoảng bao nhiêu lần diện tích đất?\nLàm tròn kết quả đến một chữ số thập phân.",
         "source": "DOCX Địa lí 8, BÀI 1. VỊ TRÍ ĐỊA LÍ VÀ PHẠM VI LÃNH THỔ VIỆT NAM, phần III, câu 22",
         "answer": "3.0",
         "explanation": "1 000 : 331,3 ≈ 3,018 → 3,0 lần.",
@@ -352,7 +347,7 @@
         "id": "g8_l1_sa_3",
         "type": "short",
         "level": "vận dụng",
-        "prompt": "Diện tích Lâm Đồng năm 2025 là 24 233,1 km². Lấy 331,3 nghìn km² làm cơ sở tính diện tích đất cả nước, diện tích Lâm Đồng chiếm khoảng bao nhiêu % diện tích đất cả nước? Làm tròn kết quả đến một chữ số thập phân của %.",
+        "prompt": "Diện tích Lâm Đồng năm 2025 là 24 233,1 km². Lấy 331,3 nghìn km² làm cơ sở tính diện tích đất cả nước, diện tích Lâm Đồng chiếm khoảng bao nhiêu % diện tích đất cả nước?\nLàm tròn kết quả đến một chữ số thập phân của %.",
         "source": "DOCX Địa lí 8, BÀI 1. VỊ TRÍ ĐỊA LÍ VÀ PHẠM VI LÃNH THỔ VIỆT NAM, phần III, câu 23",
         "answer": "7.3",
         "explanation": "24 233,1 : 331 300 × 100 ≈ 7,31% → 7,3%.",
@@ -367,7 +362,7 @@
         "id": "g8_l1_sa_4",
         "type": "short",
         "level": "vận dụng",
-        "prompt": "Đường bờ biển nước ta dài 3 260 km, còn đường biên giới trên đất liền dài hơn 4 600 km. Lấy 4 600 km làm cơ sở tính, chiều dài đường bờ biển bằng khoảng bao nhiêu % chiều dài đường biên giới trên đất liền? Làm tròn kết quả đến một chữ số thập phân của %.",
+        "prompt": "Đường bờ biển nước ta dài 3 260 km, còn đường biên giới trên đất liền dài hơn 4 600 km. Lấy 4 600 km làm cơ sở tính, chiều dài đường bờ biển bằng khoảng bao nhiêu % chiều dài đường biên giới trên đất liền?\nLàm tròn kết quả đến một chữ số thập phân của %.",
         "source": "DOCX Địa lí 8, BÀI 1. VỊ TRÍ ĐỊA LÍ VÀ PHẠM VI LÃNH THỔ VIỆT NAM, phần III, câu 24",
         "answer": "70.9",
         "explanation": "3 260 : 4 600 × 100 ≈ 70,87% → 70,9%.",
@@ -382,10 +377,16 @@
         "id": "g8_l1_sa_5",
         "type": "short",
         "level": "vận dụng",
-        "prompt": "Cho bảng số liệu diện tích năm 2025 của 6 thành phố Biết diện tích cả nước là 331 344 km². Hãy tính tổng diện tích của 6 thành phố trên chiếm bao nhiêu % diện tích cả nước (làm tròn kết quả đến một chữ số thập phân).",
+        "prompt": "Cho bảng số liệu diện tích năm 2025 của 6 thành phố",
         "source": "DOCX Địa lí 8, BÀI 1. VỊ TRÍ ĐỊA LÍ VÀ PHẠM VI LÃNH THỔ VIỆT NAM, phần III, câu 25",
         "answer": "11",
         "explanation": "Tổng diện tích 6 thành phố = 36 494,6 km². / Tỉ lệ so với diện tích cả nước = 11%. / Làm tròn kết quả đến hàng đơn vị của km².",
+        "numberFields": [
+          {
+            "label": "Kết quả",
+            "unit": "%"
+          }
+        ],
         "table": [
           [
             "Thành phố",
@@ -416,12 +417,7 @@
             "6 360,8"
           ]
         ],
-        "numberFields": [
-          {
-            "label": "Kết quả",
-            "unit": "%"
-          }
-        ]
+        "afterTable": "Biết diện tích cả nước là 331 344 km². Hãy tính tổng diện tích của 6 thành phố trên chiếm bao nhiêu % diện tích cả nước (làm tròn kết quả đến một chữ số thập phân)."
       }
     ]
   },
@@ -644,14 +640,13 @@
         "id": "g8_l2_tf_1",
         "type": "boolean",
         "level": "hiểu",
-        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "prompt": "Cho thông tin: Địa hình đồi núi chiếm tới 3/4 diện tích phần đất liền, nhưng chủ yếu là đồi núi thấp; núi cao trên 2 000 m chỉ chiếm 1% diện tích cả nước.",
         "source": "DOCX Địa lí 8, Bài 2. ĐỊA HÌNH VIỆT NAM, phần II, câu 16",
-        "context": "Cho thông tin: Địa hình đồi núi chiếm tới 3/4 diện tích phần đất liền, nhưng chủ yếu là đồi núi thấp; núi cao trên 2 000 m chỉ chiếm 1% diện tích cả nước.",
         "options": [
-          "Đồi núi là dạng địa hình chiếm ưu thế ở Việt Nam.",
-          "Núi cao trên 2 000 m chiếm phần lớn diện tích đồi núi.",
-          "Tỉ lệ đồi núi lớn nhưng địa hình nước ta không phải chủ yếu là núi cao.",
-          "Đặc điểm này góp phần bảo toàn tính nhiệt đới của thiên nhiên trên phần lớn lãnh thổ."
+          "a) Đồi núi là dạng địa hình chiếm ưu thế ở Việt Nam.",
+          "b) Núi cao trên 2 000 m chiếm phần lớn diện tích đồi núi.",
+          "c) Tỉ lệ đồi núi lớn nhưng địa hình nước ta không phải chủ yếu là núi cao.",
+          "d) Đặc điểm này góp phần bảo toàn tính nhiệt đới của thiên nhiên trên phần lớn lãnh thổ."
         ],
         "answer": [
           "Đ",
@@ -664,14 +659,13 @@
         "id": "g8_l2_tf_2",
         "type": "boolean",
         "level": "hiểu",
-        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "prompt": "Cho thông tin: Vùng Tây Bắc nằm giữa sông Hồng và sông Cả, có địa hình cao nhất nước ta; vùng Đông Bắc chủ yếu là đồi núi thấp với các cánh cung núi lớn.",
         "source": "DOCX Địa lí 8, Bài 2. ĐỊA HÌNH VIỆT NAM, phần II, câu 17",
-        "context": "Cho thông tin: Vùng Tây Bắc nằm giữa sông Hồng và sông Cả, có địa hình cao nhất nước ta; vùng Đông Bắc chủ yếu là đồi núi thấp với các cánh cung núi lớn.",
         "options": [
-          "Tây Bắc có độ cao địa hình lớn hơn Đông Bắc.",
-          "Đông Bắc nổi bật với các cánh cung Sông Gâm, Ngân Sơn, Bắc Sơn, Đông Triều.",
-          "Hai vùng có đặc trưng địa hình hoàn toàn giống nhau.",
-          "Sự khác biệt về độ cao và hướng núi giữa hai vùng là biểu hiện của sự phân hóa địa hình lãnh thổ."
+          "a) Tây Bắc có độ cao địa hình lớn hơn Đông Bắc.",
+          "b) Đông Bắc nổi bật với các cánh cung Sông Gâm, Ngân Sơn, Bắc Sơn, Đông Triều.",
+          "c) Hai vùng có đặc trưng địa hình hoàn toàn giống nhau.",
+          "d) Sự khác biệt về độ cao và hướng núi giữa hai vùng là biểu hiện của sự phân hóa địa hình lãnh thổ."
         ],
         "answer": [
           "Đ",
@@ -684,14 +678,13 @@
         "id": "g8_l2_tf_3",
         "type": "boolean",
         "level": "hiểu",
-        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "prompt": "Cho thông tin: Đồng bằng sông Hồng có diện tích khoảng 15 000 km², có hệ thống đê chống lũ; đồng bằng sông Cửu Long có diện tích trên 40 000 km², không có đê lớn ngăn lũ và có mạng lưới kênh rạch dày đặc.",
         "source": "DOCX Địa lí 8, Bài 2. ĐỊA HÌNH VIỆT NAM, phần II, câu 18",
-        "context": "Cho thông tin: Đồng bằng sông Hồng có diện tích khoảng 15 000 km², có hệ thống đê chống lũ; đồng bằng sông Cửu Long có diện tích trên 40 000 km², không có đê lớn ngăn lũ và có mạng lưới kênh rạch dày đặc.",
         "options": [
-          "Đồng bằng sông Cửu Long có diện tích lớn hơn đồng bằng sông Hồng.",
-          "Cả hai đồng bằng đều có hệ thống đê lớn ngăn lũ.",
-          "Hệ thống đê ở đồng bằng sông Hồng làm khu vực trong đê không còn được bồi đắp tự nhiên.",
-          "Khác biệt về địa hình và chế độ ngập lũ dẫn đến những cách khai thác, cải tạo đồng bằng khác nhau."
+          "a) Đồng bằng sông Cửu Long có diện tích lớn hơn đồng bằng sông Hồng.",
+          "b) Cả hai đồng bằng đều có hệ thống đê lớn ngăn lũ.",
+          "c) Hệ thống đê ở đồng bằng sông Hồng làm khu vực trong đê không còn được bồi đắp tự nhiên.",
+          "d) Khác biệt về địa hình và chế độ ngập lũ dẫn đến những cách khai thác, cải tạo đồng bằng khác nhau."
         ],
         "answer": [
           "Đ",
@@ -704,14 +697,13 @@
         "id": "g8_l2_tf_4",
         "type": "boolean",
         "level": "hiểu",
-        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "prompt": "Cho thông tin: Bờ biển bồi tụ có nhiều bãi bùn rộng, rừng ngập mặn; bờ biển mài mòn rất khúc khuỷu, có nhiều vũng, vịnh nước sâu, kín gió.",
         "source": "DOCX Địa lí 8, Bài 2. ĐỊA HÌNH VIỆT NAM, phần II, câu 19",
-        "context": "Cho thông tin: Bờ biển bồi tụ có nhiều bãi bùn rộng, rừng ngập mặn; bờ biển mài mòn rất khúc khuỷu, có nhiều vũng, vịnh nước sâu, kín gió.",
         "options": [
-          "Bờ biển nước ta có cả kiểu bồi tụ và mài mòn.",
-          "Bờ biển mài mòn phổ biến các bãi bùn rộng và rừng ngập mặn.",
-          "Vũng, vịnh nước sâu ở bờ biển mài mòn thuận lợi cho xây dựng cảng biển.",
-          "Sự khác nhau giữa hai kiểu bờ biển tạo ra thế mạnh khai thác kinh tế khác nhau."
+          "a) Bờ biển nước ta có cả kiểu bồi tụ và mài mòn.",
+          "b) Bờ biển mài mòn phổ biến các bãi bùn rộng và rừng ngập mặn.",
+          "c) Vũng, vịnh nước sâu ở bờ biển mài mòn thuận lợi cho xây dựng cảng biển.",
+          "d) Sự khác nhau giữa hai kiểu bờ biển tạo ra thế mạnh khai thác kinh tế khác nhau."
         ],
         "answer": [
           "Đ",
@@ -724,14 +716,13 @@
         "id": "g8_l2_tf_5",
         "type": "boolean",
         "level": "hiểu",
-        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "prompt": "Cho thông tin: Khu vực đồi núi có nguồn lâm sản, khoáng sản, tiềm năng thủy điện và cảnh quan du lịch; nhưng địa hình chia cắt mạnh, có nguy cơ lũ quét và sạt lở.",
         "source": "DOCX Địa lí 8, Bài 2. ĐỊA HÌNH VIỆT NAM, phần II, câu 20",
-        "context": "Cho thông tin: Khu vực đồi núi có nguồn lâm sản, khoáng sản, tiềm năng thủy điện và cảnh quan du lịch; nhưng địa hình chia cắt mạnh, có nguy cơ lũ quét và sạt lở.",
         "options": [
-          "Đồi núi có nhiều điều kiện phát triển lâm nghiệp và thủy điện.",
-          "Địa hình chia cắt mạnh luôn thuận lợi cho xây dựng mạng lưới giao thông.",
-          "Khai thác thế mạnh đồi núi cần đồng thời chú ý phòng tránh thiên tai.",
-          "Phát triển kinh tế miền núi bền vững cần kết hợp khai thác lợi thế với khắc phục hạn chế của địa hình."
+          "a) Đồi núi có nhiều điều kiện phát triển lâm nghiệp và thủy điện.",
+          "b) Địa hình chia cắt mạnh luôn thuận lợi cho xây dựng mạng lưới giao thông.",
+          "c) Khai thác thế mạnh đồi núi cần đồng thời chú ý phòng tránh thiên tai.",
+          "d) Phát triển kinh tế miền núi bền vững cần kết hợp khai thác lợi thế với khắc phục hạn chế của địa hình."
         ],
         "answer": [
           "Đ",
@@ -744,7 +735,7 @@
         "id": "g8_l2_sa_1",
         "type": "short",
         "level": "vận dụng",
-        "prompt": "Địa hình đồi núi chiếm 3/4 diện tích phần đất liền, còn đồng bằng chiếm 1/4. Diện tích đồi núi gấp bao nhiêu lần diện tích đồng bằng? Làm tròn đến 1 chữ số thập phân.",
+        "prompt": "Địa hình đồi núi chiếm 3/4 diện tích phần đất liền, còn đồng bằng chiếm 1/4. Diện tích đồi núi gấp bao nhiêu lần diện tích đồng bằng?",
         "source": "DOCX Địa lí 8, Bài 2. ĐỊA HÌNH VIỆT NAM, phần III, câu 21",
         "answer": "3.0",
         "explanation": "Cách tính: (3/4) : (1/4) = 3,0.",
@@ -1036,14 +1027,13 @@
         "id": "g8_l3_tf_1",
         "type": "boolean",
         "level": "hiểu",
-        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "prompt": "Cho thông tin: Việt Nam nằm ở vị trí giao thoa của hai vành đai sinh khoáng Thái Bình Dương và Địa Trung Hải, đồng thời có lịch sử hình thành lãnh thổ lâu dài.",
         "source": "DOCX Địa lí 8, Bài 3. KHOÁNG SẢN VIỆT NAM, phần II, câu 16",
-        "context": "Cho thông tin: Việt Nam nằm ở vị trí giao thoa của hai vành đai sinh khoáng Thái Bình Dương và Địa Trung Hải, đồng thời có lịch sử hình thành lãnh thổ lâu dài.",
         "options": [
-          "Vị trí địa chất góp phần làm khoáng sản nước ta phong phú, đa dạng.",
-          "Nước ta chỉ có một nhóm khoáng sản chủ yếu.",
-          "Sự phong phú khoáng sản có liên quan đến cả vị trí địa lí và lịch sử địa chất.",
-          "Khi giải thích đặc điểm khoáng sản Việt Nam cần xem xét mối quan hệ giữa vị trí, địa chất và quá trình hình thành lãnh thổ."
+          "a) Vị trí địa chất góp phần làm khoáng sản nước ta phong phú, đa dạng.",
+          "b) Nước ta chỉ có một nhóm khoáng sản chủ yếu.",
+          "c) Sự phong phú khoáng sản có liên quan đến cả vị trí địa lí và lịch sử địa chất.",
+          "d) Khi giải thích đặc điểm khoáng sản Việt Nam cần xem xét mối quan hệ giữa vị trí, địa chất và quá trình hình thành lãnh thổ."
         ],
         "answer": [
           "Đ",
@@ -1056,14 +1046,13 @@
         "id": "g8_l3_tf_2",
         "type": "boolean",
         "level": "hiểu",
-        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "prompt": "Cho thông tin: Phần lớn các mỏ khoáng sản ở nước ta có trữ lượng trung bình và nhỏ; khoáng sản phân bố ở nhiều nơi nhưng tập trung chủ yếu ở miền Bắc, miền Trung và Tây Nguyên.",
         "source": "DOCX Địa lí 8, Bài 3. KHOÁNG SẢN VIỆT NAM, phần II, câu 17",
-        "context": "Cho thông tin: Phần lớn các mỏ khoáng sản ở nước ta có trữ lượng trung bình và nhỏ; khoáng sản phân bố ở nhiều nơi nhưng tập trung chủ yếu ở miền Bắc, miền Trung và Tây Nguyên.",
         "options": [
-          "Phần lớn mỏ khoáng sản Việt Nam có trữ lượng trung bình và nhỏ.",
-          "Khoáng sản chỉ phân bố ở miền Bắc.",
-          "Đặc điểm trữ lượng và phân bố làm cho khai thác, quản lí tài nguyên có những khó khăn nhất định.",
-          "Việc tổ chức khai thác phải tính đến quy mô mỏ và sự phân bố không đồng đều của tài nguyên."
+          "a) Phần lớn mỏ khoáng sản Việt Nam có trữ lượng trung bình và nhỏ.",
+          "b) Khoáng sản chỉ phân bố ở miền Bắc.",
+          "c) Đặc điểm trữ lượng và phân bố làm cho khai thác, quản lí tài nguyên có những khó khăn nhất định.",
+          "d) Việc tổ chức khai thác phải tính đến quy mô mỏ và sự phân bố không đồng đều của tài nguyên."
         ],
         "answer": [
           "Đ",
@@ -1076,14 +1065,13 @@
         "id": "g8_l3_tf_3",
         "type": "boolean",
         "level": "hiểu",
-        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "prompt": "Cho thông tin: Mỏ nội sinh thường gắn với đứt gãy sâu, uốn nếp mạnh, hoạt động mac-ma; mỏ ngoại sinh thường hình thành do quá trình trầm tích ở biển nông, bờ biển hoặc vùng trũng.",
         "source": "DOCX Địa lí 8, Bài 3. KHOÁNG SẢN VIỆT NAM, phần II, câu 18",
-        "context": "Cho thông tin: Mỏ nội sinh thường gắn với đứt gãy sâu, uốn nếp mạnh, hoạt động mac-ma; mỏ ngoại sinh thường hình thành do quá trình trầm tích ở biển nông, bờ biển hoặc vùng trũng.",
         "options": [
-          "Mỏ nội sinh và ngoại sinh có cơ chế hình thành khác nhau.",
-          "Mỏ ngoại sinh chỉ hình thành ở vùng núi cao.",
-          "Điều kiện địa chất khác nhau dẫn đến sự khác nhau về nơi phân bố khoáng sản.",
-          "Có thể dùng kiến thức về nguồn gốc mỏ để giải thích một phần quy luật phân bố khoáng sản trên lãnh thổ."
+          "a) Mỏ nội sinh và ngoại sinh có cơ chế hình thành khác nhau.",
+          "b) Mỏ ngoại sinh chỉ hình thành ở vùng núi cao.",
+          "c) Điều kiện địa chất khác nhau dẫn đến sự khác nhau về nơi phân bố khoáng sản.",
+          "d) Có thể dùng kiến thức về nguồn gốc mỏ để giải thích một phần quy luật phân bố khoáng sản trên lãnh thổ."
         ],
         "answer": [
           "Đ",
@@ -1096,14 +1084,13 @@
         "id": "g8_l3_tf_4",
         "type": "boolean",
         "level": "hiểu",
-        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "prompt": "Cho thông tin: Than đá tập trung ở Quảng Ninh; dầu khí ở thềm lục địa phía nam; bô-xít tập trung ở Tây Nguyên; a-pa-tít tập trung ở Lào Cai.",
         "source": "DOCX Địa lí 8, Bài 3. KHOÁNG SẢN VIỆT NAM, phần II, câu 19",
-        "context": "Cho thông tin: Than đá tập trung ở Quảng Ninh; dầu khí ở thềm lục địa phía nam; bô-xít tập trung ở Tây Nguyên; a-pa-tít tập trung ở Lào Cai.",
         "options": [
-          "Các loại khoáng sản chủ yếu có địa bàn phân bố khác nhau.",
-          "Dầu khí tập trung chủ yếu ở vùng núi phía Bắc.",
-          "Sự phân bố khoáng sản ở nước ta mang tính không đồng đều.",
-          "Việc bố trí ngành khai thác khoáng sản cần gắn với nơi phân bố nguồn tài nguyên tương ứng."
+          "a) Các loại khoáng sản chủ yếu có địa bàn phân bố khác nhau.",
+          "b) Dầu khí tập trung chủ yếu ở vùng núi phía Bắc.",
+          "c) Sự phân bố khoáng sản ở nước ta mang tính không đồng đều.",
+          "d) Việc bố trí ngành khai thác khoáng sản cần gắn với nơi phân bố nguồn tài nguyên tương ứng."
         ],
         "answer": [
           "Đ",
@@ -1116,14 +1103,13 @@
         "id": "g8_l3_tf_5",
         "type": "boolean",
         "level": "hiểu",
-        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "prompt": "Cho thông tin: Khai thác khoáng sản chưa hợp lí, công nghệ lạc hậu có thể gây lãng phí, ô nhiễm và nguy cơ cạn kiệt; các giải pháp gồm điều tra - thăm dò, công nghệ hiện đại, bảo vệ khoáng sản chưa khai thác và sử dụng tiết kiệm.",
         "source": "DOCX Địa lí 8, Bài 3. KHOÁNG SẢN VIỆT NAM, phần II, câu 20",
-        "context": "Cho thông tin: Khai thác khoáng sản chưa hợp lí, công nghệ lạc hậu có thể gây lãng phí, ô nhiễm và nguy cơ cạn kiệt; các giải pháp gồm điều tra - thăm dò, công nghệ hiện đại, bảo vệ khoáng sản chưa khai thác và sử dụng tiết kiệm.",
         "options": [
-          "Khai thác khoáng sản có thể gây tác động tiêu cực đến môi trường.",
-          "Khoáng sản đã phát hiện nên được khai thác tối đa trong thời gian ngắn.",
-          "Công nghệ hiện đại có thể góp phần nâng cao hiệu quả và giảm tác động tiêu cực.",
-          "Sử dụng hợp lí tài nguyên khoáng sản phải kết hợp hiệu quả kinh tế, tiết kiệm tài nguyên và bảo vệ môi trường."
+          "a) Khai thác khoáng sản có thể gây tác động tiêu cực đến môi trường.",
+          "b) Khoáng sản đã phát hiện nên được khai thác tối đa trong thời gian ngắn.",
+          "c) Công nghệ hiện đại có thể góp phần nâng cao hiệu quả và giảm tác động tiêu cực.",
+          "d) Sử dụng hợp lí tài nguyên khoáng sản phải kết hợp hiệu quả kinh tế, tiết kiệm tài nguyên và bảo vệ môi trường."
         ],
         "answer": [
           "Đ",
@@ -1353,14 +1339,13 @@
         "id": "g8_l4_tf_1",
         "type": "boolean",
         "level": "hiểu",
-        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "prompt": "Cho thông tin: Nhiệt độ trung bình năm ở nước ta trên 20°C (trừ vùng núi cao), số giờ nắng 1 400 - 3 000 giờ/năm; lượng mưa phổ biến 1 500 - 2 000 mm/năm và độ ẩm trung bình trên 80%.",
         "source": "DOCX Địa lí 8, Bài 4. KHÍ HẬU VIỆT NAM, phần II, câu 16",
-        "context": "Cho thông tin: Nhiệt độ trung bình năm ở nước ta trên 20°C (trừ vùng núi cao), số giờ nắng 1 400 - 3 000 giờ/năm; lượng mưa phổ biến 1 500 - 2 000 mm/năm và độ ẩm trung bình trên 80%.",
         "options": [
-          "Khí hậu Việt Nam có nền nhiệt cao.",
-          "Nước ta có lượng mưa và độ ẩm thấp.",
-          "Các chỉ tiêu nhiệt, mưa và ẩm cùng thể hiện tính chất nhiệt đới ẩm của khí hậu.",
-          "Khi đánh giá tính nhiệt đới ẩm cần kết hợp nhiều yếu tố khí hậu thay vì chỉ dựa vào nhiệt độ."
+          "a) Khí hậu Việt Nam có nền nhiệt cao.",
+          "b) Nước ta có lượng mưa và độ ẩm thấp.",
+          "c) Các chỉ tiêu nhiệt, mưa và ẩm cùng thể hiện tính chất nhiệt đới ẩm của khí hậu.",
+          "d) Khi đánh giá tính nhiệt đới ẩm cần kết hợp nhiều yếu tố khí hậu thay vì chỉ dựa vào nhiệt độ."
         ],
         "answer": [
           "Đ",
@@ -1373,14 +1358,13 @@
         "id": "g8_l4_tf_2",
         "type": "boolean",
         "level": "hiểu",
-        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "prompt": "Cho thông tin: Gió mùa đông từ tháng 11 đến tháng 4 năm sau; miền Bắc chịu khối khí lạnh, còn từ phía nam dãy Bạch Mã trở vào tín phong đông bắc chiếm ưu thế.",
         "source": "DOCX Địa lí 8, Bài 4. KHÍ HẬU VIỆT NAM, phần II, câu 17",
-        "context": "Cho thông tin: Gió mùa đông từ tháng 11 đến tháng 4 năm sau; miền Bắc chịu khối khí lạnh, còn từ phía nam dãy Bạch Mã trở vào tín phong đông bắc chiếm ưu thế.",
         "options": [
-          "Gió mùa đông có hướng chủ yếu là đông bắc.",
-          "Mọi nơi trên cả nước đều có mùa đông lạnh giống miền Bắc.",
-          "Ảnh hưởng của gió mùa đông khác nhau giữa miền Bắc và miền Nam.",
-          "Sự khác nhau về tác động của các khối khí góp phần làm khí hậu phân hóa theo lãnh thổ."
+          "a) Gió mùa đông có hướng chủ yếu là đông bắc.",
+          "b) Mọi nơi trên cả nước đều có mùa đông lạnh giống miền Bắc.",
+          "c) Ảnh hưởng của gió mùa đông khác nhau giữa miền Bắc và miền Nam.",
+          "d) Sự khác nhau về tác động của các khối khí góp phần làm khí hậu phân hóa theo lãnh thổ."
         ],
         "answer": [
           "Đ",
@@ -1393,14 +1377,13 @@
         "id": "g8_l4_tf_3",
         "type": "boolean",
         "level": "hiểu",
-        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "prompt": "Cho thông tin: Đầu mùa hạ, gió Tây Nam gây mưa cho Nam Bộ và Tây Nguyên; khi vượt Trường Sơn, gió có thể tạo thời tiết khô nóng ở phía đông dãy núi.",
         "source": "DOCX Địa lí 8, Bài 4. KHÍ HẬU VIỆT NAM, phần II, câu 18",
-        "context": "Cho thông tin: Đầu mùa hạ, gió Tây Nam gây mưa cho Nam Bộ và Tây Nguyên; khi vượt Trường Sơn, gió có thể tạo thời tiết khô nóng ở phía đông dãy núi.",
         "options": [
-          "Gió mùa hạ chủ yếu có hướng tây nam.",
-          "Gió Tây Nam luôn gây mưa ở mọi nơi nó đi qua.",
-          "Địa hình làm thay đổi tính chất của khối khí khi vượt núi.",
-          "Hiệu ứng phơn là ví dụ thể hiện tác động kết hợp giữa gió mùa và địa hình đến sự phân hóa khí hậu."
+          "a) Gió mùa hạ chủ yếu có hướng tây nam.",
+          "b) Gió Tây Nam luôn gây mưa ở mọi nơi nó đi qua.",
+          "c) Địa hình làm thay đổi tính chất của khối khí khi vượt núi.",
+          "d) Hiệu ứng phơn là ví dụ thể hiện tác động kết hợp giữa gió mùa và địa hình đến sự phân hóa khí hậu."
         ],
         "answer": [
           "Đ",
@@ -1413,14 +1396,13 @@
         "id": "g8_l4_tf_4",
         "type": "boolean",
         "level": "hiểu",
-        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "prompt": "Cho thông tin: Miền khí hậu phía Bắc có một số tháng dưới 20°C; miền phía Nam không có tháng nào dưới 20°C, biên độ nhiệt năm nhỏ hơn 9°C và có hai mùa mưa - khô rõ rệt.",
         "source": "DOCX Địa lí 8, Bài 4. KHÍ HẬU VIỆT NAM, phần II, câu 19",
-        "context": "Cho thông tin: Miền khí hậu phía Bắc có một số tháng dưới 20°C; miền phía Nam không có tháng nào dưới 20°C, biên độ nhiệt năm nhỏ hơn 9°C và có hai mùa mưa - khô rõ rệt.",
         "options": [
-          "Miền phía Nam có nền nhiệt cao quanh năm.",
-          "Miền phía Bắc không chịu ảnh hưởng của gió mùa Đông Bắc.",
-          "Biên độ nhiệt năm là một chỉ tiêu phân biệt hai miền khí hậu.",
-          "Sự khác biệt về chế độ nhiệt và mùa khí hậu chứng minh khí hậu Việt Nam phân hóa theo chiều bắc - nam."
+          "a) Miền phía Nam có nền nhiệt cao quanh năm.",
+          "b) Miền phía Bắc không chịu ảnh hưởng của gió mùa Đông Bắc.",
+          "c) Biên độ nhiệt năm là một chỉ tiêu phân biệt hai miền khí hậu.",
+          "d) Sự khác biệt về chế độ nhiệt và mùa khí hậu chứng minh khí hậu Việt Nam phân hóa theo chiều bắc - nam."
         ],
         "answer": [
           "Đ",
@@ -1433,14 +1415,13 @@
         "id": "g8_l4_tf_5",
         "type": "boolean",
         "level": "hiểu",
-        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "prompt": "Cho thông tin: Lào Cai ở độ cao 104 m có nhiệt độ trung bình năm 22,4°C; Sa Pa ở độ cao 1 583 m có nhiệt độ trung bình năm 15,3°C và lượng mưa năm lớn hơn.",
         "source": "DOCX Địa lí 8, Bài 4. KHÍ HẬU VIỆT NAM, phần II, câu 20",
-        "context": "Cho thông tin: Lào Cai ở độ cao 104 m có nhiệt độ trung bình năm 22,4°C; Sa Pa ở độ cao 1 583 m có nhiệt độ trung bình năm 15,3°C và lượng mưa năm lớn hơn.",
         "options": [
-          "Sa Pa nằm ở độ cao lớn hơn Lào Cai.",
-          "Sa Pa có nhiệt độ trung bình năm cao hơn Lào Cai.",
-          "Độ cao địa hình có ảnh hưởng đến nhiệt độ và lượng mưa.",
-          "So sánh hai trạm cùng tỉnh giúp chứng minh sự phân hóa khí hậu theo độ cao."
+          "a) Sa Pa nằm ở độ cao lớn hơn Lào Cai.",
+          "b) Sa Pa có nhiệt độ trung bình năm cao hơn Lào Cai.",
+          "c) Độ cao địa hình có ảnh hưởng đến nhiệt độ và lượng mưa.",
+          "d) So sánh hai trạm cùng tỉnh giúp chứng minh sự phân hóa khí hậu theo độ cao."
         ],
         "answer": [
           "Đ",
@@ -1453,7 +1434,7 @@
         "id": "g8_l4_sa_1",
         "type": "short",
         "level": "vận dụng",
-        "prompt": "Dựa vào bảng 4.1, nhiệt độ tháng cao nhất ở Lạng Sơn là 27,1°C và thấp nhất là 13,1°C. Biên độ nhiệt năm của Lạng Sơn là bao nhiêu °C? Làm tròn đến 1 chữ số thập phân.",
+        "prompt": "Dựa vào bảng 4.1, nhiệt độ tháng cao nhất ở Lạng Sơn là 27,1°C và thấp nhất là 13,1°C. Biên độ nhiệt năm của Lạng Sơn là bao nhiêu °C?",
         "source": "DOCX Địa lí 8, Bài 4. KHÍ HẬU VIỆT NAM, phần III, câu 21",
         "answer": "14.0",
         "explanation": "Cách tính: 27,1 - 13,1 = 14,0°C.",
@@ -1462,13 +1443,14 @@
             "label": "Kết quả",
             "unit": "°C"
           }
-        ]
+        ],
+        "media": "/media/nhiet-do-lang-son.jpg"
       },
       {
         "id": "g8_l4_sa_2",
         "type": "short",
         "level": "vận dụng",
-        "prompt": "Nhiệt độ trung bình năm của Lạng Sơn là 21,3°C, của Cà Mau là 27,1°C. Cà Mau cao hơn Lạng Sơn bao nhiêu °C? Làm tròn đến 1 chữ số thập phân.",
+        "prompt": "Nhiệt độ trung bình năm của Lạng Sơn là 21,3°C, của Cà Mau là 27,1°C. Cà Mau cao hơn Lạng Sơn bao nhiêu °C?",
         "source": "DOCX Địa lí 8, Bài 4. KHÍ HẬU VIỆT NAM, phần III, câu 22",
         "answer": "5.8",
         "explanation": "Cách tính: 27,1 - 21,3 = 5,8°C.",
@@ -1477,7 +1459,8 @@
             "label": "Kết quả",
             "unit": "°C"
           }
-        ]
+        ],
+        "media": "/media/nhiet-do-lang-son.jpg"
       },
       {
         "id": "g8_l4_sa_3",
@@ -1487,6 +1470,12 @@
         "source": "DOCX Địa lí 8, Bài 4. KHÍ HẬU VIỆT NAM, phần III, câu 23",
         "answer": "1691",
         "explanation": "Cách tính: Tổng 12 tháng = 1 690,7 mm ≈ 1 691 mm.",
+        "numberFields": [
+          {
+            "label": "Kết quả",
+            "unit": "mm"
+          }
+        ],
         "table": [
           [
             "Tháng",
@@ -1519,12 +1508,7 @@
             "36,9"
           ]
         ],
-        "numberFields": [
-          {
-            "label": "Kết quả",
-            "unit": "mm"
-          }
-        ]
+        "tableCaption": "Bảng 4.2. Tổng lượng mưa và độ ẩm không khí trung bình tháng tại trạm khí tượng Hà Đông (Hà Nội)"
       },
       {
         "id": "g8_l4_sa_4",
@@ -1534,6 +1518,12 @@
         "source": "DOCX Địa lí 8, Bài 4. KHÍ HẬU VIỆT NAM, phần III, câu 24",
         "answer": "81.8",
         "explanation": "Cách tính: (189,4+232,5+254,6+293,5+228,8+184,8) : 1 690,7 × 100 = 81,8%.",
+        "numberFields": [
+          {
+            "label": "Kết quả",
+            "unit": "%"
+          }
+        ],
         "table": [
           [
             "Tháng",
@@ -1566,12 +1556,7 @@
             "36,9"
           ]
         ],
-        "numberFields": [
-          {
-            "label": "Kết quả",
-            "unit": "%"
-          }
-        ]
+        "tableCaption": "Bảng 4.2. Tổng lượng mưa và độ ẩm không khí trung bình tháng tại trạm khí tượng Hà Đông (Hà Nội)"
       },
       {
         "id": "g8_l4_sa_5",
@@ -1581,6 +1566,12 @@
         "source": "DOCX Địa lí 8, Bài 4. KHÍ HẬU VIỆT NAM, phần III, câu 25",
         "answer": "84.2",
         "explanation": "Cách tính: Tổng 12 giá trị độ ẩm : 12 = 84,175% ≈ 84,2%.",
+        "numberFields": [
+          {
+            "label": "Kết quả",
+            "unit": "%"
+          }
+        ],
         "table": [
           [
             "Tháng",
@@ -1613,12 +1604,7 @@
             "80,2"
           ]
         ],
-        "numberFields": [
-          {
-            "label": "Kết quả",
-            "unit": "%"
-          }
-        ]
+        "tableCaption": "Bảng 4.2. Tổng lượng mưa và độ ẩm không khí trung bình tháng tại trạm khí tượng Hà Đông (Hà Nội)"
       }
     ]
   },
@@ -1639,7 +1625,8 @@
           "C. Móng Cái.",
           "D. Điện Biên."
         ],
-        "answer": "B. Tân Sơn Hòa."
+        "answer": "B. Tân Sơn Hòa.",
+        "media": "/media/bieu-do-khi-hau.jpg"
       },
       {
         "id": "g8_l5_mcq_2",
@@ -1653,7 +1640,8 @@
           "C. Móng Cái.",
           "D. Điện Biên."
         ],
-        "answer": "C. Móng Cái."
+        "answer": "C. Móng Cái.",
+        "media": "/media/bieu-do-khi-hau.jpg"
       },
       {
         "id": "g8_l5_mcq_3",
@@ -1667,7 +1655,8 @@
           "C. 23,9°C.",
           "D. 28,1°C."
         ],
-        "answer": "C. 23,9°C."
+        "answer": "C. 23,9°C.",
+        "media": "/media/bieu-do-khi-hau.jpg"
       },
       {
         "id": "g8_l5_mcq_4",
@@ -1681,7 +1670,8 @@
           "C. 1 964 mm.",
           "D. 2 661 mm."
         ],
-        "answer": "C. 1 964 mm."
+        "answer": "C. 1 964 mm.",
+        "media": "/media/bieu-do-khi-hau.jpg"
       },
       {
         "id": "g8_l5_mcq_5",
@@ -1695,7 +1685,8 @@
           "C. 1 964 mm.",
           "D. 2 661 mm."
         ],
-        "answer": "A. 1 560 mm."
+        "answer": "A. 1 560 mm.",
+        "media": "/media/bieu-do-khi-hau.jpg"
       },
       {
         "id": "g8_l5_mcq_6",
@@ -1709,7 +1700,8 @@
           "C. 23,9°C.",
           "D. 28,1°C."
         ],
-        "answer": "B. 22,6°C."
+        "answer": "B. 22,6°C.",
+        "media": "/media/bieu-do-khi-hau.jpg"
       },
       {
         "id": "g8_l5_mcq_7",
@@ -1723,7 +1715,8 @@
           "C. Móng Cái.",
           "D. Điện Biên."
         ],
-        "answer": "D. Điện Biên."
+        "answer": "D. Điện Biên.",
+        "media": "/media/bieu-do-khi-hau.jpg"
       },
       {
         "id": "g8_l5_mcq_8",
@@ -1737,7 +1730,8 @@
           "C. Móng Cái.",
           "D. Điện Biên."
         ],
-        "answer": "D. Điện Biên."
+        "answer": "D. Điện Biên.",
+        "media": "/media/bieu-do-khi-hau.jpg"
       },
       {
         "id": "g8_l5_mcq_9",
@@ -1751,7 +1745,8 @@
           "C. mùa đông lạnh sâu hơn.",
           "D. biên độ nhiệt lớn hơn rõ rệt."
         ],
-        "answer": "B. nhiệt độ cao hơn và biến thiên năm nhỏ hơn."
+        "answer": "B. nhiệt độ cao hơn và biến thiên năm nhỏ hơn.",
+        "media": "/media/bieu-do-khi-hau.jpg"
       },
       {
         "id": "g8_l5_mcq_10",
@@ -1765,7 +1760,8 @@
           "C. cuối năm.",
           "D. phân bố đều tất cả các tháng."
         ],
-        "answer": "B. khoảng giữa năm."
+        "answer": "B. khoảng giữa năm.",
+        "media": "/media/bieu-do-khi-hau.jpg"
       },
       {
         "id": "g8_l5_mcq_11",
@@ -1779,7 +1775,8 @@
           "C. đầu mùa xuân.",
           "D. cuối mùa đông."
         ],
-        "answer": "A. mùa hạ."
+        "answer": "A. mùa hạ.",
+        "media": "/media/bieu-do-khi-hau.jpg"
       },
       {
         "id": "g8_l5_mcq_12",
@@ -1821,7 +1818,8 @@
           "C. đông - tây.",
           "D. kiểu bờ biển."
         ],
-        "answer": "A. bắc - nam."
+        "answer": "A. bắc - nam.",
+        "media": "/media/bieu-do-khi-hau.jpg"
       },
       {
         "id": "g8_l5_mcq_15",
@@ -1841,107 +1839,107 @@
         "id": "g8_l5_tf_1",
         "type": "boolean",
         "level": "hiểu",
-        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "prompt": "Cho biểu đồ khí hậu: Láng có T = 23,9°C, P = 1 670 mm; Tân Sơn Hòa có T = 28,1°C, P = 1 964 mm.",
         "source": "DOCX Địa lí 8, Bài 5. THỰC HÀNH: ĐỌC BIỂU ĐỒ KHÍ HẬU, phần II, câu 16",
-        "context": "Cho biểu đồ khí hậu: Láng có T = 23,9°C, P = 1 670 mm; Tân Sơn Hòa có T = 28,1°C, P = 1 964 mm.",
         "options": [
-          "Tân Sơn Hòa có nhiệt độ trung bình năm cao hơn Láng.",
-          "Láng có tổng lượng mưa năm lớn hơn Tân Sơn Hòa.",
-          "Đường nhiệt Tân Sơn Hòa biến thiên năm nhỏ hơn Láng.",
-          "Sự khác biệt về nhiệt giữa hai trạm phù hợp với xu hướng phân hóa khí hậu bắc - nam."
+          "a) Tân Sơn Hòa có nhiệt độ trung bình năm cao hơn Láng.",
+          "b) Láng có tổng lượng mưa năm lớn hơn Tân Sơn Hòa.",
+          "c) Đường nhiệt Tân Sơn Hòa biến thiên năm nhỏ hơn Láng.",
+          "d) Sự khác biệt về nhiệt giữa hai trạm phù hợp với xu hướng phân hóa khí hậu bắc - nam."
         ],
         "answer": [
           "Đ",
           "S",
           "Đ",
           "Đ"
-        ]
+        ],
+        "media": "/media/bieu-do-khi-hau.jpg"
       },
       {
         "id": "g8_l5_tf_2",
         "type": "boolean",
         "level": "hiểu",
-        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "prompt": "Cho biểu đồ khí hậu: Móng Cái có T = 22,6°C, P = 2 661 mm; Điện Biên có T = 22,2°C, P = 1 560 mm.",
         "source": "DOCX Địa lí 8, Bài 5. THỰC HÀNH: ĐỌC BIỂU ĐỒ KHÍ HẬU, phần II, câu 17",
-        "context": "Cho biểu đồ khí hậu: Móng Cái có T = 22,6°C, P = 2 661 mm; Điện Biên có T = 22,2°C, P = 1 560 mm.",
         "options": [
-          "Móng Cái có tổng lượng mưa năm lớn hơn Điện Biên.",
-          "Điện Biên có nhiệt độ trung bình năm cao hơn Móng Cái.",
-          "Hai trạm có nhiệt độ trung bình năm khá gần nhau nhưng lượng mưa năm khác biệt lớn.",
-          "Khi so sánh khí hậu hai trạm cần xem xét đồng thời cả nhiệt độ và lượng mưa."
+          "a) Móng Cái có tổng lượng mưa năm lớn hơn Điện Biên.",
+          "b) Điện Biên có nhiệt độ trung bình năm cao hơn Móng Cái.",
+          "c) Hai trạm có nhiệt độ trung bình năm khá gần nhau nhưng lượng mưa năm khác biệt lớn.",
+          "d) Khi so sánh khí hậu hai trạm cần xem xét đồng thời cả nhiệt độ và lượng mưa."
         ],
         "answer": [
           "Đ",
           "S",
           "Đ",
           "Đ"
-        ]
+        ],
+        "media": "/media/bieu-do-khi-hau.jpg"
       },
       {
         "id": "g8_l5_tf_3",
         "type": "boolean",
         "level": "hiểu",
-        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "prompt": "Quan sát biểu đồ Láng: nhiệt độ thấp vào đầu và cuối năm, cao vào giữa năm; lượng mưa cũng tăng mạnh trong các tháng mùa hạ.",
         "source": "DOCX Địa lí 8, Bài 5. THỰC HÀNH: ĐỌC BIỂU ĐỒ KHÍ HẬU, phần II, câu 18",
-        "context": "Quan sát biểu đồ Láng: nhiệt độ thấp vào đầu và cuối năm, cao vào giữa năm; lượng mưa cũng tăng mạnh trong các tháng mùa hạ.",
         "options": [
-          "Láng có sự biến thiên nhiệt theo mùa khá rõ.",
-          "Lượng mưa ở Láng phân bố hoàn toàn đều trong năm.",
-          "Mùa hạ vừa nóng hơn vừa mưa nhiều hơn mùa đông.",
-          "Dạng biểu đồ cho phép nhận xét đồng thời chế độ nhiệt và chế độ mưa theo thời gian."
+          "a) Láng có sự biến thiên nhiệt theo mùa khá rõ.",
+          "b) Lượng mưa ở Láng phân bố hoàn toàn đều trong năm.",
+          "c) Mùa hạ vừa nóng hơn vừa mưa nhiều hơn mùa đông.",
+          "d) Dạng biểu đồ cho phép nhận xét đồng thời chế độ nhiệt và chế độ mưa theo thời gian."
         ],
         "answer": [
           "Đ",
           "S",
           "Đ",
           "Đ"
-        ]
+        ],
+        "media": "/media/bieu-do-khi-hau.jpg"
       },
       {
         "id": "g8_l5_tf_4",
         "type": "boolean",
         "level": "hiểu",
-        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "prompt": "Quan sát biểu đồ Tân Sơn Hòa: đường nhiệt duy trì ở mức cao quanh năm; lượng mưa tăng mạnh từ khoảng cuối mùa xuân đến mùa thu và giảm vào các tháng đầu năm.",
         "source": "DOCX Địa lí 8, Bài 5. THỰC HÀNH: ĐỌC BIỂU ĐỒ KHÍ HẬU, phần II, câu 19",
-        "context": "Quan sát biểu đồ Tân Sơn Hòa: đường nhiệt duy trì ở mức cao quanh năm; lượng mưa tăng mạnh từ khoảng cuối mùa xuân đến mùa thu và giảm vào các tháng đầu năm.",
         "options": [
-          "Tân Sơn Hòa có nền nhiệt cao quanh năm.",
-          "Biên độ nhiệt năm của Tân Sơn Hòa rất lớn so với Láng.",
-          "Lượng mưa thể hiện sự phân hóa mùa mưa - mùa khô.",
-          "Sự kết hợp nhiệt cao quanh năm và mùa mưa - khô rõ là đặc trưng phù hợp với khí hậu phía Nam."
+          "a) Tân Sơn Hòa có nền nhiệt cao quanh năm.",
+          "b) Biên độ nhiệt năm của Tân Sơn Hòa rất lớn so với Láng.",
+          "c) Lượng mưa thể hiện sự phân hóa mùa mưa - mùa khô.",
+          "d) Sự kết hợp nhiệt cao quanh năm và mùa mưa - khô rõ là đặc trưng phù hợp với khí hậu phía Nam."
         ],
         "answer": [
           "Đ",
           "S",
           "Đ",
           "Đ"
-        ]
+        ],
+        "media": "/media/bieu-do-khi-hau.jpg"
       },
       {
         "id": "g8_l5_tf_5",
         "type": "boolean",
         "level": "hiểu",
-        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "prompt": "Bốn biểu đồ khí hậu có các giá trị T và P khác nhau, đồng thời hình dạng đường nhiệt và cột mưa theo tháng cũng khác nhau.",
         "source": "DOCX Địa lí 8, Bài 5. THỰC HÀNH: ĐỌC BIỂU ĐỒ KHÍ HẬU, phần II, câu 20",
-        "context": "Bốn biểu đồ khí hậu có các giá trị T và P khác nhau, đồng thời hình dạng đường nhiệt và cột mưa theo tháng cũng khác nhau.",
         "options": [
-          "T và P là hai chỉ tiêu tổng hợp giúp đọc nhanh đặc điểm khí hậu của trạm.",
-          "Chỉ cần biết T là có thể kết luận đầy đủ về khí hậu của một địa điểm.",
-          "Dạng phân bố mưa theo tháng giúp xác định tính mùa của lượng mưa.",
-          "So sánh nhiều trạm giúp nhận ra sự phân hóa khí hậu giữa các địa điểm."
+          "a) T và P là hai chỉ tiêu tổng hợp giúp đọc nhanh đặc điểm khí hậu của trạm.",
+          "b) Chỉ cần biết T là có thể kết luận đầy đủ về khí hậu của một địa điểm.",
+          "c) Dạng phân bố mưa theo tháng giúp xác định tính mùa của lượng mưa.",
+          "d) So sánh nhiều trạm giúp nhận ra sự phân hóa khí hậu giữa các địa điểm."
         ],
         "answer": [
           "Đ",
           "S",
           "Đ",
           "Đ"
-        ]
+        ],
+        "media": "/media/bieu-do-khi-hau.jpg"
       },
       {
         "id": "g8_l5_sa_1",
         "type": "short",
         "level": "vận dụng",
-        "prompt": "Nhiệt độ trung bình năm của Tân Sơn Hòa là 28,1°C, của Điện Biên là 22,2°C. Tân Sơn Hòa cao hơn Điện Biên bao nhiêu °C? Làm tròn đến 1 chữ số thập phân.",
+        "prompt": "Nhiệt độ trung bình năm của Tân Sơn Hòa là 28,1°C, của Điện Biên là 22,2°C. Tân Sơn Hòa cao hơn Điện Biên bao nhiêu °C?",
         "source": "DOCX Địa lí 8, Bài 5. THỰC HÀNH: ĐỌC BIỂU ĐỒ KHÍ HẬU, phần III, câu 21",
         "answer": "5.9",
         "explanation": "Cách tính: 28,1 - 22,2 = 5,9°C.",
@@ -2019,20 +2017,6 @@
     "title": "Bài 6. Thuỷ văn Việt Nam",
     "summary": "Mạng lưới sông ngòi dày đặc, dòng chảy thay đổi theo mùa mưa. Phân biệt hệ thống sông Hồng ở phía bắc, Thu Bồn ở miền Trung và Mê Công ở phía nam. Độ dốc và hình dạng lưu vực ảnh hưởng đến tốc độ tập trung nước khi có mưa lớn.",
     "questions": [
-      {
-        "id": "sgk8-map",
-        "type": "choice",
-        "level": "hiểu",
-        "prompt": "Dựa vào chú giải, mảng màu xanh được viền trên đất liền biểu thị đối tượng nào?",
-        "context": "SGK Lịch sử và Địa lí 8, hình 6.5, trang 124.",
-        "media": "/media/thu-bon.jpg",
-        "options": [
-          "Lưu vực hệ thống sông Thu Bồn",
-          "Biển Đông",
-          "Một hồ chứa nước"
-        ],
-        "answer": "Lưu vực hệ thống sông Thu Bồn"
-      },
       {
         "id": "g8_l6_mcq_1",
         "type": "choice",
@@ -2247,14 +2231,13 @@
         "id": "g8_l6_tf_1",
         "type": "boolean",
         "level": "hiểu",
-        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "prompt": "Cho thông tin: Nước ta có mạng lưới sông ngòi dày đặc; chế độ dòng chảy phân thành mùa lũ và mùa cạn; lượng nước mùa lũ chiếm phần lớn tổng lượng nước năm.",
         "source": "DOCX Địa lí 8, BÀI 6. THỦY VĂN VIỆT NAM, phần II, câu 16",
-        "context": "Cho thông tin: Nước ta có mạng lưới sông ngòi dày đặc; chế độ dòng chảy phân thành mùa lũ và mùa cạn; lượng nước mùa lũ chiếm phần lớn tổng lượng nước năm.",
         "options": [
-          "Nước ta có 2 360 con sông dài trên 10 km.",
-          "Phần lớn sông ngòi nước ta chảy theo hướng đông - tây.",
-          "Sự phân mùa của dòng chảy có liên quan chặt chẽ với chế độ mưa theo mùa.",
-          "Tính mùa của dòng chảy làm yêu cầu điều tiết và sử dụng nguồn nước giữa các mùa trở nên cần thiết."
+          "a) Nước ta có 2 360 con sông dài trên 10 km.",
+          "b) Phần lớn sông ngòi nước ta chảy theo hướng đông - tây.",
+          "c) Sự phân mùa của dòng chảy có liên quan chặt chẽ với chế độ mưa theo mùa.",
+          "d) Tính mùa của dòng chảy làm yêu cầu điều tiết và sử dụng nguồn nước giữa các mùa trở nên cần thiết."
         ],
         "answer": [
           "Đ",
@@ -2267,14 +2250,13 @@
         "id": "g8_l6_tf_2",
         "type": "boolean",
         "level": "vận dụng",
-        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "prompt": "Cho thông tin: Hệ thống sông Hồng có dòng chính dài 556 km trên lãnh thổ Việt Nam; các phụ lưu lớn hợp với dòng chính tạo thành mạng lưới dạng nan quạt; mùa lũ từ tháng 6 đến tháng 10.",
         "source": "DOCX Địa lí 8, BÀI 6. THỦY VĂN VIỆT NAM, phần II, câu 17",
-        "context": "Cho thông tin: Hệ thống sông Hồng có dòng chính dài 556 km trên lãnh thổ Việt Nam; các phụ lưu lớn hợp với dòng chính tạo thành mạng lưới dạng nan quạt; mùa lũ từ tháng 6 đến tháng 10.",
         "options": [
-          "Sông Đà và sông Lô là hai phụ lưu chính của hệ thống sông Hồng.",
-          "Mùa cạn của hệ thống sông Hồng kéo dài từ tháng 11 đến tháng 5 năm sau.",
-          "Lượng nước mùa lũ nhỏ hơn lượng nước mùa cạn.",
-          "Khi mưa lớn trên diện rộng, dạng mạng lưới nan quạt làm tăng khả năng nước tập trung nhanh về hạ lưu."
+          "a) Sông Đà và sông Lô là hai phụ lưu chính của hệ thống sông Hồng.",
+          "b) Mùa cạn của hệ thống sông Hồng kéo dài từ tháng 11 đến tháng 5 năm sau.",
+          "c) Lượng nước mùa lũ nhỏ hơn lượng nước mùa cạn.",
+          "d) Khi mưa lớn trên diện rộng, dạng mạng lưới nan quạt làm tăng khả năng nước tập trung nhanh về hạ lưu."
         ],
         "answer": [
           "Đ",
@@ -2287,14 +2269,13 @@
         "id": "g8_l6_tf_3",
         "type": "boolean",
         "level": "vận dụng",
-        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "prompt": "Cho thông tin: Hệ thống sông Thu Bồn có dòng chính dài 205 km, nhiều sông suối ngắn và dốc; mùa lũ từ tháng 9 đến tháng 12 và chiếm khoảng 65% lượng nước năm.",
         "source": "DOCX Địa lí 8, BÀI 6. THỦY VĂN VIỆT NAM, phần II, câu 18",
-        "context": "Cho thông tin: Hệ thống sông Thu Bồn có dòng chính dài 205 km, nhiều sông suối ngắn và dốc; mùa lũ từ tháng 9 đến tháng 12 và chiếm khoảng 65% lượng nước năm.",
         "options": [
-          "Mùa cạn của hệ thống sông Thu Bồn kéo dài từ tháng 1 đến tháng 8.",
-          "Lượng nước mùa cạn chiếm khoảng 35% tổng lượng nước năm.",
-          "Địa hình bằng phẳng là nguyên nhân chính làm lũ lên nhanh ở Thu Bồn.",
-          "Khi bão kết hợp mưa lớn, nguy cơ lũ lên nhanh và đột ngột tăng cao."
+          "a) Mùa cạn của hệ thống sông Thu Bồn kéo dài từ tháng 1 đến tháng 8.",
+          "b) Lượng nước mùa cạn chiếm khoảng 35% tổng lượng nước năm.",
+          "c) Địa hình bằng phẳng là nguyên nhân chính làm lũ lên nhanh ở Thu Bồn.",
+          "d) Khi bão kết hợp mưa lớn, nguy cơ lũ lên nhanh và đột ngột tăng cao."
         ],
         "answer": [
           "Đ",
@@ -2307,14 +2288,13 @@
         "id": "g8_l6_tf_4",
         "type": "boolean",
         "level": "vận dụng",
-        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "prompt": "Cho thông tin: Trong phần lưu vực trên lãnh thổ Việt Nam, sông Mê Công dài hơn 230 km, có 286 phụ lưu; hai chi lưu lớn là sông Tiền và sông Hậu.",
         "source": "DOCX Địa lí 8, BÀI 6. THỦY VĂN VIỆT NAM, phần II, câu 19",
-        "context": "Cho thông tin: Trong phần lưu vực trên lãnh thổ Việt Nam, sông Mê Công dài hơn 230 km, có 286 phụ lưu; hai chi lưu lớn là sông Tiền và sông Hậu.",
         "options": [
-          "Mạng lưới sông Mê Công có dạng lông chim.",
-          "Mùa lũ của hệ thống sông Mê Công kéo dài từ tháng 7 đến tháng 11.",
-          "Nước mùa lũ chiếm khoảng 20% tổng lượng nước năm.",
-          "Hồ Tôn-lê Sáp góp phần điều tiết nên nước lũ lên và xuống chậm hơn."
+          "a) Mạng lưới sông Mê Công có dạng lông chim.",
+          "b) Mùa lũ của hệ thống sông Mê Công kéo dài từ tháng 7 đến tháng 11.",
+          "c) Nước mùa lũ chiếm khoảng 20% tổng lượng nước năm.",
+          "d) Hồ Tôn-lê Sáp góp phần điều tiết nên nước lũ lên và xuống chậm hơn."
         ],
         "answer": [
           "Đ",
@@ -2327,14 +2307,13 @@
         "id": "g8_l6_tf_5",
         "type": "boolean",
         "level": "vận dụng",
-        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "prompt": "Cho thông tin: Hồ, đầm và nước ngầm đều có vai trò đối với sản xuất và sinh hoạt; nhiều hồ nhân tạo còn phục vụ thủy lợi, thủy điện và điều hòa.",
         "source": "DOCX Địa lí 8, BÀI 6. THỦY VĂN VIỆT NAM, phần II, câu 20",
-        "context": "Cho thông tin: Hồ, đầm và nước ngầm đều có vai trò đối với sản xuất và sinh hoạt; nhiều hồ nhân tạo còn phục vụ thủy lợi, thủy điện và điều hòa.",
         "options": [
-          "Hồ, đầm có thể cung cấp nước cho trồng trọt và chăn nuôi.",
-          "Một số hồ, đầm có thể khai thác cho du lịch và giao thông.",
-          "Nước ngầm chỉ có vai trò đối với sinh hoạt, không có ý nghĩa đối với sản xuất.",
-          "Ở nơi mùa khô sâu sắc, bảo vệ và sử dụng hợp lí hồ, đầm, nước ngầm góp phần bảo đảm an ninh nguồn nước."
+          "a) Hồ, đầm có thể cung cấp nước cho trồng trọt và chăn nuôi.",
+          "b) Một số hồ, đầm có thể khai thác cho du lịch và giao thông.",
+          "c) Nước ngầm chỉ có vai trò đối với sinh hoạt, không có ý nghĩa đối với sản xuất.",
+          "d) Ở nơi mùa khô sâu sắc, bảo vệ và sử dụng hợp lí hồ, đầm, nước ngầm góp phần bảo đảm an ninh nguồn nước."
         ],
         "answer": [
           "Đ",
@@ -2347,7 +2326,7 @@
         "id": "g8_l6_sa_1",
         "type": "short",
         "level": "vận dụng",
-        "prompt": "Hệ thống sông Hồng có lượng nước mùa lũ chiếm khoảng 75% và mùa cạn khoảng 25% tổng lượng nước năm. Lượng nước mùa lũ gấp bao nhiêu lần lượng nước mùa cạn? Làm tròn đến một chữ số thập phân.",
+        "prompt": "Hệ thống sông Hồng có lượng nước mùa lũ chiếm khoảng 75% và mùa cạn khoảng 25% tổng lượng nước năm. Lượng nước mùa lũ gấp bao nhiêu lần lượng nước mùa cạn?\nLàm tròn đến một chữ số thập phân.",
         "source": "DOCX Địa lí 8, BÀI 6. THỦY VĂN VIỆT NAM, phần III, câu 21",
         "answer": "3.0",
         "explanation": "75 : 25 = 3,0",
@@ -2392,7 +2371,7 @@
         "id": "g8_l6_sa_4",
         "type": "short",
         "level": "vận dụng",
-        "prompt": "Dòng chính sông Hồng trên lãnh thổ Việt Nam dài 556 km, dòng chính hệ thống sông Thu Bồn dài 205 km. Dòng chính sông Hồng dài gấp bao nhiêu lần dòng chính sông Thu Bồn? Làm tròn đến một chữ số thập phân.",
+        "prompt": "Dòng chính sông Hồng trên lãnh thổ Việt Nam dài 556 km, dòng chính hệ thống sông Thu Bồn dài 205 km. Dòng chính sông Hồng dài gấp bao nhiêu lần dòng chính sông Thu Bồn?\nLàm tròn đến một chữ số thập phân.",
         "source": "DOCX Địa lí 8, BÀI 6. THỦY VĂN VIỆT NAM, phần III, câu 24",
         "answer": "2.7",
         "explanation": "556 : 205 ≈ 2,7",
@@ -2407,7 +2386,7 @@
         "id": "g8_l6_sa_5",
         "type": "short",
         "level": "vận dụng",
-        "prompt": "Sông ngòi nước ta có lượng nước hơn 800 tỉ m³/năm và tổng lượng phù sa khoảng 200 triệu tấn/năm. Lấy 800 tỉ m³ để tính, cứ 1 m³ nước sông tương ứng trung bình khoảng bao nhiêu ki-lô-gam phù sa? Làm tròn đến hai chữ số thập phân.",
+        "prompt": "Sông ngòi nước ta có lượng nước hơn 800 tỉ m³/năm và tổng lượng phù sa khoảng 200 triệu tấn/năm. Lấy 800 tỉ m³ để tính, cứ 1 m³ nước sông tương ứng trung bình khoảng bao nhiêu ki-lô-gam phù sa?\nLàm tròn đến hai chữ số thập phân.",
         "source": "DOCX Địa lí 8, BÀI 6. THỦY VĂN VIỆT NAM, phần III, câu 25",
         "answer": "0.25",
         "explanation": "200 triệu tấn = 200 tỉ kg; 200 : 800 = 0,25",
@@ -2639,14 +2618,13 @@
         "id": "g8_l7_tf_1",
         "type": "boolean",
         "level": "hiểu",
-        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "prompt": "Cho thông tin: Khí hậu nhiệt đới ẩm cung cấp lượng nhiệt và ẩm dồi dào, cho phép sản xuất nông nghiệp quanh năm; sự phân hóa khí hậu làm đa dạng mùa vụ và sản phẩm.",
         "source": "DOCX Địa lí 8, BÀI 7. VAI TRÒ CỦA TÀI NGUYÊN KHÍ HẬU VÀ TÀI NGUYÊN NƯỚC, phần II, câu 16",
-        "context": "Cho thông tin: Khí hậu nhiệt đới ẩm cung cấp lượng nhiệt và ẩm dồi dào, cho phép sản xuất nông nghiệp quanh năm; sự phân hóa khí hậu làm đa dạng mùa vụ và sản phẩm.",
         "options": [
-          "Khí hậu nhiệt đới ẩm tạo điều kiện cho cây trồng, vật nuôi phát triển.",
-          "Sự phân hóa khí hậu làm mọi vùng có cùng cơ cấu mùa vụ.",
-          "Nước ta có thể phát triển cả sản phẩm nhiệt đới, cận nhiệt và ôn đới.",
-          "Khai thác lợi thế khí hậu cần gắn với lựa chọn mùa vụ và sản phẩm phù hợp từng vùng."
+          "a) Khí hậu nhiệt đới ẩm tạo điều kiện cho cây trồng, vật nuôi phát triển.",
+          "b) Sự phân hóa khí hậu làm mọi vùng có cùng cơ cấu mùa vụ.",
+          "c) Nước ta có thể phát triển cả sản phẩm nhiệt đới, cận nhiệt và ôn đới.",
+          "d) Khai thác lợi thế khí hậu cần gắn với lựa chọn mùa vụ và sản phẩm phù hợp từng vùng."
         ],
         "answer": [
           "Đ",
@@ -2659,14 +2637,13 @@
         "id": "g8_l7_tf_2",
         "type": "boolean",
         "level": "vận dụng",
-        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "prompt": "Cho thông tin: Khí hậu nước ta cũng gây nhiều khó khăn cho nông nghiệp do bão, lũ, hạn hán, sương muối, rét đậm, rét hại; môi trường nóng ẩm thuận lợi cho sâu bệnh.",
         "source": "DOCX Địa lí 8, BÀI 7. VAI TRÒ CỦA TÀI NGUYÊN KHÍ HẬU VÀ TÀI NGUYÊN NƯỚC, phần II, câu 17",
-        "context": "Cho thông tin: Khí hậu nước ta cũng gây nhiều khó khăn cho nông nghiệp do bão, lũ, hạn hán, sương muối, rét đậm, rét hại; môi trường nóng ẩm thuận lợi cho sâu bệnh.",
         "options": [
-          "Thiên tai khí hậu có thể làm giảm sản lượng nông nghiệp.",
-          "Môi trường nóng ẩm luôn làm sâu bệnh suy giảm.",
-          "Tác động của khí hậu đối với nông nghiệp chỉ có mặt thuận lợi.",
-          "Chủ động phòng tránh thiên tai và dịch bệnh là yêu cầu cần thiết trong sản xuất nông nghiệp."
+          "a) Thiên tai khí hậu có thể làm giảm sản lượng nông nghiệp.",
+          "b) Môi trường nóng ẩm luôn làm sâu bệnh suy giảm.",
+          "c) Tác động của khí hậu đối với nông nghiệp chỉ có mặt thuận lợi.",
+          "d) Chủ động phòng tránh thiên tai và dịch bệnh là yêu cầu cần thiết trong sản xuất nông nghiệp."
         ],
         "answer": [
           "Đ",
@@ -2679,14 +2656,13 @@
         "id": "g8_l7_tf_3",
         "type": "boolean",
         "level": "vận dụng",
-        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "prompt": "Cho thông tin: Khí hậu phân hóa theo mùa và độ cao tác động đến điểm du lịch, loại hình và mùa vụ du lịch; mưa lớn, bão gây trở ngại cho hoạt động ngoài trời.",
         "source": "DOCX Địa lí 8, BÀI 7. VAI TRÒ CỦA TÀI NGUYÊN KHÍ HẬU VÀ TÀI NGUYÊN NƯỚC, phần II, câu 18",
-        "context": "Cho thông tin: Khí hậu phân hóa theo mùa và độ cao tác động đến điểm du lịch, loại hình và mùa vụ du lịch; mưa lớn, bão gây trở ngại cho hoạt động ngoài trời.",
         "options": [
-          "Khí hậu có ảnh hưởng đến mùa vụ du lịch.",
-          "Vùng núi cao có thể phát triển du lịch nghỉ dưỡng nhờ khí hậu mát mẻ.",
-          "Mưa lớn và bão luôn làm tăng thuận lợi cho du lịch ngoài trời.",
-          "Tổ chức hoạt động du lịch cần tính đến đặc điểm khí hậu theo mùa của từng địa điểm."
+          "a) Khí hậu có ảnh hưởng đến mùa vụ du lịch.",
+          "b) Vùng núi cao có thể phát triển du lịch nghỉ dưỡng nhờ khí hậu mát mẻ.",
+          "c) Mưa lớn và bão luôn làm tăng thuận lợi cho du lịch ngoài trời.",
+          "d) Tổ chức hoạt động du lịch cần tính đến đặc điểm khí hậu theo mùa của từng địa điểm."
         ],
         "answer": [
           "Đ",
@@ -2699,14 +2675,13 @@
         "id": "g8_l7_tf_4",
         "type": "boolean",
         "level": "vận dụng",
-        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "prompt": "Cho thông tin: Nguồn nước sông được sử dụng cho giao thông, du lịch, sinh hoạt, tưới tiêu, thủy sản, thủy điện; sử dụng tổng hợp giúp nâng cao hiệu quả và bảo vệ tài nguyên nước.",
         "source": "DOCX Địa lí 8, BÀI 7. VAI TRÒ CỦA TÀI NGUYÊN KHÍ HẬU VÀ TÀI NGUYÊN NƯỚC, phần II, câu 19",
-        "context": "Cho thông tin: Nguồn nước sông được sử dụng cho giao thông, du lịch, sinh hoạt, tưới tiêu, thủy sản, thủy điện; sử dụng tổng hợp giúp nâng cao hiệu quả và bảo vệ tài nguyên nước.",
         "options": [
-          "Tài nguyên nước có nhiều mục đích sử dụng.",
-          "Sử dụng tổng hợp chỉ có ý nghĩa đối với sản xuất, không liên quan sinh hoạt.",
-          "Sử dụng tổng hợp có thể góp phần hạn chế lãng phí nước.",
-          "Phân bổ nước giữa nhiều nhu cầu cần gắn với bảo vệ hệ sinh thái lưu vực sông."
+          "a) Tài nguyên nước có nhiều mục đích sử dụng.",
+          "b) Sử dụng tổng hợp chỉ có ý nghĩa đối với sản xuất, không liên quan sinh hoạt.",
+          "c) Sử dụng tổng hợp có thể góp phần hạn chế lãng phí nước.",
+          "d) Phân bổ nước giữa nhiều nhu cầu cần gắn với bảo vệ hệ sinh thái lưu vực sông."
         ],
         "answer": [
           "Đ",
@@ -2719,14 +2694,13 @@
         "id": "g8_l7_tf_5",
         "type": "boolean",
         "level": "vận dụng",
-        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "prompt": "Cho thông tin: Ở lưu vực sông Cửu Long, mùa khô có nguy cơ thiếu nước ngọt; biến đổi khí hậu làm xâm nhập mặn và hạn hán nghiêm trọng hơn. Một giải pháp là cải tạo, mở rộng hệ thống kênh rạch.",
         "source": "DOCX Địa lí 8, BÀI 7. VAI TRÒ CỦA TÀI NGUYÊN KHÍ HẬU VÀ TÀI NGUYÊN NƯỚC, phần II, câu 20",
-        "context": "Cho thông tin: Ở lưu vực sông Cửu Long, mùa khô có nguy cơ thiếu nước ngọt; biến đổi khí hậu làm xâm nhập mặn và hạn hán nghiêm trọng hơn. Một giải pháp là cải tạo, mở rộng hệ thống kênh rạch.",
         "options": [
-          "Mùa khô ở lưu vực sông Cửu Long có thể thiếu nước ngọt.",
-          "Xâm nhập mặn không liên quan đến vấn đề nguồn nước ở lưu vực này.",
-          "Hệ thống kênh rạch có thể góp phần cấp nước và phòng chống thiên tai.",
-          "Khai thác nước hiệu quả cần đồng thời chú ý bảo vệ chất lượng nguồn nước."
+          "a) Mùa khô ở lưu vực sông Cửu Long có thể thiếu nước ngọt.",
+          "b) Xâm nhập mặn không liên quan đến vấn đề nguồn nước ở lưu vực này.",
+          "c) Hệ thống kênh rạch có thể góp phần cấp nước và phòng chống thiên tai.",
+          "d) Khai thác nước hiệu quả cần đồng thời chú ý bảo vệ chất lượng nguồn nước."
         ],
         "answer": [
           "Đ",
@@ -2739,7 +2713,7 @@
         "id": "g8_l7_sa_1",
         "type": "short",
         "level": "vận dụng",
-        "prompt": "Sa Pa có nhiệt độ trung bình năm 15,5°C; ở Nha Trang, hầu hết các tháng có nhiệt độ trung bình trên 25°C. Lấy 25°C làm mốc so sánh, nhiệt độ trung bình năm của Sa Pa thấp hơn mốc này bao nhiêu °C? Làm tròn đến 1 chữ số thập phân.",
+        "prompt": "Sa Pa có nhiệt độ trung bình năm 15,5°C; ở Nha Trang, hầu hết các tháng có nhiệt độ trung bình trên 25°C. Lấy 25°C làm mốc so sánh, nhiệt độ trung bình năm của Sa Pa thấp hơn mốc này bao nhiêu °C?",
         "source": "DOCX Địa lí 8, BÀI 7. VAI TRÒ CỦA TÀI NGUYÊN KHÍ HẬU VÀ TÀI NGUYÊN NƯỚC, phần III, câu 21",
         "answer": "9.5",
         "explanation": "25,0 - 15,5 = 9,5",
@@ -2754,7 +2728,7 @@
         "id": "g8_l7_sa_2",
         "type": "short",
         "level": "vận dụng",
-        "prompt": "Khu du lịch Sa Pa ở độ cao trung bình khoảng 1 600 m so với mực nước biển. Độ cao này tương đương bao nhiêu ki-lô-mét? Làm tròn đến 1 chữ số thập phân.",
+        "prompt": "Khu du lịch Sa Pa ở độ cao trung bình khoảng 1 600 m so với mực nước biển. Độ cao này tương đương bao nhiêu ki-lô-mét?",
         "source": "DOCX Địa lí 8, BÀI 7. VAI TRÒ CỦA TÀI NGUYÊN KHÍ HẬU VÀ TÀI NGUYÊN NƯỚC, phần III, câu 22",
         "answer": "1.6",
         "explanation": "1 600 m = 1,6 km",
@@ -2784,7 +2758,7 @@
         "id": "g8_l7_sa_4",
         "type": "short",
         "level": "vận dụng",
-        "prompt": "Hệ thống sông Mê Công có khoảng 80% lượng nước năm vào mùa lũ và 20% vào mùa cạn. Lượng nước mùa lũ gấp bao nhiêu lần mùa cạn? Làm tròn đến 1 chữ số thập phân.",
+        "prompt": "Hệ thống sông Mê Công có khoảng 80% lượng nước năm vào mùa lũ và 20% vào mùa cạn. Lượng nước mùa lũ gấp bao nhiêu lần mùa cạn?",
         "source": "DOCX Địa lí 8, BÀI 7. VAI TRÒ CỦA TÀI NGUYÊN KHÍ HẬU VÀ TÀI NGUYÊN NƯỚC, phần III, câu 24",
         "answer": "4.0",
         "explanation": "80 : 20 = 4,0",
@@ -3031,14 +3005,13 @@
         "id": "g8_l8_tf_1",
         "type": "boolean",
         "level": "hiểu",
-        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "prompt": "Cho thông tin: Trong thời kì 1958 - 2018, nhiệt độ trung bình năm có xu thế tăng trên phạm vi cả nước; tổng lượng mưa năm biến động; các hiện tượng thời tiết cực đoan có xu hướng gia tăng.",
         "source": "DOCX Địa lí 8, BÀI 8. TÁC ĐỘNG CỦA BIẾN ĐỔI KHÍ HẬU ĐỐI VỚI TỰ NHIÊN VIỆT NAM, phần II, câu 16",
-        "context": "Cho thông tin: Trong thời kì 1958 - 2018, nhiệt độ trung bình năm có xu thế tăng trên phạm vi cả nước; tổng lượng mưa năm biến động; các hiện tượng thời tiết cực đoan có xu hướng gia tăng.",
         "options": [
-          "Nhiệt độ trung bình năm ở Việt Nam có xu thế tăng.",
-          "Tổng lượng mưa năm ổn định tuyệt đối qua các giai đoạn.",
-          "Số ngày nắng nóng có xu thế tăng.",
-          "Các biến đổi về nhiệt độ, mưa và thời tiết cực đoan là những biểu hiện của biến đổi khí hậu."
+          "a) Nhiệt độ trung bình năm ở Việt Nam có xu thế tăng.",
+          "b) Tổng lượng mưa năm ổn định tuyệt đối qua các giai đoạn.",
+          "c) Số ngày nắng nóng có xu thế tăng.",
+          "d) Các biến đổi về nhiệt độ, mưa và thời tiết cực đoan là những biểu hiện của biến đổi khí hậu."
         ],
         "answer": [
           "Đ",
@@ -3051,14 +3024,13 @@
         "id": "g8_l8_tf_2",
         "type": "boolean",
         "level": "vận dụng",
-        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "prompt": "Cho thông tin: Biến đổi khí hậu làm tăng chênh lệch lưu lượng giữa mùa lũ và mùa cạn; mùa lũ có nhiều mưa lớn hơn, mùa cạn một số lưu vực giảm lưu lượng.",
         "source": "DOCX Địa lí 8, BÀI 8. TÁC ĐỘNG CỦA BIẾN ĐỔI KHÍ HẬU ĐỐI VỚI TỰ NHIÊN VIỆT NAM, phần II, câu 17",
-        "context": "Cho thông tin: Biến đổi khí hậu làm tăng chênh lệch lưu lượng giữa mùa lũ và mùa cạn; mùa lũ có nhiều mưa lớn hơn, mùa cạn một số lưu vực giảm lưu lượng.",
         "options": [
-          "Lũ quét và ngập lụt có thể nghiêm trọng hơn vào mùa lũ.",
-          "Mùa cạn ở một số lưu vực có nguy cơ thiếu nước tăng.",
-          "Biến đổi khí hậu làm chế độ nước sông ổn định hơn.",
-          "Quản lí nguồn nước cần chú ý đồng thời nguy cơ thừa nước mùa lũ và thiếu nước mùa cạn."
+          "a) Lũ quét và ngập lụt có thể nghiêm trọng hơn vào mùa lũ.",
+          "b) Mùa cạn ở một số lưu vực có nguy cơ thiếu nước tăng.",
+          "c) Biến đổi khí hậu làm chế độ nước sông ổn định hơn.",
+          "d) Quản lí nguồn nước cần chú ý đồng thời nguy cơ thừa nước mùa lũ và thiếu nước mùa cạn."
         ],
         "answer": [
           "Đ",
@@ -3071,14 +3043,13 @@
         "id": "g8_l8_tf_3",
         "type": "boolean",
         "level": "vận dụng",
-        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "prompt": "Cho thông tin: Nhiệt độ tăng, hạn hán kéo dài, mưa lớn và nước biển dâng đều tác động đến thổ nhưỡng.",
         "source": "DOCX Địa lí 8, BÀI 8. TÁC ĐỘNG CỦA BIẾN ĐỔI KHÍ HẬU ĐỐI VỚI TỰ NHIÊN VIỆT NAM, phần II, câu 18",
-        "context": "Cho thông tin: Nhiệt độ tăng, hạn hán kéo dài, mưa lớn và nước biển dâng đều tác động đến thổ nhưỡng.",
         "options": [
-          "Hạn hán kéo dài có thể làm đất khô hạn và suy giảm độ phì.",
-          "Mưa lớn có thể tăng nguy cơ xói mòn ở vùng dốc.",
-          "Nước biển dâng làm giảm nguy cơ mặn hóa đất ven biển.",
-          "Bảo vệ lớp phủ thực vật có ý nghĩa trong hạn chế xói mòn đất ở vùng đồi núi."
+          "a) Hạn hán kéo dài có thể làm đất khô hạn và suy giảm độ phì.",
+          "b) Mưa lớn có thể tăng nguy cơ xói mòn ở vùng dốc.",
+          "c) Nước biển dâng làm giảm nguy cơ mặn hóa đất ven biển.",
+          "d) Bảo vệ lớp phủ thực vật có ý nghĩa trong hạn chế xói mòn đất ở vùng đồi núi."
         ],
         "answer": [
           "Đ",
@@ -3091,14 +3062,13 @@
         "id": "g8_l8_tf_4",
         "type": "boolean",
         "level": "vận dụng",
-        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "prompt": "Cho thông tin: Biến đổi khí hậu làm thay đổi điều kiện sống của sinh vật; thực vật cận nhiệt, ôn đới có xu hướng thu hẹp phạm vi, trong khi nhiều loài nhiệt đới có xu hướng mở rộng.",
         "source": "DOCX Địa lí 8, BÀI 8. TÁC ĐỘNG CỦA BIẾN ĐỔI KHÍ HẬU ĐỐI VỚI TỰ NHIÊN VIỆT NAM, phần II, câu 19",
-        "context": "Cho thông tin: Biến đổi khí hậu làm thay đổi điều kiện sống của sinh vật; thực vật cận nhiệt, ôn đới có xu hướng thu hẹp phạm vi, trong khi nhiều loài nhiệt đới có xu hướng mở rộng.",
         "options": [
-          "Nhiệt độ và lượng mưa biến động có thể ảnh hưởng sinh trưởng của sinh vật.",
-          "Mọi loài sinh vật đều mở rộng phạm vi phân bố khi nhiệt độ tăng.",
-          "Rừng ngập mặn và rạn san hô có thể bị suy thoái.",
-          "Bảo vệ hệ sinh thái nhạy cảm là một nội dung thích ứng cần thiết."
+          "a) Nhiệt độ và lượng mưa biến động có thể ảnh hưởng sinh trưởng của sinh vật.",
+          "b) Mọi loài sinh vật đều mở rộng phạm vi phân bố khi nhiệt độ tăng.",
+          "c) Rừng ngập mặn và rạn san hô có thể bị suy thoái.",
+          "d) Bảo vệ hệ sinh thái nhạy cảm là một nội dung thích ứng cần thiết."
         ],
         "answer": [
           "Đ",
@@ -3111,14 +3081,13 @@
         "id": "g8_l8_tf_5",
         "type": "boolean",
         "level": "vận dụng",
-        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "prompt": "Cho thông tin: Ứng phó với biến đổi khí hậu gồm giảm nhẹ và thích ứng; các giải pháp cần thực hiện đồng bộ trong sản xuất, dịch vụ và đời sống.",
         "source": "DOCX Địa lí 8, BÀI 8. TÁC ĐỘNG CỦA BIẾN ĐỔI KHÍ HẬU ĐỐI VỚI TỰ NHIÊN VIỆT NAM, phần II, câu 20",
-        "context": "Cho thông tin: Ứng phó với biến đổi khí hậu gồm giảm nhẹ và thích ứng; các giải pháp cần thực hiện đồng bộ trong sản xuất, dịch vụ và đời sống.",
         "options": [
-          "Sử dụng năng lượng tái tạo là giải pháp giảm nhẹ.",
-          "Điều chỉnh mùa vụ và giống cây trồng là giải pháp thích ứng.",
-          "Tăng phát thải khí nhà kính là cách giảm nhẹ biến đổi khí hậu.",
-          "Một địa phương chịu hạn và xâm nhập mặn nên kết hợp thủy lợi, điều chỉnh sản xuất và bảo vệ nguồn nước."
+          "a) Sử dụng năng lượng tái tạo là giải pháp giảm nhẹ.",
+          "b) Điều chỉnh mùa vụ và giống cây trồng là giải pháp thích ứng.",
+          "c) Tăng phát thải khí nhà kính là cách giảm nhẹ biến đổi khí hậu.",
+          "d) Một địa phương chịu hạn và xâm nhập mặn nên kết hợp thủy lợi, điều chỉnh sản xuất và bảo vệ nguồn nước."
         ],
         "answer": [
           "Đ",
@@ -3131,7 +3100,7 @@
         "id": "g8_l8_sa_1",
         "type": "short",
         "level": "vận dụng",
-        "prompt": "Nhiệt độ trung bình năm tại trạm Láng là 23,6°C giai đoạn 1958 - 1960 và 24,7°C giai đoạn 2011 - 2018. Nhiệt độ tăng bao nhiêu °C? Làm tròn đến 1 chữ số thập phân.",
+        "prompt": "Nhiệt độ trung bình năm tại trạm Láng là 23,6°C giai đoạn 1958 - 1960 và 24,7°C giai đoạn 2011 - 2018. Nhiệt độ tăng bao nhiêu °C?",
         "source": "DOCX Địa lí 8, BÀI 8. TÁC ĐỘNG CỦA BIẾN ĐỔI KHÍ HẬU ĐỐI VỚI TỰ NHIÊN VIỆT NAM, phần III, câu 21",
         "answer": "1.1",
         "explanation": "24,7 - 23,6 = 1,1",
@@ -3140,13 +3109,14 @@
             "label": "Kết quả",
             "unit": "°C"
           }
-        ]
+        ],
+        "media": "/media/bien-doi-nhiet-do.jpg"
       },
       {
         "id": "g8_l8_sa_2",
         "type": "short",
         "level": "vận dụng",
-        "prompt": "Nhiệt độ trung bình năm tại Tân Sơn Hòa tăng từ 27,3°C lên 28,5°C. Mức tăng tương đối là bao nhiêu % so với giai đoạn 1958 - 1960? Làm tròn đến một chữ số thập phân.",
+        "prompt": "Nhiệt độ trung bình năm tại Tân Sơn Hòa tăng từ 27,3°C lên 28,5°C. Mức tăng tương đối là bao nhiêu % so với giai đoạn 1958 - 1960?\nLàm tròn đến một chữ số thập phân.",
         "source": "DOCX Địa lí 8, BÀI 8. TÁC ĐỘNG CỦA BIẾN ĐỔI KHÍ HẬU ĐỐI VỚI TỰ NHIÊN VIỆT NAM, phần III, câu 22",
         "answer": "4.4",
         "explanation": "(28,5 - 27,3) : 27,3 × 100 ≈ 4,4%",
@@ -3155,13 +3125,14 @@
             "label": "Kết quả",
             "unit": "%"
           }
-        ]
+        ],
+        "media": "/media/bien-doi-nhiet-do.jpg"
       },
       {
         "id": "g8_l8_sa_3",
         "type": "short",
         "level": "vận dụng",
-        "prompt": "Tổng lượng mưa năm tại Đà Nẵng tăng từ 1 706,7 mm lên 2 404,8 mm giữa hai giai đoạn 1958 - 1960 và 2011 - 2018. Mức tăng là bao nhiêu mm? Làm tròn đến 1 chữ số thập phân.",
+        "prompt": "Tổng lượng mưa năm tại Đà Nẵng tăng từ 1 706,7 mm lên 2 404,8 mm giữa hai giai đoạn 1958 - 1960 và 2011 - 2018. Mức tăng là bao nhiêu mm?",
         "source": "DOCX Địa lí 8, BÀI 8. TÁC ĐỘNG CỦA BIẾN ĐỔI KHÍ HẬU ĐỐI VỚI TỰ NHIÊN VIỆT NAM, phần III, câu 23",
         "answer": "698.1",
         "explanation": "2 404,8 - 1 706,7 = 698,1",
@@ -3170,13 +3141,14 @@
             "label": "Kết quả",
             "unit": "mm"
           }
-        ]
+        ],
+        "media": "/media/bien-doi-luong-mua.jpg"
       },
       {
         "id": "g8_l8_sa_4",
         "type": "short",
         "level": "vận dụng",
-        "prompt": "Lượng mưa năm tại Láng là 1 465,5 mm giai đoạn 1958 - 1960 và 1 743,9 mm giai đoạn 2011 - 2018. Lấy giai đoạn 1958 - 1960 = 100%, chỉ số của giai đoạn 2011 - 2018 là bao nhiêu %? Làm tròn đến một chữ số thập phân.",
+        "prompt": "Lượng mưa năm tại Láng là 1 465,5 mm giai đoạn 1958 - 1960 và 1 743,9 mm giai đoạn 2011 - 2018. Lấy giai đoạn 1958 - 1960 = 100%, chỉ số của giai đoạn 2011 - 2018 là bao nhiêu %?\nLàm tròn đến một chữ số thập phân.",
         "source": "DOCX Địa lí 8, BÀI 8. TÁC ĐỘNG CỦA BIẾN ĐỔI KHÍ HẬU ĐỐI VỚI TỰ NHIÊN VIỆT NAM, phần III, câu 24",
         "answer": "119.0",
         "explanation": "1 743,9 : 1 465,5 × 100 ≈ 119,0%",
@@ -3185,13 +3157,14 @@
             "label": "Kết quả",
             "unit": "%"
           }
-        ]
+        ],
+        "media": "/media/bien-doi-luong-mua.jpg"
       },
       {
         "id": "g8_l8_sa_5",
         "type": "short",
         "level": "vận dụng",
-        "prompt": "Nhiệt độ trung bình năm giai đoạn 2011 - 2018 tại Láng, Đà Nẵng và Tân Sơn Hòa lần lượt là 24,7°C; 26,3°C; 28,5°C. Nhiệt độ trung bình của ba trạm là bao nhiêu °C? Làm tròn đến một chữ số thập phân.",
+        "prompt": "Nhiệt độ trung bình năm giai đoạn 2011 - 2018 tại Láng, Đà Nẵng và Tân Sơn Hòa lần lượt là 24,7°C; 26,3°C; 28,5°C. Nhiệt độ trung bình của ba trạm là bao nhiêu °C?\nLàm tròn đến một chữ số thập phân.",
         "source": "DOCX Địa lí 8, BÀI 8. TÁC ĐỘNG CỦA BIẾN ĐỔI KHÍ HẬU ĐỐI VỚI TỰ NHIÊN VIỆT NAM, phần III, câu 25",
         "answer": "26.5",
         "explanation": "(24,7 + 26,3 + 28,5) : 3 = 26,5",
@@ -3200,7 +3173,8 @@
             "label": "Kết quả",
             "unit": "°C"
           }
-        ]
+        ],
+        "media": "/media/bien-doi-nhiet-do.jpg"
       }
     ]
   },
@@ -3423,14 +3397,13 @@
         "id": "g8_l9_tf_1",
         "type": "boolean",
         "level": "hiểu",
-        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "prompt": "Cho thông tin: Khí hậu nóng ẩm làm phong hóa mạnh; mưa lớn theo mùa tăng rửa trôi, tích tụ ôxít sắt và ôxít nhôm, tạo nên quá trình feralit.",
         "source": "DOCX Địa lí 8, BÀI 9. THỔ NHƯỠNG VIỆT NAM, phần II, câu 16",
-        "context": "Cho thông tin: Khí hậu nóng ẩm làm phong hóa mạnh; mưa lớn theo mùa tăng rửa trôi, tích tụ ôxít sắt và ôxít nhôm, tạo nên quá trình feralit.",
         "options": [
-          "Quá trình feralit là quá trình hình thành đất đặc trưng ở nước ta.",
-          "Mưa lớn làm giảm rửa trôi các chất bazơ dễ hòa tan.",
-          "Ôxít sắt và ôxít nhôm góp phần tạo màu đỏ vàng của đất feralit.",
-          "Tính chất nhiệt đới gió mùa của khí hậu để lại dấu ấn rõ trong quá trình hình thành đất."
+          "a) Quá trình feralit là quá trình hình thành đất đặc trưng ở nước ta.",
+          "b) Mưa lớn làm giảm rửa trôi các chất bazơ dễ hòa tan.",
+          "c) Ôxít sắt và ôxít nhôm góp phần tạo màu đỏ vàng của đất feralit.",
+          "d) Tính chất nhiệt đới gió mùa của khí hậu để lại dấu ấn rõ trong quá trình hình thành đất."
         ],
         "answer": [
           "Đ",
@@ -3443,14 +3416,13 @@
         "id": "g8_l9_tf_2",
         "type": "boolean",
         "level": "vận dụng",
-        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "prompt": "Cho thông tin: Đất feralit chiếm hơn 65% diện tích đất tự nhiên, phân bố chủ yếu ở trung du và miền núi; đất thường chua, nghèo bazơ và mùn nhưng một số loại trên badan, đá vôi có độ phì cao.",
         "source": "DOCX Địa lí 8, BÀI 9. THỔ NHƯỠNG VIỆT NAM, phần II, câu 17",
-        "context": "Cho thông tin: Đất feralit chiếm hơn 65% diện tích đất tự nhiên, phân bố chủ yếu ở trung du và miền núi; đất thường chua, nghèo bazơ và mùn nhưng một số loại trên badan, đá vôi có độ phì cao.",
         "options": [
-          "Đất feralit là nhóm đất có diện tích lớn nhất nước ta.",
-          "Đất feralit chủ yếu phân bố ở đồng bằng châu thổ.",
-          "Đất feralit trên badan và đá vôi có độ phì cao hơn nhiều loại feralit khác.",
-          "Khai thác đất feralit bền vững cần chú ý chống xói mòn và duy trì độ phì."
+          "a) Đất feralit là nhóm đất có diện tích lớn nhất nước ta.",
+          "b) Đất feralit chủ yếu phân bố ở đồng bằng châu thổ.",
+          "c) Đất feralit trên badan và đá vôi có độ phì cao hơn nhiều loại feralit khác.",
+          "d) Khai thác đất feralit bền vững cần chú ý chống xói mòn và duy trì độ phì."
         ],
         "answer": [
           "Đ",
@@ -3463,14 +3435,13 @@
         "id": "g8_l9_tf_3",
         "type": "boolean",
         "level": "vận dụng",
-        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "prompt": "Cho thông tin: Đất phù sa chiếm khoảng 24% diện tích đất tự nhiên, phân bố ở các đồng bằng; nhìn chung có độ phì cao và giàu dinh dưỡng.",
         "source": "DOCX Địa lí 8, BÀI 9. THỔ NHƯỠNG VIỆT NAM, phần II, câu 18",
-        "context": "Cho thông tin: Đất phù sa chiếm khoảng 24% diện tích đất tự nhiên, phân bố ở các đồng bằng; nhìn chung có độ phì cao và giàu dinh dưỡng.",
         "options": [
-          "Đất phù sa được hình thành chủ yếu do bồi đắp của sông và biển.",
-          "Đất phù sa đồng bằng sông Hồng trong đê được bồi phù sa hằng năm.",
-          "Đất phù sa thích hợp với nhiều cây lương thực, cây hàng năm và cây ăn quả.",
-          "Vùng cửa sông, ven biển có thể khai thác đất phù sa gắn với nuôi trồng thủy sản nước lợ, nước mặn."
+          "a) Đất phù sa được hình thành chủ yếu do bồi đắp của sông và biển.",
+          "b) Đất phù sa đồng bằng sông Hồng trong đê được bồi phù sa hằng năm.",
+          "c) Đất phù sa thích hợp với nhiều cây lương thực, cây hàng năm và cây ăn quả.",
+          "d) Vùng cửa sông, ven biển có thể khai thác đất phù sa gắn với nuôi trồng thủy sản nước lợ, nước mặn."
         ],
         "answer": [
           "Đ",
@@ -3483,14 +3454,13 @@
         "id": "g8_l9_tf_4",
         "type": "boolean",
         "level": "vận dụng",
-        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "prompt": "Cho thông tin: Đất mùn trên núi phân bố từ khoảng 1 600 - 1 700 m trở lên; nhiệt độ thấp làm phân giải hữu cơ chậm nên đất giàu mùn, nhưng địa hình dốc làm tầng đất mỏng.",
         "source": "DOCX Địa lí 8, BÀI 9. THỔ NHƯỠNG VIỆT NAM, phần II, câu 19",
-        "context": "Cho thông tin: Đất mùn trên núi phân bố từ khoảng 1 600 - 1 700 m trở lên; nhiệt độ thấp làm phân giải hữu cơ chậm nên đất giàu mùn, nhưng địa hình dốc làm tầng đất mỏng.",
         "options": [
-          "Đất mùn trên núi phân bố chủ yếu ở vùng núi cao.",
-          "Nhiệt độ thấp làm quá trình phân giải hữu cơ diễn ra nhanh hơn.",
-          "Đất mùn trên núi có đặc điểm giàu mùn.",
-          "Khai thác vùng đất này cần thận trọng vì địa hình dốc và tầng đất mỏng."
+          "a) Đất mùn trên núi phân bố chủ yếu ở vùng núi cao.",
+          "b) Nhiệt độ thấp làm quá trình phân giải hữu cơ diễn ra nhanh hơn.",
+          "c) Đất mùn trên núi có đặc điểm giàu mùn.",
+          "d) Khai thác vùng đất này cần thận trọng vì địa hình dốc và tầng đất mỏng."
         ],
         "answer": [
           "Đ",
@@ -3503,14 +3473,13 @@
         "id": "g8_l9_tf_5",
         "type": "boolean",
         "level": "vận dụng",
-        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "prompt": "Cho thông tin: Khoảng 10 triệu ha đất ở Việt Nam bị thoái hóa, tương đương khoảng 30% diện tích cả nước; nguyên nhân gồm cả tự nhiên và hoạt động của con người.",
         "source": "DOCX Địa lí 8, BÀI 9. THỔ NHƯỠNG VIỆT NAM, phần II, câu 20",
-        "context": "Cho thông tin: Khoảng 10 triệu ha đất ở Việt Nam bị thoái hóa, tương đương khoảng 30% diện tích cả nước; nguyên nhân gồm cả tự nhiên và hoạt động của con người.",
         "options": [
-          "Thoái hóa đất có thể làm giảm độ phì và năng suất cây trồng.",
-          "Phá rừng và lạm dụng hóa chất có thể làm đất thoái hóa.",
-          "Biến đổi khí hậu không liên quan đến thoái hóa đất.",
-          "Chống thoái hóa đất cần kết hợp bảo vệ rừng, thủy lợi và bổ sung chất hữu cơ."
+          "a) Thoái hóa đất có thể làm giảm độ phì và năng suất cây trồng.",
+          "b) Phá rừng và lạm dụng hóa chất có thể làm đất thoái hóa.",
+          "c) Biến đổi khí hậu không liên quan đến thoái hóa đất.",
+          "d) Chống thoái hóa đất cần kết hợp bảo vệ rừng, thủy lợi và bổ sung chất hữu cơ."
         ],
         "answer": [
           "Đ",
@@ -3523,7 +3492,7 @@
         "id": "g8_l9_sa_1",
         "type": "short",
         "level": "vận dụng",
-        "prompt": "Lấy 65% làm giá trị tối thiểu của tỉ trọng đất feralit và 24% là tỉ trọng đất phù sa. Đất feralit chiếm ít nhất gấp khoảng bao nhiêu lần đất phù sa? Làm tròn đến một chữ số thập phân.",
+        "prompt": "Lấy 65% làm giá trị tối thiểu của tỉ trọng đất feralit và 24% là tỉ trọng đất phù sa. Đất feralit chiếm ít nhất gấp khoảng bao nhiêu lần đất phù sa?\nLàm tròn đến một chữ số thập phân.",
         "source": "DOCX Địa lí 8, BÀI 9. THỔ NHƯỠNG VIỆT NAM, phần III, câu 21",
         "answer": "2.7",
         "explanation": "65 : 24 ≈ 2,7",
@@ -3553,7 +3522,7 @@
         "id": "g8_l9_sa_3",
         "type": "short",
         "level": "vận dụng",
-        "prompt": "Diện tích đất bị thoái hóa khoảng 10 triệu ha, chiếm khoảng 30% diện tích cả nước. Theo tỉ lệ này, diện tích cả nước xấp xỉ bao nhiêu triệu ha? Làm tròn đến một chữ số thập phân.",
+        "prompt": "Diện tích đất bị thoái hóa khoảng 10 triệu ha, chiếm khoảng 30% diện tích cả nước. Theo tỉ lệ này, diện tích cả nước xấp xỉ bao nhiêu triệu ha?\nLàm tròn đến một chữ số thập phân.",
         "source": "DOCX Địa lí 8, BÀI 9. THỔ NHƯỠNG VIỆT NAM, phần III, câu 23",
         "answer": "33.3",
         "explanation": "10 : 30 × 100 ≈ 33,3",
@@ -3568,7 +3537,7 @@
         "id": "g8_l9_sa_4",
         "type": "short",
         "level": "vận dụng",
-        "prompt": "Diện tích đất bị thoái hóa khoảng 10 triệu ha, chiếm khoảng 30% diện tích cả nước; khoảng 3/4 diện tích đất nằm ở vùng đồi núi. Theo các tỉ lệ này, diện tích đất ở vùng đồi núi xấp xỉ bao nhiêu triệu ha? Làm tròn đến một chữ số thập phân.",
+        "prompt": "Diện tích đất bị thoái hóa khoảng 10 triệu ha, chiếm khoảng 30% diện tích cả nước; khoảng 3/4 diện tích đất nằm ở vùng đồi núi. Theo các tỉ lệ này, diện tích đất ở vùng đồi núi xấp xỉ bao nhiêu triệu ha?\nLàm tròn đến một chữ số thập phân.",
         "source": "DOCX Địa lí 8, BÀI 9. THỔ NHƯỠNG VIỆT NAM, phần III, câu 24",
         "answer": "25.0",
         "explanation": "10 : 30 × 100 × 75% = 25,0",
@@ -3815,14 +3784,13 @@
         "id": "g8_l10_tf_1",
         "type": "boolean",
         "level": "hiểu",
-        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "prompt": "Cho thông tin: Việt Nam là một trong 16 quốc gia có đa dạng sinh học cao nhất thế giới, với hơn 50 000 loài đã được xác định; sự đa dạng thể hiện ở thành phần loài, nguồn gen và kiểu hệ sinh thái.",
         "source": "DOCX Địa lí 8, BÀI 10. SINH VẬT VIỆT NAM, phần II, câu 16",
-        "context": "Cho thông tin: Việt Nam là một trong 16 quốc gia có đa dạng sinh học cao nhất thế giới, với hơn 50 000 loài đã được xác định; sự đa dạng thể hiện ở thành phần loài, nguồn gen và kiểu hệ sinh thái.",
         "options": [
-          "Việt Nam có hơn 50 000 loài sinh vật đã được xác định.",
-          "Sự đa dạng sinh học chỉ thể hiện ở số lượng loài.",
-          "Số lượng cá thể phong phú trong mỗi loài góp phần tạo nên đa dạng nguồn gen.",
-          "Nếu một quốc gia có nhiều loài nhưng nguồn gen nghèo và hệ sinh thái đơn điệu thì chưa thể coi là đa dạng sinh học toàn diện."
+          "a) Việt Nam có hơn 50 000 loài sinh vật đã được xác định.",
+          "b) Sự đa dạng sinh học chỉ thể hiện ở số lượng loài.",
+          "c) Số lượng cá thể phong phú trong mỗi loài góp phần tạo nên đa dạng nguồn gen.",
+          "d) Nếu một quốc gia có nhiều loài nhưng nguồn gen nghèo và hệ sinh thái đơn điệu thì chưa thể coi là đa dạng sinh học toàn diện."
         ],
         "answer": [
           "Đ",
@@ -3835,14 +3803,13 @@
         "id": "g8_l10_tf_2",
         "type": "boolean",
         "level": "hiểu",
-        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "prompt": "Cho thông tin: Các hệ sinh thái ở Việt Nam gồm hệ sinh thái tự nhiên trên cạn, hệ sinh thái tự nhiên dưới nước và hệ sinh thái nhân tạo.",
         "source": "DOCX Địa lí 8, BÀI 10. SINH VẬT VIỆT NAM, phần II, câu 17",
-        "context": "Cho thông tin: Các hệ sinh thái ở Việt Nam gồm hệ sinh thái tự nhiên trên cạn, hệ sinh thái tự nhiên dưới nước và hệ sinh thái nhân tạo.",
         "options": [
-          "Rừng mưa nhiệt đới thuộc hệ sinh thái tự nhiên trên cạn.",
-          "Rạn san hô thuộc hệ sinh thái nhân tạo.",
-          "Đồng ruộng và vùng chuyên canh là những hệ sinh thái nhân tạo.",
-          "Sự hiện diện đồng thời nhiều nhóm hệ sinh thái là một minh chứng cho tính đa dạng sinh vật Việt Nam."
+          "a) Rừng mưa nhiệt đới thuộc hệ sinh thái tự nhiên trên cạn.",
+          "b) Rạn san hô thuộc hệ sinh thái nhân tạo.",
+          "c) Đồng ruộng và vùng chuyên canh là những hệ sinh thái nhân tạo.",
+          "d) Sự hiện diện đồng thời nhiều nhóm hệ sinh thái là một minh chứng cho tính đa dạng sinh vật Việt Nam."
         ],
         "answer": [
           "Đ",
@@ -3855,14 +3822,13 @@
         "id": "g8_l10_tf_3",
         "type": "boolean",
         "level": "hiểu",
-        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "prompt": "Theo Sách đỏ Việt Nam năm 2024, có 1 398 loài sinh vật bị đe doạ tuyệt chủng, gồm 742 loài động vật và 656 loài thực vật và nấm.",
         "source": "DOCX Địa lí 8, BÀI 10. SINH VẬT VIỆT NAM, phần II, câu 18",
-        "context": "Theo Sách đỏ Việt Nam năm 2024, có 1 398 loài sinh vật bị đe doạ tuyệt chủng, gồm 742 loài động vật và 656 loài thực vật và nấm.",
         "options": [
-          "Tổng số loài bị đe doạ tuyệt chủng là 1 398.",
-          "Số loài thực vật và nấm nhiều hơn số loài động vật.",
-          "Hai nhóm nêu trong thông tin cộng lại đúng bằng tổng số loài bị đe doạ.",
-          "Tỉ trọng động vật trong tổng số loài bị đe doạ lớn hơn 50%."
+          "a) Tổng số loài bị đe doạ tuyệt chủng là 1 398.",
+          "b) Số loài thực vật và nấm nhiều hơn số loài động vật.",
+          "c) Hai nhóm nêu trong thông tin cộng lại đúng bằng tổng số loài bị đe doạ.",
+          "d) Tỉ trọng động vật trong tổng số loài bị đe doạ lớn hơn 50%."
         ],
         "answer": [
           "Đ",
@@ -3875,14 +3841,13 @@
         "id": "g8_l10_tf_4",
         "type": "boolean",
         "level": "hiểu",
-        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "prompt": "Cho bảng số liệu diện tích rừng tự nhiên Việt Nam: 1943: 14,3 triệu ha; 1983: 6,8 triệu ha; 2024: 10,1 triệu ha.",
         "source": "DOCX Địa lí 8, BÀI 10. SINH VẬT VIỆT NAM, phần II, câu 19",
-        "context": "Cho bảng số liệu diện tích rừng tự nhiên Việt Nam: 1943: 14,3 triệu ha; 1983: 6,8 triệu ha; 2024: 10,1 triệu ha.",
         "options": [
-          "Diện tích rừng tự nhiên năm 1983 thấp hơn năm 1943.",
-          "Năm 2024 diện tích rừng tự nhiên đã bằng năm 1943.",
-          "Giai đoạn 1983-2024 diện tích rừng tự nhiên có xu hướng phục hồi.",
-          "Dù phục hồi sau 1983, diện tích năm 2024 vẫn thấp hơn năm 1943, cho thấy yêu cầu bảo tồn rừng vẫn cấp thiết."
+          "a) Diện tích rừng tự nhiên năm 1983 thấp hơn năm 1943.",
+          "b) Năm 2024 diện tích rừng tự nhiên đã bằng năm 1943.",
+          "c) Giai đoạn 1983-2024 diện tích rừng tự nhiên có xu hướng phục hồi.",
+          "d) Dù phục hồi sau 1983, diện tích năm 2024 vẫn thấp hơn năm 1943, cho thấy yêu cầu bảo tồn rừng vẫn cấp thiết."
         ],
         "answer": [
           "Đ",
@@ -3895,14 +3860,13 @@
         "id": "g8_l10_tf_5",
         "type": "boolean",
         "level": "hiểu",
-        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "prompt": "Cho thông tin: Suy giảm đa dạng sinh học ở Việt Nam do cả yếu tố tự nhiên và hoạt động của con người; các biện pháp gồm xây dựng khu bảo tồn, bảo vệ rừng, ngăn phá rừng và săn bắt trái phép, xử lí chất thải, nâng cao ý thức.",
         "source": "DOCX Địa lí 8, BÀI 10. SINH VẬT VIỆT NAM, phần II, câu 20",
-        "context": "Cho thông tin: Suy giảm đa dạng sinh học ở Việt Nam do cả yếu tố tự nhiên và hoạt động của con người; các biện pháp gồm xây dựng khu bảo tồn, bảo vệ rừng, ngăn phá rừng và săn bắt trái phép, xử lí chất thải, nâng cao ý thức.",
         "options": [
-          "Biến đổi khí hậu có thể làm suy giảm đa dạng sinh học.",
-          "Phá rừng và khai thác thuỷ sản quá mức là nguyên nhân do con người.",
-          "Xây dựng khu bảo tồn chỉ có ý nghĩa với thực vật, không có ý nghĩa với động vật.",
-          "Kết hợp bảo vệ sinh cảnh, kiểm soát khai thác và giảm ô nhiễm sẽ hiệu quả hơn chỉ thực hiện một biện pháp đơn lẻ."
+          "a) Biến đổi khí hậu có thể làm suy giảm đa dạng sinh học.",
+          "b) Phá rừng và khai thác thuỷ sản quá mức là nguyên nhân do con người.",
+          "c) Xây dựng khu bảo tồn chỉ có ý nghĩa với thực vật, không có ý nghĩa với động vật.",
+          "d) Kết hợp bảo vệ sinh cảnh, kiểm soát khai thác và giảm ô nhiễm sẽ hiệu quả hơn chỉ thực hiện một biện pháp đơn lẻ."
         ],
         "answer": [
           "Đ",
@@ -3915,7 +3879,7 @@
         "id": "g8_l10_sa_1",
         "type": "short",
         "level": "vận dụng",
-        "prompt": "Theo Sách đỏ Việt Nam năm 2024, có 742 loài động vật trong tổng số 1 398 loài sinh vật bị đe doạ tuyệt chủng. Động vật chiếm bao nhiêu % tổng số loài bị đe doạ? Làm tròn đến một chữ số thập phân của %.",
+        "prompt": "Theo Sách đỏ Việt Nam năm 2024, có 742 loài động vật trong tổng số 1 398 loài sinh vật bị đe doạ tuyệt chủng. Động vật chiếm bao nhiêu % tổng số loài bị đe doạ?\nLàm tròn đến một chữ số thập phân của %.",
         "source": "DOCX Địa lí 8, BÀI 10. SINH VẬT VIỆT NAM, phần III, câu 21",
         "answer": "53.1",
         "explanation": "742 : 1 398 x 100",
@@ -3930,7 +3894,7 @@
         "id": "g8_l10_sa_2",
         "type": "short",
         "level": "vận dụng",
-        "prompt": "Diện tích rừng tự nhiên giảm từ 14,3 triệu ha năm 1943 xuống 6,8 triệu ha năm 1983. Diện tích đã giảm bao nhiêu triệu ha? Làm tròn đến một chữ số thập phân.",
+        "prompt": "Diện tích rừng tự nhiên giảm từ 14,3 triệu ha năm 1943 xuống 6,8 triệu ha năm 1983. Diện tích đã giảm bao nhiêu triệu ha?\nLàm tròn đến một chữ số thập phân.",
         "source": "DOCX Địa lí 8, BÀI 10. SINH VẬT VIỆT NAM, phần III, câu 22",
         "answer": "7.5",
         "explanation": "14,3 - 6,8",
@@ -3945,7 +3909,7 @@
         "id": "g8_l10_sa_3",
         "type": "short",
         "level": "vận dụng",
-        "prompt": "Diện tích rừng tự nhiên tăng từ 6,8 triệu ha năm 1983 lên 10,1 triệu ha năm 2024. Tốc độ tăng của diện tích rừng tự nhiên so với năm 1983 là bao nhiêu %? Tính theo công thức (năm sau - năm trước) / năm trước x 100; làm tròn đến một chữ số thập phân.",
+        "prompt": "Diện tích rừng tự nhiên tăng từ 6,8 triệu ha năm 1983 lên 10,1 triệu ha năm 2024. Tốc độ tăng của diện tích rừng tự nhiên so với năm 1983 là bao nhiêu %?\nTính theo công thức (năm sau - năm trước) / năm trước x 100; làm tròn đến một chữ số thập phân.",
         "source": "DOCX Địa lí 8, BÀI 10. SINH VẬT VIỆT NAM, phần III, câu 23",
         "answer": "48.5",
         "explanation": "(10,1 - 6,8) : 6,8 x 100",
@@ -3960,7 +3924,7 @@
         "id": "g8_l10_sa_4",
         "type": "short",
         "level": "vận dụng",
-        "prompt": "Diện tích rừng tự nhiên năm 2024 là 10,1 triệu ha, năm 1943 là 14,3 triệu ha. Diện tích năm 2024 bằng bao nhiêu % năm 1943? Làm tròn đến một chữ số thập phân.",
+        "prompt": "Diện tích rừng tự nhiên năm 2024 là 10,1 triệu ha, năm 1943 là 14,3 triệu ha. Diện tích năm 2024 bằng bao nhiêu % năm 1943?\nLàm tròn đến một chữ số thập phân.",
         "source": "DOCX Địa lí 8, BÀI 10. SINH VẬT VIỆT NAM, phần III, câu 24",
         "answer": "70.6",
         "explanation": "10,1 : 14,3 x 100",
@@ -3975,7 +3939,7 @@
         "id": "g8_l10_sa_5",
         "type": "short",
         "level": "vận dụng",
-        "prompt": "Từ năm 1943 đến năm 2024, diện tích rừng tự nhiên giảm từ 14,3 xuống 10,1 triệu ha. Bình quân mỗi năm diện tích rừng tự nhiên giảm bao nhiêu nghìn ha? Làm tròn đến 1 chữ số thập phân.",
+        "prompt": "Từ năm 1943 đến năm 2024, diện tích rừng tự nhiên giảm từ 14,3 xuống 10,1 triệu ha. Bình quân mỗi năm diện tích rừng tự nhiên giảm bao nhiêu nghìn ha?\nKhoảng thời gian là 81 năm; làm tròn đến một chữ số thập phân nghìn ha/năm.",
         "source": "DOCX Địa lí 8, BÀI 10. SINH VẬT VIỆT NAM, phần III, câu 25",
         "answer": "51.9",
         "explanation": "(14,3 - 10,1) : 81 x 1000",
@@ -4207,14 +4171,13 @@
         "id": "g8_l11_tf_1",
         "type": "boolean",
         "level": "hiểu",
-        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "prompt": "Cho thông tin: Biển Đông thuộc Thái Bình Dương, trải từ khoảng 3°N đến 26°B và 100°Đ đến 121°Đ, diện tích khoảng 3,44 triệu km².",
         "source": "DOCX Địa lí 8, BÀI 11. PHẠM VI BIỂN ĐÔNG. VÙNG BIỂN ĐẢO VÀ ĐẶC ĐIỂM TỰ NHIÊN VÙNG BIỂN ĐẢO VIỆT NAM, phần II, câu 16",
-        "context": "Cho thông tin: Biển Đông thuộc Thái Bình Dương, trải từ khoảng 3°N đến 26°B và 100°Đ đến 121°Đ, diện tích khoảng 3,44 triệu km².",
         "options": [
-          "Biển Đông thuộc Thái Bình Dương.",
-          "Biển Đông chỉ nằm ở bán cầu Bắc.",
-          "Khoảng chênh lệch vĩ độ của Biển Đông lớn hơn khoảng chênh lệch kinh độ.",
-          "Với diện tích 3,44 triệu km², Biển Đông có quy mô lớn hơn nhiều vùng biển Việt Nam khoảng 1 triệu km²."
+          "a) Biển Đông thuộc Thái Bình Dương.",
+          "b) Biển Đông chỉ nằm ở bán cầu Bắc.",
+          "c) Khoảng chênh lệch vĩ độ của Biển Đông lớn hơn khoảng chênh lệch kinh độ.",
+          "d) Với diện tích 3,44 triệu km², Biển Đông có quy mô lớn hơn nhiều vùng biển Việt Nam khoảng 1 triệu km²."
         ],
         "answer": [
           "Đ",
@@ -4227,14 +4190,13 @@
         "id": "g8_l11_tf_2",
         "type": "boolean",
         "level": "hiểu",
-        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "prompt": "Cho thông tin: Vùng biển Việt Nam gồm nội thuỷ, lãnh hải, vùng tiếp giáp lãnh hải, vùng đặc quyền kinh tế và thềm lục địa.",
         "source": "DOCX Địa lí 8, BÀI 11. PHẠM VI BIỂN ĐÔNG. VÙNG BIỂN ĐẢO VÀ ĐẶC ĐIỂM TỰ NHIÊN VÙNG BIỂN ĐẢO VIỆT NAM, phần II, câu 17",
-        "context": "Cho thông tin: Vùng biển Việt Nam gồm nội thuỷ, lãnh hải, vùng tiếp giáp lãnh hải, vùng đặc quyền kinh tế và thềm lục địa.",
         "options": [
-          "Nội thuỷ nằm phía trong đường cơ sở.",
-          "Lãnh hải rộng 12 hải lí tính từ đường cơ sở.",
-          "Vùng tiếp giáp lãnh hải nằm phía trong lãnh hải.",
-          "Vùng đặc quyền kinh tế hợp với lãnh hải thành vùng rộng 200 hải lí tính từ đường cơ sở."
+          "a) Nội thuỷ nằm phía trong đường cơ sở.",
+          "b) Lãnh hải rộng 12 hải lí tính từ đường cơ sở.",
+          "c) Vùng tiếp giáp lãnh hải nằm phía trong lãnh hải.",
+          "d) Vùng đặc quyền kinh tế hợp với lãnh hải thành vùng rộng 200 hải lí tính từ đường cơ sở."
         ],
         "answer": [
           "Đ",
@@ -4247,14 +4209,13 @@
         "id": "g8_l11_tf_3",
         "type": "boolean",
         "level": "hiểu",
-        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "prompt": "Cho thông tin: Địa hình thềm lục địa nông và bằng phẳng ở phía bắc và phía nam, hẹp và sâu ở miền Trung; đảo ven bờ tập trung ở Quảng Ninh, Hải Phòng, Khánh Hoà, An Giang.",
         "source": "DOCX Địa lí 8, BÀI 11. PHẠM VI BIỂN ĐÔNG. VÙNG BIỂN ĐẢO VÀ ĐẶC ĐIỂM TỰ NHIÊN VÙNG BIỂN ĐẢO VIỆT NAM, phần II, câu 18",
-        "context": "Cho thông tin: Địa hình thềm lục địa nông và bằng phẳng ở phía bắc và phía nam, hẹp và sâu ở miền Trung; đảo ven bờ tập trung ở Quảng Ninh, Hải Phòng, Khánh Hoà, An Giang.",
         "options": [
-          "Thềm lục địa miền Trung hẹp và sâu.",
-          "Các đảo ven bờ chỉ tập trung ở miền Bắc.",
-          "Địa hình thềm lục địa có sự tiếp nối với địa hình đất liền.",
-          "Sự khác biệt địa hình thềm lục địa giữa các khu vực phản ánh tính phân hoá tự nhiên của vùng biển nước ta."
+          "a) Thềm lục địa miền Trung hẹp và sâu.",
+          "b) Các đảo ven bờ chỉ tập trung ở miền Bắc.",
+          "c) Địa hình thềm lục địa có sự tiếp nối với địa hình đất liền.",
+          "d) Sự khác biệt địa hình thềm lục địa giữa các khu vực phản ánh tính phân hoá tự nhiên của vùng biển nước ta."
         ],
         "answer": [
           "Đ",
@@ -4267,14 +4228,13 @@
         "id": "g8_l11_tf_4",
         "type": "boolean",
         "level": "hiểu",
-        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "prompt": "Cho thông tin: Nhiệt độ không khí trung bình năm vùng biển đảo khoảng 23-28°C; lượng mưa trên biển khoảng trên 1 100 mm/năm; trung bình mỗi năm có 5-6 cơn bão ảnh hưởng đến nước ta.",
         "source": "DOCX Địa lí 8, BÀI 11. PHẠM VI BIỂN ĐÔNG. VÙNG BIỂN ĐẢO VÀ ĐẶC ĐIỂM TỰ NHIÊN VÙNG BIỂN ĐẢO VIỆT NAM, phần II, câu 19",
-        "context": "Cho thông tin: Nhiệt độ không khí trung bình năm vùng biển đảo khoảng 23-28°C; lượng mưa trên biển khoảng trên 1 100 mm/năm; trung bình mỗi năm có 5-6 cơn bão ảnh hưởng đến nước ta.",
         "options": [
-          "Nhiệt độ trung bình năm vùng biển đảo đều trên 20°C.",
-          "Lượng mưa trên biển được nêu là nhỏ hơn trên đất liền.",
-          "Vùng biển nước ta không chịu ảnh hưởng của bão.",
-          "Các đặc điểm trên cho thấy khí hậu vùng biển đảo mang tính nhiệt đới gió mùa nhưng vẫn có nhiều thiên tai."
+          "a) Nhiệt độ trung bình năm vùng biển đảo đều trên 20°C.",
+          "b) Lượng mưa trên biển được nêu là nhỏ hơn trên đất liền.",
+          "c) Vùng biển nước ta không chịu ảnh hưởng của bão.",
+          "d) Các đặc điểm trên cho thấy khí hậu vùng biển đảo mang tính nhiệt đới gió mùa nhưng vẫn có nhiều thiên tai."
         ],
         "answer": [
           "Đ",
@@ -4287,14 +4247,13 @@
         "id": "g8_l11_tf_5",
         "type": "boolean",
         "level": "hiểu",
-        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "prompt": "Cho thông tin: Dòng biển ven bờ thay đổi theo mùa; mùa đông hướng đông bắc - tây nam, mùa hạ hướng tây nam - đông bắc; dòng biển mùa đông mạnh hơn mùa hạ.",
         "source": "DOCX Địa lí 8, BÀI 11. PHẠM VI BIỂN ĐÔNG. VÙNG BIỂN ĐẢO VÀ ĐẶC ĐIỂM TỰ NHIÊN VÙNG BIỂN ĐẢO VIỆT NAM, phần II, câu 20",
-        "context": "Cho thông tin: Dòng biển ven bờ thay đổi theo mùa; mùa đông hướng đông bắc - tây nam, mùa hạ hướng tây nam - đông bắc; dòng biển mùa đông mạnh hơn mùa hạ.",
         "options": [
-          "Hướng dòng biển ven bờ thay đổi theo mùa.",
-          "Dòng biển mùa hạ chảy cùng hướng với dòng biển mùa đông.",
-          "Cường độ dòng biển mùa đông lớn hơn mùa hạ.",
-          "Nếu quan sát thấy dòng biển chủ yếu tây nam - đông bắc thì có thể suy luận thời điểm phù hợp là mùa hạ."
+          "a) Hướng dòng biển ven bờ thay đổi theo mùa.",
+          "b) Dòng biển mùa hạ chảy cùng hướng với dòng biển mùa đông.",
+          "c) Cường độ dòng biển mùa đông lớn hơn mùa hạ.",
+          "d) Nếu quan sát thấy dòng biển chủ yếu tây nam - đông bắc thì có thể suy luận thời điểm phù hợp là mùa hạ."
         ],
         "answer": [
           "Đ",
@@ -4322,7 +4281,7 @@
         "id": "g8_l11_sa_2",
         "type": "short",
         "level": "vận dụng",
-        "prompt": "Diện tích Biển Đông khoảng 3,44 triệu km², vùng biển Việt Nam khoảng 1 triệu km². Lấy 1 triệu km² để tính, vùng biển Việt Nam chiếm khoảng bao nhiêu % diện tích Biển Đông? Làm tròn đến một chữ số thập phân.",
+        "prompt": "Diện tích Biển Đông khoảng 3,44 triệu km², vùng biển Việt Nam khoảng 1 triệu km². Lấy 1 triệu km² để tính, vùng biển Việt Nam chiếm khoảng bao nhiêu % diện tích Biển Đông?\nLàm tròn đến một chữ số thập phân.",
         "source": "DOCX Địa lí 8, BÀI 11. PHẠM VI BIỂN ĐÔNG. VÙNG BIỂN ĐẢO VÀ ĐẶC ĐIỂM TỰ NHIÊN VÙNG BIỂN ĐẢO VIỆT NAM, phần III, câu 22",
         "answer": "29.1",
         "explanation": "1 : 3,44 x 100",
@@ -4337,7 +4296,7 @@
         "id": "g8_l11_sa_3",
         "type": "short",
         "level": "vận dụng",
-        "prompt": "Lãnh hải Việt Nam rộng 12 hải lí. Biết 1 hải lí = 1 852 m, chiều rộng lãnh hải tương đương bao nhiêu ki-lô-mét? Làm tròn đến một chữ số thập phân.",
+        "prompt": "Lãnh hải Việt Nam rộng 12 hải lí. Biết 1 hải lí = 1 852 m, chiều rộng lãnh hải tương đương bao nhiêu ki-lô-mét?\nLàm tròn đến một chữ số thập phân.",
         "source": "DOCX Địa lí 8, BÀI 11. PHẠM VI BIỂN ĐÔNG. VÙNG BIỂN ĐẢO VÀ ĐẶC ĐIỂM TỰ NHIÊN VÙNG BIỂN ĐẢO VIỆT NAM, phần III, câu 23",
         "answer": "22.2",
         "explanation": "12 x 1,852",
@@ -4352,7 +4311,7 @@
         "id": "g8_l11_sa_4",
         "type": "short",
         "level": "vận dụng",
-        "prompt": "Vùng đặc quyền kinh tế hợp với lãnh hải thành vùng rộng 200 hải lí tính từ đường cơ sở. Quy đổi 200 hải lí ra ki-lô-mét. Biết 1 hải lí = 1 852 m; làm tròn đến một chữ số thập phân.",
+        "prompt": "Vùng đặc quyền kinh tế hợp với lãnh hải thành vùng rộng 200 hải lí tính từ đường cơ sở. Quy đổi 200 hải lí ra ki-lô-mét.\nBiết 1 hải lí = 1 852 m; làm tròn đến một chữ số thập phân.",
         "source": "DOCX Địa lí 8, BÀI 11. PHẠM VI BIỂN ĐÔNG. VÙNG BIỂN ĐẢO VÀ ĐẶC ĐIỂM TỰ NHIÊN VÙNG BIỂN ĐẢO VIỆT NAM, phần III, câu 24",
         "answer": "370.4",
         "explanation": "200 x 1,852",
@@ -4599,14 +4558,13 @@
         "id": "g8_l12_tf_1",
         "type": "boolean",
         "level": "hiểu",
-        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "prompt": "Cho thông tin: Môi trường biển đảo gồm các yếu tố tự nhiên và nhân tạo; môi trường biển là một thể thống nhất, còn môi trường đảo có diện tích nhỏ và biệt lập nên nhạy cảm trước tác động của con người.",
         "source": "DOCX Địa lí 8, BÀI 12. MÔI TRƯỜNG VÀ TÀI NGUYÊN BIỂN ĐẢO VIỆT NAM, phần II, câu 16",
-        "context": "Cho thông tin: Môi trường biển đảo gồm các yếu tố tự nhiên và nhân tạo; môi trường biển là một thể thống nhất, còn môi trường đảo có diện tích nhỏ và biệt lập nên nhạy cảm trước tác động của con người.",
         "options": [
-          "Môi trường biển đảo chỉ gồm các thành phần tự nhiên.",
-          "Môi trường biển có tính liên kết cao giữa vùng bờ, vùng nước và các đảo.",
-          "Môi trường đảo dễ suy thoái hơn đất liền khi chịu tác động mạnh.",
-          "Khi quản lí môi trường biển đảo cần xem xét tác động lan truyền giữa các khu vực, không chỉ xử lí riêng điểm ô nhiễm."
+          "a) Môi trường biển đảo chỉ gồm các thành phần tự nhiên.",
+          "b) Môi trường biển có tính liên kết cao giữa vùng bờ, vùng nước và các đảo.",
+          "c) Môi trường đảo dễ suy thoái hơn đất liền khi chịu tác động mạnh.",
+          "d) Khi quản lí môi trường biển đảo cần xem xét tác động lan truyền giữa các khu vực, không chỉ xử lí riêng điểm ô nhiễm."
         ],
         "answer": [
           "S",
@@ -4619,14 +4577,13 @@
         "id": "g8_l12_tf_2",
         "type": "boolean",
         "level": "hiểu",
-        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "prompt": "Cho thông tin: Chất lượng nước biển ven bờ còn khá tốt nhưng có xu hướng giảm do hoạt động kinh tế - xã hội ven bờ, nước thải, rác thải; biến đổi khí hậu và nước biển dâng cũng gây tác động xấu.",
         "source": "DOCX Địa lí 8, BÀI 12. MÔI TRƯỜNG VÀ TÀI NGUYÊN BIỂN ĐẢO VIỆT NAM, phần II, câu 17",
-        "context": "Cho thông tin: Chất lượng nước biển ven bờ còn khá tốt nhưng có xu hướng giảm do hoạt động kinh tế - xã hội ven bờ, nước thải, rác thải; biến đổi khí hậu và nước biển dâng cũng gây tác động xấu.",
         "options": [
-          "Chất lượng nước biển ven bờ được đánh giá là còn khá tốt.",
-          "Môi trường biển không chịu tác động từ hoạt động du lịch và cảng biển.",
-          "Biến đổi khí hậu là một trong các tác nhân gây sức ép lên môi trường biển đảo.",
-          "Một khu vực ven bờ phát triển nhanh cần đồng thời kiểm soát chất thải và thích ứng với biến đổi khí hậu."
+          "a) Chất lượng nước biển ven bờ được đánh giá là còn khá tốt.",
+          "b) Môi trường biển không chịu tác động từ hoạt động du lịch và cảng biển.",
+          "c) Biến đổi khí hậu là một trong các tác nhân gây sức ép lên môi trường biển đảo.",
+          "d) Một khu vực ven bờ phát triển nhanh cần đồng thời kiểm soát chất thải và thích ứng với biến đổi khí hậu."
         ],
         "answer": [
           "Đ",
@@ -4639,14 +4596,13 @@
         "id": "g8_l12_tf_3",
         "type": "boolean",
         "level": "hiểu",
-        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "prompt": "Cho thông tin: Vùng biển Việt Nam có hơn 2 000 loài cá, khoảng 110 loài có giá trị kinh tế cao; còn có giáp xác, thân mềm, rong biển.",
         "source": "DOCX Địa lí 8, BÀI 12. MÔI TRƯỜNG VÀ TÀI NGUYÊN BIỂN ĐẢO VIỆT NAM, phần II, câu 18",
-        "context": "Cho thông tin: Vùng biển Việt Nam có hơn 2 000 loài cá, khoảng 110 loài có giá trị kinh tế cao; còn có giáp xác, thân mềm, rong biển.",
         "options": [
-          "Vùng biển Việt Nam có hơn 2 000 loài cá.",
-          "Tất cả các loài cá đều có giá trị kinh tế cao.",
-          "Nguồn lợi sinh vật biển không chỉ gồm cá.",
-          "Sự phong phú về nhóm sinh vật và số loài là cơ sở để khẳng định tài nguyên sinh vật biển đa dạng."
+          "a) Vùng biển Việt Nam có hơn 2 000 loài cá.",
+          "b) Tất cả các loài cá đều có giá trị kinh tế cao.",
+          "c) Nguồn lợi sinh vật biển không chỉ gồm cá.",
+          "d) Sự phong phú về nhóm sinh vật và số loài là cơ sở để khẳng định tài nguyên sinh vật biển đa dạng."
         ],
         "answer": [
           "Đ",
@@ -4659,14 +4615,13 @@
         "id": "g8_l12_tf_4",
         "type": "boolean",
         "level": "hiểu",
-        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "prompt": "Cho thông tin: Dầu mỏ, khí tự nhiên tập trung ở các bể trong vùng thềm lục địa; các khoáng sản khác có ti-tan, cát thuỷ tinh, muối; băng cháy có tiềm năng sử dụng trong tương lai.",
         "source": "DOCX Địa lí 8, BÀI 12. MÔI TRƯỜNG VÀ TÀI NGUYÊN BIỂN ĐẢO VIỆT NAM, phần II, câu 19",
-        "context": "Cho thông tin: Dầu mỏ, khí tự nhiên tập trung ở các bể trong vùng thềm lục địa; các khoáng sản khác có ti-tan, cát thuỷ tinh, muối; băng cháy có tiềm năng sử dụng trong tương lai.",
         "options": [
-          "Dầu mỏ và khí tự nhiên gắn với vùng thềm lục địa.",
-          "Ti-tan và cát thuỷ tinh không phải tài nguyên khoáng sản biển.",
-          "Băng cháy được nêu là loại khoáng sản có tiềm năng sử dụng lớn trong tương lai.",
-          "Tài nguyên khoáng sản biển đa dạng tạo cơ sở cho nhiều hoạt động kinh tế nhưng cần khai thác hợp lí để hạn chế tác động môi trường."
+          "a) Dầu mỏ và khí tự nhiên gắn với vùng thềm lục địa.",
+          "b) Ti-tan và cát thuỷ tinh không phải tài nguyên khoáng sản biển.",
+          "c) Băng cháy được nêu là loại khoáng sản có tiềm năng sử dụng lớn trong tương lai.",
+          "d) Tài nguyên khoáng sản biển đa dạng tạo cơ sở cho nhiều hoạt động kinh tế nhưng cần khai thác hợp lí để hạn chế tác động môi trường."
         ],
         "answer": [
           "Đ",
@@ -4679,14 +4634,13 @@
         "id": "g8_l12_tf_5",
         "type": "boolean",
         "level": "hiểu",
-        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "prompt": "Cho thông tin: Bờ biển dài, có nhiều bãi cát, vịnh, hang động đẹp, nước biển trong xanh và hệ sinh thái biển phong phú, thuận lợi phát triển du lịch biển.",
         "source": "DOCX Địa lí 8, BÀI 12. MÔI TRƯỜNG VÀ TÀI NGUYÊN BIỂN ĐẢO VIỆT NAM, phần II, câu 20",
-        "context": "Cho thông tin: Bờ biển dài, có nhiều bãi cát, vịnh, hang động đẹp, nước biển trong xanh và hệ sinh thái biển phong phú, thuận lợi phát triển du lịch biển.",
         "options": [
-          "Tài nguyên du lịch biển chỉ dựa vào bãi cát.",
-          "Cảnh quan đảo và hệ sinh thái biển là thành phần của tài nguyên du lịch.",
-          "Ô nhiễm môi trường có thể làm giảm giá trị khai thác du lịch biển.",
-          "Muốn phát triển du lịch biển bền vững cần gắn khai thác tài nguyên với bảo vệ môi trường."
+          "a) Tài nguyên du lịch biển chỉ dựa vào bãi cát.",
+          "b) Cảnh quan đảo và hệ sinh thái biển là thành phần của tài nguyên du lịch.",
+          "c) Ô nhiễm môi trường có thể làm giảm giá trị khai thác du lịch biển.",
+          "d) Muốn phát triển du lịch biển bền vững cần gắn khai thác tài nguyên với bảo vệ môi trường."
         ],
         "answer": [
           "S",
@@ -4699,7 +4653,7 @@
         "id": "g8_l12_sa_1",
         "type": "short",
         "level": "vận dụng",
-        "prompt": "Vùng biển Việt Nam có hơn 2 000 loài cá, trong đó khoảng 110 loài có giá trị kinh tế cao. Lấy 2 000 loài làm mốc tính, số loài có giá trị kinh tế cao chiếm khoảng bao nhiêu %? Làm tròn đến một chữ số thập phân.",
+        "prompt": "Vùng biển Việt Nam có hơn 2 000 loài cá, trong đó khoảng 110 loài có giá trị kinh tế cao. Lấy 2 000 loài làm mốc tính, số loài có giá trị kinh tế cao chiếm khoảng bao nhiêu %?\nLàm tròn đến một chữ số thập phân.",
         "source": "DOCX Địa lí 8, BÀI 12. MÔI TRƯỜNG VÀ TÀI NGUYÊN BIỂN ĐẢO VIỆT NAM, phần III, câu 21",
         "answer": "5.5",
         "explanation": "110 : 2 000 x 100",
@@ -4714,7 +4668,7 @@
         "id": "g8_l12_sa_2",
         "type": "short",
         "level": "vận dụng",
-        "prompt": "Lấy 2 000 loài làm mốc tính và 110 loài có giá trị kinh tế cao, tổng số loài cá gấp khoảng bao nhiêu lần số loài có giá trị kinh tế cao? Làm tròn đến một chữ số thập phân.",
+        "prompt": "Lấy 2 000 loài làm mốc tính và 110 loài có giá trị kinh tế cao, tổng số loài cá gấp khoảng bao nhiêu lần số loài có giá trị kinh tế cao?\nLàm tròn đến một chữ số thập phân.",
         "source": "DOCX Địa lí 8, BÀI 12. MÔI TRƯỜNG VÀ TÀI NGUYÊN BIỂN ĐẢO VIỆT NAM, phần III, câu 22",
         "answer": "18.2",
         "explanation": "2 000 : 110",
@@ -4744,7 +4698,7 @@
         "id": "g8_l12_sa_4",
         "type": "short",
         "level": "vận dụng",
-        "prompt": "Nếu 110 loài cá có giá trị kinh tế cao tương ứng 5,5% tổng số loài cá, hãy tính tổng số loài cá theo tỉ lệ này. Làm tròn đến hàng đơn vị.",
+        "prompt": "Nếu 110 loài cá có giá trị kinh tế cao tương ứng 5,5% tổng số loài cá, hãy tính tổng số loài cá theo tỉ lệ này.\nLàm tròn đến hàng đơn vị.",
         "source": "DOCX Địa lí 8, BÀI 12. MÔI TRƯỜNG VÀ TÀI NGUYÊN BIỂN ĐẢO VIỆT NAM, phần III, câu 24",
         "answer": "2000",
         "explanation": "110 : 5,5 x 100",
@@ -4759,7 +4713,7 @@
         "id": "g8_l12_sa_5",
         "type": "short",
         "level": "vận dụng",
-        "prompt": "Lấy 2 000 loài làm mốc tính, nhóm không thuộc 110 loài có giá trị kinh tế cao chiếm khoảng bao nhiêu % tổng số loài cá? Làm tròn đến một chữ số thập phân.",
+        "prompt": "Lấy 2 000 loài làm mốc tính, nhóm không thuộc 110 loài có giá trị kinh tế cao chiếm khoảng bao nhiêu % tổng số loài cá?\nLàm tròn đến một chữ số thập phân.",
         "source": "DOCX Địa lí 8, BÀI 12. MÔI TRƯỜNG VÀ TÀI NGUYÊN BIỂN ĐẢO VIỆT NAM, phần III, câu 25",
         "answer": "94.5",
         "explanation": "(2 000 - 110) : 2 000 x 100",
@@ -4991,14 +4945,13 @@
         "id": "g8_l13_tf_1",
         "type": "boolean",
         "level": "hiểu",
-        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "prompt": "Cho thông tin: Châu thổ sông Hồng rộng khoảng 15 000 km², hình thành do phù sa hệ thống sông Hồng kết hợp với tác động của thuỷ triều và sóng biển.",
         "source": "DOCX Địa lí 8, CHỦ ĐỀ CHUNG 1. VĂN MINH CHÂU THỔ SÔNG HỒNG VÀ SÔNG CỬU LONG, phần II, câu 16",
-        "context": "Cho thông tin: Châu thổ sông Hồng rộng khoảng 15 000 km², hình thành do phù sa hệ thống sông Hồng kết hợp với tác động của thuỷ triều và sóng biển.",
         "options": [
-          "Châu thổ sông Hồng rộng khoảng 15 000 km².",
-          "Châu thổ sông Hồng chỉ do phù sa sông tạo thành, không chịu tác động của biển.",
-          "Phù sa lắng đọng ở cửa sông làm châu thổ có xu hướng tiến ra biển.",
-          "Khi lượng phù sa giảm mạnh, tốc độ bồi tụ và tiến ra biển có thể suy giảm."
+          "a) Châu thổ sông Hồng rộng khoảng 15 000 km².",
+          "b) Châu thổ sông Hồng chỉ do phù sa sông tạo thành, không chịu tác động của biển.",
+          "c) Phù sa lắng đọng ở cửa sông làm châu thổ có xu hướng tiến ra biển.",
+          "d) Khi lượng phù sa giảm mạnh, tốc độ bồi tụ và tiến ra biển có thể suy giảm."
         ],
         "answer": [
           "Đ",
@@ -5011,14 +4964,13 @@
         "id": "g8_l13_tf_2",
         "type": "boolean",
         "level": "hiểu",
-        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "prompt": "Cho thông tin: Sông Hồng có mùa lũ 5 tháng, chiếm khoảng 75% lưu lượng năm; mùa cạn 7 tháng, chiếm khoảng 25%; mạng lưới dạng nan quạt.",
         "source": "DOCX Địa lí 8, CHỦ ĐỀ CHUNG 1. VĂN MINH CHÂU THỔ SÔNG HỒNG VÀ SÔNG CỬU LONG, phần II, câu 17",
-        "context": "Cho thông tin: Sông Hồng có mùa lũ 5 tháng, chiếm khoảng 75% lưu lượng năm; mùa cạn 7 tháng, chiếm khoảng 25%; mạng lưới dạng nan quạt.",
         "options": [
-          "Mùa lũ sông Hồng kéo dài từ tháng 6 đến tháng 10.",
-          "Mùa cạn chiếm phần lớn lưu lượng năm.",
-          "Mạng lưới nan quạt góp phần làm lũ lên nhanh khi mưa lớn.",
-          "Xây dựng hồ chứa ở thượng lưu có thể làm chế độ nước điều hoà hơn."
+          "a) Mùa lũ sông Hồng kéo dài từ tháng 6 đến tháng 10.",
+          "b) Mùa cạn chiếm phần lớn lưu lượng năm.",
+          "c) Mạng lưới nan quạt góp phần làm lũ lên nhanh khi mưa lớn.",
+          "d) Xây dựng hồ chứa ở thượng lưu có thể làm chế độ nước điều hoà hơn."
         ],
         "answer": [
           "Đ",
@@ -5031,14 +4983,13 @@
         "id": "g8_l13_tf_3",
         "type": "boolean",
         "level": "hiểu",
-        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "prompt": "Cho thông tin: Sông Cửu Long có mùa lũ 5 tháng chiếm khoảng 80% lưu lượng năm, mùa cạn 7 tháng chiếm khoảng 20%; lũ lên và rút chậm do lưu vực dài, dạng lông chim và hồ Tôn-lê Sáp điều tiết.",
         "source": "DOCX Địa lí 8, CHỦ ĐỀ CHUNG 1. VĂN MINH CHÂU THỔ SÔNG HỒNG VÀ SÔNG CỬU LONG, phần II, câu 18",
-        "context": "Cho thông tin: Sông Cửu Long có mùa lũ 5 tháng chiếm khoảng 80% lưu lượng năm, mùa cạn 7 tháng chiếm khoảng 20%; lũ lên và rút chậm do lưu vực dài, dạng lông chim và hồ Tôn-lê Sáp điều tiết.",
         "options": [
-          "Mùa lũ sông Cửu Long từ tháng 7 đến tháng 11.",
-          "Mùa cạn chiếm khoảng 20% lưu lượng năm.",
-          "Lũ sông Cửu Long lên nhanh và đột ngột hơn sông Hồng do mạng lưới nan quạt.",
-          "Khả năng điều tiết của hồ Tôn-lê Sáp là một nguyên nhân làm lũ lên xuống chậm."
+          "a) Mùa lũ sông Cửu Long từ tháng 7 đến tháng 11.",
+          "b) Mùa cạn chiếm khoảng 20% lưu lượng năm.",
+          "c) Lũ sông Cửu Long lên nhanh và đột ngột hơn sông Hồng do mạng lưới nan quạt.",
+          "d) Khả năng điều tiết của hồ Tôn-lê Sáp là một nguyên nhân làm lũ lên xuống chậm."
         ],
         "answer": [
           "Đ",
@@ -5051,14 +5002,13 @@
         "id": "g8_l13_tf_4",
         "type": "boolean",
         "level": "hiểu",
-        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "prompt": "Cho thông tin: Từ xa xưa, cư dân châu thổ sông Hồng đã đào kênh, dẫn nước, tiêu nước, phân lũ và đắp đê để phát triển nông nghiệp lúa nước và bảo vệ cuộc sống.",
         "source": "DOCX Địa lí 8, CHỦ ĐỀ CHUNG 1. VĂN MINH CHÂU THỔ SÔNG HỒNG VÀ SÔNG CỬU LONG, phần II, câu 19",
-        "context": "Cho thông tin: Từ xa xưa, cư dân châu thổ sông Hồng đã đào kênh, dẫn nước, tiêu nước, phân lũ và đắp đê để phát triển nông nghiệp lúa nước và bảo vệ cuộc sống.",
         "options": [
-          "Điều tiết và chế ngự nguồn nước có vai trò quan trọng đối với trồng lúa nước.",
-          "Cư dân châu thổ sông Hồng hoàn toàn không sử dụng kênh đào.",
-          "Đắp đê vừa phục vụ sản xuất vừa góp phần phòng chống lũ.",
-          "Hệ thống đê lớn có thể làm giảm bồi đắp phù sa thường xuyên ở khu vực trong đê."
+          "a) Điều tiết và chế ngự nguồn nước có vai trò quan trọng đối với trồng lúa nước.",
+          "b) Cư dân châu thổ sông Hồng hoàn toàn không sử dụng kênh đào.",
+          "c) Đắp đê vừa phục vụ sản xuất vừa góp phần phòng chống lũ.",
+          "d) Hệ thống đê lớn có thể làm giảm bồi đắp phù sa thường xuyên ở khu vực trong đê."
         ],
         "answer": [
           "Đ",
@@ -5071,14 +5021,13 @@
         "id": "g8_l13_tf_5",
         "type": "boolean",
         "level": "hiểu",
-        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "prompt": "Cho thông tin: Ở Đồng bằng sông Cửu Long, khai hoang được đẩy mạnh từ khoảng thế kỉ XVII; nhiều kênh lớn được đào; cư dân hình thành chợ nổi, nhà nổi và văn hoá sông nước.",
         "source": "DOCX Địa lí 8, CHỦ ĐỀ CHUNG 1. VĂN MINH CHÂU THỔ SÔNG HỒNG VÀ SÔNG CỬU LONG, phần II, câu 20",
-        "context": "Cho thông tin: Ở Đồng bằng sông Cửu Long, khai hoang được đẩy mạnh từ khoảng thế kỉ XVII; nhiều kênh lớn được đào; cư dân hình thành chợ nổi, nhà nổi và văn hoá sông nước.",
         "options": [
-          "Khai hoang Nam Bộ được đẩy mạnh từ khoảng thế kỉ XVII.",
-          "Đào kênh là một hoạt động cải tạo và khai thác châu thổ.",
-          "Chợ nổi cho thấy cư dân xa rời môi trường sông nước.",
-          "Các hình thức cư trú, giao thương trên sông thể hiện khả năng thích ứng với điều kiện tự nhiên của châu thổ."
+          "a) Khai hoang Nam Bộ được đẩy mạnh từ khoảng thế kỉ XVII.",
+          "b) Đào kênh là một hoạt động cải tạo và khai thác châu thổ.",
+          "c) Chợ nổi cho thấy cư dân xa rời môi trường sông nước.",
+          "d) Các hình thức cư trú, giao thương trên sông thể hiện khả năng thích ứng với điều kiện tự nhiên của châu thổ."
         ],
         "answer": [
           "Đ",
@@ -5091,7 +5040,7 @@
         "id": "g8_l13_sa_1",
         "type": "short",
         "level": "vận dụng",
-        "prompt": "Tổng lượng dòng chảy của hệ thống sông Cửu Long là 507 tỉ m³/năm, chiếm 60,4% tổng lượng nước của tất cả sông ngòi Việt Nam. Tổng lượng nước của tất cả sông ngòi Việt Nam khoảng bao nhiêu tỉ m³/năm? Làm tròn đến một chữ số thập phân.",
+        "prompt": "Tổng lượng dòng chảy của hệ thống sông Cửu Long là 507 tỉ m³/năm, chiếm 60,4% tổng lượng nước của tất cả sông ngòi Việt Nam. Tổng lượng nước của tất cả sông ngòi Việt Nam khoảng bao nhiêu tỉ m³/năm?\nLàm tròn đến một chữ số thập phân.",
         "source": "DOCX Địa lí 8, CHỦ ĐỀ CHUNG 1. VĂN MINH CHÂU THỔ SÔNG HỒNG VÀ SÔNG CỬU LONG, phần III, câu 21",
         "answer": "839.4",
         "explanation": "507 : 60,4 x 100",
@@ -5151,7 +5100,7 @@
         "id": "g8_l13_sa_5",
         "type": "short",
         "level": "vận dụng",
-        "prompt": "Cho lưu lượng nước sông Hồng tại trạm Hà Nội (m³/s): 984; 924; 934; 1 061; 1 668; 3 080; 5 632; 5 262; 3 584; 2 647; 1 863; 1 159. Lưu lượng trung bình của 12 tháng là bao nhiêu m³/s? Làm tròn đến hàng đơn vị.",
+        "prompt": "Cho lưu lượng nước sông Hồng tại trạm Hà Nội (m³/s): 984; 924; 934; 1 061; 1 668; 3 080; 5 632; 5 262; 3 584; 2 647; 1 863; 1 159. Lưu lượng trung bình của 12 tháng là bao nhiêu m³/s?\nLàm tròn đến hàng đơn vị.",
         "source": "DOCX Địa lí 8, CHỦ ĐỀ CHUNG 1. VĂN MINH CHÂU THỔ SÔNG HỒNG VÀ SÔNG CỬU LONG, phần III, câu 25",
         "answer": "2400",
         "explanation": "Tổng 12 tháng : 12",
@@ -5363,7 +5312,8 @@
           "C. việc từ bỏ các đảo xa bờ.",
           "D. không có tổ chức quản lí biển đảo."
         ],
-        "answer": "A. hoạt động thực thi và bảo vệ chủ quyền biển đảo."
+        "answer": "A. hoạt động thực thi và bảo vệ chủ quyền biển đảo.",
+        "media": "/media/tu-lieu-con-lon.jpg"
       },
       {
         "id": "g8_l14_mcq_15",
@@ -5383,14 +5333,13 @@
         "id": "g8_l14_tf_1",
         "type": "boolean",
         "level": "hiểu",
-        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "prompt": "Cho thông tin: Đường cơ sở là căn cứ xác định chiều rộng lãnh hải và các vùng biển khác; đường cơ sở của lục địa Việt Nam là đường thẳng gãy khúc nối các điểm từ 0 đến A24.",
         "source": "DOCX Địa lí 8, CHỦ ĐỀ CHUNG 2. BẢO VỆ CHỦ QUYỀN, CÁC QUYỀN VÀ LỢI ÍCH HỢP PHÁP CỦA VIỆT NAM Ở BIỂN ĐÔNG, phần II, câu 16",
-        "context": "Cho thông tin: Đường cơ sở là căn cứ xác định chiều rộng lãnh hải và các vùng biển khác; đường cơ sở của lục địa Việt Nam là đường thẳng gãy khúc nối các điểm từ 0 đến A24.",
         "options": [
-          "Đường cơ sở có ý nghĩa xác định phạm vi các vùng biển.",
-          "Hệ thống điểm đường cơ sở chỉ gồm A1 đến A24, không có điểm 0.",
-          "Các điểm đường cơ sở được phân bố dọc ven biển và trên một số đảo.",
-          "Việc xác định rõ đường cơ sở tạo căn cứ pháp lí - không gian cho quản lí các vùng biển."
+          "a) Đường cơ sở có ý nghĩa xác định phạm vi các vùng biển.",
+          "b) Hệ thống điểm đường cơ sở chỉ gồm A1 đến A24, không có điểm 0.",
+          "c) Các điểm đường cơ sở được phân bố dọc ven biển và trên một số đảo.",
+          "d) Việc xác định rõ đường cơ sở tạo căn cứ pháp lí - không gian cho quản lí các vùng biển."
         ],
         "answer": [
           "Đ",
@@ -5403,14 +5352,13 @@
         "id": "g8_l14_tf_2",
         "type": "boolean",
         "level": "hiểu",
-        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "prompt": "Cho thông tin: Ngày 25-12-2000, Việt Nam và Trung Quốc kí Hiệp định Phân định vịnh Bắc Bộ; đường phân định được xác định qua 21 điểm nối tuần tự bằng các đoạn thẳng.",
         "source": "DOCX Địa lí 8, CHỦ ĐỀ CHUNG 2. BẢO VỆ CHỦ QUYỀN, CÁC QUYỀN VÀ LỢI ÍCH HỢP PHÁP CỦA VIỆT NAM Ở BIỂN ĐÔNG, phần II, câu 17",
-        "context": "Cho thông tin: Ngày 25-12-2000, Việt Nam và Trung Quốc kí Hiệp định Phân định vịnh Bắc Bộ; đường phân định được xác định qua 21 điểm nối tuần tự bằng các đoạn thẳng.",
         "options": [
-          "Hiệp định được kí năm 2000.",
-          "Đường phân định vịnh Bắc Bộ có 21 điểm.",
-          "Đường phân định này dùng để xác định ranh giới tất cả các vùng biển trên toàn Biển Đông.",
-          "Việc phân định bằng hiệp định là một ví dụ về giải quyết vấn đề trên biển bằng biện pháp hoà bình."
+          "a) Hiệp định được kí năm 2000.",
+          "b) Đường phân định vịnh Bắc Bộ có 21 điểm.",
+          "c) Đường phân định này dùng để xác định ranh giới tất cả các vùng biển trên toàn Biển Đông.",
+          "d) Việc phân định bằng hiệp định là một ví dụ về giải quyết vấn đề trên biển bằng biện pháp hoà bình."
         ],
         "answer": [
           "Đ",
@@ -5423,14 +5371,13 @@
         "id": "g8_l14_tf_3",
         "type": "boolean",
         "level": "hiểu",
-        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "prompt": "Cho thông tin: Tài nguyên biển phong phú, vị trí gần tuyến hàng hải quốc tế và nhiều vịnh kín thuận lợi phát triển kinh tế biển; nhưng thiên tai, biến đổi khí hậu và hạ tầng chưa đồng bộ gây nhiều khó khăn.",
         "source": "DOCX Địa lí 8, CHỦ ĐỀ CHUNG 2. BẢO VỆ CHỦ QUYỀN, CÁC QUYỀN VÀ LỢI ÍCH HỢP PHÁP CỦA VIỆT NAM Ở BIỂN ĐÔNG, phần II, câu 18",
-        "context": "Cho thông tin: Tài nguyên biển phong phú, vị trí gần tuyến hàng hải quốc tế và nhiều vịnh kín thuận lợi phát triển kinh tế biển; nhưng thiên tai, biến đổi khí hậu và hạ tầng chưa đồng bộ gây nhiều khó khăn.",
         "options": [
-          "Tài nguyên biển là một thuận lợi phát triển kinh tế biển.",
-          "Bão và nước biển dâng không ảnh hưởng đến kinh tế biển.",
-          "Vị trí gần tuyến hàng hải quốc tế thuận lợi cho giao thương.",
-          "Muốn khai thác tốt tiềm năng biển cần đồng thời nâng cấp hạ tầng và tăng khả năng thích ứng thiên tai."
+          "a) Tài nguyên biển là một thuận lợi phát triển kinh tế biển.",
+          "b) Bão và nước biển dâng không ảnh hưởng đến kinh tế biển.",
+          "c) Vị trí gần tuyến hàng hải quốc tế thuận lợi cho giao thương.",
+          "d) Muốn khai thác tốt tiềm năng biển cần đồng thời nâng cấp hạ tầng và tăng khả năng thích ứng thiên tai."
         ],
         "answer": [
           "Đ",
@@ -5443,14 +5390,13 @@
         "id": "g8_l14_tf_4",
         "type": "boolean",
         "level": "hiểu",
-        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "prompt": "Cho thông tin: UNCLOS 1982 là cơ sở pháp lí quốc tế; Việt Nam ban hành Luật Biên giới Quốc gia 2003, Luật Biển 2012 và tham gia các thoả thuận, hiệp định phân định, hợp tác trên biển.",
         "source": "DOCX Địa lí 8, CHỦ ĐỀ CHUNG 2. BẢO VỆ CHỦ QUYỀN, CÁC QUYỀN VÀ LỢI ÍCH HỢP PHÁP CỦA VIỆT NAM Ở BIỂN ĐÔNG, phần II, câu 19",
-        "context": "Cho thông tin: UNCLOS 1982 là cơ sở pháp lí quốc tế; Việt Nam ban hành Luật Biên giới Quốc gia 2003, Luật Biển 2012 và tham gia các thoả thuận, hiệp định phân định, hợp tác trên biển.",
         "options": [
-          "UNCLOS 1982 là cơ sở pháp lí quốc tế quan trọng.",
-          "Việt Nam không có pháp luật trong nước liên quan đến biển.",
-          "Các hiệp định phân định và hợp tác góp phần xử lí quan hệ biển với các nước láng giềng.",
-          "Kết hợp luật pháp quốc tế, pháp luật trong nước và hợp tác là một hướng bảo vệ quyền, lợi ích hợp pháp trên biển."
+          "a) UNCLOS 1982 là cơ sở pháp lí quốc tế quan trọng.",
+          "b) Việt Nam không có pháp luật trong nước liên quan đến biển.",
+          "c) Các hiệp định phân định và hợp tác góp phần xử lí quan hệ biển với các nước láng giềng.",
+          "d) Kết hợp luật pháp quốc tế, pháp luật trong nước và hợp tác là một hướng bảo vệ quyền, lợi ích hợp pháp trên biển."
         ],
         "answer": [
           "Đ",
@@ -5463,14 +5409,13 @@
         "id": "g8_l14_tf_5",
         "type": "boolean",
         "level": "hiểu",
-        "prompt": "Đánh giá từng nhận định dựa trên tư liệu.",
+        "prompt": "Cho thông tin: Từ thời tiền sử đến nay, cư dân và Nhà nước Việt Nam qua nhiều thời kì đã khai thác biển, giao thương, tổ chức quản lí và bảo vệ biển đảo; các chúa Nguyễn lập đội Hoàng Sa, Bắc Hải, Triều Tây Sơn tiếp tục duy trì hoạt động ở Hoàng Sa.",
         "source": "DOCX Địa lí 8, CHỦ ĐỀ CHUNG 2. BẢO VỆ CHỦ QUYỀN, CÁC QUYỀN VÀ LỢI ÍCH HỢP PHÁP CỦA VIỆT NAM Ở BIỂN ĐÔNG, phần II, câu 20",
-        "context": "Cho thông tin: Từ thời tiền sử đến nay, cư dân và Nhà nước Việt Nam qua nhiều thời kì đã khai thác biển, giao thương, tổ chức quản lí và bảo vệ biển đảo; các chúa Nguyễn lập đội Hoàng Sa, Bắc Hải, Triều Tây Sơn tiếp tục duy trì hoạt động ở Hoàng Sa.",
         "options": [
-          "Cư dân Việt cổ đã có hoạt động khai thác biển từ sớm.",
-          "Hoạt động xác lập và thực thi chủ quyền biển đảo chỉ bắt đầu sau năm 1945.",
-          "Đội Hoàng Sa, Bắc Hải là minh chứng về hoạt động tổ chức quản lí biển đảo trong lịch sử.",
-          "Chuỗi hoạt động liên tục qua nhiều thời kì là cơ sở quan trọng khi trình bày quá trình xác lập và thực thi chủ quyền biển đảo của Việt Nam."
+          "a) Cư dân Việt cổ đã có hoạt động khai thác biển từ sớm.",
+          "b) Hoạt động xác lập và thực thi chủ quyền biển đảo chỉ bắt đầu sau năm 1945.",
+          "c) Đội Hoàng Sa, Bắc Hải là minh chứng về hoạt động tổ chức quản lí biển đảo trong lịch sử.",
+          "d) Chuỗi hoạt động liên tục qua nhiều thời kì là cơ sở quan trọng khi trình bày quá trình xác lập và thực thi chủ quyền biển đảo của Việt Nam."
         ],
         "answer": [
           "Đ",

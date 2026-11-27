@@ -142,7 +142,10 @@ async function startPage(token) {
   if (!current(token)) return;
   const lesson = lessons.find(l => l.id === options.lessonId);
   const practice = mode === 'practice';
-  const picker = practice && !lesson ? `<label>Chủ đề<select id="act-lesson"><option value="">Ôn tập tổng hợp</option>${lessons.map(l => `<option value="${esc(l.id)}">${esc(l.title)}</option>`).join('')}</select></label>` : '';
+  if (practice && lesson?.count === 0) {
+    return view(lesson.title, `<p>Bộ câu hỏi gốc chưa có câu cho bài này.</p><a class="act-btn" href="/luyen-tap?grade=${options.grade}">Chọn bài khác</a>`, 'Địa lí ' + options.grade);
+  }
+  const picker = practice && !lesson ? `<label>Chủ đề<select id="act-lesson"><option value="">Ôn tập tổng hợp</option>${lessons.filter(l => l.count > 0).map(l => `<option value="${esc(l.id)}">${esc(l.title)}</option>`).join('')}</select></label>` : '';
   const examPicker = !practice && options.grade === 9 ? '<label>Chọn đề<select id="act-paper"><option value="midterm1">Giữa kì I · Theo đề mẫu của trường</option><option value="general">Ôn tập tổng hợp cả năm</option></select></label>' : '';
   const midtermScope = 'Ôn phần trắc nghiệm về dân cư, lao động và nông nghiệp trong đề giữa kì I lớp 9 của Trường THCS Nguyễn Du. Đề gốc dành 3 điểm cho phần tự luận.';
   const generalScope = 'Câu hỏi được chọn ngẫu nhiên từ các bài trong cả năm học của lớp ' + options.grade + '.';
@@ -169,9 +172,12 @@ async function startPage(token) {
   });
 }
 
+function questionLead(q) {
+  const media = q.media?.startsWith('/media/') ? `<a class="act-media-link" href="${esc(q.media)}" target="_blank" rel="noopener"><img class="act-media" src="${esc(q.media)}" alt="Mở tư liệu câu hỏi ở kích thước đầy đủ"></a>` : '';
+  return `<h3 class="act-prompt">${esc(q.prompt)}</h3>${q.context ? `<div class="act-context">${esc(q.context)}</div>` : ''}${q.table?.length ? table(q.table[0],q.table.slice(1),q.tableCaption) : ''}${media}${q.afterTable ? `<p>${esc(q.afterTable)}</p>` : ''}`;
+}
 function questionMarkup(q, value, projection = false) {
-  const media = q.media?.startsWith('/media/') ? `<img class="act-media" src="${esc(q.media)}" alt="Tư liệu minh họa cho câu hỏi">` : '';
-  const lead = `${q.context ? `<div class="act-context">${esc(q.context)}</div>` : ''}${q.table?.length ? table(q.table[0],q.table.slice(1)) : ''}${media}<h3>${esc(q.prompt)}</h3>`;
+  const lead = questionLead(q);
   if (q.type === 'short') {
     return lead + shortFields(q,value);
   }
@@ -183,6 +189,7 @@ function questionMarkup(q, value, projection = false) {
   return lead + (q.options || []).map((s, i) => `<label class="act-option"><input type="radio" name="choice" value="${esc(s)}" ${value === s ? 'checked' : ''}><span>${esc(s)}</span></label>`).join('');
 }
 function shortFields(q, value) {
+  if (q.reviewOnly) return `<p>Tự đối chiếu với đáp án sau khi nộp bài. Câu này không tính điểm.</p><label>Câu trả lời<textarea name="short" rows="4" maxlength="600">${esc(value)}</textarea></label>`;
   if (!q.numberFields) return `<label>Câu trả lời<input name="short" maxlength="220" value="${esc(value)}" autocomplete="off"></label>`;
   const fields = q.numberFields.map(({label,unit}, i) => {
     const fieldValue = q.numberFields.length === 1 ? value : value?.[i];
@@ -221,7 +228,8 @@ async function finishAttempt() {
         if (q?.numberFields?.length === 1 && a) return [a,q.numberFields[0].unit].filter(Boolean).join(' ');
         return Array.isArray(a) ? a.map(v => v === 'Đ' ? 'Đúng' : v === 'S' ? 'Sai' : v || '—').join(' · ') : a || '—';
       };
-      return `<details class="act-detail"><summary><span>Câu ${i+1}</span><strong>${item.correct ? 'Đúng' : 'Cần ôn lại'}</strong></summary><p>${esc(q?.prompt)}</p><p>Bạn chọn <b>${esc(display(session.answers[item.id]))}</b></p><p>Đáp án <b>${esc(display(item.answer))}</b></p>${item.explanation ? `<p>${esc(item.explanation)}</p>` : ''}${q?.source ? `<small>${esc(q.source)}</small>` : ''}</details>`;
+      const status = item.correct === null ? 'Tự đối chiếu' : item.correct ? 'Đúng' : 'Cần ôn lại';
+      return `<details class="act-detail"><summary><span>Câu ${i+1}</span><strong>${status}</strong></summary>${q ? questionLead(q) : ''}<p>Bạn trả lời <b>${esc(display(session.answers[item.id]))}</b></p><p>Đáp án <b>${esc(display(item.answer))}</b></p>${item.explanation ? `<p>${esc(item.explanation)}</p>` : ''}${q?.source ? `<small>${esc(q.source)}</small>` : ''}</details>`;
     }).join('');
     const objective = result.objectiveScore === undefined ? '' : `<p>Phần trắc nghiệm đạt <b>${formatScore(result.objectiveScore)} / 7</b> điểm. Điểm quy đổi trong sổ học tập:</p>`;
     view('Kết quả bài làm', `${objective}<div class="act-score">${formatScore(result.score)} <small>/ ${formatScore(result.total)}</small></div>${rows}<div class="act-actions">${button('continue',user ? 'Xem sổ học tập' : 'Tạo tài khoản')}</div>`, titles[mode] + ' · Lớp ' + options.grade);
@@ -266,8 +274,8 @@ function questionPage() {
   }
 }
 
-function table(headers, rows) {
-  return `<div class="act-scroll"><table><thead><tr>${headers.map(h => `<th scope="col">${esc(h)}</th>`).join('')}</tr></thead><tbody>${rows.map(row => `<tr>${row.map(v => `<td>${esc(v)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
+function table(headers, rows, caption) {
+  return `<div class="act-scroll"><table>${caption ? `<caption>${esc(caption)}</caption>` : ''}<thead><tr>${headers.map(h => `<th scope="col">${esc(h)}</th>`).join('')}</tr></thead><tbody>${rows.map(row => `<tr>${row.map(v => `<td>${esc(v)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
 }
 async function progressPage(token) {
   if (!user) return accountGate('Đăng nhập hoặc dùng thử với tư cách khách để xem Sổ học tập.');

@@ -31,13 +31,13 @@ export function selectQuestions(grade, lessonId, mode, guest, examPaper = 'gener
     return ['choice', 'boolean', 'short'].map(type => first.find(q => q.type === type && q.media) || first.find(q => q.type === type)).filter(Boolean);
   }
   if (mode === 'room') {
-    const shuffled = shuffle(pool.filter(q => q.type !== 'choice' || q.options?.length === 4));
+    const shuffled = shuffle(pool.filter(q => !q.reviewOnly && (q.type !== 'choice' || q.options?.length === 4)));
     const required = ['biết','hiểu','vận dụng'].flatMap(level => shuffled.filter(q => q.level === level).slice(0, 3));
     return shuffle(required.concat(shuffled.filter(q => !required.includes(q))).slice(0, 10));
   }
   if (mode === 'exam') {
     return ['choice','boolean','short'].flatMap((type, i) => {
-      const candidates = pool.filter(q => q.type === type && (type !== 'boolean' || q.answer.length === 4));
+      const candidates = pool.filter(q => !q.reviewOnly && q.type === type && (type !== 'boolean' || q.answer.length === 4));
       const count = [8,2,2][i];
       if (candidates.length < count) fail(409, 'Ngân hàng chưa đủ câu hỏi cho cấu trúc đề này.');
       return shuffle(candidates).slice(0,count);
@@ -80,12 +80,14 @@ export function fraction(q, value) {
 export function gradeAttempt(questions, answers, mode) {
   // Preserve the 4:2:1 objective section weights in the supplied paper.
   const weights = { choice:4, boolean:2, short:1 };
-  const counts = Object.fromEntries(Object.keys(weights).map(type => [type, questions.filter(q => q.type === type).length]));
+  const scored = questions.filter(q => !q.reviewOnly);
+  const counts = Object.fromEntries(Object.keys(weights).map(type => [type, scored.filter(q => q.type === type).length]));
   const weightSum = Object.keys(weights).reduce((n,t) => n + (counts[t] ? weights[t] : 0), 0);
   let score = 0;
   const items = questions.map(q => {
+    if (q.reviewOnly) return { id:q.id, correct:null, answer:q.answer, lessonId:q.lessonId };
     const part = fraction(q, answers[q.id]);
-    score += part * (mode === 'exam' ? weights[q.type] / counts[q.type] / weightSum : 1 / questions.length);
+    score += part * (mode === 'exam' ? weights[q.type] / counts[q.type] / weightSum : 1 / scored.length);
     return { id:q.id, correct:part === 1, answer:q.answer, lessonId:q.lessonId, explanation:q.explanation || '' };
   });
   const result = { score: Math.round(score * 1000) / 100, total:10, items };

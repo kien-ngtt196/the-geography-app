@@ -13,6 +13,10 @@ test('Đề giữa kì I lớp 9 khớp thứ tự, phạm vi và điểm phần
   const questions = selectQuestions(9,null,'exam',false,'midterm1');
   const types = questions.map(q=>q.type);
   assert.deepEqual(types,[...Array(8).fill('choice'),'boolean','boolean','short','short']);
+  assert.equal(questions[1].prompt,'Cơ cấu dân số theo nhóm tuổi của nước ta có xu hướng');
+  assert.equal(questions[8].prompt,'Cho đoạn tư liệu:');
+  assert.match(questions[8].context,/có nhiều chính sách phát triển, thị trường tiêu thụ ngày càng mở rộng\./);
+  assert.match(questions[8].options[1],/^B\. Nước ta có cơ cấu cây trồng, vật nuôi đa dạng/);
   assert.deepEqual(new Set(questions.map(q=>q.lessonId)),new Set(['g9_l1','g9_l2','g9_l3','g9_l5']));
   assert.deepEqual(questions.slice(0,8).map(q=>q.answer[0]),['B','B','D','A','B','D','C','B']);
   assert.deepEqual(questions.slice(8,10).map(q=>q.answer),[['Đ','S','S','Đ'],['Đ','Đ','S','Đ']]);
@@ -31,7 +35,7 @@ test('Đề giữa kì I lớp 9 khớp thứ tự, phạm vi và điểm phần
 test('Câu trả lời ngắn công bố đơn vị và chấm phần số', () => {
   const bank = [8,9].flatMap(grade=>lessons(grade).flatMap(lesson=>lesson.questions));
   const midterm = selectQuestions(9,null,'exam',false,'midterm1');
-  const questions = [...bank,...midterm].filter(question=>question.type==='short');
+  const questions = [...bank,...midterm].filter(question=>question.type==='short' && !question.reviewOnly);
   for (const question of questions) assert.ok(safeQuestion(question).numberFields?.length,question.id);
   const angle = questions.find(question=>question.id==='g8_l1_sa_1');
   assert.deepEqual(safeQuestion(angle).numberFields.map(field=>field.unit),['°','′']);
@@ -41,6 +45,31 @@ test('Câu trả lời ngắn công bố đơn vị và chấm phần số', () 
   const percent = midterm.find(question=>question.id==='hk1_9_III_2');
   assert.equal(safeQuestion(percent).numberFields[0].unit,'%');
   assert.equal(fraction(percent,'19,0'),1);
+});
+
+test('Ngân hàng giữ nguồn, dạng câu và tư liệu gốc', () => {
+  for (const [grade,count] of [[8,340],[9,460]]) {
+    const questions = lessons(grade).flatMap(lesson=>lesson.questions);
+    assert.equal(questions.length,count);
+    assert.equal(new Set(questions.map(q=>q.source)).size,count);
+    assert.ok(questions.every(q=>q.source.startsWith(`DOCX Địa lí ${grade},`)));
+  }
+  const book8 = lessons(8).flatMap(l=>l.questions);
+  assert.equal(book8.find(q=>q.id==='g8_l5_mcq_1').media,'/media/bieu-do-khi-hau.jpg');
+  assert.match(book8.find(q=>q.id==='g8_l1_sa_5').afterTable,/Biết diện tích cả nước/);
+  const book9 = lessons(9).flatMap(l=>l.questions);
+  assert.match(book9.find(q=>q.id==='g9_l4_mcq_1').tableCaption,/nghìn đồng\/người\/tháng/);
+  assert.equal(book9.find(q=>q.id==='g9_l2_tf_5').media,'/media/ban-do-dan-so.jpg');
+  assert.equal(book9.find(q=>q.id==='g9_l5_tf_3').table,undefined);
+  assert.equal(book9.find(q=>q.id==='g9_l5_tf_3').media,'/media/dien-tich-cay-an-qua.jpg');
+  const formula = book9.find(q=>q.id==='g9_l1_sa_10');
+  const other = book9.find(q=>q.id==='g9_l1_mcq_1');
+  assert.match(formula.prompt,/^Viết công thức.*phải chuyển đổi như thế nào\?$/);
+  assert.equal(formula.numberFields,undefined);
+  assert.ok(!('answer' in safeQuestion(formula)));
+  const result = gradeAttempt([formula,other],{[other.id]:other.answer},'practice');
+  assert.equal(result.score,10);
+  assert.equal(result.items[0].correct,null);
 });
 
 test('Học thử, đăng ký, luyện tập, thi thử và chơi theo đội', async t => {
@@ -274,10 +303,11 @@ test('Học thử, đăng ký, luyện tập, thi thử và chơi theo đội', 
   assert.equal(fraction({type:'short',answer:'3.5'},'3,50'),1);
   for(const grade of [8,9]) {
     const catalog=await teacher('catalog?grade='+grade);
-    assert.ok(catalog.lessons.every(l=>l.summary && l.count));
+    assert.ok(catalog.lessons.every(l=>l.summary));
+    assert.deepEqual(catalog.lessons.filter(l=>!l.count).map(l=>l.id),grade===8 ? [] : ['g9_dichvu','g9_dothi','g9_biendong']);
     for(const {questions} of lessons(grade)){
       for(const q of questions) {
-        assert.equal(fraction(q,q.answer),1,q.id);
+        if (!q.reviewOnly) assert.equal(fraction(q,q.answer),1,q.id);
         if(q.media) assert.equal((await fetch(base+q.media)).status,200);
       }
     }
